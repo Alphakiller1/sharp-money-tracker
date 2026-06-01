@@ -2,118 +2,127 @@
   "cross_venue": {
     "arbs": [
       {
-        "legs": "KCR@kalshi + CIN@onexbet",
-        "cost": 0.882,
-        "profit": 11.8
+        "legs": "KCR@kalshi + CIN@10 commercial",
+        "cost": 0.9035,
+        "profit": 9.65
       },
       {
-        "legs": "MIA@kalshi + WSN@matchbook",
-        "cost": 0.9158,
-        "profit": 8.42
+        "legs": "MIA@kalshi + WSN@10 commercial",
+        "cost": 0.9565,
+        "profit": 4.35
       },
       {
-        "legs": "ARI@kalshi + LAD@onexbet",
-        "cost": 0.942,
-        "profit": 5.8
+        "legs": "DET@kalshi + TBR@10 commercial",
+        "cost": 0.9648,
+        "profit": 3.52
       },
       {
-        "legs": "COL@kalshi + LAA@onexbet",
-        "cost": 0.945,
-        "profit": 5.5
+        "legs": "COL@kalshi + LAA@10 commercial",
+        "cost": 0.986,
+        "profit": 1.4
       },
       {
-        "legs": "MIL@kalshi + SFG@gtbets",
-        "cost": 0.9767,
-        "profit": 2.33
-      },
-      {
-        "legs": "STL@kalshi + TEX@onexbet",
-        "cost": 0.9848,
-        "profit": 1.52
-      },
-      {
-        "legs": "TEX@kalshi + STL@everygame",
-        "cost": 0.9887,
-        "profit": 1.13
-      },
-      {
-        "legs": "NYM@kalshi + SEA@betfair_ex_eu",
-        "cost": 0.9905,
-        "profit": 0.95
-      },
-      {
-        "legs": "SEA@kalshi + NYM@fanduel",
-        "cost": 0.9936,
-        "profit": 0.64
-      },
-      {
-        "legs": "LAD@kalshi + ARI@matchbook",
-        "cost": 0.995,
-        "profit": 0.5
+        "legs": "ARI@kalshi + LAD@10 commercial",
+        "cost": 0.9923,
+        "profit": 0.77
       }
     ],
     "value": [
       {
         "sel": "CIN",
         "venue": "book",
-        "edge": 0.118,
+        "edge": 0.0965,
         "vol": 162628.62
+      },
+      {
+        "sel": "MIA",
+        "venue": "kalshi",
+        "edge": 0.0842,
+        "vol": 15260.4
+      },
+      {
+        "sel": "DET",
+        "venue": "kalshi",
+        "edge": 0.0737,
+        "vol": 34840.96
+      },
+      {
+        "sel": "ARI",
+        "venue": "kalshi",
+        "edge": 0.0511,
+        "vol": 9670.68
+      },
+      {
+        "sel": "COL",
+        "venue": "kalshi",
+        "edge": 0.0506,
+        "vol": 14163.74
       },
       {
         "sel": "WSN",
         "venue": "book",
-        "edge": 0.0842,
+        "edge": 0.0435,
         "vol": 101797.16
+      },
+      {
+        "sel": "MIL",
+        "venue": "kalshi",
+        "edge": 0.0427,
+        "vol": 144428.81
+      },
+      {
+        "sel": "TBR",
+        "venue": "book",
+        "edge": 0.0352,
+        "vol": 217732.19
+      },
+      {
+        "sel": "NYM",
+        "venue": "kalshi",
+        "edge": 0.0278,
+        "vol": 10171.96
       },
       {
         "sel": "LAA",
         "venue": "book",
-        "edge": 0.065,
+        "edge": 0.024,
         "vol": 22470.9
-      },
-      {
-        "sel": "LAD",
-        "venue": "book",
-        "edge": 0.058,
-        "vol": 65972.84
-      },
-      {
-        "sel": "SFG",
-        "venue": "book",
-        "edge": 0.0333,
-        "vol": 8602.01
-      },
-      {
-        "sel": "TEX",
-        "venue": "book",
-        "edge": 0.0202,
-        "vol": 16403.45
       }
     ],
     "thin": [
       {
+        "sel": "MIA",
+        "div": -0.0842,
+        "vol": 15260.4
+      },
+      {
+        "sel": "DET",
+        "div": -0.0737,
+        "vol": 34840.96
+      },
+      {
+        "sel": "ARI",
+        "div": -0.0511,
+        "vol": 9670.68
+      },
+      {
+        "sel": "COL",
+        "div": -0.0506,
+        "vol": 14163.74
+      },
+      {
+        "sel": "NYM",
+        "div": -0.0278,
+        "vol": 10171.96
+      },
+      {
         "sel": "LAA",
-        "div": 0.065,
+        "div": 0.024,
         "vol": 22470.9
-      },
-      {
-        "sel": "LAD",
-        "div": 0.058,
-        "vol": 65972.84
-      },
-      {
-        "sel": "SFG",
-        "div": 0.0333,
-        "vol": 8602.01
-      },
-      {
-        "sel": "TEX",
-        "div": 0.0202,
-        "vol": 16403.45
       }
     ]
   },
-  "generated_at": "2026-06-01T23:23:33+00:00",
+  "generated_at": "2026-06-01T23:30:07+00:00",
   "counts": {
     "settled_contracts": 647,
     "sharp_observations": 20,
