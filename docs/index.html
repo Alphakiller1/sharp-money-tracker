@@ -84,6 +84,9 @@
   <h2>Line movement → outcome <span style="color:var(--muted);font-weight:400;font-size:13px">— does the move predict beyond the close?</span></h2>
   <div class="panel" id="move"></div>
 
+  <h2>Cross-venue edge <span style="color:var(--muted);font-weight:400;font-size:13px">— Kalshi contracts priced as binary options vs the sportsbook market</span></h2>
+  <div class="cards" id="cv"></div>
+
   <h2>The quant logic, in plain terms</h2>
   <div class="panel meth">
     <p><b>ROI at entry, not the close.</b> The closing line is near-efficient, so beating it by a point isn't profit. We measure return at the <i>open</i> — the price you can actually act on before sharp money moves it.</p>
@@ -151,6 +154,23 @@ fetch('data.json?_='+Date.now()).then(r=>r.json()).then(d=>{
         <span>n=${r.n} · win ${pct(r.win_rate)} vs close ${pct(r.avg_close)} · edge <b class="${cls(edge)}">${sgn(edge)}</b></span></div>
        <div class="bar"><i style="left:${left};width:${w}%;background:${color}"></i><i style="left:50%;width:1px;background:#5b6b86"></i></div></div>`);
   });
+
+  // cross-venue
+  const cv=document.getElementById('cv'); const c=d.cross_venue||{arbs:[],value:[],thin:[]};
+  const arbCard=document.createElement('div'); arbCard.className='card';
+  arbCard.innerHTML=`<div class="lab">Arbitrage <span style="color:var(--muted);font-weight:400">(locked)</span></div>`+
+    (c.arbs.length?c.arbs.map(a=>`<div class="row"><span>${a.legs}</span><b class="pos">+${a.profit}%</b></div>`).join('')
+      :'<div class="row" style="margin-top:6px">none right now — efficient cross-venue pricing</div>')+
+    '<div class="row" style="margin-top:8px;color:#6b7890">verify limits + simultaneity</div>';
+  const valCard=document.createElement('div'); valCard.className='card';
+  valCard.innerHTML=`<div class="lab">Value <span style="color:var(--muted);font-weight:400">(cheap side)</span></div>`+
+    (c.value.length?c.value.map(v=>`<div class="row"><span>${v.sel} @ ${v.venue}</span><b class="pos">+${(v.edge*100).toFixed(1)}%</b></div>`).join('')
+      :'<div class="row" style="margin-top:6px">no value gap right now</div>');
+  const thinCard=document.createElement('div'); thinCard.className='card';
+  thinCard.innerHTML=`<div class="lab">Thin-market edge <span style="color:var(--muted);font-weight:400">(low-liq Kalshi)</span></div>`+
+    (c.thin.length?c.thin.map(t=>`<div class="row"><span>${t.sel} · vol ${Math.round(t.vol).toLocaleString()}</span><b class="${t.div>=0?'pos':'neg'}">${(t.div*100>=0?'+':'')+(t.div*100).toFixed(1)}pt</b></div>`).join('')
+      :'<div class="row" style="margin-top:6px">no thin mispricing right now</div>');
+  cv.append(arbCard,valCard,thinCard);
 
   // sharp signals
   const ss=document.querySelector('#sharp tbody');

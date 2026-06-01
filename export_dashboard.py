@@ -15,6 +15,7 @@ from pathlib import Path
 
 import db
 import market_edge
+import cross_venue
 
 DOCS = Path(__file__).resolve().parent / "docs"
 
@@ -29,7 +30,21 @@ def _safe(view: str, params: str = "") -> list[dict]:
 def build() -> dict:
     edges = market_edge.scan(min_n=30, hurdle=0.03)
     tradeable = [e for e in edges if e.get("tradeable")]
+    try:
+        _games, arbs, values, thins = cross_venue.compute()
+    except SystemExit:
+        arbs, values, thins = [], [], []
+    cv = {
+        "arbs": [{"legs": l, "cost": c, "profit": p}
+                 for (g, l, c, p) in sorted(arbs, key=lambda x: x[2]) if p <= 12][:10],
+        "value": [{"sel": s, "venue": v, "edge": e, "vol": vol}
+                  for (g, s, v, e, tk, rf, vol, susp) in sorted(values, key=lambda x: -x[3])
+                  if not susp][:10],
+        "thin": [{"sel": s, "div": d, "vol": vol}
+                 for (g, s, d, vol) in sorted(thins, key=lambda x: abs(x[2]), reverse=True)][:10],
+    }
     return {
+        "cross_venue": cv,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "counts": {
             "settled_contracts": db.count("prediction_market_snapshots"),
