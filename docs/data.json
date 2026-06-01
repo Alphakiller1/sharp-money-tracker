@@ -1,0 +1,421 @@
+{
+  "generated_at": "2026-06-01T23:10:10+00:00",
+  "counts": {
+    "settled_contracts": 647,
+    "sharp_observations": 20,
+    "sharp_signals": 8,
+    "games": 1222
+  },
+  "market_edge": [
+    {
+      "label": "steam up >=2pt",
+      "n": 201,
+      "enough": true,
+      "win_rate": 0.5522,
+      "roi": 0.2077,
+      "roi_lb": 0.0567,
+      "roi_ub": 0.3616,
+      "sharpe": 0.1884,
+      "clv": 0.0762,
+      "kelly": 0.1645,
+      "fdr_ok": true,
+      "tradeable": true
+    },
+    {
+      "label": "steam up >=4pt",
+      "n": 149,
+      "enough": true,
+      "win_rate": 0.5638,
+      "roi": 0.231,
+      "roi_lb": 0.0635,
+      "roi_ub": 0.408,
+      "sharpe": 0.2109,
+      "clv": 0.093,
+      "kelly": 0.1921,
+      "fdr_ok": true,
+      "tradeable": true
+    },
+    {
+      "label": "up + liquid >=120k",
+      "n": 129,
+      "enough": true,
+      "win_rate": 0.5581,
+      "roi": 0.1969,
+      "roi_lb": -0.0035,
+      "roi_ub": 0.3891,
+      "sharpe": 0.1819,
+      "clv": 0.0812,
+      "kelly": 0.1639,
+      "fdr_ok": true,
+      "tradeable": false
+    },
+    {
+      "label": "up + thin <80k",
+      "n": 32,
+      "enough": true,
+      "win_rate": 0.4375,
+      "roi": -0.0116,
+      "roi_lb": -0.3783,
+      "roi_ub": 0.3944,
+      "sharpe": -0.0103,
+      "clv": 0.0667,
+      "kelly": 0.0,
+      "fdr_ok": false,
+      "tradeable": false
+    },
+    {
+      "label": "bet down >=2pt (fade)",
+      "n": 164,
+      "enough": true,
+      "win_rate": 0.4207,
+      "roi": -0.195,
+      "roi_lb": -0.3414,
+      "roi_ub": -0.0491,
+      "sharpe": -0.2044,
+      "clv": -0.0753,
+      "kelly": 0.0,
+      "fdr_ok": false,
+      "tradeable": false
+    },
+    {
+      "label": "down + liquid >=120k",
+      "n": 92,
+      "enough": true,
+      "win_rate": 0.5,
+      "roi": -0.05,
+      "roi_lb": -0.2388,
+      "roi_ub": 0.143,
+      "sharpe": -0.052,
+      "clv": -0.0755,
+      "kelly": 0.0,
+      "fdr_ok": false,
+      "tradeable": false
+    },
+    {
+      "label": "flat (<1pt)",
+      "n": 52,
+      "enough": true,
+      "win_rate": 0.4808,
+      "roi": -0.0145,
+      "roi_lb": -0.3046,
+      "roi_ub": 0.2754,
+      "sharpe": -0.014,
+      "clv": 0.0006,
+      "kelly": 0.0,
+      "fdr_ok": false,
+      "tradeable": false
+    },
+    {
+      "label": "underdog open <0.45",
+      "n": 93,
+      "enough": true,
+      "win_rate": 0.4624,
+      "roi": 0.1193,
+      "roi_lb": -0.1308,
+      "roi_ub": 0.3716,
+      "sharpe": 0.0983,
+      "clv": 0.0387,
+      "kelly": 0.0833,
+      "fdr_ok": false,
+      "tradeable": false
+    },
+    {
+      "label": "favorite open >0.55",
+      "n": 75,
+      "enough": true,
+      "win_rate": 0.52,
+      "roi": -0.1229,
+      "roi_lb": -0.3161,
+      "roi_ub": 0.076,
+      "sharpe": -0.1453,
+      "clv": -0.0344,
+      "kelly": 0.0,
+      "fdr_ok": false,
+      "tradeable": false
+    },
+    {
+      "label": "dog + steam up",
+      "n": 56,
+      "enough": true,
+      "win_rate": 0.6071,
+      "roi": 0.4793,
+      "roi_lb": 0.162,
+      "roi_ub": 0.8016,
+      "sharpe": 0.3992,
+      "clv": 0.0849,
+      "kelly": 0.25,
+      "fdr_ok": true,
+      "tradeable": true
+    }
+  ],
+  "tradeable": [
+    {
+      "label": "dog + steam up",
+      "roi": 0.4793,
+      "roi_lb": 0.162,
+      "kelly": 0.25,
+      "clv": 0.0849,
+      "n": 56
+    },
+    {
+      "label": "steam up >=4pt",
+      "roi": 0.231,
+      "roi_lb": 0.0635,
+      "kelly": 0.1921,
+      "clv": 0.093,
+      "n": 149
+    },
+    {
+      "label": "steam up >=2pt",
+      "roi": 0.2077,
+      "roi_lb": 0.0567,
+      "kelly": 0.1645,
+      "clv": 0.0762,
+      "n": 201
+    }
+  ],
+  "line_move_vs_outcome": [
+    {
+      "move_bucket": "0_dn_big",
+      "n": 118,
+      "avg_open": 0.5178,
+      "avg_close": 0.4223,
+      "win_rate": 0.4068,
+      "edge_vs_close": -0.0156
+    },
+    {
+      "move_bucket": "1_dn",
+      "n": 69,
+      "avg_open": 0.5233,
+      "avg_close": 0.5024,
+      "win_rate": 0.4783,
+      "edge_vs_close": -0.0241
+    },
+    {
+      "move_bucket": "2_flat",
+      "n": 86,
+      "avg_open": 0.4869,
+      "avg_close": 0.4867,
+      "win_rate": 0.4884,
+      "edge_vs_close": 0.0016
+    },
+    {
+      "move_bucket": "3_up",
+      "n": 49,
+      "avg_open": 0.4856,
+      "avg_close": 0.5066,
+      "win_rate": 0.5714,
+      "edge_vs_close": 0.0648
+    },
+    {
+      "move_bucket": "4_up_big",
+      "n": 169,
+      "avg_open": 0.4615,
+      "avg_close": 0.5476,
+      "win_rate": 0.5385,
+      "edge_vs_close": -0.0092
+    }
+  ],
+  "open_vs_close": [
+    {
+      "n": 491,
+      "open_brier": 0.2511,
+      "close_brier": 0.243,
+      "avg_abs_move": 0.0587
+    }
+  ],
+  "liquidity": [
+    {
+      "liq_q": 1,
+      "n": 123,
+      "avg_volume": 60356,
+      "avg_close": 0.4747,
+      "win_rate": 0.4146,
+      "edge_vs_close": -0.0601
+    },
+    {
+      "liq_q": 2,
+      "n": 123,
+      "avg_volume": 115372,
+      "avg_close": 0.4806,
+      "win_rate": 0.4797,
+      "edge_vs_close": -0.0009
+    },
+    {
+      "liq_q": 3,
+      "n": 123,
+      "avg_volume": 202819,
+      "avg_close": 0.5056,
+      "win_rate": 0.5285,
+      "edge_vs_close": 0.0229
+    },
+    {
+      "liq_q": 4,
+      "n": 122,
+      "avg_volume": 532671,
+      "avg_close": 0.525,
+      "win_rate": 0.5492,
+      "edge_vs_close": 0.0242
+    }
+  ],
+  "pm_calibration": [
+    {
+      "price_bucket": 1,
+      "n": 1,
+      "avg_price": 0.025,
+      "actual_win_rate": 0.0,
+      "gap": 0.025
+    },
+    {
+      "price_bucket": 5,
+      "n": 1,
+      "avg_price": 0.205,
+      "actual_win_rate": 0.0,
+      "gap": 0.205
+    },
+    {
+      "price_bucket": 6,
+      "n": 2,
+      "avg_price": 0.255,
+      "actual_win_rate": 0.5,
+      "gap": -0.245
+    },
+    {
+      "price_bucket": 7,
+      "n": 12,
+      "avg_price": 0.3308,
+      "actual_win_rate": 0.25,
+      "gap": 0.0808
+    },
+    {
+      "price_bucket": 8,
+      "n": 31,
+      "avg_price": 0.3785,
+      "actual_win_rate": 0.3871,
+      "gap": -0.0085
+    },
+    {
+      "price_bucket": 9,
+      "n": 85,
+      "avg_price": 0.4294,
+      "actual_win_rate": 0.4235,
+      "gap": 0.0058
+    },
+    {
+      "price_bucket": 10,
+      "n": 110,
+      "avg_price": 0.4743,
+      "actual_win_rate": 0.4636,
+      "gap": 0.0107
+    },
+    {
+      "price_bucket": 11,
+      "n": 128,
+      "avg_price": 0.5227,
+      "actual_win_rate": 0.5938,
+      "gap": -0.071
+    },
+    {
+      "price_bucket": 12,
+      "n": 78,
+      "avg_price": 0.571,
+      "actual_win_rate": 0.4615,
+      "gap": 0.1094
+    },
+    {
+      "price_bucket": 13,
+      "n": 29,
+      "avg_price": 0.6233,
+      "actual_win_rate": 0.5862,
+      "gap": 0.0371
+    },
+    {
+      "price_bucket": 14,
+      "n": 7,
+      "avg_price": 0.6664,
+      "actual_win_rate": 0.7143,
+      "gap": -0.0479
+    },
+    {
+      "price_bucket": 15,
+      "n": 5,
+      "avg_price": 0.727,
+      "actual_win_rate": 0.8,
+      "gap": -0.073
+    },
+    {
+      "price_bucket": 16,
+      "n": 1,
+      "avg_price": 0.795,
+      "actual_win_rate": 1.0,
+      "gap": -0.205
+    }
+  ],
+  "sharp_signals_recent": [
+    {
+      "market_type": "total",
+      "selection": "over",
+      "divergence": 0.0345,
+      "sharp_novig_prob": 0.5226,
+      "soft_novig_prob": 0.4881,
+      "steam_flag": false
+    },
+    {
+      "market_type": "ml",
+      "selection": "ARI",
+      "divergence": 0.0639,
+      "sharp_novig_prob": 0.4716,
+      "soft_novig_prob": 0.4077,
+      "steam_flag": false
+    },
+    {
+      "market_type": "ml",
+      "selection": "COL",
+      "divergence": 0.0482,
+      "sharp_novig_prob": 0.4067,
+      "soft_novig_prob": 0.3585,
+      "steam_flag": false
+    },
+    {
+      "market_type": "runline",
+      "selection": "SFG",
+      "divergence": 0.0337,
+      "sharp_novig_prob": 0.6106,
+      "soft_novig_prob": 0.5768,
+      "steam_flag": true
+    },
+    {
+      "market_type": "ml",
+      "selection": "MIL",
+      "divergence": 0.0209,
+      "sharp_novig_prob": 0.6243,
+      "soft_novig_prob": 0.6033,
+      "steam_flag": true
+    },
+    {
+      "market_type": "ml",
+      "selection": "CHW",
+      "divergence": 0.0842,
+      "sharp_novig_prob": 0.5218,
+      "soft_novig_prob": 0.4376,
+      "steam_flag": true
+    },
+    {
+      "market_type": "total",
+      "selection": "under",
+      "divergence": 0.0418,
+      "sharp_novig_prob": 0.4935,
+      "soft_novig_prob": 0.4517,
+      "steam_flag": true
+    },
+    {
+      "market_type": "ml",
+      "selection": "WSN",
+      "divergence": 0.0642,
+      "sharp_novig_prob": 0.5642,
+      "soft_novig_prob": 0.5,
+      "steam_flag": true
+    }
+  ],
+  "sharp_performance": []
+}
