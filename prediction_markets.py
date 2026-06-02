@@ -165,6 +165,38 @@ def f5_market(away: str, home: str, gdate: str) -> dict:
     return out
 
 
+def ks_market(away: str, home: str, gdate: str) -> dict:
+    """Live Kalshi pitcher-strikeout ladders for a game ->
+    {pitcher_name: {floor_strike: over_implied_mid}}. Liquid strikes only."""
+    blob = TO_KALSHI.get(away, away) + TO_KALSHI.get(home, home)
+    dc = _date_compact(gdate)
+    out: dict = {}
+    cursor = None
+    for _ in range(10):
+        params = {"series_ticker": "KXMLBKS", "status": "open", "limit": 200}
+        if cursor:
+            params["cursor"] = cursor
+        data = _get("/markets", params)
+        for m in data.get("markets", []):
+            tk = m.get("ticker", "")
+            if dc not in tk or blob not in tk:
+                continue
+            title = (m.get("title") or m.get("yes_sub_title") or "")
+            name = title.split(":")[0].strip()
+            strike = m.get("floor_strike")
+            bid, ask = m.get("yes_bid_dollars"), m.get("yes_ask_dollars")
+            if not name or strike is None or bid is None or ask is None:
+                continue
+            bid, ask = float(bid), float(ask)
+            if ask - bid > 0.25 or not (bid or ask):
+                continue
+            out.setdefault(name, {})[float(strike)] = round((bid + ask) / 2, 4)
+        cursor = data.get("cursor")
+        if not cursor:
+            break
+    return out
+
+
 def backfill_history(max_pages: int = 60) -> None:
     """Pull the LARGE settled-market sample. The reliable signal here is the game
     OUTCOME (result/winner) — a big independent sample of real MLB results. The
