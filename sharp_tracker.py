@@ -236,7 +236,7 @@ def run(only_game: str | None = None):
     sharp_books_seen = sorted({r["book"] for r in raw if r["book"] in config.SHARP_BOOKS})
     print(f"  Sharp books present: {sharp_books_seen or 'NONE (check region/credits)'}")
 
-    all_signals, all_obs = [], []
+    all_signals, all_obs, near = [], [], []
     for (away, home), rows in by_game.items():
         if (away, home) not in matchups:
             continue
@@ -245,6 +245,7 @@ def run(only_game: str | None = None):
         gpk = game_pk(TODAY, away, home)
         all_signals.extend(sharp_signals_for_game(gpk, rows))
         all_obs.extend(build_observations(gpk, rows, sched.get((away, home)), home))
+        near.extend(_near_misses(gpk, rows))
 
     _persist(all_signals)
     if all_obs:
@@ -255,7 +256,7 @@ def run(only_game: str | None = None):
             print(f"  sharp_observations store skipped: {e}")
     else:
         print("  No per-book sharp observations above threshold.")
-    _report(all_signals)
+    _report(all_signals, near)
 
 
 def _persist(signals: list[dict]):
@@ -274,9 +275,46 @@ def _persist(signals: list[dict]):
         print("  -> re-run backtest/schema.sql in the SQL editor to enable Supabase storage.")
 
 
-def _report(signals: list[dict]):
+def _near_misses(gpk: int, rows: list[dict]) -> list[dict]:
+    """Best legitimate sharp-vs-soft divergence per market, regardless of the
+    SHARP_DIVERGENCE_MIN floor — so an honest-empty slate can still show where the
+    closest leans are. Excludes implausible (>= MAX) pairs that are line mismatches."""
+    novig = devig_game(rows)
+    by_pair: dict[tuple, list] = {}
+    for (market, pk, sel), bybook in novig.items():
+        sharp = [p for b, p in bybook.items() if b in config.SHARP_BOOKS]
+        soft = [p for b, p in bybook.items() if b not in config.SHARP_BOOKS]
+        if not sharp or not soft:
+            continue
+        by_pair.setdefault((market, pk), []).append({
+            "selection": sel, "div": statistics.median(sharp) - statistics.median(soft),
+            "sharp": statistics.median(sharp), "soft": statistics.median(soft),
+            "n_sharp": len(sharp),
+        })
+    out = []
+    for (market, pk), sides in by_pair.items():
+        best = max(sides, key=lambda s: s["div"])
+        if best["div"] <= 0 or best["div"] >= config.SHARP_DIVERGENCE_MAX:
+            continue   # no sharp lean, or implausible (stale/mismatched line)
+        out.append({"game_pk": gpk, "market_type": market, **best})
+    return out
+
+
+def _report(signals: list[dict], near: list[dict] | None = None):
     if not signals:
-        print("\n  No sharp lean above threshold across today's slate.\n")
+        print("\n  No sharp lean above the "
+              f"{config.SHARP_DIVERGENCE_MIN*100:.0f}% threshold across today's slate "
+              "(market is efficient - sharp and soft books agree).")
+        if near:
+            top = sorted(near, key=lambda x: -x["div"])[:6]
+            print(f"\n  Closest leans (below threshold, FYI):")
+            print(f"  {'GAME/MKT':<22} {'SHARP SIDE':<16} {'DIV':>6} {'SHARP%':>7} {'SOFT%':>7}")
+            for s in top:
+                g = _GAME_BY_PK.get(s["game_pk"], ("?", "?"))
+                label = f"{g[0]}@{g[1]} {s['market_type']}"
+                print(f"  {label:<22} {s['selection']:<16} {s['div']*100:>5.1f} "
+                      f"{s['sharp']*100:>6.1f} {s['soft']*100:>6.1f}")
+        print()
         return
     print(f"\n  SHARP MONEY REPORT — {len(signals)} signal(s)")
     print(f"  {'GAME/MKT':<22} {'SHARP SIDE':<16} {'DIV':>6} {'SHARP%':>7} {'SOFT%':>7} MOVE")
