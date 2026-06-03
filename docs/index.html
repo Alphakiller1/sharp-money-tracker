@@ -3,185 +3,255 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sharp Money Tracker — Market-Edge Engine</title>
+<title>Sharp Money Tracker</title>
 <style>
-  :root{--bg:#0a0e16;--panel:#121a2b;--panel2:#0f1626;--ink:#e9eef7;--muted:#8a97ad;
-        --teal:#2dd4bf;--green:#22c55e;--red:#ef4444;--purple:#9a6bff;--amber:#f59e0b;--line:#1e293b;}
-  *{box-sizing:border-box;}
-  body{margin:0;background:var(--bg);color:var(--ink);
-       font-family:"DM Sans",-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.5;}
-  .wrap{max-width:1160px;margin:0 auto;padding:24px;}
-  h1{font-family:"Roboto Condensed",sans-serif;font-weight:700;letter-spacing:.5px;margin:0;font-size:30px;}
-  h2{font-family:"Roboto Condensed",sans-serif;font-weight:600;letter-spacing:.4px;
-     font-size:19px;margin:30px 0 12px;color:#cdd7e6;}
-  .sub{color:var(--muted);margin-top:6px;max-width:840px;}
-  .stamp{color:var(--muted);font-size:12.5px;margin-top:4px;}
-  /* process flow */
-  .flow{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch;margin:8px 0 4px;}
-  .step{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px;flex:1;min-width:130px;}
-  .step .t{font-weight:600;font-size:13.5px;}
-  .step .d{color:var(--muted);font-size:11.5px;margin-top:3px;}
-  .arrow{color:var(--purple);align-self:center;font-size:18px;}
-  /* cards */
-  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
-  .card{background:linear-gradient(160deg,var(--panel),var(--panel2));border:1px solid var(--line);
-        border-radius:14px;padding:16px;}
-  .card.win{border-color:#1f7a4d;box-shadow:0 0 0 1px #14532d inset;}
-  .card .lab{font-weight:600;font-size:15px;}
-  .card .big{font-family:"Roboto Condensed";font-weight:700;font-size:32px;margin:6px 0 2px;color:var(--green);}
-  .card .row{display:flex;justify-content:space-between;color:var(--muted);font-size:12.5px;margin-top:3px;}
-  .card .row b{color:var(--ink);font-weight:600;}
-  table{width:100%;border-collapse:collapse;font-size:13px;}
-  th,td{text-align:right;padding:7px 9px;border-bottom:1px solid var(--line);}
-  th:first-child,td:first-child{text-align:left;}
-  th{color:var(--muted);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
-  .tag{padding:1px 8px;border-radius:20px;font-size:11px;font-weight:600;}
-  .tag.t{background:#0c3b27;color:#5ef0b0;}.tag.f{background:#3a2d10;color:#fbd36b;}.tag.n{background:#2a2f3a;color:#8a97ad;}
-  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;}
-  .bar{height:9px;border-radius:5px;background:#22314a;position:relative;overflow:hidden;}
-  .bar>i{position:absolute;top:0;bottom:0;border-radius:5px;}
-  .meth{columns:2;column-gap:26px;color:#c4cee0;font-size:13px;}
-  .meth p{margin:0 0 10px;break-inside:avoid;}
-  .meth b{color:var(--teal);}
-  code{background:#1b2740;color:#cbb6ff;padding:1px 6px;border-radius:5px;font-size:12px;}
-  footer{color:var(--muted);font-size:12px;margin-top:34px;border-top:1px solid var(--line);padding-top:14px;}
-  .pos{color:var(--green);}.neg{color:var(--red);}
-  @media(max-width:680px){.meth{columns:1;}}
+  :root{
+    --bg:#0b0f17;--panel:#121a2b;--panel2:#0e1524;--ink:#eef2f9;--ink2:#c3ccdb;--muted:#8b97ac;
+    --line:#222d44;--line2:#2c3a57;--accent:#7c4dff;
+    --green:#34d27b;--greenbg:#34d27b1f;--red:#ef5350;--redbg:#ef53501c;--amber:#f6b94a;--amberbg:#f6b94a1c;--teal:#34d6c8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px;line-height:1.5}
+  .wrap{max-width:1140px;margin:0 auto;padding:26px 20px 70px}
+  .num{font-variant-numeric:tabular-nums}
+  .pos{color:var(--green)}.neg{color:var(--red)}.warnc{color:var(--amber)}
+
+  header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px}
+  h1{font-family:"Roboto Condensed",sans-serif;font-weight:700;letter-spacing:.4px;margin:0;font-size:29px}
+  .tag{color:var(--muted);font-size:13.5px;margin-top:3px;max-width:560px}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:6px 11px;font-size:12px;color:var(--muted)}
+  .chip b{color:var(--ink);font-size:14px}
+  #stamp{color:var(--muted);font-size:12px;margin-top:6px}
+
+  /* tabs */
+  .tabs{display:flex;gap:6px;margin:22px 0 8px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+  .tab{background:none;border:none;color:var(--muted);font-size:15px;font-weight:700;font-family:inherit;
+    padding:11px 16px;cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1px}
+  .tab:hover{color:var(--ink2)}
+  .tab.active{color:var(--ink);border-bottom-color:var(--accent)}
+  .view{display:none} .view.active{display:block}
+
+  /* controls */
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0 14px}
+  .seg{display:inline-flex;background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:3px}
+  .seg button{background:none;border:none;color:var(--muted);font-family:inherit;font-size:13px;font-weight:700;
+    padding:7px 13px;border-radius:8px;cursor:pointer}
+  .seg button.on{background:var(--accent);color:#fff}
+  .search{background:var(--panel2);border:1px solid var(--line);border-radius:11px;color:var(--ink);
+    font-family:inherit;font-size:14px;padding:8px 13px;width:200px;outline:none}
+  .search:focus{border-color:var(--accent)}
+  .hint{color:var(--muted);font-size:12.5px;margin-left:auto}
+
+  .tblwrap{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
+  table{width:100%;border-collapse:collapse}
+  th{background:#0c1120;color:#9aa6bb;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;
+    text-align:right;padding:11px 13px;border-bottom:1px solid var(--line2);white-space:nowrap;cursor:pointer;user-select:none}
+  th:first-child{text-align:left} th.sorted{color:#fff}
+  th.sortable::after{content:" ⇅";color:#4a5670;font-size:10px}
+  th.sorted.asc::after{content:" ↑";color:var(--accent)} th.sorted.desc::after{content:" ↓";color:var(--accent)}
+  td{padding:11px 13px;text-align:right;border-bottom:1px solid #ffffff08;font-size:14.5px}
+  td:first-child{text-align:left;font-weight:600;color:#e7edf6}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr.r:hover td{background:#7c4dff10;cursor:pointer}
+  tbody tr.detail td{background:#0c111e;padding:0}
+  .factors{display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px}
+  .factor{background:#16203a;border:1px solid var(--line2);border-radius:9px;padding:7px 11px;font-size:12.5px;min-width:150px}
+  .factor .fl{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+  .factor .fv{font-weight:700;font-size:14px} .factor .fn{color:var(--ink2);font-size:11.5px}
+
+  .pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:11.5px;font-weight:700}
+  .pill.reg{background:var(--redbg);color:#fca5a5}.pill.prog{background:var(--greenbg);color:#86efac}.pill.stab{background:#ffffff12;color:#aab4c6}
+  .lean.over{color:var(--green);font-weight:700}.lean.under{color:var(--red);font-weight:700}.lean.n{color:var(--muted)}
+  .today-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);display:inline-block;margin-right:7px;vertical-align:middle}
+  .empty{color:var(--muted);font-size:14px;padding:16px;background:var(--panel);border:1px dashed var(--line);border-radius:12px}
+
+  /* market cards */
+  .mkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+  .mk{background:linear-gradient(165deg,var(--panel),var(--panel2));border:1px solid var(--line2);border-radius:14px;padding:15px 16px}
+  .mk .gm{font-weight:700;font-size:16px;display:flex;justify-content:space-between;align-items:center}
+  .mk .gm .t{color:var(--muted);font-size:12px;font-weight:500}
+  .mk .sp{color:var(--ink2);font-size:13px;margin:8px 0 12px;line-height:1.5}
+  .mk .leans{display:flex;gap:8px;margin-bottom:10px}
+  .lz{flex:1;text-align:center;background:#0c111e;border:1px solid var(--line);border-radius:10px;padding:8px 4px}
+  .lz .lk{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em}
+  .lz .lv{font-weight:800;font-size:16px;font-family:"Roboto Condensed",sans-serif;margin-top:2px}
+  .lv.side{color:var(--teal)}.lv.over{color:var(--green)}.lv.under{color:var(--red)}.lv.none{color:#54607a}
+  .drv{font-size:12px;color:var(--ink2)} .drv span{display:inline-block;background:#16203a;border-radius:6px;padding:2px 8px;margin:3px 3px 0 0}
+  .secnote{color:var(--muted);font-size:13px;margin:0 0 14px}
+  details.meth{margin-top:30px;border-top:1px solid var(--line);padding-top:14px}
+  details.meth summary{cursor:pointer;color:var(--ink2);font-weight:600;font-size:14px;list-style:none}
+  details.meth summary::-webkit-details-marker{display:none}
+  details.meth summary::before{content:"▸ "} details.meth[open] summary::before{content:"▾ "}
+  .meth p{color:var(--muted);font-size:13.5px;line-height:1.7} .meth b{color:var(--ink2)}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>🎯 Sharp Money Tracker — Market-Edge Engine</h1>
-  <div class="sub">Finds where the betting market is <b>consistently beatable</b> — and proves it with
-    profit, not probability points. Every edge below is measured in ROI at the entry price, sized by
-    Kelly, bounded by a bootstrap CI, and survives false-discovery control. Minute/efficient-market
-    edges are deliberately rejected.</div>
-  <div class="stamp" id="stamp">loading…</div>
+  <header>
+    <div><h1>Sharp Money Tracker</h1>
+      <div class="tag">Pitcher regression, prop leans, and market reads — built from the full luck stack and bullpen/split context, not just ERA vs FIP.</div></div>
+    <div class="chips" id="chips"></div>
+  </header>
+  <div id="stamp">loading…</div>
 
-  <h2>How it thinks — the pipeline</h2>
-  <div class="flow">
-    <div class="step"><div class="t">1 · Ingest</div><div class="d">Sharp + soft books (Pinnacle, BetOnline…) and Kalshi contract prices, timestamped for movement.</div></div>
-    <div class="arrow">→</div>
-    <div class="step"><div class="t">2 · De-vig</div><div class="d">Strip the hold to a true probability per book; build sharp vs soft consensus.</div></div>
-    <div class="arrow">→</div>
-    <div class="step"><div class="t">3 · Signal</div><div class="d">Divergence, line movement (open→close), steam. Per-book observations logged.</div></div>
-    <div class="arrow">→</div>
-    <div class="step"><div class="t">4 · Settle</div><div class="d">Grade vs final outcomes; compute CLV (did the line move our way).</div></div>
-    <div class="arrow">→</div>
-    <div class="step"><div class="t">5 · Quant gate</div><div class="d">ROI-at-entry · Kelly · bootstrap CI · Benjamini-Hochberg FDR.</div></div>
-    <div class="arrow">→</div>
-    <div class="step"><div class="t">6 · Verdict</div><div class="d">Only economically meaningful, robust, FDR-surviving segments surface as tradeable.</div></div>
+  <div class="tabs">
+    <button class="tab active" data-view="pitchers">Pitchers</button>
+    <button class="tab" data-view="markets">General Markets</button>
+    <button class="tab" data-view="signals">Sharp Signals</button>
   </div>
 
-  <h2>Exploitable vulnerabilities <span style="color:var(--muted);font-weight:400;font-size:13px">— profit-positive, robust, FDR-controlled</span></h2>
-  <div class="cards" id="cards"></div>
-
-  <h2>Full segment scan</h2>
-  <div class="panel"><table id="scan"><thead><tr>
-    <th>Segment</th><th>N</th><th>Win%</th><th>ROI/u</th><th>ROI 95% LB</th><th>CLV</th><th>Kelly</th><th>Sharpe</th><th>Verdict</th>
-  </tr></thead><tbody></tbody></table></div>
-
-  <h2>Line movement → outcome <span style="color:var(--muted);font-weight:400;font-size:13px">— does the move predict beyond the close?</span></h2>
-  <div class="panel" id="move"></div>
-
-  <h2>Cross-venue edge <span style="color:var(--muted);font-weight:400;font-size:13px">— Kalshi contracts priced as binary options vs the sportsbook market</span></h2>
-  <div class="cards" id="cv"></div>
-
-  <h2>The quant logic, in plain terms</h2>
-  <div class="panel meth">
-    <p><b>ROI at entry, not the close.</b> The closing line is near-efficient, so beating it by a point isn't profit. We measure return at the <i>open</i> — the price you can actually act on before sharp money moves it.</p>
-    <p><b>CLV (closing line value).</b> The single best-validated predictor of long-run betting profit. If the line moves your way after you bet, you got a good number; we track it on every segment.</p>
-    <p><b>Kelly criterion (Thorp/Kelly).</b> Translates edge into growth-optimal stake. A tiny edge implies a tiny Kelly and negligible compounding — which is exactly how we filter out "minute" edges that don't win meaningfully.</p>
-    <p><b>Bootstrap confidence interval.</b> Sports payoffs are skewed, so we resample (non-parametric) thousands of times to bound the true ROI. We trust a segment only when its lower bound clears the hurdle.</p>
-    <p><b>False-discovery control (Benjamini-Hochberg).</b> We scan many segments, so some look good by luck. BH correction keeps the expected false-positive rate low — no cherry-picking the one lucky split.</p>
-    <p><b>Honest-empty.</b> If nothing clears profit + robustness + FDR, the engine reports nothing rather than invent an edge. Beating an efficient market is rare and must be earned by the data.</p>
+  <!-- PITCHERS -->
+  <div class="view active" id="view-pitchers">
+    <div class="controls">
+      <div class="seg" id="scope"><button data-v="today" class="on">Today's starters</button><button data-v="all">All</button></div>
+      <div class="seg" id="prop"><button data-v="K" class="on">K</button><button data-v="BB">Walks</button><button data-v="Outs">Outs</button><button data-v="ER">Earned runs</button></div>
+      <input class="search" id="psearch" placeholder="search pitcher / team…">
+      <span class="hint">click a row for the full factor breakdown · click headers to sort</span>
+    </div>
+    <div id="ptable"></div>
   </div>
 
-  <h2>Live sharp signals</h2>
-  <div class="panel"><table id="sharp"><thead><tr>
-    <th>Market</th><th>Sharp side</th><th>Sharp%</th><th>Soft%</th><th>Divergence</th><th>Steam</th>
-  </tr></thead><tbody></tbody></table></div>
+  <!-- MARKETS -->
+  <div class="view" id="view-markets">
+    <p class="secnote">Per-game ML / Total / First-5 leans driven by starter regression-progression, bullpen fatigue &amp; quality, opponent offense (OSI), and splits. Leans are model directional reads, not guaranteed.</p>
+    <div class="controls">
+      <div class="seg" id="mkfilter"><button data-v="all" class="on">All games</button><button data-v="ml">Has ML lean</button><button data-v="total">Has total lean</button></div>
+    </div>
+    <div id="mkcards"></div>
+  </div>
 
-  <footer>
-    <span id="counts"></span> · Generated by <code>export_dashboard.py</code> from the Supabase truth layer.
-    Educational analysis; not betting advice. Part of the Chase Analytics ecosystem.
-  </footer>
+  <!-- SIGNALS -->
+  <div class="view" id="view-signals">
+    <p class="secnote">Live sharp-vs-soft de-vigged consensus across books. Biggest gaps = softest spots. Below 2% the slate is efficient.</p>
+    <div id="sigtable"></div>
+    <h3 style="font-family:Roboto Condensed,sans-serif;font-weight:600;margin:26px 0 10px;color:#dde5f1">Tradeable segments <span style="color:var(--muted);font-size:13px;font-weight:400">— profit-positive, robust, FDR-controlled</span></h3>
+    <div id="trade"></div>
+  </div>
+
+  <details class="meth">
+    <summary>Methodology</summary>
+    <div class="meth"><p><b>Pitcher regression</b> blends the DIPS skill estimate (FIP/xFIP) with balls-in-play luck (BABIP vs .295),
+      sequencing luck (LOB% vs 72%), HR-suppression (xFIP−FIP), strength of schedule faced (OOR), recent K%/BB% trend, and
+      pitch-count fatigue into a single luck score (expected ERA change). <b>Prop leans</b> follow the verdict: a regressing
+      arm projects fewer Ks/outs and more earned runs. <b>Market leans</b> combine both starters' reg/prog with bullpen
+      fatigue/quality, opponent OSI, and splits. <b>Sharp signals</b> de-vig each book and surface only FDR-surviving,
+      profit-positive, CLV-validated segments as tradeable.</p></div>
+  </details>
 </div>
 
 <script>
-const pct=(x)=>x==null?'—':(x*100).toFixed(1)+'%';
-const sgn=(x)=>x==null?'—':((x>=0?'+':'')+(x*100).toFixed(1));
-const cls=(x)=>x>0?'pos':(x<0?'neg':'');
+const D={data:null, scope:'today', prop:'K', psort:{k:'luck',dir:-1}, mkfilter:'all'};
+const f1=(x,d=1)=>x==null?'—':(+x).toFixed(d);
+const sp=(x,d=2)=>x==null?'—':(x>=0?'+':'')+(+x).toFixed(d);
+const pctNum=(x)=>x==null?'—':(x*100).toFixed(1)+'%';
+const esc=s=>String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const verdPill=v=>`<span class="pill ${v==='REGRESSION'?'reg':v==='PROGRESSION'?'prog':'stab'}">${v==='REGRESSION'?'REGRESS':v==='PROGRESSION'?'PROGRESS':'STABLE'}</span>`;
+const leanCls=l=>l==='over'?'over':l==='under'?'under':'n';
+
+/* ---- Pitchers ---- */
+function pitcherRows(){
+  let rows=(D.data.pitchers||[]).slice();
+  if(D.scope==='today') rows=rows.filter(r=>r.today);
+  const q=document.getElementById('psearch').value.trim().toLowerCase();
+  if(q) rows=rows.filter(r=>(r.name+' '+r.team+' '+(r.opp||'')).toLowerCase().includes(q));
+  const k=D.psort.k, dir=D.psort.dir;
+  const val=r=>k==='name'?r.name:k==='luck'?r.luck:k==='skill'?r.skill_era:k==='prop'?(r.props[D.prop]||{}).proj:r[k];
+  rows.sort((a,b)=>{const x=val(a),y=val(b);return typeof x==='string'?dir*String(x).localeCompare(String(y)):dir*((x??-999)-(y??-999));});
+  return rows;
+}
+function renderPitchers(){
+  const rows=pitcherRows(), pn=D.prop;
+  const propLbl={K:'K proj',BB:'BB proj',Outs:'Outs proj',ER:'ER proj'}[pn];
+  const H=[['name','Pitcher'],['','vs'],['verdict','State'],['luck','Luck'],['skill','Skill ERA'],['prop',propLbl],['','Lean']];
+  let h='<div class="tblwrap"><table><thead><tr>'+H.map(([k,l],i)=>{
+    const so=D.psort.k===k; const cls=(k?'sortable ':'')+(so?'sorted '+(D.psort.dir<0?'desc':'asc'):'');
+    return `<th class="${cls}" ${k?`data-k="${k}"`:''} ${i>0&&i<5?'':''}>${l}</th>`;}).join('')+'</tr></thead><tbody>';
+  if(!rows.length) h+='<tr><td colspan="7" style="text-align:center;color:var(--muted)">no pitchers match</td></tr>';
+  rows.forEach((r,idx)=>{
+    const pr=r.props[pn]||{};
+    h+=`<tr class="r" data-i="${idx}">
+      <td>${r.today?'<span class="today-dot"></span>':''}${esc(r.name)} <span style="color:var(--muted);font-weight:500">${esc(r.team)}</span></td>
+      <td class="num">${esc(r.opp||'—')}</td>
+      <td>${verdPill(r.verdict)}</td>
+      <td class="num ${r.luck>=0?'neg':'pos'}">${sp(r.luck)}</td>
+      <td class="num">${f1(r.skill_era,2)}</td>
+      <td class="num">${f1(pr.proj,1)}</td>
+      <td><span class="lean ${leanCls(pr.lean)}">${pr.lean&&pr.lean!=='—'?pr.lean.toUpperCase():'—'}</span></td></tr>`;
+    h+=`<tr class="detail" id="det-${idx}" style="display:none"><td colspan="7"><div class="factors">`
+      + (r.factors||[]).map(ff=>`<div class="factor"><div class="fl">${esc(ff[0])}</div><div class="fv num">${esc(ff[1])}</div>${ff[2]?`<div class="fn">${esc(ff[2])}</div>`:''}</div>`).join('')
+      + `</div></td></tr>`;
+  });
+  h+='</tbody></table></div>';
+  document.getElementById('ptable').innerHTML=h;
+  document.querySelectorAll('#ptable th.sortable').forEach(th=>th.onclick=()=>{
+    const k=th.dataset.k; D.psort= D.psort.k===k?{k,dir:-D.psort.dir}:{k,dir:k==='name'?1:-1}; renderPitchers();});
+  document.querySelectorAll('#ptable tr.r').forEach(tr=>tr.onclick=()=>{
+    const d=document.getElementById('det-'+tr.dataset.i); d.style.display=d.style.display==='none'?'table-row':'none';});
+}
+
+/* ---- Markets ---- */
+function renderMarkets(){
+  let g=(D.data.markets||[]).slice();
+  if(D.mkfilter==='ml') g=g.filter(m=>m.ml_lean&&m.ml_lean!=='—');
+  if(D.mkfilter==='total') g=g.filter(m=>m.total_lean&&m.total_lean!=='—');
+  const lz=(lab,v,kind)=>{const c=v==='—'||!v?'none':kind==='side'?'side':v==='OVER'?'over':'under';
+    return `<div class="lz"><div class="lk">${lab}</div><div class="lv ${c}">${v||'—'}</div></div>`;};
+  let h='<div class="mkgrid">';
+  if(!g.length) h+='<div class="empty">no games match this filter.</div>';
+  g.forEach(m=>{
+    h+=`<div class="mk"><div class="gm">${esc(m.game)}<span class="t">${esc(m.time||'')}</span></div>
+      <div class="sp">${esc(m.away_sp||'TBD')} <span style="color:var(--muted)">(${m.away_verdict||'—'}, ${f1(m.away_skill,2)})</span><br>
+        ${esc(m.home_sp||'TBD')} <span style="color:var(--muted)">(${m.home_verdict||'—'}, ${f1(m.home_skill,2)})</span></div>
+      <div class="leans">${lz('Moneyline',m.ml_lean,'side')}${lz('Total',m.total_lean)}${lz('First 5',m.f5_lean)}</div>
+      <div class="drv">${(m.drivers||[]).map(x=>`<span>${esc(x)}</span>`).join('')||'<span style="color:var(--muted);background:none;padding:0">no strong edge</span>'}</div></div>`;
+  });
+  document.getElementById('mkcards').innerHTML=h+'</div>';
+}
+
+/* ---- Signals ---- */
+function renderSignals(){
+  const sig=(D.data.sharp_signals_recent||[]).slice().sort((a,b)=>Math.abs(b.divergence)-Math.abs(a.divergence));
+  let h='<div class="tblwrap"><table><thead><tr><th>Market</th><th>Sharp side</th><th>Divergence</th><th>Sharp%</th><th>Soft%</th><th></th></tr></thead><tbody>';
+  if(!sig.length) h+='<tr><td colspan="6" style="text-align:center;color:var(--muted)">No sharp lean above the noise floor — slate efficient today.</td></tr>';
+  sig.forEach(s=>h+=`<tr><td>${esc((s.market_type||'').toUpperCase())}</td><td>${esc(s.selection)}</td>
+    <td class="num ${Math.abs(s.divergence)>=0.02?'pos':'warnc'}">${sp(s.divergence)}</td>
+    <td class="num">${pctNum(s.sharp_novig_prob)}</td><td class="num">${pctNum(s.soft_novig_prob)}</td>
+    <td>${s.steam_flag?'<span class="pill" style="background:#7c4dff26;color:#c9b6ff">STEAM</span>':''}</td></tr>`);
+  document.getElementById('sigtable').innerHTML=h+'</tbody></table></div>';
+  const t=D.data.tradeable||[];
+  document.getElementById('trade').innerHTML=t.length
+    ? '<div class="mkgrid">'+t.map(x=>`<div class="mk"><div class="gm">${esc(x.label)}</div>
+        <div class="lv over" style="font-size:30px;margin:8px 0">+${(x.roi*100).toFixed(1)}% <span style="font-size:14px;color:var(--muted)">ROI/u</span></div>
+        <div class="drv"><span>95% LB +${(x.roi_lb*100).toFixed(1)}%</span><span>Kelly ${(x.kelly*100).toFixed(1)}%</span><span>CLV ${sp(x.clv,1)}</span><span>${x.n} games</span></div></div>`).join('')+'</div>'
+    : '<div class="empty">No edge clears the bar — closing line near-efficient. The engine refuses to chase noise.</div>';
+}
+
+function show(v){if(!['pitchers','markets','signals'].includes(v))v='pitchers';
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.view===v));
+  document.querySelectorAll('.view').forEach(x=>x.classList.toggle('active',x.id==='view-'+v));
+  if(location.hash.slice(1)!==v) history.replaceState(null,'','#'+v);}
 
 fetch('data.json?_='+Date.now()).then(r=>r.json()).then(d=>{
-  document.getElementById('stamp').textContent =
-    `${d.counts.settled_contracts} settled contracts · ${d.counts.sharp_signals} sharp signals · updated ${d.generated_at}`;
-  document.getElementById('counts').textContent =
-    `${d.counts.games} games · ${d.counts.settled_contracts} settled prediction-market contracts · ${d.counts.sharp_observations} sharp observations`;
+  D.data=d;
+  document.getElementById('stamp').innerHTML='Updated <b style="color:var(--ink2)">'+(d.generated_at||'—')+'</b>';
+  const c=d.counts||{}, today=(d.pitchers||[]).filter(p=>p.today).length;
+  document.getElementById('chips').innerHTML=
+    `<span class="chip">Starters today <b>${today}</b></span>`+
+    `<span class="chip">Games <b>${(d.markets||[]).length}</b></span>`+
+    `<span class="chip">Sharp signals <b>${c.sharp_signals??(d.sharp_signals_recent||[]).length}</b></span>`;
+  renderPitchers(); renderMarkets(); renderSignals();
+  show(location.hash.slice(1)||'pitchers');
+}).catch(e=>{document.getElementById('stamp').textContent='Could not load data.json — run export_boards.py';});
 
-  // tradeable cards
-  const cards=document.getElementById('cards');
-  if(!d.tradeable.length){ cards.innerHTML='<div class="card"><div class="lab">No edge clears the bar yet</div><div class="row" style="margin-top:8px">The closing line is near-efficient. More sample + forward CLV needed before an edge is declared. The engine refuses to chase noise.</div></div>'; }
-  d.tradeable.forEach(t=>{
-    const el=document.createElement('div'); el.className='card win';
-    el.innerHTML=`<div class="lab">${t.label}</div><div class="big">+${(t.roi*100).toFixed(1)}%</div>
-      <div class="row"><span>ROI / unit</span><b>95% LB +${(t.roi_lb*100).toFixed(1)}%</b></div>
-      <div class="row"><span>Kelly stake</span><b>${(t.kelly*100).toFixed(1)}%</b></div>
-      <div class="row"><span>Avg CLV</span><b class="pos">+${(t.clv*100).toFixed(1)}</b></div>
-      <div class="row"><span>Sample</span><b>${t.n} games</b></div>`;
-    cards.appendChild(el);
-  });
-
-  // scan table
-  const sb=document.querySelector('#scan tbody');
-  d.market_edge.forEach(r=>{
-    const v=r.tradeable?'<span class="tag t">TRADEABLE</span>':(r.fdr_ok?'<span class="tag f">survives FDR</span>':'<span class="tag n">noise</span>');
-    sb.insertAdjacentHTML('beforeend',
-      `<tr><td>${r.label}</td><td>${r.n}</td><td>${pct(r.win_rate)}</td>
-       <td class="${cls(r.roi)}">${sgn(r.roi)}</td><td class="${cls(r.roi_lb)}">${sgn(r.roi_lb)}</td>
-       <td class="${cls(r.clv)}">${sgn(r.clv)}</td><td>${(r.kelly*100).toFixed(1)}%</td>
-       <td>${(r.sharpe||0).toFixed(2)}</td><td style="text-align:right">${v}</td></tr>`);
-  });
-
-  // movement bars
-  const mv=document.getElementById('move');
-  (d.line_move_vs_outcome||[]).forEach(r=>{
-    const edge=r.edge_vs_close||0; const w=Math.min(100,Math.abs(edge)*100*6);
-    const color=edge>=0?'var(--green)':'var(--red)'; const left=edge>=0?'50%':(50-w/2)+'%';
-    mv.insertAdjacentHTML('beforeend',
-      `<div style="margin:9px 0"><div style="display:flex;justify-content:space-between;font-size:12.5px;color:#c4cee0">
-        <span>${r.move_bucket.replace(/^\d_/,'')}</span>
-        <span>n=${r.n} · win ${pct(r.win_rate)} vs close ${pct(r.avg_close)} · edge <b class="${cls(edge)}">${sgn(edge)}</b></span></div>
-       <div class="bar"><i style="left:${left};width:${w}%;background:${color}"></i><i style="left:50%;width:1px;background:#5b6b86"></i></div></div>`);
-  });
-
-  // cross-venue
-  const cv=document.getElementById('cv'); const c=d.cross_venue||{arbs:[],value:[],thin:[]};
-  const arbCard=document.createElement('div'); arbCard.className='card';
-  arbCard.innerHTML=`<div class="lab">Arbitrage <span style="color:var(--muted);font-weight:400">(locked)</span></div>`+
-    (c.arbs.length?c.arbs.map(a=>`<div class="row"><span>${a.legs}</span><b class="pos">+${a.profit}%</b></div>`).join('')
-      :'<div class="row" style="margin-top:6px">none right now — efficient cross-venue pricing</div>')+
-    '<div class="row" style="margin-top:8px;color:#6b7890">verify limits + simultaneity</div>';
-  const valCard=document.createElement('div'); valCard.className='card';
-  valCard.innerHTML=`<div class="lab">Value <span style="color:var(--muted);font-weight:400">(cheap side)</span></div>`+
-    (c.value.length?c.value.map(v=>`<div class="row"><span>${v.sel} @ ${v.venue}</span><b class="pos">+${(v.edge*100).toFixed(1)}%</b></div>`).join('')
-      :'<div class="row" style="margin-top:6px">no value gap right now</div>');
-  const thinCard=document.createElement('div'); thinCard.className='card';
-  thinCard.innerHTML=`<div class="lab">Thin-market edge <span style="color:var(--muted);font-weight:400">(low-liq Kalshi)</span></div>`+
-    (c.thin.length?c.thin.map(t=>`<div class="row"><span>${t.sel} · vol ${Math.round(t.vol).toLocaleString()}</span><b class="${t.div>=0?'pos':'neg'}">${(t.div*100>=0?'+':'')+(t.div*100).toFixed(1)}pt</b></div>`).join('')
-      :'<div class="row" style="margin-top:6px">no thin mispricing right now</div>');
-  cv.append(arbCard,valCard,thinCard);
-
-  // sharp signals
-  const ss=document.querySelector('#sharp tbody');
-  if(!(d.sharp_signals_recent||[]).length) ss.innerHTML='<tr><td colspan="6" style="color:var(--muted)">No sharp signals stored yet — run <code>sharp_tracker.py</code> pre-game.</td></tr>';
-  (d.sharp_signals_recent||[]).forEach(s=>{
-    ss.insertAdjacentHTML('beforeend',
-      `<tr><td>${s.market_type}</td><td>${s.selection}</td><td>${pct(s.sharp_novig_prob)}</td>
-       <td>${pct(s.soft_novig_prob)}</td><td class="pos">+${(s.divergence*100).toFixed(1)}</td>
-       <td style="text-align:right">${s.steam_flag?'⚡ steam':''}</td></tr>`);
-  });
-}).catch(e=>{document.getElementById('stamp').textContent='Could not load data.json — run export_dashboard.py.';});
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>show(t.dataset.view));
+document.getElementById('scope').onclick=e=>{if(e.target.dataset.v){D.scope=e.target.dataset.v;
+  document.querySelectorAll('#scope button').forEach(b=>b.classList.toggle('on',b===e.target));renderPitchers();}};
+document.getElementById('prop').onclick=e=>{if(e.target.dataset.v){D.prop=e.target.dataset.v;
+  document.querySelectorAll('#prop button').forEach(b=>b.classList.toggle('on',b===e.target));renderPitchers();}};
+document.getElementById('mkfilter').onclick=e=>{if(e.target.dataset.v){D.mkfilter=e.target.dataset.v;
+  document.querySelectorAll('#mkfilter button').forEach(b=>b.classList.toggle('on',b===e.target));renderMarkets();}};
+document.getElementById('psearch').oninput=()=>renderPitchers();
 </script>
 </body>
 </html>
