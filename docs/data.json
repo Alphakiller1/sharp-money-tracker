@@ -122,7 +122,7 @@
       }
     ]
   },
-  "generated_at": "2026-06-04T07:08:01+00:00",
+  "generated_at": "2026-06-04T07:20:43+00:00",
   "counts": {
     "settled_contracts": 647,
     "sharp_observations": 20,
@@ -543,6 +543,166 @@
   "sharp_performance": [],
   "pitchers": [
     {
+      "name": "Jared Jones",
+      "team": "PIT",
+      "opp": "HOU",
+      "hand": "R",
+      "today": true,
+      "starts": 1,
+      "verdict": "PROGRESSION",
+      "tone": "back",
+      "luck": -3.27,
+      "skill_era": 5.6,
+      "era": 10.38,
+      "fip": 7.706196062263769,
+      "xfip": 3.022428620725995,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -2.67,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -7.36,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -4.68,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.455,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.645,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          41.6,
+          "soft slate inflated results"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          0.0,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.0,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          77.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 5.3,
+          "lean": "over"
+        },
+        "BB": {
+          "proj": 1.7,
+          "lean": "under"
+        },
+        "Outs": {
+          "proj": 13.0,
+          "lean": "over"
+        },
+        "ER": {
+          "proj": 3.6,
+          "lean": "under"
+        }
+      }
+    },
+    {
+      "name": "Brayan Bello",
+      "team": "BOS",
+      "opp": "BAL",
+      "hand": "R",
+      "today": true,
+      "starts": 7,
+      "verdict": "PROGRESSION",
+      "tone": "back",
+      "luck": -3.03,
+      "skill_era": 4.68,
+      "era": 9.68,
+      "fip": 5.108668586186001,
+      "xfip": 4.162232959057604,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -4.57,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -5.52,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.95,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.363,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.618,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          50.1,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -3.9,
+          ""
+        ],
+        [
+          "BB% trend",
+          -2.4,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          82.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 2.1,
+          "lean": "over"
+        },
+        "BB": {
+          "proj": 2.1,
+          "lean": "under"
+        },
+        "Outs": {
+          "proj": 13.1,
+          "lean": "over"
+        },
+        "ER": {
+          "proj": 3.3,
+          "lean": "under"
+        }
+      }
+    },
+    {
       "name": "Andrew Morris",
       "team": "MIN",
       "opp": "KCR",
@@ -618,128 +778,48 @@
       }
     },
     {
-      "name": "Shohei Ohtani",
-      "team": "LAD",
-      "opp": "ARI",
-      "hand": "R",
-      "today": true,
-      "starts": 10,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 1.57,
-      "skill_era": 2.85,
-      "era": 0.74,
-      "fip": 2.490811443328857,
-      "xfip": 3.2884480221705004,
-      "factors": [
-        [
-          "ERA vs FIP",
-          1.75,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          2.55,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          0.8,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.192,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.907,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          38.2,
-          "soft slate inflated results"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -1.3,
-          ""
-        ],
-        [
-          "BB% trend",
-          3.6,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          92.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 7.5,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 2.0,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 18.3,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 1.4,
-          "lean": "over"
-        }
-      }
-    },
-    {
-      "name": "Robert Gasser",
-      "team": "MIL",
-      "opp": "SFG",
+      "name": "Lucas Giolito",
+      "team": "SDP",
+      "opp": "PHI",
       "hand": "R",
       "today": true,
       "starts": 3,
       "verdict": "REGRESSION",
       "tone": "fade",
-      "luck": 1.16,
-      "skill_era": 6.66,
-      "era": 4.73,
-      "fip": 6.210811444576858,
-      "xfip": 7.217464941006511,
+      "luck": 1.42,
+      "skill_era": 7.26,
+      "era": 4.97,
+      "fip": 7.275021968543539,
+      "xfip": 7.248695781203356,
       "factors": [
         [
           "ERA vs FIP",
-          1.48,
+          2.31,
           "ERA below FIP = lucky"
         ],
         [
           "ERA vs xFIP",
-          2.49,
+          2.28,
           ""
         ],
         [
           "HR suppression (xFIP-FIP)",
-          1.01,
-          "homer-lucky"
+          -0.03,
+          "homer-unlucky"
         ],
         [
           "BABIP",
-          0.244,
+          0.216,
           "low = lucky on contact"
         ],
         [
           "LOB% (strand)",
-          0.679,
-          "low = unlucky"
+          0.781,
+          "high = lucky sequencing"
         ],
         [
           "Schedule faced (OOR)",
-          59.9,
+          66.1,
           "tough slate"
         ],
         [
@@ -750,6 +830,646 @@
         [
           "BB% trend",
           0.0,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          80.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 1.9,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 3.8,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 12.7,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 3.0,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Trevor Rogers",
+      "team": "BAL",
+      "opp": "BOS",
+      "hand": "R",
+      "today": true,
+      "starts": 10,
+      "verdict": "PROGRESSION",
+      "tone": "back",
+      "luck": -1.29,
+      "skill_era": 4.83,
+      "era": 6.84,
+      "fip": 4.837386785674982,
+      "xfip": 4.8099787002195935,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -2.0,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -2.03,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.03,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.321,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.571,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          51.6,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -5.2,
+          ""
+        ],
+        [
+          "BB% trend",
+          -0.6,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          87.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 3.6,
+          "lean": "over"
+        },
+        "BB": {
+          "proj": 1.7,
+          "lean": "under"
+        },
+        "Outs": {
+          "proj": 14.6,
+          "lean": "over"
+        },
+        "ER": {
+          "proj": 3.0,
+          "lean": "under"
+        }
+      }
+    },
+    {
+      "name": "J.T. Ginn",
+      "team": "ATH",
+      "opp": "CHC",
+      "hand": "R",
+      "today": true,
+      "starts": 10,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 1.04,
+      "skill_era": 4.09,
+      "era": 2.56,
+      "fip": 4.113157811986827,
+      "xfip": 4.072493336099254,
+      "factors": [
+        [
+          "ERA vs FIP",
+          1.55,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.51,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.04,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.228,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.811,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          47.5,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          4.7,
+          ""
+        ],
+        [
+          "BB% trend",
+          3.9,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          86.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 5.0,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 2.5,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 15.8,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.0,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Justin Wrobleski",
+      "team": "LAD",
+      "opp": "ARI",
+      "hand": "R",
+      "today": true,
+      "starts": 9,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.97,
+      "skill_era": 3.92,
+      "era": 2.61,
+      "fip": 3.4099603794820945,
+      "xfip": 4.537018895896625,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.8,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.93,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          1.13,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.23,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.782,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          41.0,
+          "soft slate inflated results"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          8.3,
+          ""
+        ],
+        [
+          "BB% trend",
+          -1.5,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          97.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 4.5,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 1.6,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 19.6,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.5,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Zack Wheeler",
+      "team": "PHI",
+      "opp": "SDP",
+      "hand": "R",
+      "today": true,
+      "starts": 7,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.85,
+      "skill_era": 3.37,
+      "era": 2.27,
+      "fip": 3.434322893684315,
+      "xfip": 3.284612885261986,
+      "factors": [
+        [
+          "ERA vs FIP",
+          1.16,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.01,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.15,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.209,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.867,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          57.1,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          1.7,
+          ""
+        ],
+        [
+          "BB% trend",
+          -1.1,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          96.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 6.5,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 1.5,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 18.7,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.0,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Mason Fluharty",
+      "team": "TOR",
+      "opp": "ATL",
+      "hand": "R",
+      "today": true,
+      "starts": 2,
+      "verdict": "PROGRESSION",
+      "tone": "back",
+      "luck": -0.8,
+      "skill_era": 2.88,
+      "era": 3.86,
+      "fip": 2.340811443439152,
+      "xfip": 3.5287109013222007,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -1.52,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.33,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          1.19,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.429,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.75,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          63.6,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          0.0,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.0,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          19.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 1.4,
+          "lean": "over"
+        },
+        "BB": {
+          "proj": 0.5,
+          "lean": "under"
+        },
+        "Outs": {
+          "proj": 3.5,
+          "lean": "over"
+        },
+        "ER": {
+          "proj": 0.4,
+          "lean": "under"
+        }
+      }
+    },
+    {
+      "name": "Coleman Crow",
+      "team": "MIL",
+      "opp": "SFG",
+      "hand": "R",
+      "today": true,
+      "starts": 3,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.79,
+      "skill_era": 4.34,
+      "era": 3.14,
+      "fip": 3.718718420219069,
+      "xfip": 5.099843630176727,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.58,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.96,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          1.38,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.217,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.556,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          41.5,
+          "soft slate inflated results"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          0.0,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.0,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          69.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 2.8,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 1.1,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 14.3,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.1,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Chris Sale",
+      "team": "ATL",
+      "opp": "TOR",
+      "hand": "R",
+      "today": true,
+      "starts": 11,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.69,
+      "skill_era": 2.92,
+      "era": 2.01,
+      "fip": 2.896781592582589,
+      "xfip": 2.9456974240381326,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.89,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.94,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.05,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.247,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.842,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          46.1,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          2.2,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.3,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          97.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 7.8,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 1.7,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 18.3,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 1.7,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Slade Cecconi",
+      "team": "CLE",
+      "opp": "NYY",
+      "hand": "R",
+      "today": true,
+      "starts": 12,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.58,
+      "skill_era": 4.4,
+      "era": 5.25,
+      "fip": 4.485406037848069,
+      "xfip": 4.299211071245498,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.76,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.95,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.19,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.326,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.68,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          47.5,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -0.5,
+          ""
+        ],
+        [
+          "BB% trend",
+          -2.9,
           ""
         ],
         [
@@ -760,236 +1480,76 @@
       ],
       "props": {
         "K": {
-          "proj": 3.7,
-          "lean": "under"
+          "proj": 4.0,
+          "lean": "\u2014"
         },
         "BB": {
-          "proj": 2.1,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 13.3,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 2.9,
-          "lean": "over"
-        }
-      }
-    },
-    {
-      "name": "Gerrit Cole",
-      "team": "NYY",
-      "opp": "CLE",
-      "hand": "R",
-      "today": true,
-      "starts": 3,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 0.89,
-      "skill_era": 2.72,
-      "era": 2.0,
-      "fip": 1.906600917324703,
-      "xfip": 3.707761264939831,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -0.09,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          1.71,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          1.8,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.191,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          1.017,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          60.7,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          0.0,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.0,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          78.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 5.3,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 1.5,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 18.0,
-          "lean": "under"
-        },
-        "ER": {
           "proj": 1.6,
-          "lean": "over"
-        }
-      }
-    },
-    {
-      "name": "Chris Bassitt",
-      "team": "BAL",
-      "opp": "BOS",
-      "hand": "R",
-      "today": true,
-      "starts": 10,
-      "verdict": "PROGRESSION",
-      "tone": "back",
-      "luck": -0.64,
-      "skill_era": 4.66,
-      "era": 5.67,
-      "fip": 4.534561443419092,
-      "xfip": 4.813025982785575,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -1.14,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.86,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          0.28,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.329,
-          "high = unlucky"
-        ],
-        [
-          "LOB% (strand)",
-          0.702,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          47.2,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -1.1,
-          ""
-        ],
-        [
-          "BB% trend",
-          -3.2,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          73.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 2.4,
-          "lean": "over"
-        },
-        "BB": {
-          "proj": 1.9,
-          "lean": "under"
+          "lean": "\u2014"
         },
         "Outs": {
-          "proj": 13.8,
-          "lean": "over"
+          "proj": 15.4,
+          "lean": "\u2014"
         },
         "ER": {
-          "proj": 2.6,
-          "lean": "under"
+          "proj": 2.7,
+          "lean": "\u2014"
         }
       }
     },
     {
-      "name": "Grant Holmes",
-      "team": "ATL",
-      "opp": "TOR",
+      "name": "Kai-Wei Teng",
+      "team": "HOU",
+      "opp": "PIT",
       "hand": "R",
       "today": true,
-      "starts": 12,
+      "starts": 5,
       "verdict": "STABLE",
       "tone": "neutral",
-      "luck": 0.55,
-      "skill_era": 4.64,
-      "era": 3.86,
-      "fip": 5.055723724030612,
-      "xfip": 4.122967098784029,
+      "luck": 0.44,
+      "skill_era": 3.97,
+      "era": 3.27,
+      "fip": 4.090811443328858,
+      "xfip": 3.8333092323371343,
       "factors": [
         [
           "ERA vs FIP",
-          1.2,
+          0.82,
           "ERA below FIP = lucky"
         ],
         [
           "ERA vs xFIP",
-          0.26,
+          0.56,
           ""
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -0.93,
+          -0.26,
           "homer-unlucky"
         ],
         [
           "BABIP",
-          0.254,
+          0.278,
           "low = lucky on contact"
         ],
         [
           "LOB% (strand)",
-          0.831,
+          0.802,
           "high = lucky sequencing"
         ],
         [
           "Schedule faced (OOR)",
-          43.0,
-          "soft slate inflated results"
+          56.0,
+          "tough slate"
         ],
         [
           "K% trend (L3 vs szn)",
-          6.8,
+          6.5,
           ""
         ],
         [
           "BB% trend",
-          -2.7,
+          4.3,
           ""
         ],
         [
@@ -1004,91 +1564,11 @@
           "lean": "\u2014"
         },
         "BB": {
-          "proj": 2.2,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 15.8,
-          "lean": "\u2014"
-        },
-        "ER": {
           "proj": 2.5,
           "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Payton Tolle",
-      "team": "BOS",
-      "opp": "BAL",
-      "hand": "R",
-      "today": true,
-      "starts": 8,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.54,
-      "skill_era": 3.06,
-      "era": 2.28,
-      "fip": 2.679521120715044,
-      "xfip": 3.529870338436895,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.4,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          1.25,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          0.85,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.25,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.718,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          56.0,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          1.9,
-          ""
-        ],
-        [
-          "BB% trend",
-          1.4,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          93.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 6.9,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.8,
-          "lean": "\u2014"
         },
         "Outs": {
-          "proj": 17.8,
+          "proj": 13.2,
           "lean": "\u2014"
         },
         "ER": {
@@ -1098,43 +1578,43 @@
       }
     },
     {
-      "name": "Zac Gallen",
-      "team": "ARI",
-      "opp": "LAD",
+      "name": "Adrian Houser",
+      "team": "SFG",
+      "opp": "MIL",
       "hand": "R",
       "today": true,
-      "starts": 13,
+      "starts": 11,
       "verdict": "STABLE",
       "tone": "neutral",
-      "luck": -0.5,
-      "skill_era": 4.65,
-      "era": 5.32,
-      "fip": 4.877328297361808,
-      "xfip": 4.368580588736686,
+      "luck": -0.43,
+      "skill_era": 5.0,
+      "era": 5.59,
+      "fip": 5.203237478956812,
+      "xfip": 4.746292939933004,
       "factors": [
         [
           "ERA vs FIP",
-          -0.44,
+          -0.39,
           "ERA above FIP = unlucky"
         ],
         [
           "ERA vs xFIP",
-          -0.95,
+          -0.84,
           ""
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -0.51,
+          -0.46,
           "homer-unlucky"
         ],
         [
           "BABIP",
-          0.316,
+          0.302,
           "high = unlucky"
         ],
         [
           "LOB% (strand)",
-          0.666,
+          0.65,
           "low = unlucky"
         ],
         [
@@ -1144,332 +1624,12 @@
         ],
         [
           "K% trend (L3 vs szn)",
-          -2.2,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.1,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          85.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 3.2,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.5,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 14.9,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.7,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Logan Webb",
-      "team": "SFG",
-      "opp": "MIL",
-      "hand": "R",
-      "today": true,
-      "starts": 10,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": -0.47,
-      "skill_era": 3.52,
-      "era": 4.25,
-      "fip": 3.5494101694727176,
-      "xfip": 3.482172577800895,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -0.7,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.77,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.07,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.294,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.648,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          51.3,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          0.3,
-          ""
-        ],
-        [
-          "BB% trend",
-          -1.2,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          81.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 5.1,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.9,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 17.8,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.5,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Walker Buehler",
-      "team": "SDP",
-      "opp": "PHI",
-      "hand": "R",
-      "today": true,
-      "starts": 12,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": -0.42,
-      "skill_era": 3.77,
-      "era": 4.53,
-      "fip": 3.6521017658732906,
-      "xfip": 3.915177688622357,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -0.88,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.61,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          0.26,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.292,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.658,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          37.1,
-          "soft slate inflated results"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -1.3,
-          ""
-        ],
-        [
-          "BB% trend",
-          1.2,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          76.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 4.1,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.7,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 14.4,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.2,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Colin Rea",
-      "team": "CHC",
-      "opp": "ATH",
-      "hand": "R",
-      "today": true,
-      "starts": 10,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": -0.15,
-      "skill_era": 4.42,
-      "era": 4.64,
-      "fip": 4.573957510827911,
-      "xfip": 4.23624625359766,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -0.07,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.4,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.34,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.284,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.717,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          59.3,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -0.1,
+          4.0,
           ""
         ],
         [
           "BB% trend",
           2.1,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          86.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 3.8,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 2.0,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 15.7,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.6,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Jeffrey Springs",
-      "team": "ATH",
-      "opp": "CHC",
-      "hand": "R",
-      "today": true,
-      "starts": 13,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.12,
-      "skill_era": 4.5,
-      "era": 4.37,
-      "fip": 4.718952146928261,
-      "xfip": 4.237368010843328,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.35,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.13,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.48,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.26,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.727,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          48.5,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -0.3,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.6,
           ""
         ],
         [
@@ -1480,7 +1640,87 @@
       ],
       "props": {
         "K": {
-          "proj": 4.6,
+          "proj": 3.0,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.8,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 15.4,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 3.0,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Ryne Nelson",
+      "team": "ARI",
+      "opp": "LAD",
+      "hand": "R",
+      "today": true,
+      "starts": 12,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.25,
+      "skill_era": 5.2,
+      "era": 4.82,
+      "fip": 5.447954300591977,
+      "xfip": 4.885867039160206,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.63,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.07,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.56,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.229,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.632,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          47.2,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -8.2,
+          ""
+        ],
+        [
+          "BB% trend",
+          -1.0,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          97.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 4.3,
           "lean": "\u2014"
         },
         "BB": {
@@ -1488,109 +1728,29 @@
           "lean": "\u2014"
         },
         "Outs": {
-          "proj": 16.1,
+          "proj": 16.3,
           "lean": "\u2014"
         },
         "ER": {
-          "proj": 2.7,
+          "proj": 3.1,
           "lean": "\u2014"
         }
       }
     },
     {
-      "name": "Paul Skenes",
-      "team": "PIT",
-      "opp": "HOU",
+      "name": "Shota Imanaga",
+      "team": "CHC",
+      "opp": "ATH",
       "hand": "R",
       "today": true,
-      "starts": 13,
+      "starts": 12,
       "verdict": "STABLE",
       "tone": "neutral",
-      "luck": -0.1,
-      "skill_era": 2.83,
-      "era": 3.09,
-      "fip": 2.723464504534605,
-      "xfip": 2.9700557523174376,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -0.37,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.12,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          0.25,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.254,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.647,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          46.4,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -2.4,
-          ""
-        ],
-        [
-          "BB% trend",
-          2.5,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          103.0,
-          "heavy"
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 6.7,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.1,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 16.1,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 1.8,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Patrick Corbin",
-      "team": "TOR",
-      "opp": "ATL",
-      "hand": "R",
-      "today": true,
-      "starts": 11,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.07,
-      "skill_era": 4.13,
-      "era": 3.98,
-      "fip": 4.043514146095932,
-      "xfip": 4.228941869007151,
+      "luck": -0.07,
+      "skill_era": 4.15,
+      "era": 4.37,
+      "fip": 4.433668586186,
+      "xfip": 3.811966265950885,
       "factors": [
         [
           "ERA vs FIP",
@@ -1599,37 +1759,37 @@
         ],
         [
           "ERA vs xFIP",
-          0.25,
+          -0.56,
           ""
         ],
         [
           "HR suppression (xFIP-FIP)",
-          0.19,
-          "homer-lucky"
+          -0.62,
+          "homer-unlucky"
         ],
         [
           "BABIP",
-          0.303,
-          "high = unlucky"
+          0.239,
+          "low = lucky on contact"
         ],
         [
           "LOB% (strand)",
-          0.766,
-          "high = lucky sequencing"
+          0.704,
+          "low = unlucky"
         ],
         [
           "Schedule faced (OOR)",
-          57.1,
+          55.4,
           "tough slate"
         ],
         [
           "K% trend (L3 vs szn)",
-          2.1,
+          -10.6,
           ""
         ],
         [
           "BB% trend",
-          -2.4,
+          0.5,
           ""
         ],
         [
@@ -1640,99 +1800,19 @@
       ],
       "props": {
         "K": {
-          "proj": 3.3,
+          "proj": 6.0,
           "lean": "\u2014"
         },
         "BB": {
-          "proj": 1.4,
+          "proj": 1.6,
           "lean": "\u2014"
         },
         "Outs": {
-          "proj": 14.8,
+          "proj": 17.5,
           "lean": "\u2014"
         },
         "ER": {
-          "proj": 2.2,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Gavin Williams",
-      "team": "CLE",
-      "opp": "NYY",
-      "hand": "R",
-      "today": true,
-      "starts": 13,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.07,
-      "skill_era": 3.21,
-      "era": 3.2,
-      "fip": 3.3397197402829586,
-      "xfip": 3.058539130618631,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.14,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.14,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.28,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.268,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.799,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          59.1,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -0.6,
-          ""
-        ],
-        [
-          "BB% trend",
-          -3.7,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          96.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 7.7,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 2.1,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 18.8,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.2,
+          "proj": 2.7,
           "lean": "\u2014"
         }
       }
@@ -3498,86 +3578,6 @@
       }
     },
     {
-      "name": "Jared Jones",
-      "team": "PIT",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 1,
-      "verdict": "PROGRESSION",
-      "tone": "back",
-      "luck": -3.27,
-      "skill_era": 5.6,
-      "era": 10.38,
-      "fip": 7.706196062263769,
-      "xfip": 3.022428620725995,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -2.67,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -7.36,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -4.68,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.455,
-          "high = unlucky"
-        ],
-        [
-          "LOB% (strand)",
-          0.645,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          41.6,
-          "soft slate inflated results"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          0.0,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.0,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          77.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 5.3,
-          "lean": "over"
-        },
-        "BB": {
-          "proj": 1.7,
-          "lean": "under"
-        },
-        "Outs": {
-          "proj": 13.0,
-          "lean": "over"
-        },
-        "ER": {
-          "proj": 3.6,
-          "lean": "under"
-        }
-      }
-    },
-    {
       "name": "Shane Smith",
       "team": "CHW",
       "opp": "",
@@ -3973,86 +3973,6 @@
         },
         "ER": {
           "proj": 3.8,
-          "lean": "under"
-        }
-      }
-    },
-    {
-      "name": "Brayan Bello",
-      "team": "BOS",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 7,
-      "verdict": "PROGRESSION",
-      "tone": "back",
-      "luck": -3.03,
-      "skill_era": 4.68,
-      "era": 9.68,
-      "fip": 5.108668586186001,
-      "xfip": 4.162232959057604,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -4.57,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -5.52,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.95,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.363,
-          "high = unlucky"
-        ],
-        [
-          "LOB% (strand)",
-          0.618,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          50.1,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -3.9,
-          ""
-        ],
-        [
-          "BB% trend",
-          -2.4,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          82.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 2.1,
-          "lean": "over"
-        },
-        "BB": {
-          "proj": 2.1,
-          "lean": "under"
-        },
-        "Outs": {
-          "proj": 13.1,
-          "lean": "over"
-        },
-        "ER": {
-          "proj": 3.3,
           "lean": "under"
         }
       }
@@ -6993,6 +6913,86 @@
       }
     },
     {
+      "name": "Shohei Ohtani",
+      "team": "LAD",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 10,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 1.57,
+      "skill_era": 2.85,
+      "era": 0.74,
+      "fip": 2.490811443328857,
+      "xfip": 3.2884480221705004,
+      "factors": [
+        [
+          "ERA vs FIP",
+          1.75,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          2.55,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.8,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.192,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.907,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          38.2,
+          "soft slate inflated results"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -1.3,
+          ""
+        ],
+        [
+          "BB% trend",
+          3.6,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          92.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 7.5,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 2.0,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 18.3,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 1.4,
+          "lean": "over"
+        }
+      }
+    },
+    {
       "name": "Luinder Avila",
       "team": "KCR",
       "opp": "",
@@ -7473,86 +7473,6 @@
       }
     },
     {
-      "name": "Lucas Giolito",
-      "team": "SDP",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 3,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 1.42,
-      "skill_era": 7.26,
-      "era": 4.97,
-      "fip": 7.275021968543539,
-      "xfip": 7.248695781203356,
-      "factors": [
-        [
-          "ERA vs FIP",
-          2.31,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          2.28,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.03,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.216,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.781,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          66.1,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          0.0,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.0,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          80.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 1.9,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 3.8,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 12.7,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 3.0,
-          "lean": "over"
-        }
-      }
-    },
-    {
       "name": "Griffin Canning",
       "team": "SDP",
       "opp": "",
@@ -7873,86 +7793,6 @@
       }
     },
     {
-      "name": "Trevor Rogers",
-      "team": "BAL",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 10,
-      "verdict": "PROGRESSION",
-      "tone": "back",
-      "luck": -1.29,
-      "skill_era": 4.83,
-      "era": 6.84,
-      "fip": 4.837386785674982,
-      "xfip": 4.8099787002195935,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -2.0,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -2.03,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.03,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.321,
-          "high = unlucky"
-        ],
-        [
-          "LOB% (strand)",
-          0.571,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          51.6,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -5.2,
-          ""
-        ],
-        [
-          "BB% trend",
-          -0.6,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          87.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 3.6,
-          "lean": "over"
-        },
-        "BB": {
-          "proj": 1.7,
-          "lean": "under"
-        },
-        "Outs": {
-          "proj": 14.6,
-          "lean": "over"
-        },
-        "ER": {
-          "proj": 3.0,
-          "lean": "under"
-        }
-      }
-    },
-    {
       "name": "Cade Horton",
       "team": "CHC",
       "opp": "",
@@ -8189,6 +8029,86 @@
         "ER": {
           "proj": 4.6,
           "lean": "under"
+        }
+      }
+    },
+    {
+      "name": "Robert Gasser",
+      "team": "MIL",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 3,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 1.16,
+      "skill_era": 6.66,
+      "era": 4.73,
+      "fip": 6.210811444576858,
+      "xfip": 7.217464941006511,
+      "factors": [
+        [
+          "ERA vs FIP",
+          1.48,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          2.49,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          1.01,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.244,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.679,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          59.9,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          0.0,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.0,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          84.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 3.7,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 2.1,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 13.3,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.9,
+          "lean": "over"
         }
       }
     },
@@ -8593,86 +8513,6 @@
       }
     },
     {
-      "name": "J.T. Ginn",
-      "team": "ATH",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 10,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 1.04,
-      "skill_era": 4.09,
-      "era": 2.56,
-      "fip": 4.113157811986827,
-      "xfip": 4.072493336099254,
-      "factors": [
-        [
-          "ERA vs FIP",
-          1.55,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          1.51,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.04,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.228,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.811,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          47.5,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          4.7,
-          ""
-        ],
-        [
-          "BB% trend",
-          3.9,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          86.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 5.0,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 2.5,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 15.8,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 2.0,
-          "lean": "over"
-        }
-      }
-    },
-    {
       "name": "Erick Fedde",
       "team": "CHW",
       "opp": "",
@@ -9069,86 +8909,6 @@
         "ER": {
           "proj": 2.8,
           "lean": "under"
-        }
-      }
-    },
-    {
-      "name": "Justin Wrobleski",
-      "team": "LAD",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 9,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 0.97,
-      "skill_era": 3.92,
-      "era": 2.61,
-      "fip": 3.4099603794820945,
-      "xfip": 4.537018895896625,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.8,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          1.93,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          1.13,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.23,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.782,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          41.0,
-          "soft slate inflated results"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          8.3,
-          ""
-        ],
-        [
-          "BB% trend",
-          -1.5,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          97.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 4.5,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 1.6,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 19.6,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 2.5,
-          "lean": "over"
         }
       }
     },
@@ -9553,6 +9313,86 @@
       }
     },
     {
+      "name": "Gerrit Cole",
+      "team": "NYY",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 3,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.89,
+      "skill_era": 2.72,
+      "era": 2.0,
+      "fip": 1.906600917324703,
+      "xfip": 3.707761264939831,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.09,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.71,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          1.8,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.191,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          1.017,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          60.7,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          0.0,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.0,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          78.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 5.3,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 1.5,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 18.0,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 1.6,
+          "lean": "over"
+        }
+      }
+    },
+    {
       "name": "Jason Alexander",
       "team": "HOU",
       "opp": "",
@@ -9709,86 +9549,6 @@
         "ER": {
           "proj": 2.4,
           "lean": "under"
-        }
-      }
-    },
-    {
-      "name": "Zack Wheeler",
-      "team": "PHI",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 7,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 0.85,
-      "skill_era": 3.37,
-      "era": 2.27,
-      "fip": 3.434322893684315,
-      "xfip": 3.284612885261986,
-      "factors": [
-        [
-          "ERA vs FIP",
-          1.16,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          1.01,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.15,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.209,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.867,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          57.1,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          1.7,
-          ""
-        ],
-        [
-          "BB% trend",
-          -1.1,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          96.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 6.5,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 1.5,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 18.7,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 2.0,
-          "lean": "over"
         }
       }
     },
@@ -10108,86 +9868,6 @@
       }
     },
     {
-      "name": "Mason Fluharty",
-      "team": "TOR",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 2,
-      "verdict": "PROGRESSION",
-      "tone": "back",
-      "luck": -0.8,
-      "skill_era": 2.88,
-      "era": 3.86,
-      "fip": 2.340811443439152,
-      "xfip": 3.5287109013222007,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -1.52,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.33,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          1.19,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.429,
-          "high = unlucky"
-        ],
-        [
-          "LOB% (strand)",
-          0.75,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          63.6,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          0.0,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.0,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          19.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 1.4,
-          "lean": "over"
-        },
-        "BB": {
-          "proj": 0.5,
-          "lean": "under"
-        },
-        "Outs": {
-          "proj": 3.5,
-          "lean": "over"
-        },
-        "ER": {
-          "proj": 0.4,
-          "lean": "under"
-        }
-      }
-    },
-    {
       "name": "Landen Roupp",
       "team": "SFG",
       "opp": "",
@@ -10264,86 +9944,6 @@
         "ER": {
           "proj": 2.1,
           "lean": "under"
-        }
-      }
-    },
-    {
-      "name": "Coleman Crow",
-      "team": "MIL",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 3,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 0.79,
-      "skill_era": 4.34,
-      "era": 3.14,
-      "fip": 3.718718420219069,
-      "xfip": 5.099843630176727,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.58,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          1.96,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          1.38,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.217,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.556,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          41.5,
-          "soft slate inflated results"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          0.0,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.0,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          69.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 2.8,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 1.1,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 14.3,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 2.1,
-          "lean": "over"
         }
       }
     },
@@ -11468,86 +11068,6 @@
       }
     },
     {
-      "name": "Chris Sale",
-      "team": "ATL",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 11,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 0.69,
-      "skill_era": 2.92,
-      "era": 2.01,
-      "fip": 2.896781592582589,
-      "xfip": 2.9456974240381326,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.89,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          0.94,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          0.05,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.247,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.842,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          46.1,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          2.2,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.3,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          97.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 7.8,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 1.7,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 18.3,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 1.7,
-          "lean": "over"
-        }
-      }
-    },
-    {
       "name": "Rhett Lowder",
       "team": "CIN",
       "opp": "",
@@ -11944,6 +11464,86 @@
         "ER": {
           "proj": 1.3,
           "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Chris Bassitt",
+      "team": "BAL",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 10,
+      "verdict": "PROGRESSION",
+      "tone": "back",
+      "luck": -0.64,
+      "skill_era": 4.66,
+      "era": 5.67,
+      "fip": 4.534561443419092,
+      "xfip": 4.813025982785575,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -1.14,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.86,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.28,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.329,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.702,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          47.2,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -1.1,
+          ""
+        ],
+        [
+          "BB% trend",
+          -3.2,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          73.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 2.4,
+          "lean": "over"
+        },
+        "BB": {
+          "proj": 1.9,
+          "lean": "under"
+        },
+        "Outs": {
+          "proj": 13.8,
+          "lean": "over"
+        },
+        "ER": {
+          "proj": 2.6,
+          "lean": "under"
         }
       }
     },
@@ -12508,86 +12108,6 @@
       }
     },
     {
-      "name": "Slade Cecconi",
-      "team": "CLE",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 12,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": -0.58,
-      "skill_era": 4.4,
-      "era": 5.25,
-      "fip": 4.485406037848069,
-      "xfip": 4.299211071245498,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -0.76,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.95,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.19,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.326,
-          "high = unlucky"
-        ],
-        [
-          "LOB% (strand)",
-          0.68,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          47.5,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -0.5,
-          ""
-        ],
-        [
-          "BB% trend",
-          -2.9,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          84.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 4.0,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.6,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 15.4,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.7,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
       "name": "Shane McClanahan",
       "team": "TBR",
       "opp": "",
@@ -12828,6 +12348,86 @@
       }
     },
     {
+      "name": "Grant Holmes",
+      "team": "ATL",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 12,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.55,
+      "skill_era": 4.64,
+      "era": 3.86,
+      "fip": 5.055723724030612,
+      "xfip": 4.122967098784029,
+      "factors": [
+        [
+          "ERA vs FIP",
+          1.2,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.26,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.93,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.254,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.831,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          43.0,
+          "soft slate inflated results"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          6.8,
+          ""
+        ],
+        [
+          "BB% trend",
+          -2.7,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          85.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 4.7,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 2.2,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 15.8,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.5,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
       "name": "Brenan Hanifee",
       "team": "DET",
       "opp": "",
@@ -12903,6 +12503,86 @@
         },
         "ER": {
           "proj": 0.5,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Payton Tolle",
+      "team": "BOS",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 8,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.54,
+      "skill_era": 3.06,
+      "era": 2.28,
+      "fip": 2.679521120715044,
+      "xfip": 3.529870338436895,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.4,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.25,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.85,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.25,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.718,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          56.0,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          1.9,
+          ""
+        ],
+        [
+          "BB% trend",
+          1.4,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          93.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 6.9,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.8,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 17.8,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 1.8,
           "lean": "\u2014"
         }
       }
@@ -13548,6 +13228,86 @@
       }
     },
     {
+      "name": "Zac Gallen",
+      "team": "ARI",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 13,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.5,
+      "skill_era": 4.65,
+      "era": 5.32,
+      "fip": 4.877328297361808,
+      "xfip": 4.368580588736686,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.44,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.95,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.51,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.316,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.666,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          50.3,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -2.2,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.1,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          85.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 3.2,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.5,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 14.9,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.7,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
       "name": "Chase Dollander",
       "team": "COL",
       "opp": "",
@@ -13943,6 +13703,86 @@
         },
         "ER": {
           "proj": 1.8,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Logan Webb",
+      "team": "SFG",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 10,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.47,
+      "skill_era": 3.52,
+      "era": 4.25,
+      "fip": 3.5494101694727176,
+      "xfip": 3.482172577800895,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.7,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.77,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.07,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.294,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.648,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          51.3,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          0.3,
+          ""
+        ],
+        [
+          "BB% trend",
+          -1.2,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          81.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 5.1,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.9,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 17.8,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.5,
           "lean": "\u2014"
         }
       }
@@ -14588,86 +14428,6 @@
       }
     },
     {
-      "name": "Kai-Wei Teng",
-      "team": "HOU",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 5,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.44,
-      "skill_era": 3.97,
-      "era": 3.27,
-      "fip": 4.090811443328858,
-      "xfip": 3.8333092323371343,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.82,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          0.56,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.26,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.278,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.802,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          56.0,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          6.5,
-          ""
-        ],
-        [
-          "BB% trend",
-          4.3,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          85.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 4.7,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 2.5,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 13.2,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 1.8,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
       "name": "Yoshinobu Yamamoto",
       "team": "LAD",
       "opp": "",
@@ -14748,81 +14508,81 @@
       }
     },
     {
-      "name": "Adrian Houser",
-      "team": "SFG",
+      "name": "Walker Buehler",
+      "team": "SDP",
       "opp": "",
       "hand": "R",
       "today": false,
-      "starts": 11,
+      "starts": 12,
       "verdict": "STABLE",
       "tone": "neutral",
-      "luck": -0.43,
-      "skill_era": 5.0,
-      "era": 5.59,
-      "fip": 5.203237478956812,
-      "xfip": 4.746292939933004,
+      "luck": -0.42,
+      "skill_era": 3.77,
+      "era": 4.53,
+      "fip": 3.6521017658732906,
+      "xfip": 3.915177688622357,
       "factors": [
         [
           "ERA vs FIP",
-          -0.39,
+          -0.88,
           "ERA above FIP = unlucky"
         ],
         [
           "ERA vs xFIP",
-          -0.84,
+          -0.61,
           ""
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -0.46,
-          "homer-unlucky"
+          0.26,
+          "homer-lucky"
         ],
         [
           "BABIP",
-          0.302,
-          "high = unlucky"
+          0.292,
+          "low = lucky on contact"
         ],
         [
           "LOB% (strand)",
-          0.65,
+          0.658,
           "low = unlucky"
         ],
         [
           "Schedule faced (OOR)",
-          50.3,
-          "tough slate"
+          37.1,
+          "soft slate inflated results"
         ],
         [
           "K% trend (L3 vs szn)",
-          4.0,
+          -1.3,
           ""
         ],
         [
           "BB% trend",
-          2.1,
+          1.2,
           ""
         ],
         [
           "Recent pitch count",
-          88.0,
+          76.0,
           ""
         ]
       ],
       "props": {
         "K": {
-          "proj": 3.0,
+          "proj": 4.1,
           "lean": "\u2014"
         },
         "BB": {
-          "proj": 1.8,
+          "proj": 1.7,
           "lean": "\u2014"
         },
         "Outs": {
-          "proj": 15.4,
+          "proj": 14.4,
           "lean": "\u2014"
         },
         "ER": {
-          "proj": 3.0,
+          "proj": 2.2,
           "lean": "\u2014"
         }
       }
@@ -16988,86 +16748,6 @@
       }
     },
     {
-      "name": "Ryne Nelson",
-      "team": "ARI",
-      "opp": "",
-      "hand": "R",
-      "today": false,
-      "starts": 12,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.25,
-      "skill_era": 5.2,
-      "era": 4.82,
-      "fip": 5.447954300591977,
-      "xfip": 4.885867039160206,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.63,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          0.07,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.56,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.229,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.632,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          47.2,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -8.2,
-          ""
-        ],
-        [
-          "BB% trend",
-          -1.0,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          97.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 4.3,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.6,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 16.3,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 3.1,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
       "name": "Jack Leiter",
       "team": "TEX",
       "opp": "",
@@ -18028,6 +17708,86 @@
       }
     },
     {
+      "name": "Colin Rea",
+      "team": "CHC",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 10,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.15,
+      "skill_era": 4.42,
+      "era": 4.64,
+      "fip": 4.573957510827911,
+      "xfip": 4.23624625359766,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.07,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.4,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.34,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.284,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.717,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          59.3,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -0.1,
+          ""
+        ],
+        [
+          "BB% trend",
+          2.1,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          86.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 3.8,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 2.0,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 15.7,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.6,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
       "name": "Kumar Rocker",
       "team": "TEX",
       "opp": "",
@@ -18423,6 +18183,86 @@
         },
         "ER": {
           "proj": 2.1,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Jeffrey Springs",
+      "team": "ATH",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 13,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.12,
+      "skill_era": 4.5,
+      "era": 4.37,
+      "fip": 4.718952146928261,
+      "xfip": 4.237368010843328,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.35,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.13,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.48,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.26,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.727,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          48.5,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -0.3,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.6,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          88.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 4.6,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.6,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 16.1,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.7,
           "lean": "\u2014"
         }
       }
@@ -19148,6 +18988,86 @@
       }
     },
     {
+      "name": "Paul Skenes",
+      "team": "PIT",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 13,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.1,
+      "skill_era": 2.83,
+      "era": 3.09,
+      "fip": 2.723464504534605,
+      "xfip": 2.9700557523174376,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.37,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.12,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.25,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.254,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.647,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          46.4,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -2.4,
+          ""
+        ],
+        [
+          "BB% trend",
+          2.5,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          103.0,
+          "heavy"
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 6.7,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.1,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 16.1,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 1.8,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "opp": "",
@@ -19468,6 +19388,86 @@
       }
     },
     {
+      "name": "Patrick Corbin",
+      "team": "TOR",
+      "opp": "",
+      "hand": "R",
+      "today": false,
+      "starts": 11,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.07,
+      "skill_era": 4.13,
+      "era": 3.98,
+      "fip": 4.043514146095932,
+      "xfip": 4.228941869007151,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.06,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.25,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.19,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.303,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.766,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          57.1,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          2.1,
+          ""
+        ],
+        [
+          "BB% trend",
+          -2.4,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          83.0,
+          ""
+        ]
+      ],
+      "props": {
+        "K": {
+          "proj": 3.3,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.4,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 14.8,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.2,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
       "name": "Joe Ryan",
       "team": "MIN",
       "opp": "",
@@ -19548,81 +19548,81 @@
       }
     },
     {
-      "name": "Shota Imanaga",
-      "team": "CHC",
+      "name": "Gavin Williams",
+      "team": "CLE",
       "opp": "",
       "hand": "R",
       "today": false,
-      "starts": 12,
+      "starts": 13,
       "verdict": "STABLE",
       "tone": "neutral",
-      "luck": -0.07,
-      "skill_era": 4.15,
-      "era": 4.37,
-      "fip": 4.433668586186,
-      "xfip": 3.811966265950885,
+      "luck": 0.07,
+      "skill_era": 3.21,
+      "era": 3.2,
+      "fip": 3.3397197402829586,
+      "xfip": 3.058539130618631,
       "factors": [
         [
           "ERA vs FIP",
-          0.06,
+          0.14,
           "ERA below FIP = lucky"
         ],
         [
           "ERA vs xFIP",
-          -0.56,
+          -0.14,
           ""
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -0.62,
+          -0.28,
           "homer-unlucky"
         ],
         [
           "BABIP",
-          0.239,
+          0.268,
           "low = lucky on contact"
         ],
         [
           "LOB% (strand)",
-          0.704,
-          "low = unlucky"
+          0.799,
+          "high = lucky sequencing"
         ],
         [
           "Schedule faced (OOR)",
-          55.4,
+          59.1,
           "tough slate"
         ],
         [
           "K% trend (L3 vs szn)",
-          -10.6,
+          -0.6,
           ""
         ],
         [
           "BB% trend",
-          0.5,
+          -3.7,
           ""
         ],
         [
           "Recent pitch count",
-          83.0,
+          96.0,
           ""
         ]
       ],
       "props": {
         "K": {
-          "proj": 6.0,
+          "proj": 7.7,
           "lean": "\u2014"
         },
         "BB": {
-          "proj": 1.6,
+          "proj": 2.1,
           "lean": "\u2014"
         },
         "Outs": {
-          "proj": 17.5,
+          "proj": 18.8,
           "lean": "\u2014"
         },
         "ER": {
-          "proj": 2.7,
+          "proj": 2.2,
           "lean": "\u2014"
         }
       }
@@ -20753,71 +20753,54 @@
       "game": "SDP@PHI",
       "away": "SDP",
       "home": "PHI",
-      "time": "6:40 PM ET",
-      "away_sp": "Walker Buehler",
-      "home_sp": "C. Sanchez",
-      "away_skill": 3.77,
-      "home_skill": null,
-      "away_verdict": "STABLE",
-      "home_verdict": null,
+      "time": "1:05 PM ET",
+      "away_sp": "Lucas Giolito",
+      "home_sp": "Zack Wheeler",
+      "away_skill": 7.26,
+      "home_skill": 3.37,
+      "away_verdict": "REGRESSION",
+      "home_verdict": "REGRESSION",
       "away_bp": -1.31,
       "home_bp": -0.38,
-      "ml_lean": "SDP",
-      "total_lean": "\u2014",
-      "f5_lean": "\u2014",
-      "drivers": []
+      "ml_lean": "PHI",
+      "total_lean": "OVER",
+      "f5_lean": "OVER",
+      "drivers": [
+        "SDP SP regression risk",
+        "PHI SP regression risk"
+      ]
     },
     {
       "game": "BAL@BOS",
       "away": "BAL",
       "home": "BOS",
-      "time": "6:45 PM ET",
-      "away_sp": "Chris Bassitt",
-      "home_sp": "Payton Tolle",
-      "away_skill": 4.66,
-      "home_skill": 3.06,
+      "time": "1:35 PM ET",
+      "away_sp": "Trevor Rogers",
+      "home_sp": "Brayan Bello",
+      "away_skill": 4.83,
+      "home_skill": 4.68,
       "away_verdict": "PROGRESSION",
-      "home_verdict": "STABLE",
+      "home_verdict": "PROGRESSION",
       "away_bp": -0.1,
       "home_bp": -1.3,
-      "ml_lean": "\u2014",
-      "total_lean": "UNDER",
-      "f5_lean": "\u2014",
+      "ml_lean": "BAL",
+      "total_lean": "\u2014",
+      "f5_lean": "OVER",
       "drivers": []
     },
     {
       "game": "CLE@NYY",
       "away": "CLE",
       "home": "NYY",
-      "time": "7:05 PM ET",
-      "away_sp": "Gavin Williams",
-      "home_sp": "Gerrit Cole",
-      "away_skill": 3.21,
-      "home_skill": 2.72,
+      "time": "1:35 PM ET",
+      "away_sp": "Slade Cecconi",
+      "home_sp": "Carlos Rodon",
+      "away_skill": 4.4,
+      "home_skill": null,
       "away_verdict": "STABLE",
-      "home_verdict": "REGRESSION",
+      "home_verdict": null,
       "away_bp": -0.8,
       "home_bp": -0.77,
-      "ml_lean": "\u2014",
-      "total_lean": "\u2014",
-      "f5_lean": "UNDER",
-      "drivers": [
-        "NYY SP regression risk"
-      ]
-    },
-    {
-      "game": "TOR@ATL",
-      "away": "TOR",
-      "home": "ATL",
-      "time": "7:15 PM ET",
-      "away_sp": "Patrick Corbin",
-      "home_sp": "Grant Holmes",
-      "away_skill": 4.13,
-      "home_skill": 4.64,
-      "away_verdict": "STABLE",
-      "home_verdict": "STABLE",
-      "away_bp": -1.09,
-      "home_bp": -2.01,
       "ml_lean": "\u2014",
       "total_lean": "\u2014",
       "f5_lean": "\u2014",
@@ -20827,20 +20810,40 @@
       "game": "SFG@MIL",
       "away": "SFG",
       "home": "MIL",
-      "time": "7:40 PM ET",
-      "away_sp": "Logan Webb",
-      "home_sp": "Robert Gasser",
-      "away_skill": 3.52,
-      "home_skill": 6.66,
+      "time": "2:10 PM ET",
+      "away_sp": "Adrian Houser",
+      "home_sp": "Coleman Crow",
+      "away_skill": 5.0,
+      "home_skill": 4.34,
       "away_verdict": "STABLE",
       "home_verdict": "REGRESSION",
       "away_bp": -0.63,
       "home_bp": -0.52,
-      "ml_lean": "SFG",
+      "ml_lean": "MIL",
       "total_lean": "OVER",
       "f5_lean": "OVER",
       "drivers": [
         "MIL SP regression risk"
+      ]
+    },
+    {
+      "game": "TOR@ATL",
+      "away": "TOR",
+      "home": "ATL",
+      "time": "7:15 PM ET",
+      "away_sp": "Mason Fluharty",
+      "home_sp": "Chris Sale",
+      "away_skill": 2.88,
+      "home_skill": 2.92,
+      "away_verdict": "PROGRESSION",
+      "home_verdict": "REGRESSION",
+      "away_bp": -1.09,
+      "home_bp": -2.01,
+      "ml_lean": "\u2014",
+      "total_lean": "UNDER",
+      "f5_lean": "UNDER",
+      "drivers": [
+        "ATL SP regression risk"
       ]
     },
     {
@@ -20868,35 +20871,37 @@
       "away": "ATH",
       "home": "CHC",
       "time": "8:05 PM ET",
-      "away_sp": "Jeffrey Springs",
-      "home_sp": "Colin Rea",
-      "away_skill": 4.5,
-      "home_skill": 4.42,
-      "away_verdict": "STABLE",
+      "away_sp": "J.T. Ginn",
+      "home_sp": "Shota Imanaga",
+      "away_skill": 4.09,
+      "home_skill": 4.15,
+      "away_verdict": "REGRESSION",
       "home_verdict": "STABLE",
       "away_bp": -0.35,
       "home_bp": -0.9,
-      "ml_lean": "\u2014",
-      "total_lean": "\u2014",
+      "ml_lean": "CHC",
+      "total_lean": "OVER",
       "f5_lean": "\u2014",
-      "drivers": []
+      "drivers": [
+        "ATH SP regression risk"
+      ]
     },
     {
       "game": "PIT@HOU",
       "away": "PIT",
       "home": "HOU",
       "time": "8:10 PM ET",
-      "away_sp": "Paul Skenes",
-      "home_sp": "S. Arrighetti",
-      "away_skill": 2.83,
-      "home_skill": null,
-      "away_verdict": "STABLE",
-      "home_verdict": null,
+      "away_sp": "Jared Jones",
+      "home_sp": "Kai-Wei Teng",
+      "away_skill": 5.6,
+      "home_skill": 3.97,
+      "away_verdict": "PROGRESSION",
+      "home_verdict": "STABLE",
       "away_bp": -0.86,
       "home_bp": -0.49,
-      "ml_lean": "PIT",
+      "ml_lean": "HOU",
       "total_lean": "\u2014",
-      "f5_lean": "UNDER",
+      "f5_lean": "OVER",
       "drivers": []
     },
     {
@@ -20904,17 +20909,17 @@
       "away": "LAD",
       "home": "ARI",
       "time": "9:40 PM ET",
-      "away_sp": "Shohei Ohtani",
-      "home_sp": "Zac Gallen",
-      "away_skill": 2.85,
-      "home_skill": 4.65,
+      "away_sp": "Justin Wrobleski",
+      "home_sp": "Ryne Nelson",
+      "away_skill": 3.92,
+      "home_skill": 5.2,
       "away_verdict": "REGRESSION",
       "home_verdict": "STABLE",
       "away_bp": -1.52,
       "home_bp": -1.56,
       "ml_lean": "LAD",
-      "total_lean": "\u2014",
-      "f5_lean": "\u2014",
+      "total_lean": "OVER",
+      "f5_lean": "OVER",
       "drivers": [
         "LAD SP regression risk"
       ]
