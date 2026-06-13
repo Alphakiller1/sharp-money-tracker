@@ -56,7 +56,10 @@ HFA_RUNS = 0.15                 # small home-field run bump
 
 # Mapping strength.
 OSI_RUN_SENSITIVITY = 0.9       # off_factor = 1 + (OSI-50)/100 * this
-SP_FIP_WEIGHT = 0.70            # SP covers ~70% of run prevention; rest ~ league/pen
+SP_FIP_WEIGHT = 0.70            # SP covers ~70% of run prevention; rest = bullpen
+BULLPEN_WEIGHT = 1 - SP_FIP_WEIGHT  # bullpen share of opponent run prevention
+LEAGUE_BULLPEN_ERA = 4.05       # fallback anchor; runtime uses team_profiles mean
+BULLPEN_IR_SENSITIVITY = 0.004  # pen-factor nudge per point of IR-scored% vs league
 OFF_FACTOR_CLIP = (0.55, 1.60)
 PITCH_FACTOR_CLIP = (0.60, 1.70)
 # Early-season inputs (esp. SP FIP) are noisy; regress each factor toward 1.0.
@@ -98,6 +101,12 @@ ODDS_HISTORY_CSV = EVAL_DATA_DIR / "odds_history.csv"
 # (or paste it into ODDS_API_KEY_FALLBACK below). Never commit a real key.
 ODDS_API_KEY = os.getenv("ODDS_API_KEY", "")
 ODDS_API_BASE = "https://api.the-odds-api.com/v4"
+# Refuse paid fetches when the cached remaining quota drops below this floor
+# (0 disables the guard). The cache is written after every API response.
+ODDS_API_MIN_REMAINING = int(os.getenv("ODDS_API_MIN_REMAINING", "20"))
+
+# Optional ops webhook for plain-text warnings (stale slate, etc.).
+DISCORD_WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL", "")
 ODDS_SPORT_KEY = "baseball_mlb"
 ODDS_REGIONS = "us"            # us|us2|uk|eu|au
 ODDS_FORMAT = "american"

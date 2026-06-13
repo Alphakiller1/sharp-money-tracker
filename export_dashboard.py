@@ -74,6 +74,8 @@ def build() -> dict:
 
 
 def main():
+    from _compat import check_slate_freshness
+    check_slate_freshness("the dashboard export")
     DOCS.mkdir(exist_ok=True)
     data = build()
     (DOCS / "data.json").write_text(json.dumps(data, indent=2, default=str), encoding="utf-8")

@@ -85,9 +85,10 @@ def _ticker_date(ticker: str) -> str | None:
 
 def _game_start_ts(ticker: str) -> int | None:
     """Game start from the ticker's encoded date+time (ET) -> UTC unix seconds.
-    KXMLBGAME-26MAY311920... = 2026-05-31 19:20 ET. June = EDT (UTC-4)."""
+    KXMLBGAME-26MAY311920... = 2026-05-31 19:20 ET (DST-aware)."""
     import re
-    from datetime import datetime, timezone, timedelta
+    from datetime import datetime
+    from _compat import eastern
     m = re.search(r"-(\d{2})([A-Z]{3})(\d{2})(\d{2})(\d{2})", ticker)
     if not m:
         return None
@@ -96,8 +97,7 @@ def _game_start_ts(ticker: str) -> int | None:
               "JUL": 7, "AUG": 8, "SEP": 9, "OCT": 10, "NOV": 11, "DEC": 12}
     if mon not in months:
         return None
-    et = timezone(timedelta(hours=-4))   # EDT (MLB season)
-    dt = datetime(2000 + int(yy), months[mon], int(dd), int(hh), int(mm), tzinfo=et)
+    dt = eastern(datetime(2000 + int(yy), months[mon], int(dd), int(hh), int(mm)))
     return int(dt.timestamp())
 
 

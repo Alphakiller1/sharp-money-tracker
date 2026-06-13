@@ -39,6 +39,7 @@ from config import (
     EVAL_DATA_DIR,
     ODDS_API_BASE,
     ODDS_API_KEY,
+    ODDS_API_MIN_REMAINING,
     ODDS_BOOKMAKERS,
     ODDS_FORMAT,
     ODDS_GAME_MARKETS,
@@ -58,6 +59,8 @@ COLUMNS = [
 ]
 
 _LAST_USAGE: dict[str, str] = {}
+# Quota cache persisted across runs so check_quota() works pre-fetch.
+_USAGE_FILE = EVAL_DATA_DIR / "odds_api_usage.json"
 
 
 # ── HTTP ─────────────────────────────────────────────────────────────────────
@@ -75,10 +78,53 @@ def _get(path: str, params: dict[str, Any]) -> Any:
         with urllib.request.urlopen(url, timeout=30) as resp:
             _LAST_USAGE["remaining"] = resp.headers.get("x-requests-remaining", "?")
             _LAST_USAGE["used"] = resp.headers.get("x-requests-used", "?")
+            try:
+                EVAL_DATA_DIR.mkdir(parents=True, exist_ok=True)
+                _USAGE_FILE.write_text(json.dumps({
+                    **_LAST_USAGE,
+                    "checked_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                }))
+            except OSError:
+                pass
             return json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8", "ignore")
         raise SystemExit(f"Odds API error {e.code}: {body}") from e
+
+
+def check_quota() -> None:
+    """Abort a paid fetch when the last-known remaining quota is below the floor.
+    No-op when no usage has ever been recorded (first run) or floor <= 0."""
+    floor = ODDS_API_MIN_REMAINING
+    rem = _LAST_USAGE.get("remaining")
+    if rem in (None, "?") and _USAGE_FILE.exists():
+        try:
+            rem = json.loads(_USAGE_FILE.read_text()).get("remaining")
+        except (OSError, ValueError):
+            return
+    try:
+        rem = float(rem)
+    except (TypeError, ValueError):
+        return
+    if floor > 0 and rem < floor:
+        raise SystemExit(
+            f"  Odds API quota low: {rem:.0f} requests remaining (< floor {floor}).\n"
+            "  Skipping fetch. Override with ODDS_API_MIN_REMAINING=0.")
+
+
+def print_usage() -> None:
+    """One-line API quota readout (in-process, falling back to the cached file)."""
+    u: dict = _LAST_USAGE
+    cached = False
+    if not u and _USAGE_FILE.exists():
+        try:
+            u = json.loads(_USAGE_FILE.read_text())
+            cached = True
+        except (OSError, ValueError):
+            u = {}
+    if u:
+        note = f" (cached {u.get('checked_at', '')})" if cached else ""
+        print(f"  API quota: used {u.get('used')}, remaining {u.get('remaining')}{note}.")
 
 
 # ── Normalization ────────────────────────────────────────────────────────────
@@ -273,6 +319,7 @@ def fetch_historical(date_iso: str, props: bool = False) -> list[dict]:
 
 def fetch_game(away: str, home: str, props: bool = False) -> list[dict]:
     """Live fetch + store odds for one game. Returns its rows (may be empty)."""
+    check_quota()
     away, home = away.upper(), home.upper()
     events = list_events()
     eid = events.get((away, home))
@@ -281,13 +328,12 @@ def fetch_game(away: str, home: str, props: bool = False) -> list[dict]:
         return []
     rows = fetch_event_odds(eid, props=props)
     store(rows)
-    if _LAST_USAGE:
-        print(f"  API quota: used {_LAST_USAGE.get('used')}, "
-              f"remaining {_LAST_USAGE.get('remaining')}.")
+    print_usage()
     return rows
 
 
 def run_fetch(props: bool = False) -> None:
+    check_quota()
     print("Fetching game odds from The Odds API...")
     rows = fetch_game_odds()
     if props:
@@ -295,9 +341,7 @@ def run_fetch(props: bool = False) -> None:
         print(f"Fetching props/team-totals for {len(ids)} events...")
         rows.extend(fetch_prop_odds(ids))
     store(rows)
-    if _LAST_USAGE:
-        print(f"  API quota: used {_LAST_USAGE.get('used')}, "
-              f"remaining {_LAST_USAGE.get('remaining')}.")
+    print_usage()
 
 
 # ── Lookups (used by the evaluator) ───────────────────────────────────────────
@@ -411,7 +455,9 @@ def main() -> None:
     if args.show:
         show_game(args.show)
     if args.usage:
-        print(f"  Last API usage: {_LAST_USAGE or 'no call made this run'}")
+        print_usage()
+        if not _LAST_USAGE and not _USAGE_FILE.exists():
+            print("  No API usage recorded yet (run --slate or --fetch first).")
     if not (args.slate or args.fetch or args.fetch_game or args.show or args.usage):
         p.print_help()
 

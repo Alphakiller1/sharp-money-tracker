@@ -23,7 +23,7 @@ from typing import Optional
 
 import pandas as pd
 
-from _compat import load
+from _compat import check_slate_freshness, load
 
 # League baselines
 LG_BABIP, LG_LOB, LG_HR9, LG_OOR, LG_ERA = 0.295, 0.72, 1.15, 44.0, 4.10
@@ -176,6 +176,7 @@ def prop_projections(p: dict, reg: dict) -> dict:
 
 
 def pitcher_board() -> list[dict]:
+    check_slate_freshness("the boards")
     profiles = load("sp_profiles.csv")
     gamelog = load("sp_gamelog.csv")
     matchups = load("today_matchups.csv")
@@ -212,6 +213,7 @@ def pitcher_board() -> list[dict]:
 
 
 def market_board() -> list[dict]:
+    check_slate_freshness("the boards")
     matchups = load("today_matchups.csv")
     profiles = load("sp_profiles.csv")
     teams = load("team_profiles.csv")

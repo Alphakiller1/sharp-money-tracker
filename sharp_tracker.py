@@ -35,7 +35,7 @@ import config
 import market_data
 from _compat import american_to_implied, load
 import db
-from _compat import game_pk, scheduled_start, TODAY
+from _compat import check_slate_freshness, game_pk, scheduled_start, TODAY
 
 NOW = datetime.now(timezone.utc).isoformat(timespec="seconds")
 SHARP_CSV = config.EVAL_DATA_DIR / "sharp_signals.csv"
@@ -103,6 +103,7 @@ def build_observations(gpk: int, rows: list[dict], sched: str | None, home: str)
 
 # ── Fetch (sharp + soft, us+eu) ───────────────────────────────────────────────
 def fetch_sharp_odds() -> list[dict]:
+    market_data.check_quota()
     params = {"regions": config.ODDS_SHARP_REGIONS, "markets": config.ODDS_GAME_MARKETS,
               "oddsFormat": config.ODDS_FORMAT}
     data = market_data._get(f"/sports/{config.ODDS_SPORT_KEY}/odds", params)
@@ -213,6 +214,7 @@ def run(only_game: str | None = None):
     m = load("today_matchups.csv")
     if m is None:
         raise SystemExit("today_matchups.csv not found.")
+    check_slate_freshness("sharp signals")
     m["Away"] = m["Away"].astype(str).str.upper().str.strip()
     m["Home"] = m["Home"].astype(str).str.upper().str.strip()
     matchups = set(zip(m["Away"], m["Home"]))
@@ -227,6 +229,7 @@ def run(only_game: str | None = None):
         raise SystemExit("  No odds returned.")
     # store raw for movement history (local CSV); sharp signals go to Supabase below
     market_data.store(raw)
+    market_data.print_usage()
 
     # group raw rows by game
     by_game: dict[tuple, list] = {}

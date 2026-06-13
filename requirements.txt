@@ -1,3 +1,4 @@
-pandas
-requests
-psycopg2-binary
+pandas==3.0.3
+requests==2.34.2
+psycopg2-binary==2.9.12
+tzdata==2026.2   # IANA tz database for zoneinfo on Windows (DST-aware ET)
