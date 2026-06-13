@@ -3,94 +3,137 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sharp Money Tracker</title>
+<title>Sharp Money Tracker — Chase Analytics</title>
+<meta name="description" content="Pitcher regression, prop leans, and de-vigged sharp-vs-soft market reads — built on the full luck stack, FDR-controlled and CLV-validated." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" media="print" onload="this.media='all'"
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Roboto+Condensed:wght@400;500;600;700;800&display=swap">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Roboto+Condensed:wght@400;500;600;700;800&display=swap"></noscript>
 <style>
   :root{
-    --bg:#0b0f17;--panel:#121a2b;--panel2:#0e1524;--ink:#eef2f9;--ink2:#c3ccdb;--muted:#8b97ac;
-    --line:#222d44;--line2:#2c3a57;--accent:#7c4dff;
-    --green:#34d27b;--greenbg:#34d27b1f;--red:#ef5350;--redbg:#ef53501c;--amber:#f6b94a;--amberbg:#f6b94a1c;--teal:#34d6c8;
+    --bg:#08090F;--bg-2:#0E1018;--card:#12141D;--card-2:#181B26;--raised:#20232F;
+    --border:#262A38;--border-2:#363B4D;--border-violet:rgba(124,77,255,.32);
+    --ink:#F5F6FA;--ink2:#A4A8B6;--muted:#6E7383;--muted-2:#4C5161;
+    --v-light:#C4B0FF;--accent:#9A6BFF;--v-mid:#7C4DFF;--v-deep:#5B2BE0;
+    --v-grad:linear-gradient(135deg,#9A6BFF 0%,#5B2BE0 100%);
+    --green:#3CCB7F;--green-l:#7BDC5A;--red:#F2545B;--red-l:#FCA5A5;
+    --gold:#E8C24A;--amber:#FBBF24;--teal:#2DD4BF;
+    --greenbg:rgba(60,203,127,.13);--redbg:rgba(242,84,91,.12);--amberbg:rgba(232,194,74,.12);
+    --display:"Roboto Condensed","DM Sans",-apple-system,system-ui,sans-serif;
+    --sans:"DM Sans",-apple-system,system-ui,sans-serif;
   }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",-apple-system,Segoe UI,Roboto,sans-serif;font-size:16px;line-height:1.5}
-  .wrap{max-width:1140px;margin:0 auto;padding:26px 20px 70px}
+  body{margin:0;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;
+    background:
+      radial-gradient(ellipse 90% 60% at 78% -8%, rgba(124,77,255,.14), transparent 58%),
+      radial-gradient(ellipse 70% 50% at 6% 102%, rgba(91,43,224,.08), transparent 60%),
+      var(--bg);
+    background-attachment:fixed;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:1180px;margin:0 auto;padding:30px 22px 80px}
   .num{font-variant-numeric:tabular-nums}
-  .pos{color:var(--green)}.neg{color:var(--red)}.warnc{color:var(--amber)}
+  .pos{color:var(--green)}.neg{color:var(--red)}.warnc{color:var(--gold)}
 
-  header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px}
-  h1{font-family:"Roboto Condensed",sans-serif;font-weight:700;letter-spacing:.4px;margin:0;font-size:29px}
-  .tag{color:var(--muted);font-size:13.5px;margin-top:3px;max-width:560px}
-  .chips{display:flex;gap:8px;flex-wrap:wrap}
-  .chip{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:6px 11px;font-size:12px;color:var(--muted)}
-  .chip b{color:var(--ink);font-size:14px}
-  #stamp{color:var(--muted);font-size:12px;margin-top:6px}
+  /* ── Page header (advanced hero) ───────────────────────────── */
+  .ca-page-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;
+    gap:18px;padding-bottom:22px;margin-bottom:8px;border-bottom:1px solid var(--border)}
+  .ca-eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--display);
+    font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--v-light);margin-bottom:11px}
+  .ca-eyebrow::before{content:"";width:26px;height:2px;border-radius:2px;background:var(--v-grad)}
+  .ca-page-title{font-family:var(--display);font-weight:800;font-variation-settings:"wdth" 125;
+    font-size:clamp(34px,5.2vw,54px);line-height:.98;letter-spacing:-.02em;margin:0;
+    background:linear-gradient(180deg,#FFFFFF 0%,#E9EAF0 38%,#9DA0AE 56%,#D7D9E2 72%,#FFFFFF 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+  .tag{color:var(--ink2);font-size:14px;margin-top:10px;max-width:600px;line-height:1.55}
+  .chips{display:flex;gap:9px;flex-wrap:wrap}
+  .chip{background:var(--raised);border:1px solid var(--border);border-radius:10px;padding:8px 13px;
+    font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:700;text-align:center}
+  .chip b{display:block;color:var(--ink);font-size:21px;font-family:var(--display);font-weight:800;
+    font-variant-numeric:tabular-nums;letter-spacing:0;text-transform:none;margin-top:2px}
+  #stamp{color:var(--muted);font-size:12px;margin:14px 0 0}
+  #stamp b{color:var(--ink2);font-variant-numeric:tabular-nums}
 
-  /* tabs */
-  .tabs{display:flex;gap:6px;margin:22px 0 8px;border-bottom:1px solid var(--line);flex-wrap:wrap}
-  .tab{background:none;border:none;color:var(--muted);font-size:15px;font-weight:700;font-family:inherit;
-    padding:11px 16px;cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1px}
+  /* ── Tabs ──────────────────────────────────────────────────── */
+  .tabs{display:flex;gap:4px;margin:26px 0 10px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+  .tab{background:none;border:none;color:var(--muted);font-size:14.5px;font-weight:700;font-family:var(--sans);
+    padding:12px 18px;cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1px;transition:color .15s}
   .tab:hover{color:var(--ink2)}
   .tab.active{color:var(--ink);border-bottom-color:var(--accent)}
   .view{display:none} .view.active{display:block}
 
-  /* controls */
-  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:16px 0 14px}
-  .seg{display:inline-flex;background:var(--panel2);border:1px solid var(--line);border-radius:11px;padding:3px}
-  .seg button{background:none;border:none;color:var(--muted);font-family:inherit;font-size:13px;font-weight:700;
-    padding:7px 13px;border-radius:8px;cursor:pointer}
-  .seg button.on{background:var(--accent);color:#fff}
-  .search{background:var(--panel2);border:1px solid var(--line);border-radius:11px;color:var(--ink);
-    font-family:inherit;font-size:14px;padding:8px 13px;width:200px;outline:none}
-  .search:focus{border-color:var(--accent)}
+  /* ── Controls ──────────────────────────────────────────────── */
+  .controls{display:flex;flex-wrap:wrap;gap:11px;align-items:center;margin:18px 0 14px}
+  .seg{display:inline-flex;background:var(--card);border:1px solid var(--border);border-radius:11px;padding:3px}
+  .seg button{background:none;border:none;color:var(--muted);font-family:var(--sans);font-size:13px;font-weight:700;
+    padding:8px 14px;border-radius:8px;cursor:pointer;transition:all .15s}
+  .seg button:hover{color:var(--ink2)}
+  .seg button.on{background:var(--v-grad);color:#fff;box-shadow:0 8px 20px -12px var(--v-deep)}
+  .search{background:var(--card);border:1px solid var(--border);border-radius:11px;color:var(--ink);
+    font-family:var(--sans);font-size:14px;padding:9px 14px;width:210px;outline:none;transition:border-color .15s,box-shadow .15s}
+  .search::placeholder{color:var(--muted-2)}
+  .search:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,77,255,.22)}
   .hint{color:var(--muted);font-size:12.5px;margin-left:auto}
 
-  .tblwrap{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel)}
+  /* ── Table card (premium, violet top-edge glint) ───────────── */
+  .tblwrap{border:1px solid var(--border-2);border-radius:16px;overflow:hidden;background:var(--card);
+    position:relative;box-shadow:0 24px 70px -24px rgba(0,0,0,.7)}
+  .tblwrap::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,#9A6BFF,#5B2BE0);z-index:3}
   table{width:100%;border-collapse:collapse}
-  th{background:#0c1120;color:#9aa6bb;font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;
-    text-align:right;padding:11px 13px;border-bottom:1px solid var(--line2);white-space:nowrap;cursor:pointer;user-select:none}
-  th:first-child{text-align:left} th.sorted{color:#fff}
-  th.sortable::after{content:" ⇅";color:#4a5670;font-size:10px}
+  th{background:#0C0E16;color:var(--muted);font-size:11px;letter-spacing:.07em;text-transform:uppercase;font-weight:800;
+    text-align:right;padding:13px 14px;border-bottom:1px solid var(--border-2);white-space:nowrap;cursor:pointer;user-select:none}
+  th:first-child{text-align:left} th.sorted{color:var(--ink)}
+  th.sortable::after{content:" ⇅";color:var(--muted-2);font-size:10px}
   th.sorted.asc::after{content:" ↑";color:var(--accent)} th.sorted.desc::after{content:" ↓";color:var(--accent)}
-  td{padding:11px 13px;text-align:right;border-bottom:1px solid #ffffff08;font-size:14.5px}
-  td:first-child{text-align:left;font-weight:600;color:#e7edf6}
+  td{padding:12px 14px;text-align:right;border-bottom:1px solid rgba(255,255,255,.045);font-size:14.5px;font-variant-numeric:tabular-nums}
+  td:first-child{text-align:left;font-weight:600;color:var(--ink)}
   tbody tr:last-child td{border-bottom:none}
-  tbody tr.r:hover td{background:#7c4dff10;cursor:pointer}
-  tbody tr.detail td{background:#0c111e;padding:0}
-  .factors{display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px}
-  .factor{background:#16203a;border:1px solid var(--line2);border-radius:9px;padding:7px 11px;font-size:12.5px;min-width:150px}
-  .factor .fl{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
-  .factor .fv{font-weight:700;font-size:14px} .factor .fn{color:var(--ink2);font-size:11.5px}
+  tbody tr.r:hover td{background:rgba(124,77,255,.07);cursor:pointer}
+  tbody tr.detail td{background:#0C0E16;padding:0}
+  .factors{display:flex;flex-wrap:wrap;gap:9px;padding:15px 16px}
+  .factor{background:var(--card-2);border:1px solid var(--border-2);border-radius:10px;padding:8px 12px;font-size:12.5px;min-width:150px}
+  .factor .fl{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+  .factor .fv{font-weight:800;font-size:14px;font-family:var(--display);margin-top:1px} .factor .fn{color:var(--ink2);font-size:11.5px}
 
-  .pill{display:inline-block;padding:2px 10px;border-radius:999px;font-size:11.5px;font-weight:700}
-  .pill.reg{background:var(--redbg);color:#fca5a5}.pill.prog{background:var(--greenbg);color:#86efac}.pill.stab{background:#ffffff12;color:#aab4c6}
-  .lean.over{color:var(--green);font-weight:700}.lean.under{color:var(--red);font-weight:700}.lean.n{color:var(--muted)}
-  .today-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);display:inline-block;margin-right:7px;vertical-align:middle}
-  .empty{color:var(--muted);font-size:14px;padding:16px;background:var(--panel);border:1px dashed var(--line);border-radius:12px}
+  .pill{display:inline-block;padding:3px 11px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.03em}
+  .pill.reg{background:var(--redbg);color:var(--red-l)}.pill.prog{background:var(--greenbg);color:var(--green-l)}.pill.stab{background:rgba(255,255,255,.07);color:var(--ink2)}
+  .lean.over{color:var(--green);font-weight:800}.lean.under{color:var(--red);font-weight:800}.lean.n{color:var(--muted)}
+  .today-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:8px;vertical-align:middle;box-shadow:0 0 8px rgba(154,107,255,.7)}
+  .empty{color:var(--muted);font-size:14px;padding:18px;background:var(--card);border:1px dashed var(--border-2);border-radius:14px}
 
-  /* market cards */
-  .mkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
-  .mk{background:linear-gradient(165deg,var(--panel),var(--panel2));border:1px solid var(--line2);border-radius:14px;padding:15px 16px}
-  .mk .gm{font-weight:700;font-size:16px;display:flex;justify-content:space-between;align-items:center}
-  .mk .gm .t{color:var(--muted);font-size:12px;font-weight:500}
-  .mk .sp{color:var(--ink2);font-size:13px;margin:8px 0 12px;line-height:1.5}
-  .mk .leans{display:flex;gap:8px;margin-bottom:10px}
-  .lz{flex:1;text-align:center;background:#0c111e;border:1px solid var(--line);border-radius:10px;padding:8px 4px}
-  .lz .lk{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em}
-  .lz .lv{font-weight:800;font-size:16px;font-family:"Roboto Condensed",sans-serif;margin-top:2px}
-  .lv.side{color:var(--teal)}.lv.over{color:var(--green)}.lv.under{color:var(--red)}.lv.none{color:#54607a}
-  .drv{font-size:12px;color:var(--ink2)} .drv span{display:inline-block;background:#16203a;border-radius:6px;padding:2px 8px;margin:3px 3px 0 0}
-  .secnote{color:var(--muted);font-size:13px;margin:0 0 14px}
-  details.meth{margin-top:30px;border-top:1px solid var(--line);padding-top:14px}
-  details.meth summary{cursor:pointer;color:var(--ink2);font-weight:600;font-size:14px;list-style:none}
+  /* ── Market cards ──────────────────────────────────────────── */
+  .mkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(335px,1fr));gap:15px}
+  .mk{background:linear-gradient(168deg,var(--card-2),var(--card));border:1px solid var(--border-2);border-radius:16px;
+    padding:16px 17px;position:relative;overflow:hidden}
+  .mk::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--v-grad);opacity:.7}
+  .mk .gm{font-family:var(--display);font-weight:800;font-size:17px;display:flex;justify-content:space-between;align-items:center;letter-spacing:.01em}
+  .mk .gm .t{color:var(--muted);font-size:12px;font-weight:500;font-family:var(--sans)}
+  .mk .sp{color:var(--ink2);font-size:13px;margin:9px 0 13px;line-height:1.55}
+  .mk .leans{display:flex;gap:9px;margin-bottom:11px}
+  .lz{flex:1;text-align:center;background:var(--bg-2);border:1px solid var(--border);border-radius:11px;padding:9px 4px}
+  .lz .lk{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+  .lz .lv{font-weight:800;font-size:16px;font-family:var(--display);margin-top:3px}
+  .lv.side{color:var(--v-light)}.lv.over{color:var(--green)}.lv.under{color:var(--red)}.lv.none{color:var(--muted-2)}
+  .drv{font-size:12px;color:var(--ink2)} .drv span{display:inline-block;background:var(--card-2);border:1px solid var(--border);border-radius:7px;padding:3px 9px;margin:4px 4px 0 0}
+  .secnote{color:var(--ink2);font-size:13.5px;margin:0 0 16px;line-height:1.6;max-width:760px}
+  .sechead{font-family:var(--display);font-weight:800;font-size:21px;margin:28px 0 11px;color:var(--ink);
+    font-variation-settings:"wdth" 125;letter-spacing:-.01em}
+  .sechead span{color:var(--muted);font-size:13px;font-weight:500;font-family:var(--sans)}
+  details.meth{margin-top:34px;border-top:1px solid var(--border);padding-top:16px}
+  details.meth summary{cursor:pointer;color:var(--ink2);font-weight:700;font-size:14px;list-style:none}
   details.meth summary::-webkit-details-marker{display:none}
-  details.meth summary::before{content:"▸ "} details.meth[open] summary::before{content:"▾ "}
-  .meth p{color:var(--muted);font-size:13.5px;line-height:1.7} .meth b{color:var(--ink2)}
+  details.meth summary::before{content:"▸ ";color:var(--accent)} details.meth[open] summary::before{content:"▾ "}
+  .meth p{color:var(--muted);font-size:13.5px;line-height:1.75} .meth b{color:var(--ink2)}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header>
-    <div><h1>Sharp Money Tracker</h1>
-      <div class="tag">Pitcher regression, prop leans, and market reads — built from the full luck stack and bullpen/split context, not just ERA vs FIP.</div></div>
+  <header class="ca-page-header">
+    <div>
+      <div class="ca-eyebrow">Chase Analytics · Market Desk</div>
+      <h1 class="ca-page-title">Sharp Money Tracker</h1>
+      <div class="tag">Pitcher regression, prop leans, and de-vigged sharp-vs-soft market reads — built on the full luck stack and bullpen/split context, not just ERA vs FIP.</div>
+    </div>
     <div class="chips" id="chips"></div>
   </header>
   <div id="stamp">loading…</div>
@@ -125,7 +168,7 @@
   <div class="view" id="view-signals">
     <p class="secnote">Live sharp-vs-soft de-vigged consensus across books. Biggest gaps = softest spots. Below 2% the slate is efficient.</p>
     <div id="sigtable"></div>
-    <h3 style="font-family:Roboto Condensed,sans-serif;font-weight:600;margin:26px 0 10px;color:#dde5f1">Tradeable segments <span style="color:var(--muted);font-size:13px;font-weight:400">— profit-positive, robust, FDR-controlled</span></h3>
+    <h3 class="sechead">Tradeable segments <span>— profit-positive, robust, FDR-controlled</span></h3>
     <div id="trade"></div>
   </div>
 
@@ -204,7 +247,7 @@ function renderMarkets(){
       <div class="sp">${esc(m.away_sp||'TBD')} <span style="color:var(--muted)">(${m.away_verdict||'—'}, ${f1(m.away_skill,2)})</span><br>
         ${esc(m.home_sp||'TBD')} <span style="color:var(--muted)">(${m.home_verdict||'—'}, ${f1(m.home_skill,2)})</span></div>
       <div class="leans">${lz('Moneyline',m.ml_lean,'side')}${lz('Total',m.total_lean)}${lz('First 5',m.f5_lean)}</div>
-      <div class="drv">${(m.drivers||[]).map(x=>`<span>${esc(x)}</span>`).join('')||'<span style="color:var(--muted);background:none;padding:0">no strong edge</span>'}</div></div>`;
+      <div class="drv">${(m.drivers||[]).map(x=>`<span>${esc(x)}</span>`).join('')||'<span style="color:var(--muted);background:none;border:none;padding:0">no strong edge</span>'}</div></div>`;
   });
   document.getElementById('mkcards').innerHTML=h+'</div>';
 }
@@ -217,12 +260,12 @@ function renderSignals(){
   sig.forEach(s=>h+=`<tr><td>${esc((s.market_type||'').toUpperCase())}</td><td>${esc(s.selection)}</td>
     <td class="num ${Math.abs(s.divergence)>=0.02?'pos':'warnc'}">${sp(s.divergence)}</td>
     <td class="num">${pctNum(s.sharp_novig_prob)}</td><td class="num">${pctNum(s.soft_novig_prob)}</td>
-    <td>${s.steam_flag?'<span class="pill" style="background:#7c4dff26;color:#c9b6ff">STEAM</span>':''}</td></tr>`);
+    <td>${s.steam_flag?'<span class="pill" style="background:rgba(124,77,255,.18);color:var(--v-light)">STEAM</span>':''}</td></tr>`);
   document.getElementById('sigtable').innerHTML=h+'</tbody></table></div>';
   const t=D.data.tradeable||[];
   document.getElementById('trade').innerHTML=t.length
     ? '<div class="mkgrid">'+t.map(x=>`<div class="mk"><div class="gm">${esc(x.label)}</div>
-        <div class="lv over" style="font-size:30px;margin:8px 0">+${(x.roi*100).toFixed(1)}% <span style="font-size:14px;color:var(--muted)">ROI/u</span></div>
+        <div class="lv over" style="font-size:30px;margin:8px 0;font-family:var(--display)">+${(x.roi*100).toFixed(1)}% <span style="font-size:14px;color:var(--muted)">ROI/u</span></div>
         <div class="drv"><span>95% LB +${(x.roi_lb*100).toFixed(1)}%</span><span>Kelly ${(x.kelly*100).toFixed(1)}%</span><span>CLV ${sp(x.clv,1)}</span><span>${x.n} games</span></div></div>`).join('')+'</div>'
     : '<div class="empty">No edge clears the bar — closing line near-efficient. The engine refuses to chase noise.</div>';
 }
@@ -234,7 +277,7 @@ function show(v){if(!['pitchers','markets','signals'].includes(v))v='pitchers';
 
 fetch('data.json?_='+Date.now()).then(r=>r.json()).then(d=>{
   D.data=d;
-  document.getElementById('stamp').innerHTML='Updated <b style="color:var(--ink2)">'+(d.generated_at||'—')+'</b>';
+  document.getElementById('stamp').innerHTML='Updated <b>'+(d.generated_at||'—')+'</b>';
   const c=d.counts||{}, today=(d.pitchers||[]).filter(p=>p.today).length;
   document.getElementById('chips').innerHTML=
     `<span class="chip">Starters today <b>${today}</b></span>`+
