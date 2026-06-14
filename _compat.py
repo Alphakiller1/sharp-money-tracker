@@ -76,11 +76,15 @@ def slate_date() -> str | None:
 
 
 def check_slate_freshness(context: str = "this output") -> bool:
-    """True if the pipeline slate is today's. Stale/missing -> loud banner once
-    per process (+ optional Discord webhook ping). Warns, never crashes."""
+    """True if the pipeline slate is current. The slate legitimately rolls
+    *forward* to the next unplayed date once today's games have all started
+    (see core/slate_date.py), so today-or-future is fresh; only a slate that
+    is BEHIND today (or missing) is stale -> loud banner once per process
+    (+ optional Discord webhook ping). Warns, never crashes."""
     global _FRESHNESS_WARNED
     d = slate_date()
-    if d == TODAY:
+    # ISO YYYY-MM-DD strings sort chronologically, so >= TODAY == today-or-future.
+    if d is not None and d >= TODAY:
         return True
     if not _FRESHNESS_WARNED:
         _FRESHNESS_WARNED = True
