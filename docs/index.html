@@ -98,6 +98,9 @@
   td .chip, .factor .chip{font-family:var(--display);font-size:inherit}
   .chip.c-elite{color:#4ADE80}.chip.c-good{color:#7BDC5A}.chip.c-mid{color:#FBBF24}
   .chip.c-weak{color:#FB923C}.chip.c-poor{color:#F87171}.chip.c-na{color:var(--muted)}
+  .c-elite{color:#4ADE80}.c-good{color:#7BDC5A}.c-mid{color:#FBBF24}
+  .c-weak{color:#FB923C}.c-poor{color:#F87171}.c-na{color:var(--muted)}
+  .mk .mval{font-variant-numeric:tabular-nums;font-weight:700}
 
   .pill{display:inline-block;padding:3px 11px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.03em}
   .pill.reg{background:var(--redbg);color:var(--red-l)}.pill.prog{background:var(--greenbg);color:var(--green-l)}.pill.stab{background:rgba(255,255,255,.07);color:var(--ink2)}
@@ -243,6 +246,12 @@ function factorChip(label,raw){
   return metricChip(v,'default',false,2);
 }
 function skillChip(v){return metricChip(v,'era',null,2);}
+function metricText(v,ctx,invert,dec){
+  if(v==null||isNaN(+v))return `<span class="c-na">—</span>`;
+  const d=dec==null?1:dec;const cls=CHIP_CLASS[gradeKey(+v,ctx,invert)]||'c-mid';
+  return `<span class="mval ${cls}">${(+v).toFixed(d)}</span>`;
+}
+function skillText(v){return metricText(v,'era',null,2);}
 function propCell(r,stat){
   const pr=(r.props||{})[stat]||{};
   return `<td class="num prop-cell">${metricChip(pr.proj,propCtx(stat),null,1)}<span class="lean ${leanCls(pr.lean)}">${pr.lean&&pr.lean!=='—'?pr.lean:'—'}</span></td>`;
@@ -306,8 +315,8 @@ function renderMarkets(){
   if(!g.length) h+='<div class="empty">no games match this filter.</div>';
   g.forEach(m=>{
     h+=`<div class="mk"><div class="gm">${esc(m.game)}<span class="t">${esc(m.time||'')}</span></div>
-      <div class="sp">${esc(m.away_sp||'TBD')} <span style="color:var(--muted)">(${m.away_verdict||'—'}, </span>${skillChip(m.away_skill)}<span style="color:var(--muted)">)</span><br>
-        ${esc(m.home_sp||'TBD')} <span style="color:var(--muted)">(${m.home_verdict||'—'}, </span>${skillChip(m.home_skill)}<span style="color:var(--muted)">)</span></div>
+      <div class="sp">${esc(m.away_sp||'TBD')} <span style="color:var(--muted)">(${m.away_verdict||'—'}, </span>${skillText(m.away_skill)}<span style="color:var(--muted)">)</span><br>
+        ${esc(m.home_sp||'TBD')} <span style="color:var(--muted)">(${m.home_verdict||'—'}, </span>${skillText(m.home_skill)}<span style="color:var(--muted)">)</span></div>
       <div class="leans">${lz('Moneyline',m.ml_lean,'side')}${lz('Total',m.total_lean)}${lz('First 5',m.f5_lean)}</div>
       <div class="drv">${(m.drivers||[]).map(x=>`<span>${esc(x)}</span>`).join('')||'<span style="color:var(--muted);background:none;border:none;padding:0">no strong edge</span>'}</div></div>`;
   });
