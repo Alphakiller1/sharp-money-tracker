@@ -25,6 +25,7 @@ splits + opponent offense).
 
 from __future__ import annotations
 
+import unicodedata
 from datetime import date
 from typing import Optional
 
@@ -46,6 +47,180 @@ def _num(v):
         return None if pd.isna(f) else f
     except (TypeError, ValueError):
         return None
+
+
+def _norm_name(s: str) -> str:
+    """Accent-insensitive name key for slate ↔ profile matching."""
+    s = unicodedata.normalize("NFKD", str(s or ""))
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return " ".join(s.lower().split())
+
+
+def _pct(v) -> float | None:
+    x = _num(v)
+    if x is None:
+        return None
+    return x * 100 if x <= 1.5 else x
+
+
+def _standard_to_profile(row, *, team: str | None = None, hand: str | None = None) -> dict:
+    """Map FanGraphs sp_standard row into sp_profiles-shaped dict."""
+    ip = _num(row.get("IP")) or 0.0
+    g = int(_num(row.get("G")) or 1)
+    return {
+        "pitcher_name": str(row.get("Name", "")).strip(),
+        "pitcher_team": (team or str(row.get("Tm", ""))).upper(),
+        "pitcher_hand": str(hand or "R").upper()[:1],
+        "starts": g,
+        "avg_IP": round(ip / max(g, 1), 1) if ip else 5.3,
+        "ERA": _num(row.get("ERA")),
+        "FIP": _num(row.get("FIP")),
+        "xFIP": _num(row.get("xFIP")),
+        "K_pct": _pct(row.get("K%")),
+        "BB_pct": _pct(row.get("BB%")),
+        "_standard_babip": _num(row.get("BABIP")),
+        "_standard_lob": _num(row.get("LOB%")),
+        "_source": "standard",
+    }
+
+
+def _build_pitcher_index(profiles: pd.DataFrame | None, standard: pd.DataFrame | None) -> dict[str, list[tuple[int, dict]]]:
+    """norm_name -> [(priority, profile)] — profiles beat standard."""
+    index: dict[str, list[tuple[int, dict]]] = {}
+
+    def put(p: dict, priority: int) -> None:
+        nm = str(p.get("pitcher_name") or "").strip()
+        if not nm:
+            return
+        index.setdefault(_norm_name(nm), []).append((priority, dict(p)))
+
+    if profiles is not None and not profiles.empty:
+        for _, r in profiles.iterrows():
+            d = r.to_dict()
+            d["pitcher_name"] = str(d.get("pitcher_name", "")).strip()
+            d["_source"] = "profiles"
+            put(d, 0)
+    if standard is not None and not standard.empty:
+        df = standard
+        if "Season" in df.columns:
+            df = df[df["Season"] == df["Season"].max()]
+        for _, r in df.iterrows():
+            put(_standard_to_profile(r), 1)
+    for nk in index:
+        index[nk].sort(key=lambda x: x[0])
+    return index
+
+
+def _resolve_pitcher(
+    name: str,
+    team: str | None,
+    hand: str | None,
+    index: dict[str, list[tuple[int, dict]]],
+) -> dict | None:
+    """Find the best profile for a slate starter (profiles first, then sp_standard)."""
+    nk = _norm_name(name)
+    cands = [p for _, p in index.get(nk, [])]
+    if team:
+        team = str(team).upper()
+        team_cands = [p for p in cands if str(p.get("pitcher_team", "")).upper() == team]
+        if team_cands:
+            cands = team_cands
+    if not cands:
+        return None
+    p = dict(cands[0])
+    p["pitcher_name"] = str(name).strip()
+    if team:
+        p["pitcher_team"] = str(team).upper()
+    if hand:
+        p["pitcher_hand"] = str(hand).upper()[:1]
+    return p
+
+
+def _gamelog_slice(gamelog: pd.DataFrame | None, name: str) -> pd.DataFrame:
+    if gamelog is None or gamelog.empty:
+        return pd.DataFrame()
+    col = "pitcher_name"
+    if col not in gamelog.columns:
+        return pd.DataFrame()
+    nk = _norm_name(name)
+    return gamelog[gamelog[col].astype(str).apply(_norm_name) == nk]
+
+
+def _glfactors_for(name: str, gamelog: pd.DataFrame | None, profile: dict) -> dict:
+    gf = _gamelog_factors(_gamelog_slice(gamelog, name))
+    if gf.get("babip") is None and profile.get("_standard_babip") is not None:
+        gf["babip"] = profile["_standard_babip"]
+    if gf.get("lob") is None and profile.get("_standard_lob") is not None:
+        lob = profile["_standard_lob"]
+        if lob > 1.5:
+            lob /= 100.0
+        gf["lob"] = lob
+    return gf
+
+
+def _parse_today_starters(matchups: pd.DataFrame | None) -> dict[str, tuple]:
+    """norm_name -> (display_name, team, opp, hand, is_home, matchup_row)."""
+    today_sp: dict[str, tuple] = {}
+    if matchups is None:
+        return today_sp
+    for _, g in matchups.iterrows():
+        a, h = str(g.get("Away", "")).upper(), str(g.get("Home", "")).upper()
+        gdict = g.to_dict()
+        for sp_col, hand_col, team, opp, is_home in (
+            ("Away_SP", "Away_Hand", a, h, False),
+            ("Home_SP", "Home_Hand", h, a, True),
+        ):
+            nm = str(g.get(sp_col, "")).strip()
+            if nm and nm.lower() != "tbd":
+                today_sp[_norm_name(nm)] = (
+                    nm, team, opp, str(g.get(hand_col, "R")).upper()[:1], is_home, gdict,
+                )
+    return today_sp
+
+
+def _pitcher_row(
+    profile: dict,
+    *,
+    display_name: str,
+    team: str,
+    opp: str,
+    hand: str,
+    is_today: bool,
+    gamelog: pd.DataFrame | None,
+    lineups: pd.DataFrame | None,
+    weather: pd.DataFrame | None,
+    split_cache: dict,
+    matchup_row: dict | None = None,
+    is_home: bool = False,
+) -> dict:
+    glf = _glfactors_for(display_name, gamelog, profile)
+    reg = regression_read(profile, glf)
+    ctx = None
+    if is_today and matchup_row is not None:
+        ctx = matchup_context(
+            pitcher_name=display_name,
+            pitcher_team=team,
+            opp_team=opp,
+            pitcher_hand=hand,
+            is_home=is_home,
+            matchup_row=matchup_row,
+            lineups=lineups,
+            weather=weather,
+            split_cache=split_cache,
+            season_fip=_num(profile.get("FIP")),
+        )
+        reg = apply_matchup_to_regression(reg, ctx)
+    props = prop_projections(profile, reg, ctx)
+    return {
+        "name": display_name,
+        "team": team,
+        "opp": opp if is_today else "",
+        "hand": hand,
+        "today": is_today,
+        "starts": int(_num(profile.get("starts")) or 0),
+        **reg,
+        "props": props,
+    }
 
 
 def _ip(v):
@@ -110,7 +285,8 @@ def _sp_split_fip(name: str, split: str, cache: dict) -> float | None:
         cache[key] = None
         return None
     name_col = "Name" if "Name" in df.columns else "pitcher_name"
-    sub = df[df[name_col].astype(str).str.strip() == str(name).strip()]
+    nk = _norm_name(name)
+    sub = df[df[name_col].astype(str).apply(_norm_name) == nk]
     val = _num(sub.iloc[0].get("FIP")) if not sub.empty else None
     cache[key] = val
     return val
@@ -425,61 +601,56 @@ def prop_projections(p: dict, reg: dict, ctx: dict | None = None) -> dict:
 def pitcher_board() -> list[dict]:
     check_slate_freshness("the boards")
     profiles = load("sp_profiles.csv")
+    standard = load("sp_standard.csv")
     gamelog = load("sp_gamelog.csv")
     matchups = load("today_matchups.csv")
     lineups = load("today_lineups.csv")
     weather = load("today_weather.csv")
-    if profiles is None:
+    if profiles is None and standard is None:
         return []
-    profiles = profiles.copy()
-    profiles["__name"] = profiles["pitcher_name"].astype(str).str.strip()
 
-    today_sp: dict[str, tuple] = {}
-    if matchups is not None:
-        for _, g in matchups.iterrows():
-            a, h = str(g.get("Away", "")).upper(), str(g.get("Home", "")).upper()
-            gdict = g.to_dict()
-            for sp_col, hand_col, team, opp, is_home in (
-                ("Away_SP", "Away_Hand", a, h, False),
-                ("Home_SP", "Home_Hand", h, a, True),
-            ):
-                nm = str(g.get(sp_col, "")).strip()
-                if nm and nm.lower() != "tbd":
-                    today_sp[nm] = (team, opp, str(g.get(hand_col, "R")).upper()[:1], is_home, gdict)
-
+    index = _build_pitcher_index(profiles, standard)
+    today_sp = _parse_today_starters(matchups)
     split_cache: dict = {}
     rows = []
-    for _, p in profiles.iterrows():
-        name = p["__name"]
-        glf = _gamelog_factors(gamelog[gamelog["pitcher_name"].astype(str).str.strip() == name]) if gamelog is not None else {}
-        reg = regression_read(p.to_dict(), glf)
-        is_today = name in today_sp
-        if is_today:
-            team, opp, hand, is_home, mrow = today_sp[name]
-            ctx = matchup_context(
-                pitcher_name=name,
-                pitcher_team=team,
-                opp_team=opp,
-                pitcher_hand=hand,
-                is_home=is_home,
-                matchup_row=mrow,
-                lineups=lineups,
-                weather=weather,
-                split_cache=split_cache,
-                season_fip=_num(p.get("FIP")),
-            )
-            reg = apply_matchup_to_regression(reg, ctx)
-            props = prop_projections(p.to_dict(), reg, ctx)
-        else:
-            team = str(p.get("pitcher_team", "")).upper()
-            opp, hand = "", str(p.get("pitcher_hand", "R")).upper()[:1]
-            props = prop_projections(p.to_dict(), reg, None)
-        rows.append({
-            "name": name, "team": team, "opp": opp, "hand": hand, "today": is_today,
-            "starts": int(_num(p.get("starts")) or 0),
-            **reg, "props": props,
-        })
-    # today's starters first, then by |luck| desc
+    seen_today: set[str] = set()
+
+    if profiles is not None and not profiles.empty:
+        profiles = profiles.copy()
+        profiles["__name"] = profiles["pitcher_name"].astype(str).str.strip()
+        for _, p in profiles.iterrows():
+            display = p["__name"]
+            nk = _norm_name(display)
+            is_today = nk in today_sp
+            if is_today:
+                display, team, opp, hand, is_home, mrow = today_sp[nk]
+                seen_today.add(nk)
+            else:
+                team = str(p.get("pitcher_team", "")).upper()
+                opp, hand, is_home, mrow = "", str(p.get("pitcher_hand", "R")).upper()[:1], False, None
+            rows.append(_pitcher_row(
+                p.to_dict(), display_name=display, team=team, opp=opp, hand=hand,
+                is_today=is_today, gamelog=gamelog, lineups=lineups, weather=weather,
+                split_cache=split_cache, matchup_row=mrow, is_home=is_home,
+            ))
+
+    # Slate starters missing from sp_profiles (common for arms without gamelog rows yet)
+    for nk, (display, team, opp, hand, is_home, mrow) in today_sp.items():
+        if nk in seen_today:
+            continue
+        profile = _resolve_pitcher(display, team, hand, index)
+        if profile is None:
+            profile = {
+                "pitcher_name": display, "pitcher_team": team, "pitcher_hand": hand,
+                "starts": 0, "avg_IP": 5.3, "ERA": None, "FIP": None, "xFIP": None,
+                "K_pct": 21.0, "BB_pct": 8.0,
+            }
+        rows.append(_pitcher_row(
+            profile, display_name=display, team=team, opp=opp, hand=hand,
+            is_today=True, gamelog=gamelog, lineups=lineups, weather=weather,
+            split_cache=split_cache, matchup_row=mrow, is_home=is_home,
+        ))
+
     rows.sort(key=lambda r: (not r["today"], -abs(r["luck"])))
     return rows
 
@@ -488,12 +659,13 @@ def market_board() -> list[dict]:
     check_slate_freshness("the boards")
     matchups = load("today_matchups.csv")
     profiles = load("sp_profiles.csv")
+    standard = load("sp_standard.csv")
     teams = load("team_profiles.csv")
     lineups = load("today_lineups.csv")
     weather = load("today_weather.csv")
     if matchups is None:
         return []
-    prof_by_name = {str(r["pitcher_name"]).strip(): r.to_dict() for _, r in profiles.iterrows()} if profiles is not None else {}
+    index = _build_pitcher_index(profiles, standard)
     bp_by_team = {}
     if teams is not None:
         for _, t in teams.iterrows():
@@ -504,15 +676,16 @@ def market_board() -> list[dict]:
     gamelog = load("sp_gamelog.csv")
 
     def reg_for(name, *, team=None, opp=None, hand=None, is_home=None, matchup_row=None):
-        p = prof_by_name.get(str(name).strip())
+        p = _resolve_pitcher(str(name).strip(), team, hand, index)
         if not p:
             return None
-        if name not in glf_cache and gamelog is not None:
-            glf_cache[name] = _gamelog_factors(gamelog[gamelog["pitcher_name"].astype(str).str.strip() == str(name).strip()])
-        reg = regression_read(p, glf_cache.get(name, {}))
+        nm = str(name).strip()
+        if nm not in glf_cache:
+            glf_cache[nm] = _glfactors_for(nm, gamelog, p)
+        reg = regression_read(p, glf_cache[nm])
         if team and opp and hand is not None and matchup_row is not None:
             ctx = matchup_context(
-                pitcher_name=str(name).strip(),
+                pitcher_name=nm,
                 pitcher_team=team,
                 opp_team=opp,
                 pitcher_hand=hand,

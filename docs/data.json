@@ -122,7 +122,7 @@
       }
     ]
   },
-  "generated_at": "2026-06-16T21:17:54+00:00",
+  "generated_at": "2026-06-16T22:23:15+00:00",
   "counts": {
     "settled_contracts": 647,
     "sharp_observations": 20,
@@ -543,6 +543,107 @@
   "sharp_performance": [],
   "pitchers": [
     {
+      "name": "Kodai Senga",
+      "team": "NYM",
+      "opp": "CIN",
+      "hand": "R",
+      "today": true,
+      "starts": 5,
+      "verdict": "PROGRESSION",
+      "tone": "back",
+      "luck": -2.53,
+      "luck_base": -2.23,
+      "matchup_adj": -0.3,
+      "skill_era": 5.44,
+      "era": 9.0,
+      "fip": 6.154953002929688,
+      "xfip": 4.89692623578012,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -2.85,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -4.1,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -1.26,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.38181818,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.57575758,
+          "low = unlucky"
+        ],
+        [
+          "Lineup platoon mix",
+          -0.48,
+          "2/9 LHH (22%) \u2014 same-side heavy, RHP-friendly"
+        ],
+        [
+          "Opponent lineup OSI",
+          52.9,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          89.0,
+          "offense weak vs this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          5.44,
+          "weighted vs today's 22% LHH mix (\u0394 -0.71 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.1,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "clear"
+        ]
+      ],
+      "opp_osi": 52.9,
+      "lineup_platoon": {
+        "lhh": 2,
+        "rhh": 7,
+        "n": 9,
+        "lhh_pct": 0.222,
+        "rhh_pct": 0.778
+      },
+      "park_factor": 1.1,
+      "props": {
+        "K": {
+          "proj": 4.3,
+          "lean": "over"
+        },
+        "BB": {
+          "proj": 2.2,
+          "lean": "under"
+        },
+        "Outs": {
+          "proj": 12.0,
+          "lean": "over"
+        },
+        "ER": {
+          "proj": 3.1,
+          "lean": "under"
+        }
+      }
+    },
+    {
       "name": "Gerrit Cole",
       "team": "NYY",
       "opp": "CHW",
@@ -659,6 +760,107 @@
         },
         "ER": {
           "proj": 2.1,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Brandon Young",
+      "team": "BAL",
+      "opp": "SEA",
+      "hand": "R",
+      "today": true,
+      "starts": 10,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 1.31,
+      "luck_base": 0.8,
+      "matchup_adj": 0.51,
+      "skill_era": 4.33,
+      "era": 3.03550296,
+      "fip": 4.063532884643213,
+      "xfip": 4.643388143898858,
+      "factors": [
+        [
+          "ERA vs FIP",
+          1.03,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.61,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.58,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.26315789,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.7028754,
+          "low = unlucky"
+        ],
+        [
+          "Lineup platoon mix",
+          0.86,
+          "7/9 LHH (78%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          59.8,
+          "hot split-adjusted lineup \u2014 lucky ERAs bleed fast"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          114.0,
+          "offense hits this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          4.33,
+          "weighted vs today's 78% LHH mix (\u0394 +0.27 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          0.96,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "clear"
+        ]
+      ],
+      "opp_osi": 59.8,
+      "lineup_platoon": {
+        "lhh": 7,
+        "rhh": 2,
+        "n": 9,
+        "lhh_pct": 0.778,
+        "rhh_pct": 0.222
+      },
+      "park_factor": 0.96,
+      "props": {
+        "K": {
+          "proj": 3.5,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 2.1,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 16.8,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.4,
           "lean": "over"
         }
       }
@@ -785,6 +987,410 @@
       }
     },
     {
+      "name": "Jack Perkins",
+      "team": "ATH",
+      "opp": "PIT",
+      "hand": "R",
+      "today": true,
+      "starts": 19,
+      "verdict": "PROGRESSION",
+      "tone": "back",
+      "luck": -1.14,
+      "luck_base": -1.52,
+      "matchup_adj": 0.38,
+      "skill_era": 2.64,
+      "era": 6.25,
+      "fip": 3.660508558485243,
+      "xfip": 3.978509566974309,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -2.59,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -2.27,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.32,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.33333333,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.56680162,
+          "low = unlucky"
+        ],
+        [
+          "Lineup platoon mix",
+          0.86,
+          "7/9 LHH (78%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          59.3,
+          "hot split-adjusted lineup \u2014 lucky ERAs bleed fast"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          112.0,
+          "offense hits this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          2.64,
+          "weighted vs today's 78% LHH mix (\u0394 -1.02 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          0.9,
+          " suppresses offense \u2014 progression harder to sustain"
+        ],
+        [
+          "Weather / environment",
+          0.18,
+          "wind 13 mph SSW \u2014 fly-ball/total risk \u00b7 clear"
+        ]
+      ],
+      "opp_osi": 59.3,
+      "lineup_platoon": {
+        "lhh": 7,
+        "rhh": 2,
+        "n": 9,
+        "lhh_pct": 0.778,
+        "rhh_pct": 0.222
+      },
+      "park_factor": 0.9,
+      "props": {
+        "K": {
+          "proj": 1.9,
+          "lean": "over"
+        },
+        "BB": {
+          "proj": 0.7,
+          "lean": "under"
+        },
+        "Outs": {
+          "proj": 5.7,
+          "lean": "over"
+        },
+        "ER": {
+          "proj": 0.8,
+          "lean": "under"
+        }
+      }
+    },
+    {
+      "name": "Hunter Brown",
+      "team": "HOU",
+      "opp": "DET",
+      "hand": "R",
+      "today": true,
+      "starts": 2,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 1.08,
+      "luck_base": 0.9,
+      "matchup_adj": 0.18,
+      "skill_era": 1.76,
+      "era": 0.84375,
+      "fip": 1.6049530033984376,
+      "xfip": 2.4349418501600795,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.76,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.59,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.83,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.25,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.90909091,
+          "high = lucky sequencing"
+        ],
+        [
+          "Lineup platoon mix",
+          0.59,
+          "6/9 LHH (67%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          43.0,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          97.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          1.76,
+          "weighted vs today's 67% LHH mix (\u0394 +0.15 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.02,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
+        ]
+      ],
+      "opp_osi": 43.0,
+      "lineup_platoon": {
+        "lhh": 6,
+        "rhh": 3,
+        "n": 9,
+        "lhh_pct": 0.667,
+        "rhh_pct": 0.333
+      },
+      "park_factor": 1.02,
+      "props": {
+        "K": {
+          "proj": 8.1,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 3.2,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 15.3,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 0.8,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Drew Rasmussen",
+      "team": "TBR",
+      "opp": "LAD",
+      "hand": "R",
+      "today": true,
+      "starts": 13,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 1.06,
+      "luck_base": 0.28,
+      "matchup_adj": 0.78,
+      "skill_era": 3.21,
+      "era": 2.71232877,
+      "fip": 3.0364598522447563,
+      "xfip": 2.844784227728028,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.32,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.13,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.19,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.23626374,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.76642336,
+          "high = lucky sequencing"
+        ],
+        [
+          "Lineup platoon mix",
+          0.86,
+          "7/9 LHH (78%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          84.4,
+          "hot split-adjusted lineup \u2014 lucky ERAs bleed fast"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          125.0,
+          "offense hits this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          3.21,
+          "weighted vs today's 78% LHH mix (\u0394 +0.18 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.01,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
+        ]
+      ],
+      "opp_osi": 84.4,
+      "lineup_platoon": {
+        "lhh": 7,
+        "rhh": 2,
+        "n": 9,
+        "lhh_pct": 0.778,
+        "rhh_pct": 0.222
+      },
+      "park_factor": 1.01,
+      "props": {
+        "K": {
+          "proj": 5.8,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 1.4,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 16.8,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 1.9,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Jes\u00fas Luzardo",
+      "team": "PHI",
+      "opp": "MIA",
+      "hand": "R",
+      "today": true,
+      "starts": 14,
+      "verdict": "PROGRESSION",
+      "tone": "back",
+      "luck": -0.99,
+      "luck_base": -0.72,
+      "matchup_adj": -0.27,
+      "skill_era": 3.21,
+      "era": 4.34745763,
+      "fip": 3.333766562242026,
+      "xfip": 3.1746548902782106,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -1.01,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -1.17,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.16,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.34285714,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.70850202,
+          "low = unlucky"
+        ],
+        [
+          "Lineup platoon mix",
+          -0.21,
+          "3/9 LHH (33%) \u2014 same-side heavy, RHP-friendly"
+        ],
+        [
+          "Opponent lineup OSI",
+          33.3,
+          "cold lineup \u2014 regression damage may stay hidden"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          96.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          3.21,
+          "weighted vs today's 33% LHH mix (\u0394 -0.12 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.07,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
+        ]
+      ],
+      "opp_osi": 33.3,
+      "lineup_platoon": {
+        "lhh": 3,
+        "rhh": 6,
+        "n": 9,
+        "lhh_pct": 0.333,
+        "rhh_pct": 0.667
+      },
+      "park_factor": 1.07,
+      "props": {
+        "K": {
+          "proj": 6.4,
+          "lean": "over"
+        },
+        "BB": {
+          "proj": 1.7,
+          "lean": "under"
+        },
+        "Outs": {
+          "proj": 16.8,
+          "lean": "over"
+        },
+        "ER": {
+          "proj": 2.3,
+          "lean": "under"
+        }
+      }
+    },
+    {
       "name": "Davis Martin",
       "team": "CHW",
       "opp": "NYY",
@@ -906,6 +1512,107 @@
       }
     },
     {
+      "name": "Justin Wrobleski",
+      "team": "LAD",
+      "opp": "TBR",
+      "hand": "R",
+      "today": true,
+      "starts": 12,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.73,
+      "luck_base": 0.83,
+      "matchup_adj": -0.1,
+      "skill_era": 3.85,
+      "era": 2.94545455,
+      "fip": 3.6776802756829934,
+      "xfip": 4.58589620319238,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.73,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.64,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.91,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.24336283,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.77903683,
+          "high = lucky sequencing"
+        ],
+        [
+          "Lineup platoon mix",
+          -0.21,
+          "3/9 LHH (33%) \u2014 same-side heavy, RHP-friendly"
+        ],
+        [
+          "Opponent lineup OSI",
+          43.0,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          106.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          3.85,
+          "weighted vs today's 33% LHH mix (\u0394 +0.18 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.01,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
+        ]
+      ],
+      "opp_osi": 43.0,
+      "lineup_platoon": {
+        "lhh": 3,
+        "rhh": 6,
+        "n": 9,
+        "lhh_pct": 0.333,
+        "rhh_pct": 0.667
+      },
+      "park_factor": 1.01,
+      "props": {
+        "K": {
+          "proj": 4.1,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 1.3,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 18.3,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.4,
+          "lean": "over"
+        }
+      }
+    },
+    {
       "name": "Michael Wacha",
       "team": "KCR",
       "opp": "WSN",
@@ -1022,6 +1729,107 @@
         },
         "ER": {
           "proj": 2.7,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Kumar Rocker",
+      "team": "TEX",
+      "opp": "MIN",
+      "hand": "R",
+      "today": true,
+      "starts": 13,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.68,
+      "luck_base": 0.47,
+      "matchup_adj": 0.21,
+      "skill_era": 4.14,
+      "era": 3.56345178,
+      "fip": 4.079572292220316,
+      "xfip": 4.41972096489148,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.52,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.86,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.34,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.27835052,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.78431373,
+          "high = lucky sequencing"
+        ],
+        [
+          "Lineup platoon mix",
+          0.59,
+          "6/9 LHH (67%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          45.4,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          101.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          4.14,
+          "weighted vs today's 67% LHH mix (\u0394 +0.06 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.08,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "clear"
+        ]
+      ],
+      "opp_osi": 45.4,
+      "lineup_platoon": {
+        "lhh": 6,
+        "rhh": 3,
+        "n": 9,
+        "lhh_pct": 0.667,
+        "rhh_pct": 0.333
+      },
+      "park_factor": 1.08,
+      "props": {
+        "K": {
+          "proj": 3.5,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 2.3,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 15.0,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.2,
           "lean": "over"
         }
       }
@@ -1386,6 +2194,107 @@
         "ER": {
           "proj": 2.5,
           "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Reid Detmers",
+      "team": "LAA",
+      "opp": "ARI",
+      "hand": "R",
+      "today": true,
+      "starts": 14,
+      "verdict": "PROGRESSION",
+      "tone": "back",
+      "luck": -0.63,
+      "luck_base": -0.45,
+      "matchup_adj": -0.18,
+      "skill_era": 2.88,
+      "era": 4.0,
+      "fip": 2.87038510169512,
+      "xfip": 3.477494906183378,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -1.13,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.52,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.61,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.27135678,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.63131313,
+          "low = unlucky"
+        ],
+        [
+          "Lineup platoon mix",
+          0.06,
+          "4/9 LHH (44%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          28.7,
+          "cold lineup \u2014 regression damage may stay hidden"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          84.0,
+          "offense weak vs this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          2.88,
+          "weighted vs today's 44% LHH mix (\u0394 +0.01 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          0.97,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.06,
+          "warm 92\u00b0F \u00b7 clear"
+        ]
+      ],
+      "opp_osi": 28.7,
+      "lineup_platoon": {
+        "lhh": 4,
+        "rhh": 5,
+        "n": 9,
+        "lhh_pct": 0.444,
+        "rhh_pct": 0.556
+      },
+      "park_factor": 0.97,
+      "props": {
+        "K": {
+          "proj": 7.2,
+          "lean": "over"
+        },
+        "BB": {
+          "proj": 1.8,
+          "lean": "under"
+        },
+        "Outs": {
+          "proj": 17.4,
+          "lean": "over"
+        },
+        "ER": {
+          "proj": 2.1,
+          "lean": "under"
         }
       }
     },
@@ -2116,6 +3025,309 @@
       }
     },
     {
+      "name": "Zebby Matthews",
+      "team": "MIN",
+      "opp": "TEX",
+      "hand": "R",
+      "today": true,
+      "starts": 6,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.19,
+      "luck_base": -0.14,
+      "matchup_adj": -0.05,
+      "skill_era": 5.36,
+      "era": 5.20183486,
+      "fip": 5.224219058169988,
+      "xfip": 4.473609641347251,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.02,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.73,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.75,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.25742574,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.71005917,
+          "low = unlucky"
+        ],
+        [
+          "Lineup platoon mix",
+          0.06,
+          "4/9 LHH (44%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          38.8,
+          "cold lineup \u2014 regression damage may stay hidden"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          97.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          5.36,
+          "weighted vs today's 44% LHH mix (\u0394 +0.13 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.08,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "clear"
+        ]
+      ],
+      "opp_osi": 38.8,
+      "lineup_platoon": {
+        "lhh": 4,
+        "rhh": 5,
+        "n": 9,
+        "lhh_pct": 0.444,
+        "rhh_pct": 0.556
+      },
+      "park_factor": 1.08,
+      "props": {
+        "K": {
+          "proj": 5.1,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.5,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 18.0,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 3.6,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Andre Pallante",
+      "team": "STL",
+      "opp": "SDP",
+      "hand": "R",
+      "today": true,
+      "starts": 13,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.17,
+      "luck_base": 0.36,
+      "matchup_adj": -0.19,
+      "skill_era": 4.42,
+      "era": 3.87559809,
+      "fip": 4.468589366500805,
+      "xfip": 4.271759236786994,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.59,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.4,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.2,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.26600985,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.75870647,
+          "high = lucky sequencing"
+        ],
+        [
+          "Lineup platoon mix",
+          -0.21,
+          "3/9 LHH (33%) \u2014 same-side heavy, RHP-friendly"
+        ],
+        [
+          "Opponent lineup OSI",
+          42.5,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          89.0,
+          "offense weak vs this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          4.42,
+          "weighted vs today's 33% LHH mix (\u0394 -0.04 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.0,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
+        ]
+      ],
+      "opp_osi": 42.5,
+      "lineup_platoon": {
+        "lhh": 3,
+        "rhh": 6,
+        "n": 9,
+        "lhh_pct": 0.333,
+        "rhh_pct": 0.667
+      },
+      "park_factor": 1.0,
+      "props": {
+        "K": {
+          "proj": 4.4,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.8,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 15.9,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.5,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Robert Gasser",
+      "team": "MIL",
+      "opp": "CLE",
+      "hand": "R",
+      "today": true,
+      "starts": 4,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.1,
+      "luck_base": 0.01,
+      "matchup_adj": 0.09,
+      "skill_era": 7.55,
+      "era": 6.38181818,
+      "fip": 7.250407549137952,
+      "xfip": 5.490858870772112,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.87,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.89,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -1.76,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.28,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.76271186,
+          "high = lucky sequencing"
+        ],
+        [
+          "Lineup platoon mix",
+          0.06,
+          "4/9 LHH (44%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          43.5,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          92.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          7.55,
+          "weighted vs today's 44% LHH mix (\u0394 +0.30 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.04,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.08,
+          "breeze 9 mph SW \u00b7 cloudy"
+        ]
+      ],
+      "opp_osi": 43.5,
+      "lineup_platoon": {
+        "lhh": 4,
+        "rhh": 5,
+        "n": 9,
+        "lhh_pct": 0.444,
+        "rhh_pct": 0.556
+      },
+      "park_factor": 1.04,
+      "props": {
+        "K": {
+          "proj": 4.1,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 2.0,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 13.5,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 3.6,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
       "name": "Ryan Feltner",
       "team": "COL",
       "opp": "CHC",
@@ -2237,6 +3449,208 @@
       }
     },
     {
+      "name": "Slade Cecconi",
+      "team": "CLE",
+      "opp": "MIL",
+      "hand": "R",
+      "today": true,
+      "starts": 14,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.03,
+      "luck_base": -0.41,
+      "matchup_adj": 0.44,
+      "skill_era": 4.17,
+      "era": 4.83027523,
+      "fip": 4.288439241407509,
+      "xfip": 4.164502494152598,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.54,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.67,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.12,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.32876712,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.71276596,
+          "low = unlucky"
+        ],
+        [
+          "Lineup platoon mix",
+          0.59,
+          "6/9 LHH (67%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          62.0,
+          "hot split-adjusted lineup \u2014 lucky ERAs bleed fast"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          112.0,
+          "offense hits this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          4.17,
+          "weighted vs today's 67% LHH mix (\u0394 -0.11 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.04,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.08,
+          "breeze 9 mph SW \u00b7 cloudy"
+        ]
+      ],
+      "opp_osi": 62.0,
+      "lineup_platoon": {
+        "lhh": 6,
+        "rhh": 3,
+        "n": 9,
+        "lhh_pct": 0.667,
+        "rhh_pct": 0.333
+      },
+      "park_factor": 1.04,
+      "props": {
+        "K": {
+          "proj": 3.8,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.8,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 15.6,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.6,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Brady Singer",
+      "team": "CIN",
+      "opp": "NYM",
+      "hand": "R",
+      "today": true,
+      "starts": 13,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.02,
+      "luck_base": -0.14,
+      "matchup_adj": 0.16,
+      "skill_era": 6.31,
+      "era": 5.60655738,
+      "fip": 6.318067757028048,
+      "xfip": 4.630245761011468,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.71,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.98,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -1.69,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.32307692,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.77020202,
+          "high = lucky sequencing"
+        ],
+        [
+          "Lineup platoon mix",
+          0.59,
+          "6/9 LHH (67%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          43.3,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          90.0,
+          "offense weak vs this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          6.31,
+          "weighted vs today's 67% LHH mix (\u0394 -0.01 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.1,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "clear"
+        ]
+      ],
+      "opp_osi": 43.3,
+      "lineup_platoon": {
+        "lhh": 6,
+        "rhh": 3,
+        "n": 9,
+        "lhh_pct": 0.667,
+        "rhh_pct": 0.333
+      },
+      "park_factor": 1.1,
+      "props": {
+        "K": {
+          "proj": 2.9,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.6,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 14.1,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 3.2,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
       "name": "Adrian Houser",
       "team": "SFG",
       "opp": "ATL",
@@ -2353,6 +3767,107 @@
         },
         "ER": {
           "proj": 3.0,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Payton Tolle",
+      "team": "BOS",
+      "opp": "TOR",
+      "hand": "R",
+      "today": true,
+      "starts": 9,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.01,
+      "luck_base": 0.39,
+      "matchup_adj": -0.4,
+      "skill_era": 2.42,
+      "era": 2.7,
+      "fip": 2.7112030029050778,
+      "xfip": 3.8889273511270166,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.01,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          1.19,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          1.18,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.27464789,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.7063197,
+          "low = unlucky"
+        ],
+        [
+          "Lineup platoon mix",
+          -0.74,
+          "1/9 LHH (11%) \u2014 same-side heavy, RHP-friendly"
+        ],
+        [
+          "Opponent lineup OSI",
+          34.3,
+          "cold lineup \u2014 regression damage may stay hidden"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          101.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          2.42,
+          "weighted vs today's 11% LHH mix (\u0394 -0.29 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.12,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.08,
+          "breeze 10 mph NW \u00b7 cloudy"
+        ]
+      ],
+      "opp_osi": 34.3,
+      "lineup_platoon": {
+        "lhh": 1,
+        "rhh": 8,
+        "n": 9,
+        "lhh_pct": 0.111,
+        "rhh_pct": 0.889
+      },
+      "park_factor": 1.12,
+      "props": {
+        "K": {
+          "proj": 6.9,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.4,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 17.7,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 1.7,
           "lean": "\u2014"
         }
       }
@@ -11859,15 +13374,17 @@
       "away_sp": "Tyler Phillips",
       "home_sp": "Jes\u00fas Luzardo",
       "away_skill": 3.38,
-      "home_skill": null,
+      "home_skill": 3.21,
       "away_verdict": "REGRESSION",
-      "home_verdict": null,
+      "home_verdict": "PROGRESSION",
       "away_bp": -0.89,
       "home_bp": -0.52,
-      "ml_lean": "\u2014",
-      "total_lean": "\u2014",
+      "ml_lean": "PHI",
+      "total_lean": "UNDER",
       "f5_lean": "\u2014",
-      "drivers": []
+      "drivers": [
+        "MIA SP regression risk"
+      ]
     },
     {
       "game": "KCR@WSN",
@@ -11897,9 +13414,9 @@
       "away_sp": "Dylan Cease",
       "home_sp": "Payton Tolle",
       "away_skill": 2.34,
-      "home_skill": null,
+      "home_skill": 2.42,
       "away_verdict": "STABLE",
-      "home_verdict": null,
+      "home_verdict": "STABLE",
       "away_bp": -1.33,
       "home_bp": -0.53,
       "ml_lean": "TOR",
@@ -11935,15 +13452,15 @@
       "time": "7:10 PM ET",
       "away_sp": "Kodai Senga",
       "home_sp": "Brady Singer",
-      "away_skill": null,
-      "home_skill": null,
-      "away_verdict": null,
-      "home_verdict": null,
+      "away_skill": 5.44,
+      "home_skill": 6.31,
+      "away_verdict": "PROGRESSION",
+      "home_verdict": "STABLE",
       "away_bp": -0.8,
       "home_bp": -0.92,
-      "ml_lean": "CIN",
+      "ml_lean": "NYM",
       "total_lean": "\u2014",
-      "f5_lean": "\u2014",
+      "f5_lean": "OVER",
       "drivers": []
     },
     {
@@ -11973,15 +13490,15 @@
       "time": "7:40 PM ET",
       "away_sp": "Slade Cecconi",
       "home_sp": "Robert Gasser",
-      "away_skill": null,
-      "home_skill": null,
-      "away_verdict": null,
-      "home_verdict": null,
+      "away_skill": 4.17,
+      "home_skill": 7.55,
+      "away_verdict": "STABLE",
+      "home_verdict": "STABLE",
       "away_bp": -1.18,
       "home_bp": -0.84,
-      "ml_lean": "MIL",
-      "total_lean": "\u2014",
-      "f5_lean": "\u2014",
+      "ml_lean": "CLE",
+      "total_lean": "OVER",
+      "f5_lean": "OVER",
       "drivers": []
     },
     {
@@ -11992,15 +13509,17 @@
       "away_sp": "Michael King",
       "home_sp": "Andre Pallante",
       "away_skill": 4.31,
-      "home_skill": null,
+      "home_skill": 4.42,
       "away_verdict": "REGRESSION",
-      "home_verdict": null,
+      "home_verdict": "STABLE",
       "away_bp": -0.89,
       "home_bp": 0.77,
-      "ml_lean": "SDP",
+      "ml_lean": "\u2014",
       "total_lean": "\u2014",
-      "f5_lean": "\u2014",
-      "drivers": []
+      "f5_lean": "OVER",
+      "drivers": [
+        "SDP SP regression risk"
+      ]
     },
     {
       "game": "COL@CHC",
@@ -12027,16 +13546,18 @@
       "time": "8:05 PM ET",
       "away_sp": "Zebby Matthews",
       "home_sp": "Kumar Rocker",
-      "away_skill": null,
-      "home_skill": null,
-      "away_verdict": null,
-      "home_verdict": null,
+      "away_skill": 5.36,
+      "home_skill": 4.14,
+      "away_verdict": "STABLE",
+      "home_verdict": "REGRESSION",
       "away_bp": 0.38,
       "home_bp": -1.43,
-      "ml_lean": "\u2014",
+      "ml_lean": "TEX",
       "total_lean": "\u2014",
-      "f5_lean": "\u2014",
-      "drivers": []
+      "f5_lean": "OVER",
+      "drivers": [
+        "TEX SP regression risk"
+      ]
     },
     {
       "game": "DET@HOU",
@@ -12046,15 +13567,17 @@
       "away_sp": "Framber Valdez",
       "home_sp": "Hunter Brown",
       "away_skill": 4.75,
-      "home_skill": null,
+      "home_skill": 1.76,
       "away_verdict": "STABLE",
-      "home_verdict": null,
+      "home_verdict": "REGRESSION",
       "away_bp": -0.24,
       "home_bp": -0.45,
-      "ml_lean": "\u2014",
+      "ml_lean": "HOU",
       "total_lean": "\u2014",
       "f5_lean": "\u2014",
-      "drivers": []
+      "drivers": [
+        "HOU SP regression risk"
+      ]
     },
     {
       "game": "BAL@SEA",
@@ -12063,16 +13586,19 @@
       "time": "9:40 PM ET",
       "away_sp": "Brandon Young",
       "home_sp": "Logan Gilbert",
-      "away_skill": null,
+      "away_skill": 4.33,
       "home_skill": 4.12,
-      "away_verdict": null,
+      "away_verdict": "REGRESSION",
       "home_verdict": "REGRESSION",
       "away_bp": -0.17,
       "home_bp": -0.74,
       "ml_lean": "\u2014",
       "total_lean": "OVER",
-      "f5_lean": "\u2014",
-      "drivers": []
+      "f5_lean": "OVER",
+      "drivers": [
+        "BAL SP regression risk",
+        "SEA SP regression risk"
+      ]
     },
     {
       "game": "LAA@ARI",
@@ -12081,14 +13607,14 @@
       "time": "9:40 PM ET",
       "away_sp": "Reid Detmers",
       "home_sp": "Merrill Kelly",
-      "away_skill": null,
+      "away_skill": 2.88,
       "home_skill": 5.07,
-      "away_verdict": null,
+      "away_verdict": "PROGRESSION",
       "home_verdict": "STABLE",
       "away_bp": -0.18,
       "home_bp": -1.52,
-      "ml_lean": "\u2014",
-      "total_lean": "\u2014",
+      "ml_lean": "LAA",
+      "total_lean": "UNDER",
       "f5_lean": "\u2014",
       "drivers": []
     },
@@ -12100,14 +13626,14 @@
       "away_sp": "Mitch Keller",
       "home_sp": "Jack Perkins",
       "away_skill": 3.86,
-      "home_skill": null,
+      "home_skill": 2.64,
       "away_verdict": "STABLE",
-      "home_verdict": null,
+      "home_verdict": "PROGRESSION",
       "away_bp": -0.69,
       "home_bp": 0.28,
-      "ml_lean": "PIT",
-      "total_lean": "\u2014",
-      "f5_lean": "\u2014",
+      "ml_lean": "ATH",
+      "total_lean": "UNDER",
+      "f5_lean": "UNDER",
       "drivers": []
     },
     {
@@ -12117,16 +13643,19 @@
       "time": "10:10 PM ET",
       "away_sp": "Drew Rasmussen",
       "home_sp": "Justin Wrobleski",
-      "away_skill": null,
-      "home_skill": null,
-      "away_verdict": null,
-      "home_verdict": null,
+      "away_skill": 3.21,
+      "home_skill": 3.85,
+      "away_verdict": "REGRESSION",
+      "home_verdict": "REGRESSION",
       "away_bp": -0.71,
       "home_bp": -0.69,
       "ml_lean": "LAD",
-      "total_lean": "\u2014",
+      "total_lean": "OVER",
       "f5_lean": "\u2014",
-      "drivers": []
+      "drivers": [
+        "TBR SP regression risk",
+        "LAD SP regression risk"
+      ]
     }
   ]
 }
