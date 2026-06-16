@@ -75,7 +75,7 @@
   .hint{color:var(--muted);font-size:12.5px;margin-left:auto}
 
   /* ── Table card (premium, violet top-edge glint) ───────────── */
-  .tblwrap{border:1px solid var(--border-2);border-radius:16px;overflow:hidden;background:var(--card);
+  .tblwrap{border:1px solid var(--border-2);border-radius:16px;overflow-x:auto;overflow-y:hidden;background:var(--card);
     position:relative;box-shadow:0 24px 70px -24px rgba(0,0,0,.7)}
   .tblwrap::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
     background:linear-gradient(90deg,#9A6BFF,#5B2BE0);z-index:3}
@@ -102,6 +102,8 @@
   .pill{display:inline-block;padding:3px 11px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.03em}
   .pill.reg{background:var(--redbg);color:var(--red-l)}.pill.prog{background:var(--greenbg);color:var(--green-l)}.pill.stab{background:rgba(255,255,255,.07);color:var(--ink2)}
   .lean.over{color:var(--green);font-weight:800}.lean.under{color:var(--red);font-weight:800}.lean.n{color:var(--muted)}
+  .prop-cell{line-height:1.2;vertical-align:middle}
+  .prop-cell .lean{display:block;font-size:10px;margin-top:4px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
   .today-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:8px;vertical-align:middle;box-shadow:0 0 8px rgba(154,107,255,.7)}
   .empty{color:var(--muted);font-size:14px;padding:18px;background:var(--card);border:1px dashed var(--border-2);border-radius:14px}
 
@@ -152,9 +154,8 @@
   <div class="view active" id="view-pitchers">
     <div class="controls">
       <div class="seg" id="scope"><button data-v="today" class="on">Today's starters</button><button data-v="all">All</button></div>
-      <div class="seg" id="prop"><button data-v="K" class="on">K</button><button data-v="BB">Walks</button><button data-v="Outs">Outs</button><button data-v="ER">Earned runs</button></div>
       <input class="search" id="psearch" placeholder="search pitcher / team…">
-      <span class="hint">click a row for the full factor breakdown · luck = base + today's matchup · click headers to sort</span>
+      <span class="hint">click a row for factor breakdown · each prop cell = projection + lean · click headers to sort</span>
     </div>
     <div id="ptable"></div>
   </div>
@@ -193,7 +194,8 @@
 </div>
 
 <script>
-const D={data:null, scope:'today', prop:'K', psort:{k:'luck',dir:-1}, mkfilter:'all'};
+const D={data:null, scope:'today', psort:{k:'luck',dir:-1}, mkfilter:'all'};
+const PROP_STATS=['K','BB','ER','Outs'];
 const f1=(x,d=1)=>x==null?'—':(+x).toFixed(d);
 const sp=(x,d=2)=>x==null?'—':(x>=0?'+':'')+(+x).toFixed(d);
 const pctNum=(x)=>x==null?'—':(x*100).toFixed(1)+'%';
@@ -241,6 +243,10 @@ function factorChip(label,raw){
   return metricChip(v,'default',false,2);
 }
 function skillChip(v){return metricChip(v,'era',null,2);}
+function propCell(r,stat){
+  const pr=(r.props||{})[stat]||{};
+  return `<td class="num prop-cell">${metricChip(pr.proj,propCtx(stat),null,1)}<span class="lean ${leanCls(pr.lean)}">${pr.lean&&pr.lean!=='—'?pr.lean:'—'}</span></td>`;
+}
 
 /* ---- Pitchers ---- */
 function pitcherRows(){
@@ -249,20 +255,25 @@ function pitcherRows(){
   const q=document.getElementById('psearch').value.trim().toLowerCase();
   if(q) rows=rows.filter(r=>(r.name+' '+r.team+' '+(r.opp||'')).toLowerCase().includes(q));
   const k=D.psort.k, dir=D.psort.dir;
-  const val=r=>k==='name'?r.name:k==='luck'?r.luck:k==='skill'?r.skill_era:k==='prop'?(r.props[D.prop]||{}).proj:r[k];
+  const val=r=>{
+    if(k==='name') return r.name;
+    if(k==='luck') return r.luck;
+    if(k==='skill') return r.skill_era;
+    if(PROP_STATS.includes(k)) return (r.props||{})[k]?.proj;
+    return r[k];
+  };
   rows.sort((a,b)=>{const x=val(a),y=val(b);return typeof x==='string'?dir*String(x).localeCompare(String(y)):dir*((x??-999)-(y??-999));});
   return rows;
 }
 function renderPitchers(){
-  const rows=pitcherRows(), pn=D.prop;
-  const propLbl={K:'K proj',BB:'BB proj',Outs:'Outs proj',ER:'ER proj'}[pn];
-  const H=[['name','Pitcher'],['','vs'],['verdict','State'],['luck','Luck'],['skill','Skill ERA'],['prop',propLbl],['','Lean']];
-  let h='<div class="tblwrap"><table><thead><tr>'+H.map(([k,l],i)=>{
+  const rows=pitcherRows();
+  const H=[['name','Pitcher'],['','vs'],['verdict','State'],['luck','Luck'],['skill','Skill ERA'],
+    ['K','K'],['BB','BB'],['ER','ER'],['Outs','Outs']];
+  let h='<div class="tblwrap"><table><thead><tr>'+H.map(([k,l])=>{
     const so=D.psort.k===k; const cls=(k?'sortable ':'')+(so?'sorted '+(D.psort.dir<0?'desc':'asc'):'');
-    return `<th class="${cls}" ${k?`data-k="${k}"`:''} ${i>0&&i<5?'':''}>${l}</th>`;}).join('')+'</tr></thead><tbody>';
-  if(!rows.length) h+='<tr><td colspan="7" style="text-align:center;color:var(--muted)">no pitchers match</td></tr>';
+    return `<th class="${cls}" ${k?`data-k="${k}"`:''}>${l}</th>`;}).join('')+'</tr></thead><tbody>';
+  if(!rows.length) h+='<tr><td colspan="9" style="text-align:center;color:var(--muted)">no pitchers match</td></tr>';
   rows.forEach((r,idx)=>{
-    const pr=r.props[pn]||{};
     const luckTitle=r.matchup_adj?`Base ${sp(r.luck_base,2)} + matchup ${sp(r.matchup_adj,2)}`:'Season luck only';
     h+=`<tr class="r" data-i="${idx}">
       <td>${r.today?'<span class="today-dot"></span>':''}${esc(r.name)} <span style="color:var(--muted);font-weight:500">${esc(r.team)}</span></td>
@@ -270,9 +281,8 @@ function renderPitchers(){
       <td>${verdPill(r.verdict)}</td>
       <td class="num" title="${esc(luckTitle)}">${metricChipSigned(r.luck,'luck',null,2)}</td>
       <td class="num">${skillChip(r.skill_era)}</td>
-      <td class="num">${metricChip(pr.proj,propCtx(pn),null,1)}</td>
-      <td><span class="lean ${leanCls(pr.lean)}">${pr.lean&&pr.lean!=='—'?pr.lean.toUpperCase():'—'}</span></td></tr>`;
-    h+=`<tr class="detail" id="det-${idx}" style="display:none"><td colspan="7"><div class="factors">`
+      ${PROP_STATS.map(s=>propCell(r,s)).join('')}</tr>`;
+    h+=`<tr class="detail" id="det-${idx}" style="display:none"><td colspan="9"><div class="factors">`
       + (r.luck_base!=null&&r.matchup_adj?`<div class="factor"><div class="fl">Luck stack</div><div class="fv num"><span class="chip c-mid">Base ${sp(r.luck_base,2)}</span> <span style="color:var(--muted)">+</span> <span class="chip ${r.matchup_adj>=0?'c-poor':'c-good'}">Matchup ${sp(r.matchup_adj,2)}</span></div><div class="fn">Today's slate overlay on season luck</div></div>`:'')
       + (r.factors||[]).map(ff=>`<div class="factor"><div class="fl">${esc(ff[0])}</div><div class="fv num">${factorChip(ff[0],ff[1])}</div>${ff[2]?`<div class="fn">${esc(ff[2])}</div>`:''}</div>`).join('')
       + `</div></td></tr>`;
@@ -342,8 +352,6 @@ fetch('data.json?_='+Date.now()).then(r=>r.json()).then(d=>{
 document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>show(t.dataset.view));
 document.getElementById('scope').onclick=e=>{if(e.target.dataset.v){D.scope=e.target.dataset.v;
   document.querySelectorAll('#scope button').forEach(b=>b.classList.toggle('on',b===e.target));renderPitchers();}};
-document.getElementById('prop').onclick=e=>{if(e.target.dataset.v){D.prop=e.target.dataset.v;
-  document.querySelectorAll('#prop button').forEach(b=>b.classList.toggle('on',b===e.target));renderPitchers();}};
 document.getElementById('mkfilter').onclick=e=>{if(e.target.dataset.v){D.mkfilter=e.target.dataset.v;
   document.querySelectorAll('#mkfilter button').forEach(b=>b.classList.toggle('on',b===e.target));renderMarkets();}};
 document.getElementById('psearch').oninput=()=>renderPitchers();
