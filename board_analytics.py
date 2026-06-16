@@ -2,7 +2,7 @@
 Pitcher + general-market analytics for the sharp dashboard.
 
 Regression/progression is NOT just ERA-vs-FIP. We extrapolate the full luck stack
-from the mlbma pipeline:
+from the mlbma pipeline, then layer TODAY'S MATCHUP for starters:
   - ERA vs FIP and vs xFIP        (DIPS skill gap)
   - BABIP vs ~.295                (balls-in-play luck, from the game log)
   - LOB% / strand vs ~72%         (sequencing luck, from the game log)
@@ -10,6 +10,13 @@ from the mlbma pipeline:
   - strength of schedule faced    (soft slate inflates results -> mean-reverts)
   - recent K%/BB% trend           (real skill change, not luck)
   - workload / pitch-count fatigue (stuff erosion risk)
+  Matchup overlay (today's starters only):
+  - projected lineup platoon mix  (LHH/RHH vs SP hand from Today_Lineups)
+  - opponent split-adjusted OSI   (from Today_Matchups)
+  - opponent wRC+ vs SP hand      (metrics_vs_RHP / metrics_vs_LHP)
+  - split FIP weighted to lineup  (sp_vs_LHH / sp_vs_RHH)
+  - ballpark factor               (home stadium run environment)
+  - weather                       (wind/temp/dome from today_weather.csv)
 
 Output drives a Pitcher board (regression + K/BB/Outs/ER prop leans) and a
 General-Markets board (ML/Total/F5 lean from starter reg/prog + bullpen fatigue +
@@ -23,11 +30,14 @@ from typing import Optional
 
 import pandas as pd
 
+import config
 from _compat import check_slate_freshness, load
 
 # League baselines
 LG_BABIP, LG_LOB, LG_HR9, LG_OOR, LG_ERA = 0.295, 0.72, 1.15, 44.0, 4.10
+LG_LHH_SHARE = 0.42  # typical share of LHH in a lineup vs RHP
 RECENT_N = 3
+VERDICT_THRESHOLD = 0.6
 
 
 def _num(v):
@@ -51,6 +61,235 @@ def _ip(v):
 
 def _clamp(x, lo, hi):
     return max(lo, min(hi, x))
+
+
+def _effective_platoon_side(bats: str, pitcher_hand: str) -> str:
+    """Switch hitters bat opposite the pitcher; L/R pass through."""
+    b = str(bats or "R").strip().upper()[:1]
+    ph = str(pitcher_hand or "R").strip().upper()[:1]
+    if b == "S":
+        return "L" if ph == "R" else "R"
+    return b if b in ("L", "R") else "R"
+
+
+def _lineup_platoon(lineups: pd.DataFrame | None, opp_team: str, pitcher_hand: str) -> dict:
+    out = {"lhh": 0, "rhh": 0, "n": 0, "lhh_pct": None, "rhh_pct": None}
+    if lineups is None or lineups.empty or not opp_team:
+        return out
+    sub = lineups[lineups["Team"].astype(str).str.upper().str.strip() == str(opp_team).upper()]
+    if sub.empty:
+        return out
+    sides = [_effective_platoon_side(r.get("Bats"), pitcher_hand) for _, r in sub.iterrows()]
+    out["lhh"] = sum(1 for s in sides if s == "L")
+    out["rhh"] = sum(1 for s in sides if s == "R")
+    out["n"] = out["lhh"] + out["rhh"]
+    if out["n"]:
+        out["lhh_pct"] = round(out["lhh"] / out["n"], 3)
+        out["rhh_pct"] = round(out["rhh"] / out["n"], 3)
+    return out
+
+
+def _team_wrc_vs_hand(opp: str, pitcher_hand: str) -> float | None:
+    fname = "metrics_vs_RHP.csv" if str(pitcher_hand).upper().startswith("R") else "metrics_vs_LHP.csv"
+    df = load(fname)
+    if df is None or "Tm" not in df.columns:
+        return None
+    row = df[df["Tm"].astype(str).str.upper().str.strip() == str(opp).upper()]
+    if row.empty:
+        return None
+    return _num(row.iloc[0].get("wRC+"))
+
+
+def _sp_split_fip(name: str, split: str, cache: dict) -> float | None:
+    key = (name, split)
+    if key in cache:
+        return cache[key]
+    fname = "sp_vs_LHH.csv" if split == "LHH" else "sp_vs_RHH.csv"
+    df = load(fname)
+    if df is None:
+        cache[key] = None
+        return None
+    name_col = "Name" if "Name" in df.columns else "pitcher_name"
+    sub = df[df[name_col].astype(str).str.strip() == str(name).strip()]
+    val = _num(sub.iloc[0].get("FIP")) if not sub.empty else None
+    cache[key] = val
+    return val
+
+
+def _weather_for_home(home_team: str, weather: pd.DataFrame | None) -> dict:
+    if weather is None or weather.empty:
+        return {}
+    col = "home_team" if "home_team" in weather.columns else "Home"
+    sub = weather[weather[col].astype(str).str.upper().str.strip() == str(home_team).upper()]
+    if sub.empty:
+        return {}
+    w = sub.iloc[0]
+    return {
+        "temp_f": _num(w.get("temperature_f")),
+        "wind_mph": _num(w.get("wind_speed_mph")),
+        "wind_dir": str(w.get("wind_direction", "")).strip(),
+        "conditions": str(w.get("conditions", "")).strip(),
+        "dome": bool(w.get("is_dome", False)),
+        "stadium": str(w.get("stadium_name", "")).strip(),
+    }
+
+
+def _verdict_from_luck(luck: float) -> tuple[str, str]:
+    if luck >= VERDICT_THRESHOLD:
+        return "REGRESSION", "fade"
+    if luck <= -VERDICT_THRESHOLD:
+        return "PROGRESSION", "back"
+    return "STABLE", "neutral"
+
+
+def matchup_context(
+    *,
+    pitcher_name: str,
+    pitcher_team: str,
+    opp_team: str,
+    pitcher_hand: str,
+    is_home: bool,
+    matchup_row: dict | None,
+    lineups: pd.DataFrame | None,
+    weather: pd.DataFrame | None,
+    split_cache: dict,
+    season_fip: float | None,
+) -> dict:
+    """Today's slate context layered on top of season luck — platoon, OSI, park, weather, splits."""
+    factors: list[tuple] = []
+    adj = 0.0
+    ph = str(pitcher_hand or "R").upper()[:1]
+    home_team = pitcher_team if is_home else opp_team
+    plat = _lineup_platoon(lineups, opp_team, ph)
+
+    if plat["n"] >= 7:
+        if ph == "R":
+            share = plat["lhh_pct"] or LG_LHH_SHARE
+            pressure = (share - LG_LHH_SHARE) * 2.4
+            note = (f"{plat['lhh']}/{plat['n']} LHH ({share * 100:.0f}%) — "
+                    f"{'platoon stress on RHP' if pressure > 0.05 else 'same-side heavy, RHP-friendly' if pressure < -0.05 else 'neutral platoon mix'}")
+        else:
+            share = plat["rhh_pct"] or LG_LHH_SHARE
+            pressure = (share - LG_LHH_SHARE) * 2.4
+            note = (f"{plat['rhh']}/{plat['n']} RHH ({share * 100:.0f}%) — "
+                    f"{'platoon stress on LHP' if pressure > 0.05 else 'same-side heavy, LHP-friendly' if pressure < -0.05 else 'neutral platoon mix'}")
+        adj += pressure * 0.38
+        factors.append(("Lineup platoon mix", round(pressure, 2), note))
+
+    opp_osi = None
+    if matchup_row:
+        if str(pitcher_team).upper() == str(matchup_row.get("Home", "")).upper():
+            opp_osi = _num(matchup_row.get("Away_OSI"))
+        elif str(pitcher_team).upper() == str(matchup_row.get("Away", "")).upper():
+            opp_osi = _num(matchup_row.get("Home_OSI"))
+    if opp_osi is not None:
+        osi_push = (opp_osi - 50) * 0.035
+        adj += osi_push * 0.30
+        if opp_osi >= 58:
+            osi_note = "hot split-adjusted lineup — lucky ERAs bleed fast"
+        elif opp_osi <= 42:
+            osi_note = "cold lineup — regression damage may stay hidden"
+        else:
+            osi_note = "league-average lineup OSI vs this SP hand"
+        factors.append(("Opponent lineup OSI", round(opp_osi, 1), osi_note))
+
+    wrc = _team_wrc_vs_hand(opp_team, ph)
+    if wrc is not None:
+        wrc_push = (wrc - 100) * 0.012
+        adj += wrc_push * 0.18
+        factors.append(("Opp wRC+ vs hand", round(wrc, 0),
+                        "offense hits this hand" if wrc >= 108 else "offense weak vs this hand" if wrc <= 92 else ""))
+
+    fip_l = _sp_split_fip(pitcher_name, "LHH", split_cache)
+    fip_r = _sp_split_fip(pitcher_name, "RHH", split_cache)
+    if fip_l is not None and fip_r is not None and plat["lhh_pct"] is not None and season_fip is not None:
+        l_share = plat["lhh_pct"]
+        exp_fip = l_share * fip_l + (1 - l_share) * fip_r
+        split_delta = exp_fip - season_fip
+        adj += split_delta * 0.22
+        factors.append(("Split FIP vs lineup", round(exp_fip, 2),
+                        f"weighted vs today's {l_share * 100:.0f}% LHH mix (Δ {split_delta:+.2f} vs season FIP)"))
+
+    park = config.park_factor_for_team(home_team)
+    park_push = (park - 1.0) * 1.15
+    adj += park_push * 0.22
+    if park >= 1.06:
+        park_note = " hitter-friendly — run environment amplifies regression"
+    elif park <= 0.94:
+        park_note = " suppresses offense — progression harder to sustain"
+    else:
+        park_note = " neutral run environment"
+    factors.append(("Ballpark factor", round(park, 2), park_note))
+
+    wx = _weather_for_home(home_team, weather)
+    if wx:
+        wx_push = 0.0
+        wx_bits = []
+        if wx.get("dome"):
+            wx_bits.append("dome — weather neutral")
+        else:
+            wind = wx.get("wind_mph")
+            temp = wx.get("temp_f")
+            if wind is not None and wind >= 12:
+                wx_push += 0.18
+                wx_bits.append(f"wind {wind:.0f} mph {wx.get('wind_dir', '')} — fly-ball/total risk")
+            elif wind is not None and wind >= 8:
+                wx_push += 0.08
+                wx_bits.append(f"breeze {wind:.0f} mph {wx.get('wind_dir', '')}")
+            if temp is not None and temp <= 50:
+                wx_push -= 0.14
+                wx_bits.append(f"cold {temp:.0f}°F — suppresses offense")
+            elif temp is not None and temp >= 82:
+                wx_push += 0.06
+                wx_bits.append(f"warm {temp:.0f}°F")
+            if wx.get("conditions"):
+                wx_bits.append(str(wx["conditions"]))
+        adj += wx_push
+        if wx_bits:
+            factors.append(("Weather / environment", round(wx_push, 2), " · ".join(wx_bits)))
+
+    return {
+        "adj": round(adj, 2),
+        "factors": factors,
+        "opp_osi": opp_osi,
+        "platoon": plat,
+        "park": park,
+        "home_team": home_team,
+        "weather": wx,
+    }
+
+
+def apply_matchup_to_regression(reg: dict, ctx: dict | None) -> dict:
+    """Blend today's matchup context into luck score + verdict; preserve base luck."""
+    reg = dict(reg)
+    base_luck = reg.get("luck", 0.0)
+    reg["luck_base"] = base_luck
+    if not ctx or not ctx.get("factors"):
+        reg["matchup_adj"] = 0.0
+        return reg
+    adj = ctx.get("adj") or 0.0
+    combined = round(base_luck + adj, 2)
+    reg["matchup_adj"] = adj
+    reg["luck"] = combined
+    reg["factors"] = list(reg.get("factors") or []) + list(ctx.get("factors") or [])
+    verdict, tone = _verdict_from_luck(combined)
+    reg["verdict"] = verdict
+    reg["tone"] = tone
+    if ctx.get("opp_osi") is not None:
+        reg["opp_osi"] = ctx["opp_osi"]
+    if ctx.get("platoon"):
+        reg["lineup_platoon"] = ctx["platoon"]
+    if ctx.get("park") is not None:
+        reg["park_factor"] = ctx["park"]
+    # Nudge skill ERA toward split-weighted expectation when available
+    for label, val, _note in ctx.get("factors") or []:
+        if str(label).startswith("Split FIP") and val is not None:
+            try:
+                reg["skill_era"] = round(float(val), 2)
+            except (TypeError, ValueError):
+                pass
+            break
+    return reg
 
 
 def _gamelog_factors(gl: pd.DataFrame) -> dict:
@@ -129,19 +368,14 @@ def regression_read(p: dict, gl_factors: dict) -> dict:
         factors.append(("Recent pitch count", gl_factors["fatigue"], "heavy" if gl_factors["fatigue"] >= 100 else ""))
 
     luck = round(luck, 2)
-    if luck >= 0.6:
-        verdict, tone = "REGRESSION", "fade"
-    elif luck <= -0.6:
-        verdict, tone = "PROGRESSION", "back"
-    else:
-        verdict, tone = "STABLE", "neutral"
+    verdict, tone = _verdict_from_luck(luck)
     skill_era = round((fip * 0.55 + xfip * 0.45) if (fip is not None and xfip is not None)
                       else (fip if fip is not None else era or 4.10), 2)
-    return {"verdict": verdict, "tone": tone, "luck": luck, "skill_era": skill_era,
-            "era": era, "fip": fip, "xfip": xfip, "factors": factors}
+    return {"verdict": verdict, "tone": tone, "luck": luck, "luck_base": luck, "matchup_adj": 0.0,
+            "skill_era": skill_era, "era": era, "fip": fip, "xfip": xfip, "factors": factors}
 
 
-def prop_projections(p: dict, reg: dict) -> dict:
+def prop_projections(p: dict, reg: dict, ctx: dict | None = None) -> dict:
     """Regression-adjusted projections + over/under leans for K / BB / Outs / ER."""
     avg_ip = _num(p.get("avg_IP")) or 5.3
     k_pct = _num(p.get("K_pct"))
@@ -150,12 +384,25 @@ def prop_projections(p: dict, reg: dict) -> dict:
         k_pct *= 100
     if bb_pct is not None and bb_pct <= 1.5:
         bb_pct *= 100
+    # Matchup platoon nudge on K%/BB% when today's lineup is known
+    if ctx and ctx.get("platoon") and ctx["platoon"].get("n", 0) >= 7:
+        ph = str(p.get("pitcher_hand", "R")).upper()[:1]
+        plat = ctx["platoon"]
+        if ph == "R":
+            stress = (plat.get("lhh_pct") or LG_LHH_SHARE) - LG_LHH_SHARE
+        else:
+            stress = (plat.get("rhh_pct") or LG_LHH_SHARE) - LG_LHH_SHARE
+        k_pct = (k_pct or 21) - stress * 8
+        bb_pct = (bb_pct or 8) + stress * 3
     bf = avg_ip * 4.25  # ~batters faced per start
     outs = round(avg_ip * 3, 1)
     k_proj = round(bf * (k_pct or 21) / 100, 1)
     bb_proj = round(bf * (bb_pct or 8) / 100, 1)
-    # ER: regress ERA toward skill_era; per-start ER = blended/9 * IP
+    # ER: regress ERA toward skill_era; park/weather nudge run environment
     blended = (reg["skill_era"] * 0.6 + (reg["era"] or reg["skill_era"]) * 0.4)
+    park = ctx.get("park") if ctx else None
+    if park is not None:
+        blended *= 0.85 + park * 0.15
     er_proj = round(blended / 9 * avg_ip, 1)
 
     def lean(verdict, stat):
@@ -180,28 +427,53 @@ def pitcher_board() -> list[dict]:
     profiles = load("sp_profiles.csv")
     gamelog = load("sp_gamelog.csv")
     matchups = load("today_matchups.csv")
+    lineups = load("today_lineups.csv")
+    weather = load("today_weather.csv")
     if profiles is None:
         return []
     profiles = profiles.copy()
     profiles["__name"] = profiles["pitcher_name"].astype(str).str.strip()
 
-    today_sp = {}  # name -> (team, opp, hand)
+    today_sp: dict[str, tuple] = {}
     if matchups is not None:
         for _, g in matchups.iterrows():
             a, h = str(g.get("Away", "")).upper(), str(g.get("Home", "")).upper()
-            for sp_col, hand_col, team, opp in ((("Away_SP",), ("Away_Hand",), a, h), (("Home_SP",), ("Home_Hand",), h, a)):
-                nm = str(g.get(sp_col[0], "")).strip()
+            gdict = g.to_dict()
+            for sp_col, hand_col, team, opp, is_home in (
+                ("Away_SP", "Away_Hand", a, h, False),
+                ("Home_SP", "Home_Hand", h, a, True),
+            ):
+                nm = str(g.get(sp_col, "")).strip()
                 if nm and nm.lower() != "tbd":
-                    today_sp[nm] = (team, opp, str(g.get(hand_col[0], "R")).upper()[:1])
+                    today_sp[nm] = (team, opp, str(g.get(hand_col, "R")).upper()[:1], is_home, gdict)
 
+    split_cache: dict = {}
     rows = []
     for _, p in profiles.iterrows():
         name = p["__name"]
         glf = _gamelog_factors(gamelog[gamelog["pitcher_name"].astype(str).str.strip() == name]) if gamelog is not None else {}
         reg = regression_read(p.to_dict(), glf)
-        props = prop_projections(p.to_dict(), reg)
         is_today = name in today_sp
-        team, opp, hand = today_sp.get(name, (str(p.get("pitcher_team", "")).upper(), "", str(p.get("pitcher_hand", "R")).upper()[:1]))
+        if is_today:
+            team, opp, hand, is_home, mrow = today_sp[name]
+            ctx = matchup_context(
+                pitcher_name=name,
+                pitcher_team=team,
+                opp_team=opp,
+                pitcher_hand=hand,
+                is_home=is_home,
+                matchup_row=mrow,
+                lineups=lineups,
+                weather=weather,
+                split_cache=split_cache,
+                season_fip=_num(p.get("FIP")),
+            )
+            reg = apply_matchup_to_regression(reg, ctx)
+            props = prop_projections(p.to_dict(), reg, ctx)
+        else:
+            team = str(p.get("pitcher_team", "")).upper()
+            opp, hand = "", str(p.get("pitcher_hand", "R")).upper()[:1]
+            props = prop_projections(p.to_dict(), reg, None)
         rows.append({
             "name": name, "team": team, "opp": opp, "hand": hand, "today": is_today,
             "starts": int(_num(p.get("starts")) or 0),
@@ -217,6 +489,8 @@ def market_board() -> list[dict]:
     matchups = load("today_matchups.csv")
     profiles = load("sp_profiles.csv")
     teams = load("team_profiles.csv")
+    lineups = load("today_lineups.csv")
+    weather = load("today_weather.csv")
     if matchups is None:
         return []
     prof_by_name = {str(r["pitcher_name"]).strip(): r.to_dict() for _, r in profiles.iterrows()} if profiles is not None else {}
@@ -226,15 +500,31 @@ def market_board() -> list[dict]:
             bp_by_team[str(t.get("team", "")).upper()] = t.to_dict()
 
     glf_cache = {}
+    split_cache = {}
     gamelog = load("sp_gamelog.csv")
 
-    def reg_for(name):
+    def reg_for(name, *, team=None, opp=None, hand=None, is_home=None, matchup_row=None):
         p = prof_by_name.get(str(name).strip())
         if not p:
             return None
         if name not in glf_cache and gamelog is not None:
             glf_cache[name] = _gamelog_factors(gamelog[gamelog["pitcher_name"].astype(str).str.strip() == str(name).strip()])
-        return regression_read(p, glf_cache.get(name, {}))
+        reg = regression_read(p, glf_cache.get(name, {}))
+        if team and opp and hand is not None and matchup_row is not None:
+            ctx = matchup_context(
+                pitcher_name=str(name).strip(),
+                pitcher_team=team,
+                opp_team=opp,
+                pitcher_hand=hand,
+                is_home=bool(is_home),
+                matchup_row=matchup_row,
+                lineups=lineups,
+                weather=weather,
+                split_cache=split_cache,
+                season_fip=_num(p.get("FIP")),
+            )
+            reg = apply_matchup_to_regression(reg, ctx)
+        return reg
 
     def bp_fatigue(team):
         t = bp_by_team.get(str(team).upper())
@@ -257,8 +547,10 @@ def market_board() -> list[dict]:
         a, h = str(g.get("Away", "")).upper(), str(g.get("Home", "")).upper()
         if not a or not h:
             continue
-        a_reg = reg_for(g.get("Away_SP"))
-        h_reg = reg_for(g.get("Home_SP"))
+        a_reg = reg_for(g.get("Away_SP"), team=a, opp=h, hand=str(g.get("Away_Hand", "R")).upper()[:1],
+                        is_home=False, matchup_row=g.to_dict())
+        h_reg = reg_for(g.get("Home_SP"), team=h, opp=a, hand=str(g.get("Home_Hand", "R")).upper()[:1],
+                        is_home=True, matchup_row=g.to_dict())
         a_bp, h_bp = bp_fatigue(a), bp_fatigue(h)
         a_osi, h_osi = _num(g.get("Away_OSI")), _num(g.get("Home_OSI"))
         drivers = []

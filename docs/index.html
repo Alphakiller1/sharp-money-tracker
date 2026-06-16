@@ -154,7 +154,7 @@
       <div class="seg" id="scope"><button data-v="today" class="on">Today's starters</button><button data-v="all">All</button></div>
       <div class="seg" id="prop"><button data-v="K" class="on">K</button><button data-v="BB">Walks</button><button data-v="Outs">Outs</button><button data-v="ER">Earned runs</button></div>
       <input class="search" id="psearch" placeholder="search pitcher / team…">
-      <span class="hint">click a row for the full factor breakdown · click headers to sort</span>
+      <span class="hint">click a row for the full factor breakdown · luck = base + today's matchup · click headers to sort</span>
     </div>
     <div id="ptable"></div>
   </div>
@@ -178,12 +178,17 @@
 
   <details class="meth">
     <summary>Methodology</summary>
-    <div class="meth"><p><b>Pitcher regression</b> blends the DIPS skill estimate (FIP/xFIP) with balls-in-play luck (BABIP vs .295),
+    <div class="meth"><p><b>Pitcher regression (base)</b> blends the DIPS skill estimate (FIP/xFIP) with balls-in-play luck (BABIP vs .295),
       sequencing luck (LOB% vs 72%), HR-suppression (xFIP−FIP), strength of schedule faced (OOR), recent K%/BB% trend, and
-      pitch-count fatigue into a single luck score (expected ERA change). <b>Prop leans</b> follow the verdict: a regressing
-      arm projects fewer Ks/outs and more earned runs. <b>Market leans</b> combine both starters' reg/prog with bullpen
-      fatigue/quality, opponent OSI, and splits. <b>Sharp signals</b> de-vig each book and surface only FDR-surviving,
-      profit-positive, CLV-validated segments as tradeable.</p></div>
+      pitch-count fatigue into a single luck score (expected ERA change).</p>
+      <p><b>Today's matchup overlay</b> (starters only) adjusts that luck score using the actual slate context from the MLBMA pipeline:
+      projected lineup platoon mix from <b>Today_Lineups</b> (how many LHH/RHH the SP faces, switch hitters bat opposite),
+      split-adjusted opponent <b>OSI</b> and team <b>wRC+ vs hand</b>, the pitcher's <b>vs-LHH / vs-RHH FIP</b> weighted to that mix,
+      <b>ballpark factor</b> at the home stadium, and <b>weather</b> (wind, temperature, dome). Positive matchup adjustment
+      pushes a lucky arm toward regression faster; a cold lineup or pitcher-friendly park can dampen it.</p>
+      <p><b>Prop leans</b> follow the matchup-adjusted verdict: a regressing arm in a platoon-stress spot projects fewer Ks/outs
+      and more earned runs. <b>Market leans</b> combine both starters' reg/prog with bullpen fatigue/quality, opponent OSI, and splits.
+      <b>Sharp signals</b> de-vig each book and surface only FDR-surviving, profit-positive, CLV-validated segments as tradeable.</p></div>
   </details>
 </div>
 
@@ -228,6 +233,11 @@ function factorChip(label,raw){
   if(l.includes('k% trend'))return metricChipSigned(v,'trend',false,1);
   if(l.includes('bb% trend'))return metricChipSigned(v,'trend',true,1);
   if(l.includes('pitch count'))return metricChip(v,'pitches',false,0);
+  if(l.includes('lineup platoon')||l.includes('platoon mix'))return metricChipSigned(v,'trend',true,2);
+  if(l.includes('opponent lineup osi')||l.includes('wrc'))return metricChip(v,'oor',false,0);
+  if(l.includes('ballpark'))return metricChip(v,'default',null,2);
+  if(l.includes('weather'))return metricChipSigned(v,'luck_delta',true,2);
+  if(l.includes('split fip'))return metricChip(v,'era',null,2);
   return metricChip(v,'default',false,2);
 }
 function skillChip(v){return metricChip(v,'era',null,2);}
@@ -253,15 +263,17 @@ function renderPitchers(){
   if(!rows.length) h+='<tr><td colspan="7" style="text-align:center;color:var(--muted)">no pitchers match</td></tr>';
   rows.forEach((r,idx)=>{
     const pr=r.props[pn]||{};
+    const luckTitle=r.matchup_adj?`Base ${sp(r.luck_base,2)} + matchup ${sp(r.matchup_adj,2)}`:'Season luck only';
     h+=`<tr class="r" data-i="${idx}">
       <td>${r.today?'<span class="today-dot"></span>':''}${esc(r.name)} <span style="color:var(--muted);font-weight:500">${esc(r.team)}</span></td>
       <td class="num">${esc(r.opp||'—')}</td>
       <td>${verdPill(r.verdict)}</td>
-      <td class="num">${metricChipSigned(r.luck,'luck',null,2)}</td>
+      <td class="num" title="${esc(luckTitle)}">${metricChipSigned(r.luck,'luck',null,2)}</td>
       <td class="num">${skillChip(r.skill_era)}</td>
       <td class="num">${metricChip(pr.proj,propCtx(pn),null,1)}</td>
       <td><span class="lean ${leanCls(pr.lean)}">${pr.lean&&pr.lean!=='—'?pr.lean.toUpperCase():'—'}</span></td></tr>`;
     h+=`<tr class="detail" id="det-${idx}" style="display:none"><td colspan="7"><div class="factors">`
+      + (r.luck_base!=null&&r.matchup_adj?`<div class="factor"><div class="fl">Luck stack</div><div class="fv num"><span class="chip c-mid">Base ${sp(r.luck_base,2)}</span> <span style="color:var(--muted)">+</span> <span class="chip ${r.matchup_adj>=0?'c-poor':'c-good'}">Matchup ${sp(r.matchup_adj,2)}</span></div><div class="fn">Today's slate overlay on season luck</div></div>`:'')
       + (r.factors||[]).map(ff=>`<div class="factor"><div class="fl">${esc(ff[0])}</div><div class="fv num">${factorChip(ff[0],ff[1])}</div>${ff[2]?`<div class="fn">${esc(ff[2])}</div>`:''}</div>`).join('')
       + `</div></td></tr>`;
   });

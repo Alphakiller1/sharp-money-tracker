@@ -122,7 +122,7 @@
       }
     ]
   },
-  "generated_at": "2026-06-16T21:07:50+00:00",
+  "generated_at": "2026-06-16T21:15:44+00:00",
   "counts": {
     "settled_contracts": 647,
     "sharp_observations": 20,
@@ -551,8 +551,10 @@
       "starts": 4,
       "verdict": "REGRESSION",
       "tone": "fade",
-      "luck": 1.36,
-      "skill_era": 4.36,
+      "luck": 1.91,
+      "luck_base": 1.36,
+      "matchup_adj": 0.55,
+      "skill_era": 4.11,
       "era": 2.45,
       "fip": 4.1958620938387785,
       "xfip": 4.569368607347662,
@@ -601,15 +603,54 @@
           "Recent pitch count",
           82.0,
           ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.86,
+          "7/9 LHH (78%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          63.3,
+          "hot split-adjusted lineup \u2014 lucky ERAs bleed fast"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          101.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          4.11,
+          "weighted vs today's 78% LHH mix (\u0394 -0.09 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.06,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.08,
+          "breeze 11 mph NW \u00b7 clear"
         ]
       ],
+      "opp_osi": 63.3,
+      "lineup_platoon": {
+        "lhh": 7,
+        "rhh": 2,
+        "n": 9,
+        "lhh_pct": 0.778,
+        "rhh_pct": 0.222
+      },
+      "park_factor": 1.06,
       "props": {
         "K": {
-          "proj": 4.7,
+          "proj": 4.1,
           "lean": "under"
         },
         "BB": {
-          "proj": 1.6,
+          "proj": 1.8,
           "lean": "over"
         },
         "Outs": {
@@ -617,7 +658,7 @@
           "lean": "under"
         },
         "ER": {
-          "proj": 2.2,
+          "proj": 2.1,
           "lean": "over"
         }
       }
@@ -631,8 +672,10 @@
       "starts": 3,
       "verdict": "REGRESSION",
       "tone": "fade",
-      "luck": 1.28,
-      "skill_era": 3.92,
+      "luck": 1.26,
+      "luck_base": 1.28,
+      "matchup_adj": -0.02,
+      "skill_era": 3.38,
       "era": 1.98,
       "fip": 3.49805645123266,
       "xfip": 4.425485036381996,
@@ -681,15 +724,54 @@
           "Recent pitch count",
           67.0,
           ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.59,
+          "6/9 LHH (67%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          29.8,
+          "cold lineup \u2014 regression damage may stay hidden"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          88.0,
+          "offense weak vs this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          3.38,
+          "weighted vs today's 67% LHH mix (\u0394 -0.11 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.07,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
         ]
       ],
+      "opp_osi": 29.8,
+      "lineup_platoon": {
+        "lhh": 6,
+        "rhh": 3,
+        "n": 9,
+        "lhh_pct": 0.667,
+        "rhh_pct": 0.333
+      },
+      "park_factor": 1.07,
       "props": {
         "K": {
-          "proj": 3.9,
+          "proj": 3.5,
           "lean": "under"
         },
         "BB": {
-          "proj": 1.8,
+          "proj": 1.9,
           "lean": "over"
         },
         "Outs": {
@@ -697,648 +779,8 @@
           "lean": "under"
         },
         "ER": {
-          "proj": 1.6,
+          "proj": 1.4,
           "lean": "over"
-        }
-      }
-    },
-    {
-      "name": "Foster Griffin",
-      "team": "WSN",
-      "opp": "KCR",
-      "hand": "R",
-      "today": true,
-      "starts": 14,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 0.6,
-      "skill_era": 4.33,
-      "era": 3.46,
-      "fip": 4.745978643955329,
-      "xfip": 3.816099995584824,
-      "factors": [
-        [
-          "ERA vs FIP",
-          1.29,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          0.36,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.93,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.232,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.797,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          52.0,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -0.5,
-          ""
-        ],
-        [
-          "BB% trend",
-          -3.3,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          84.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 5.5,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 1.5,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 16.7,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 2.5,
-          "lean": "over"
-        }
-      }
-    },
-    {
-      "name": "Grant Holmes",
-      "team": "ATL",
-      "opp": "SFG",
-      "hand": "R",
-      "today": true,
-      "starts": 13,
-      "verdict": "REGRESSION",
-      "tone": "fade",
-      "luck": 0.6,
-      "skill_era": 4.9,
-      "era": 4.05,
-      "fip": 5.264953002821688,
-      "xfip": 4.456329804665828,
-      "factors": [
-        [
-          "ERA vs FIP",
-          1.21,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          0.41,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.81,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.253,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.819,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          37.9,
-          "soft slate inflated results"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -3.4,
-          ""
-        ],
-        [
-          "BB% trend",
-          -2.3,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          79.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 4.5,
-          "lean": "under"
-        },
-        "BB": {
-          "proj": 2.2,
-          "lean": "over"
-        },
-        "Outs": {
-          "proj": 15.4,
-          "lean": "under"
-        },
-        "ER": {
-          "proj": 2.6,
-          "lean": "over"
-        }
-      }
-    },
-    {
-      "name": "Mitch Keller",
-      "team": "PIT",
-      "opp": "ATH",
-      "hand": "R",
-      "today": true,
-      "starts": 14,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": -0.59,
-      "skill_era": 4.13,
-      "era": 5.14,
-      "fip": 3.89716079513748,
-      "xfip": 4.417197915176293,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -1.24,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.72,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          0.52,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.286,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.616,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          48.5,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -1.0,
-          ""
-        ],
-        [
-          "BB% trend",
-          2.9,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          91.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 4.1,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.9,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 16.5,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.8,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Michael King",
-      "team": "SDP",
-      "opp": "STL",
-      "hand": "R",
-      "today": true,
-      "starts": 14,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.57,
-      "skill_era": 4.27,
-      "era": 3.46,
-      "fip": 4.307432341722974,
-      "xfip": 4.214078607352046,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.85,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          0.75,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.09,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.241,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.772,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          52.7,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -10.5,
-          ""
-        ],
-        [
-          "BB% trend",
-          -4.7,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          92.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 5.4,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 2.4,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 17.3,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.5,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Michael Wacha",
-      "team": "KCR",
-      "opp": "WSN",
-      "hand": "R",
-      "today": true,
-      "starts": 14,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.4,
-      "skill_era": 4.15,
-      "era": 3.58,
-      "fip": 4.036771184747869,
-      "xfip": 4.286545957337049,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.46,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          0.71,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          0.25,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.26,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.739,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          52.0,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -8.1,
-          ""
-        ],
-        [
-          "BB% trend",
-          -1.3,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          87.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 5.2,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 2.0,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 18.9,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.7,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Adrian Houser",
-      "team": "SFG",
-      "opp": "ATL",
-      "hand": "R",
-      "today": true,
-      "starts": 13,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": -0.38,
-      "skill_era": 5.02,
-      "era": 5.54,
-      "fip": 5.181876079852765,
-      "xfip": 4.820620602483933,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -0.36,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.72,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.36,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.302,
-          "high = unlucky"
-        ],
-        [
-          "LOB% (strand)",
-          0.65,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          49.3,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          9.0,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.1,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          84.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 3.3,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.7,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 15.0,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.9,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Dylan Cease",
-      "team": "TOR",
-      "opp": "BOS",
-      "hand": "R",
-      "today": true,
-      "starts": 12,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": -0.34,
-      "skill_era": 2.38,
-      "era": 2.91,
-      "fip": 2.354953002929688,
-      "xfip": 2.418926226720214,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -0.56,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.49,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          0.06,
-          "homer-lucky"
-        ],
-        [
-          "BABIP",
-          0.324,
-          "high = unlucky"
-        ],
-        [
-          "LOB% (strand)",
-          0.75,
-          "high = lucky sequencing"
-        ],
-        [
-          "Schedule faced (OOR)",
-          51.1,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          7.7,
-          ""
-        ],
-        [
-          "BB% trend",
-          -0.1,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          90.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 8.9,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 2.3,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 17.0,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 1.6,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Edward Cabrera",
-      "team": "CHC",
-      "opp": "COL",
-      "hand": "R",
-      "today": true,
-      "starts": 12,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": -0.26,
-      "skill_era": 4.55,
-      "era": 4.86,
-      "fip": 5.089079987056672,
-      "xfip": 3.8820760325543455,
-      "factors": [
-        [
-          "ERA vs FIP",
-          0.23,
-          "ERA below FIP = lucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.98,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -1.21,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.303,
-          "high = unlucky"
-        ],
-        [
-          "LOB% (strand)",
-          0.706,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          42.1,
-          "soft slate inflated results"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          0.9,
-          ""
-        ],
-        [
-          "BB% trend",
-          0.1,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          75.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 4.8,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.9,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 15.8,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.7,
-          "lean": "\u2014"
         }
       }
     },
@@ -1349,10 +791,12 @@
       "hand": "R",
       "today": true,
       "starts": 13,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.25,
-      "skill_era": 2.73,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.91,
+      "luck_base": 0.25,
+      "matchup_adj": 0.66,
+      "skill_era": 2.43,
       "era": 2.41,
       "fip": 2.39005938587799,
       "xfip": 3.154241008614801,
@@ -1401,24 +845,305 @@
           "Recent pitch count",
           92.0,
           ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.86,
+          "7/9 LHH (78%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          70.0,
+          "hot split-adjusted lineup \u2014 lucky ERAs bleed fast"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          110.0,
+          "offense hits this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          2.43,
+          "weighted vs today's 78% LHH mix (\u0394 +0.04 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.06,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.08,
+          "breeze 11 mph NW \u00b7 clear"
         ]
       ],
+      "opp_osi": 70.0,
+      "lineup_platoon": {
+        "lhh": 7,
+        "rhh": 2,
+        "n": 9,
+        "lhh_pct": 0.778,
+        "rhh_pct": 0.222
+      },
+      "park_factor": 1.06,
       "props": {
         "K": {
-          "proj": 6.5,
-          "lean": "\u2014"
+          "proj": 5.7,
+          "lean": "under"
         },
         "BB": {
-          "proj": 1.4,
-          "lean": "\u2014"
+          "proj": 1.7,
+          "lean": "over"
         },
         "Outs": {
           "proj": 18.1,
-          "lean": "\u2014"
+          "lean": "under"
         },
         "ER": {
-          "proj": 1.7,
-          "lean": "\u2014"
+          "proj": 1.6,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Michael Wacha",
+      "team": "KCR",
+      "opp": "WSN",
+      "hand": "R",
+      "today": true,
+      "starts": 14,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.69,
+      "luck_base": 0.4,
+      "matchup_adj": 0.29,
+      "skill_era": 4.05,
+      "era": 3.58,
+      "fip": 4.036771184747869,
+      "xfip": 4.286545957337049,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.46,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.71,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.25,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.26,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.739,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          52.0,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -8.1,
+          ""
+        ],
+        [
+          "BB% trend",
+          -1.3,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          87.0,
+          ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.59,
+          "6/9 LHH (67%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          56.7,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          102.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          4.05,
+          "weighted vs today's 67% LHH mix (\u0394 +0.01 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          0.95,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "clear"
+        ]
+      ],
+      "opp_osi": 56.7,
+      "lineup_platoon": {
+        "lhh": 6,
+        "rhh": 3,
+        "n": 9,
+        "lhh_pct": 0.667,
+        "rhh_pct": 0.333
+      },
+      "park_factor": 0.95,
+      "props": {
+        "K": {
+          "proj": 4.7,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 2.2,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 18.9,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.7,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Grant Holmes",
+      "team": "ATL",
+      "opp": "SFG",
+      "hand": "R",
+      "today": true,
+      "starts": 13,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.66,
+      "luck_base": 0.6,
+      "matchup_adj": 0.06,
+      "skill_era": 5.26,
+      "era": 4.05,
+      "fip": 5.264953002821688,
+      "xfip": 4.456329804665828,
+      "factors": [
+        [
+          "ERA vs FIP",
+          1.21,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.41,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.81,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.253,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.819,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          37.9,
+          "soft slate inflated results"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -3.4,
+          ""
+        ],
+        [
+          "BB% trend",
+          -2.3,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          79.0,
+          ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.33,
+          "5/9 LHH (56%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          42.3,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          104.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          5.26,
+          "weighted vs today's 56% LHH mix (\u0394 -0.01 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.03,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
+        ]
+      ],
+      "opp_osi": 42.3,
+      "lineup_platoon": {
+        "lhh": 5,
+        "rhh": 4,
+        "n": 9,
+        "lhh_pct": 0.556,
+        "rhh_pct": 0.444
+      },
+      "park_factor": 1.03,
+      "props": {
+        "K": {
+          "proj": 4.3,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 2.3,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 15.4,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.7,
+          "lean": "over"
         }
       }
     },
@@ -1429,10 +1154,12 @@
       "hand": "R",
       "today": true,
       "starts": 14,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.24,
-      "skill_era": 3.88,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.66,
+      "luck_base": 0.24,
+      "matchup_adj": 0.42,
+      "skill_era": 4.12,
       "era": 3.62,
       "fip": 4.033823295777852,
       "xfip": 3.690535804891625,
@@ -1481,171 +1208,413 @@
           "Recent pitch count",
           98.0,
           ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.59,
+          "6/9 LHH (67%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          65.4,
+          "hot split-adjusted lineup \u2014 lucky ERAs bleed fast"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          111.0,
+          "offense hits this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          4.12,
+          "weighted vs today's 67% LHH mix (\u0394 +0.09 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          0.96,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "clear"
         ]
       ],
+      "opp_osi": 65.4,
+      "lineup_platoon": {
+        "lhh": 6,
+        "rhh": 3,
+        "n": 9,
+        "lhh_pct": 0.667,
+        "rhh_pct": 0.333
+      },
+      "park_factor": 0.96,
       "props": {
         "K": {
-          "proj": 6.2,
-          "lean": "\u2014"
+          "proj": 5.7,
+          "lean": "under"
         },
         "BB": {
-          "proj": 1.4,
-          "lean": "\u2014"
+          "proj": 1.6,
+          "lean": "over"
         },
         "Outs": {
           "proj": 17.1,
-          "lean": "\u2014"
-        },
-        "ER": {
-          "proj": 2.4,
-          "lean": "\u2014"
-        }
-      }
-    },
-    {
-      "name": "Ryan Feltner",
-      "team": "COL",
-      "opp": "CHC",
-      "hand": "R",
-      "today": true,
-      "starts": 8,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": -0.21,
-      "skill_era": 4.8,
-      "era": 5.2,
-      "fip": 4.976512636128914,
-      "xfip": 4.575999873861152,
-      "factors": [
-        [
-          "ERA vs FIP",
-          -0.22,
-          "ERA above FIP = unlucky"
-        ],
-        [
-          "ERA vs xFIP",
-          -0.62,
-          ""
-        ],
-        [
-          "HR suppression (xFIP-FIP)",
-          -0.4,
-          "homer-unlucky"
-        ],
-        [
-          "BABIP",
-          0.238,
-          "low = lucky on contact"
-        ],
-        [
-          "LOB% (strand)",
-          0.618,
-          "low = unlucky"
-        ],
-        [
-          "Schedule faced (OOR)",
-          50.3,
-          "tough slate"
-        ],
-        [
-          "K% trend (L3 vs szn)",
-          -2.8,
-          ""
-        ],
-        [
-          "BB% trend",
-          -0.6,
-          ""
-        ],
-        [
-          "Recent pitch count",
-          73.0,
-          ""
-        ]
-      ],
-      "props": {
-        "K": {
-          "proj": 3.3,
-          "lean": "\u2014"
-        },
-        "BB": {
-          "proj": 1.7,
-          "lean": "\u2014"
-        },
-        "Outs": {
-          "proj": 13.6,
-          "lean": "\u2014"
+          "lean": "under"
         },
         "ER": {
           "proj": 2.5,
-          "lean": "\u2014"
+          "lean": "over"
         }
       }
     },
     {
-      "name": "Merrill Kelly",
-      "team": "ARI",
-      "opp": "LAA",
+      "name": "Michael King",
+      "team": "SDP",
+      "opp": "STL",
       "hand": "R",
       "today": true,
-      "starts": 11,
-      "verdict": "STABLE",
-      "tone": "neutral",
-      "luck": 0.15,
-      "skill_era": 5.66,
-      "era": 5.46,
-      "fip": 5.9028804642145545,
-      "xfip": 5.36309421420834,
+      "starts": 14,
+      "verdict": "REGRESSION",
+      "tone": "fade",
+      "luck": 0.65,
+      "luck_base": 0.57,
+      "matchup_adj": 0.08,
+      "skill_era": 4.31,
+      "era": 3.46,
+      "fip": 4.307432341722974,
+      "xfip": 4.214078607352046,
       "factors": [
         [
           "ERA vs FIP",
-          0.44,
+          0.85,
           "ERA below FIP = lucky"
         ],
         [
           "ERA vs xFIP",
-          -0.1,
+          0.75,
           ""
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -0.54,
+          -0.09,
           "homer-unlucky"
         ],
         [
           "BABIP",
-          0.26,
+          0.241,
           "low = lucky on contact"
         ],
         [
           "LOB% (strand)",
-          0.722,
+          0.772,
           "high = lucky sequencing"
         ],
         [
           "Schedule faced (OOR)",
-          49.1,
+          52.7,
           "tough slate"
         ],
         [
           "K% trend (L3 vs szn)",
-          -4.1,
+          -10.5,
           ""
         ],
         [
           "BB% trend",
-          -0.2,
+          -4.7,
           ""
         ],
         [
           "Recent pitch count",
-          85.0,
+          92.0,
           ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.33,
+          "5/9 LHH (56%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          44.9,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          103.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          4.31,
+          "weighted vs today's 56% LHH mix (\u0394 +0.00 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.0,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
         ]
       ],
+      "opp_osi": 44.9,
+      "lineup_platoon": {
+        "lhh": 5,
+        "rhh": 4,
+        "n": 9,
+        "lhh_pct": 0.556,
+        "rhh_pct": 0.444
+      },
+      "park_factor": 1.0,
       "props": {
         "K": {
-          "proj": 3.4,
+          "proj": 5.1,
+          "lean": "under"
+        },
+        "BB": {
+          "proj": 2.5,
+          "lean": "over"
+        },
+        "Outs": {
+          "proj": 17.3,
+          "lean": "under"
+        },
+        "ER": {
+          "proj": 2.5,
+          "lean": "over"
+        }
+      }
+    },
+    {
+      "name": "Foster Griffin",
+      "team": "WSN",
+      "opp": "KCR",
+      "hand": "R",
+      "today": true,
+      "starts": 14,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.47,
+      "luck_base": 0.6,
+      "matchup_adj": -0.13,
+      "skill_era": 4.71,
+      "era": 3.46,
+      "fip": 4.745978643955329,
+      "xfip": 3.816099995584824,
+      "factors": [
+        [
+          "ERA vs FIP",
+          1.29,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          0.36,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.93,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.232,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.797,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          52.0,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -0.5,
+          ""
+        ],
+        [
+          "BB% trend",
+          -3.3,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          84.0,
+          ""
+        ],
+        [
+          "Lineup platoon mix",
+          -0.21,
+          "3/9 LHH (33%) \u2014 same-side heavy, RHP-friendly"
+        ],
+        [
+          "Opponent lineup OSI",
+          48.7,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          93.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          4.71,
+          "weighted vs today's 33% LHH mix (\u0394 -0.04 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          0.95,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "clear"
+        ]
+      ],
+      "opp_osi": 48.7,
+      "lineup_platoon": {
+        "lhh": 3,
+        "rhh": 6,
+        "n": 9,
+        "lhh_pct": 0.333,
+        "rhh_pct": 0.667
+      },
+      "park_factor": 0.95,
+      "props": {
+        "K": {
+          "proj": 5.6,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.5,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 16.7,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.6,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Dylan Cease",
+      "team": "TOR",
+      "opp": "BOS",
+      "hand": "R",
+      "today": true,
+      "starts": 12,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.4,
+      "luck_base": -0.34,
+      "matchup_adj": -0.06,
+      "skill_era": 2.34,
+      "era": 2.91,
+      "fip": 2.354953002929688,
+      "xfip": 2.418926226720214,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.56,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.49,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.06,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.324,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.75,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          51.1,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          7.7,
+          ""
+        ],
+        [
+          "BB% trend",
+          -0.1,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          90.0,
+          ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.33,
+          "5/9 LHH (56%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          24.5,
+          "cold lineup \u2014 regression damage may stay hidden"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          87.0,
+          "offense weak vs this hand"
+        ],
+        [
+          "Split FIP vs lineup",
+          2.34,
+          "weighted vs today's 56% LHH mix (\u0394 -0.01 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.12,
+          " hitter-friendly \u2014 run environment amplifies regression"
+        ],
+        [
+          "Weather / environment",
+          0.08,
+          "breeze 10 mph NW \u00b7 cloudy"
+        ]
+      ],
+      "opp_osi": 24.5,
+      "lineup_platoon": {
+        "lhh": 5,
+        "rhh": 4,
+        "n": 9,
+        "lhh_pct": 0.556,
+        "rhh_pct": 0.444
+      },
+      "park_factor": 1.12,
+      "props": {
+        "K": {
+          "proj": 8.6,
           "lean": "\u2014"
         },
         "BB": {
@@ -1653,11 +1622,253 @@
           "lean": "\u2014"
         },
         "Outs": {
-          "proj": 17.5,
+          "proj": 17.0,
           "lean": "\u2014"
         },
         "ER": {
-          "proj": 3.6,
+          "proj": 1.6,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Edward Cabrera",
+      "team": "CHC",
+      "opp": "COL",
+      "hand": "R",
+      "today": true,
+      "starts": 12,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.31,
+      "luck_base": -0.26,
+      "matchup_adj": -0.05,
+      "skill_era": 5.09,
+      "era": 4.86,
+      "fip": 5.089079987056672,
+      "xfip": 3.8820760325543455,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.23,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.98,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -1.21,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.303,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.706,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          42.1,
+          "soft slate inflated results"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          0.9,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.1,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          75.0,
+          ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.33,
+          "5/9 LHH (56%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          25.6,
+          "cold lineup \u2014 regression damage may stay hidden"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          96.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          5.09,
+          "weighted vs today's 56% LHH mix (\u0394 -0.00 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.05,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.08,
+          "breeze 10 mph SW \u00b7 cloudy"
+        ]
+      ],
+      "opp_osi": 25.6,
+      "lineup_platoon": {
+        "lhh": 5,
+        "rhh": 4,
+        "n": 9,
+        "lhh_pct": 0.556,
+        "rhh_pct": 0.444
+      },
+      "park_factor": 1.05,
+      "props": {
+        "K": {
+          "proj": 4.6,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 2.0,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 15.8,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.9,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Mitch Keller",
+      "team": "PIT",
+      "opp": "ATH",
+      "hand": "R",
+      "today": true,
+      "starts": 14,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.29,
+      "luck_base": -0.59,
+      "matchup_adj": 0.3,
+      "skill_era": 3.86,
+      "era": 5.14,
+      "fip": 3.89716079513748,
+      "xfip": 4.417197915176293,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -1.24,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.72,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          0.52,
+          "homer-lucky"
+        ],
+        [
+          "BABIP",
+          0.286,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.616,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          48.5,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -1.0,
+          ""
+        ],
+        [
+          "BB% trend",
+          2.9,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          91.0,
+          ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.33,
+          "5/9 LHH (56%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          52.0,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          103.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          3.86,
+          "weighted vs today's 56% LHH mix (\u0394 -0.04 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          0.9,
+          " suppresses offense \u2014 progression harder to sustain"
+        ],
+        [
+          "Weather / environment",
+          0.18,
+          "wind 13 mph SSW \u2014 fly-ball/total risk \u00b7 clear"
+        ]
+      ],
+      "opp_osi": 52.0,
+      "lineup_platoon": {
+        "lhh": 5,
+        "rhh": 4,
+        "n": 9,
+        "lhh_pct": 0.556,
+        "rhh_pct": 0.444
+      },
+      "park_factor": 0.9,
+      "props": {
+        "K": {
+          "proj": 3.9,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 2.0,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 16.5,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.6,
           "lean": "\u2014"
         }
       }
@@ -1671,8 +1882,10 @@
       "starts": 14,
       "verdict": "STABLE",
       "tone": "neutral",
-      "luck": 0.03,
-      "skill_era": 4.45,
+      "luck": -0.29,
+      "luck_base": 0.03,
+      "matchup_adj": -0.32,
+      "skill_era": 4.75,
       "era": 4.4,
       "fip": 4.469759869823902,
       "xfip": 4.426192286892851,
@@ -1721,15 +1934,54 @@
           "Recent pitch count",
           89.0,
           ""
+        ],
+        [
+          "Lineup platoon mix",
+          -0.74,
+          "1/9 LHH (11%) \u2014 same-side heavy, RHP-friendly"
+        ],
+        [
+          "Opponent lineup OSI",
+          39.7,
+          "cold lineup \u2014 regression damage may stay hidden"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          101.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          4.75,
+          "weighted vs today's 11% LHH mix (\u0394 +0.28 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.02,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
         ]
       ],
+      "opp_osi": 39.7,
+      "lineup_platoon": {
+        "lhh": 1,
+        "rhh": 8,
+        "n": 9,
+        "lhh_pct": 0.111,
+        "rhh_pct": 0.889
+      },
+      "park_factor": 1.02,
       "props": {
         "K": {
-          "proj": 4.2,
+          "proj": 4.8,
           "lean": "\u2014"
         },
         "BB": {
-          "proj": 2.0,
+          "proj": 1.8,
           "lean": "\u2014"
         },
         "Outs": {
@@ -1737,7 +1989,370 @@
           "lean": "\u2014"
         },
         "ER": {
-          "proj": 2.7,
+          "proj": 2.9,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Merrill Kelly",
+      "team": "ARI",
+      "opp": "LAA",
+      "hand": "R",
+      "today": true,
+      "starts": 11,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.2,
+      "luck_base": 0.15,
+      "matchup_adj": -0.35,
+      "skill_era": 5.07,
+      "era": 5.46,
+      "fip": 5.9028804642145545,
+      "xfip": 5.36309421420834,
+      "factors": [
+        [
+          "ERA vs FIP",
+          0.44,
+          "ERA below FIP = lucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.1,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.54,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.26,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.722,
+          "high = lucky sequencing"
+        ],
+        [
+          "Schedule faced (OOR)",
+          49.1,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -4.1,
+          ""
+        ],
+        [
+          "BB% trend",
+          -0.2,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          85.0,
+          ""
+        ],
+        [
+          "Lineup platoon mix",
+          -0.21,
+          "3/9 LHH (33%) \u2014 same-side heavy, RHP-friendly"
+        ],
+        [
+          "Opponent lineup OSI",
+          37.5,
+          "cold lineup \u2014 regression damage may stay hidden"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          96.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          5.07,
+          "weighted vs today's 33% LHH mix (\u0394 -0.83 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          0.97,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.06,
+          "warm 92\u00b0F \u00b7 clear"
+        ]
+      ],
+      "opp_osi": 37.5,
+      "lineup_platoon": {
+        "lhh": 3,
+        "rhh": 6,
+        "n": 9,
+        "lhh_pct": 0.333,
+        "rhh_pct": 0.667
+      },
+      "park_factor": 0.97,
+      "props": {
+        "K": {
+          "proj": 3.5,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 2.3,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 17.5,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 3.4,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Ryan Feltner",
+      "team": "COL",
+      "opp": "CHC",
+      "hand": "R",
+      "today": true,
+      "starts": 8,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": 0.07,
+      "luck_base": -0.21,
+      "matchup_adj": 0.28,
+      "skill_era": 5.09,
+      "era": 5.2,
+      "fip": 4.976512636128914,
+      "xfip": 4.575999873861152,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.22,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.62,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.4,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.238,
+          "low = lucky on contact"
+        ],
+        [
+          "LOB% (strand)",
+          0.618,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          50.3,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          -2.8,
+          ""
+        ],
+        [
+          "BB% trend",
+          -0.6,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          73.0,
+          ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.06,
+          "4/9 LHH (44%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          62.4,
+          "hot split-adjusted lineup \u2014 lucky ERAs bleed fast"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          105.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          5.09,
+          "weighted vs today's 44% LHH mix (\u0394 +0.11 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.05,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.08,
+          "breeze 10 mph SW \u00b7 cloudy"
+        ]
+      ],
+      "opp_osi": 62.4,
+      "lineup_platoon": {
+        "lhh": 4,
+        "rhh": 5,
+        "n": 9,
+        "lhh_pct": 0.444,
+        "rhh_pct": 0.556
+      },
+      "park_factor": 1.05,
+      "props": {
+        "K": {
+          "proj": 3.3,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.7,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 13.6,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 2.6,
+          "lean": "\u2014"
+        }
+      }
+    },
+    {
+      "name": "Adrian Houser",
+      "team": "SFG",
+      "opp": "ATL",
+      "hand": "R",
+      "today": true,
+      "starts": 13,
+      "verdict": "STABLE",
+      "tone": "neutral",
+      "luck": -0.01,
+      "luck_base": -0.38,
+      "matchup_adj": 0.37,
+      "skill_era": 5.37,
+      "era": 5.54,
+      "fip": 5.181876079852765,
+      "xfip": 4.820620602483933,
+      "factors": [
+        [
+          "ERA vs FIP",
+          -0.36,
+          "ERA above FIP = unlucky"
+        ],
+        [
+          "ERA vs xFIP",
+          -0.72,
+          ""
+        ],
+        [
+          "HR suppression (xFIP-FIP)",
+          -0.36,
+          "homer-unlucky"
+        ],
+        [
+          "BABIP",
+          0.302,
+          "high = unlucky"
+        ],
+        [
+          "LOB% (strand)",
+          0.65,
+          "low = unlucky"
+        ],
+        [
+          "Schedule faced (OOR)",
+          49.3,
+          "tough slate"
+        ],
+        [
+          "K% trend (L3 vs szn)",
+          9.0,
+          ""
+        ],
+        [
+          "BB% trend",
+          0.1,
+          ""
+        ],
+        [
+          "Recent pitch count",
+          84.0,
+          ""
+        ],
+        [
+          "Lineup platoon mix",
+          0.59,
+          "6/9 LHH (67%) \u2014 platoon stress on RHP"
+        ],
+        [
+          "Opponent lineup OSI",
+          57.9,
+          "league-average lineup OSI vs this SP hand"
+        ],
+        [
+          "Opp wRC+ vs hand",
+          107.0,
+          ""
+        ],
+        [
+          "Split FIP vs lineup",
+          5.37,
+          "weighted vs today's 67% LHH mix (\u0394 +0.19 vs season FIP)"
+        ],
+        [
+          "Ballpark factor",
+          1.03,
+          " neutral run environment"
+        ],
+        [
+          "Weather / environment",
+          0.0,
+          "cloudy"
+        ]
+      ],
+      "opp_osi": 57.9,
+      "lineup_platoon": {
+        "lhh": 6,
+        "rhh": 3,
+        "n": 9,
+        "lhh_pct": 0.667,
+        "rhh_pct": 0.333
+      },
+      "park_factor": 1.03,
+      "props": {
+        "K": {
+          "proj": 2.9,
+          "lean": "\u2014"
+        },
+        "BB": {
+          "proj": 1.9,
+          "lean": "\u2014"
+        },
+        "Outs": {
+          "proj": 15.0,
+          "lean": "\u2014"
+        },
+        "ER": {
+          "proj": 3.0,
           "lean": "\u2014"
         }
       }
@@ -1752,6 +2367,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -28.77,
+      "luck_base": -28.77,
+      "matchup_adj": 0.0,
       "skill_era": 3.34,
       "era": 54.0,
       "fip": 3.5167177088120405,
@@ -1832,6 +2449,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -13.9,
+      "luck_base": -13.9,
+      "matchup_adj": 0.0,
       "skill_era": 3.89,
       "era": 27.0,
       "fip": 3.547058266041045,
@@ -1912,6 +2531,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -13.18,
+      "luck_base": -13.18,
+      "matchup_adj": 0.0,
       "skill_era": 4.51,
       "era": 27.0,
       "fip": 4.754953002929687,
@@ -1992,6 +2613,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -9.56,
+      "luck_base": -9.56,
+      "matchup_adj": 0.0,
       "skill_era": 3.71,
       "era": 20.25,
       "fip": 3.533524431501116,
@@ -2072,6 +2695,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -6.79,
+      "luck_base": -6.79,
+      "matchup_adj": 0.0,
       "skill_era": 7.65,
       "era": 18.69,
       "fip": 9.10495300086072,
@@ -2152,6 +2777,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -6.52,
+      "luck_base": -6.52,
+      "matchup_adj": 0.0,
       "skill_era": 4.34,
       "era": 15.43,
       "fip": 4.514953003070688,
@@ -2232,6 +2859,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -6.31,
+      "luck_base": -6.31,
+      "matchup_adj": 0.0,
       "skill_era": 1.99,
       "era": 12.0,
       "fip": 1.7716196695963549,
@@ -2312,6 +2941,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -6.08,
+      "luck_base": -6.08,
+      "matchup_adj": 0.0,
       "skill_era": 4.34,
       "era": 13.5,
       "fip": 3.8162932091885886,
@@ -2392,6 +3023,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -4.43,
+      "luck_base": -4.43,
+      "matchup_adj": 0.0,
       "skill_era": 7.26,
       "era": 14.54,
       "fip": 6.335722236184125,
@@ -2472,6 +3105,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -4.05,
+      "luck_base": -4.05,
+      "matchup_adj": 0.0,
       "skill_era": 4.19,
       "era": 10.8,
       "fip": 4.173918520171067,
@@ -2552,6 +3187,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -3.49,
+      "luck_base": -3.49,
+      "matchup_adj": 0.0,
       "skill_era": 3.47,
       "era": 9.0,
       "fip": 2.793264691281855,
@@ -2632,6 +3269,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -3.45,
+      "luck_base": -3.45,
+      "matchup_adj": 0.0,
       "skill_era": 2.86,
       "era": 7.71,
       "fip": 2.8026274215343383,
@@ -2712,6 +3351,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 3.18,
+      "luck_base": 3.18,
+      "matchup_adj": 0.0,
       "skill_era": 4.63,
       "era": 0.0,
       "fip": 4.620104518081202,
@@ -2787,6 +3428,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 3.16,
+      "luck_base": 3.16,
+      "matchup_adj": 0.0,
       "skill_era": 4.18,
       "era": 0.0,
       "fip": 3.8791465513167847,
@@ -2867,6 +3510,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -3.11,
+      "luck_base": -3.11,
+      "matchup_adj": 0.0,
       "skill_era": 9.91,
       "era": 13.5,
       "fip": 11.832225722268532,
@@ -2947,6 +3592,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 3.07,
+      "luck_base": 3.07,
+      "matchup_adj": 0.0,
       "skill_era": 3.97,
       "era": 0.0,
       "fip": 3.7642936623428014,
@@ -3027,6 +3674,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -2.93,
+      "luck_base": -2.93,
+      "matchup_adj": 0.0,
       "skill_era": 7.41,
       "era": 12.27,
       "fip": 7.741316635078448,
@@ -3107,6 +3756,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 2.85,
+      "luck_base": 2.85,
+      "matchup_adj": 0.0,
       "skill_era": 3.78,
       "era": 0.0,
       "fip": 3.533524431501116,
@@ -3182,6 +3833,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 2.85,
+      "luck_base": 2.85,
+      "matchup_adj": 0.0,
       "skill_era": 4.03,
       "era": 0.0,
       "fip": 4.170742476754134,
@@ -3257,6 +3910,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 2.8,
+      "luck_base": 2.8,
+      "matchup_adj": 0.0,
       "skill_era": 4.1,
       "era": 0.0,
       "fip": 2.771619669596354,
@@ -3337,6 +3992,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -2.53,
+      "luck_base": -2.53,
+      "matchup_adj": 0.0,
       "skill_era": 8.38,
       "era": 12.54,
       "fip": 8.569238719166933,
@@ -3417,6 +4074,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 2.48,
+      "luck_base": 2.48,
+      "matchup_adj": 0.0,
       "skill_era": 2.8,
       "era": 0.0,
       "fip": 2.414953002860688,
@@ -3497,6 +4156,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -2.47,
+      "luck_base": -2.47,
+      "matchup_adj": 0.0,
       "skill_era": 3.73,
       "era": 7.56,
       "fip": 3.5147890685034584,
@@ -3577,6 +4238,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 2.4,
+      "luck_base": 2.4,
+      "matchup_adj": 0.0,
       "skill_era": 4.64,
       "era": 0.0,
       "fip": 4.547990977795895,
@@ -3657,6 +4320,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -2.23,
+      "luck_base": -2.23,
+      "matchup_adj": 0.0,
       "skill_era": 2.5,
       "era": 6.0,
       "fip": 2.354953002929688,
@@ -3737,6 +4402,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -2.18,
+      "luck_base": -2.18,
+      "matchup_adj": 0.0,
       "skill_era": 3.7,
       "era": 7.36,
       "fip": 3.719707101239954,
@@ -3817,6 +4484,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -2.11,
+      "luck_base": -2.11,
+      "matchup_adj": 0.0,
       "skill_era": 4.91,
       "era": 8.28,
       "fip": 5.281423591164982,
@@ -3897,6 +4566,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 2.05,
+      "luck_base": 2.05,
+      "matchup_adj": 0.0,
       "skill_era": 4.12,
       "era": 0.0,
       "fip": 4.083213872388573,
@@ -3977,6 +4648,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -2.03,
+      "luck_base": -2.03,
+      "matchup_adj": 0.0,
       "skill_era": 4.6,
       "era": 7.36,
       "fip": 4.504953002929687,
@@ -4057,6 +4730,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.99,
+      "luck_base": 1.99,
+      "matchup_adj": 0.0,
       "skill_era": 3.43,
       "era": 0.0,
       "fip": 3.698359596401491,
@@ -4137,6 +4812,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.97,
+      "luck_base": 1.97,
+      "matchup_adj": 0.0,
       "skill_era": 5.66,
       "era": 2.61,
       "fip": 5.763180851367438,
@@ -4217,6 +4894,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -1.86,
+      "luck_base": -1.86,
+      "matchup_adj": 0.0,
       "skill_era": 5.12,
       "era": 7.98,
       "fip": 5.610634820969137,
@@ -4297,6 +4976,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.84,
+      "luck_base": 1.84,
+      "matchup_adj": 0.0,
       "skill_era": 3.72,
       "era": 1.17,
       "fip": 3.7049530029818616,
@@ -4377,6 +5058,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -1.74,
+      "luck_base": -1.74,
+      "matchup_adj": 0.0,
       "skill_era": 4.63,
       "era": 7.23,
       "fip": 4.84099361197862,
@@ -4457,6 +5140,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.74,
+      "luck_base": 1.74,
+      "matchup_adj": 0.0,
       "skill_era": 3.79,
       "era": 2.08,
       "fip": 3.34737724535393,
@@ -4537,6 +5222,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -1.65,
+      "luck_base": -1.65,
+      "matchup_adj": 0.0,
       "skill_era": 6.74,
       "era": 9.16,
       "fip": 7.7814235904772655,
@@ -4617,6 +5304,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -1.64,
+      "luck_base": -1.64,
+      "matchup_adj": 0.0,
       "skill_era": 7.63,
       "era": 10.23,
       "fip": 8.78677118474787,
@@ -4697,6 +5386,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -1.45,
+      "luck_base": -1.45,
+      "matchup_adj": 0.0,
       "skill_era": 4.65,
       "era": 6.86,
       "fip": 5.062580121739656,
@@ -4777,6 +5468,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.43,
+      "luck_base": 1.43,
+      "matchup_adj": 0.0,
       "skill_era": 2.98,
       "era": 1.06,
       "fip": 2.676381574379371,
@@ -4857,6 +5550,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -1.42,
+      "luck_base": -1.42,
+      "matchup_adj": 0.0,
       "skill_era": 4.99,
       "era": 7.17,
       "fip": 5.547430878819734,
@@ -4937,6 +5632,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -1.4,
+      "luck_base": -1.4,
+      "matchup_adj": 0.0,
       "skill_era": 2.1,
       "era": 4.5,
       "fip": 1.2299530029296877,
@@ -5017,6 +5714,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.4,
+      "luck_base": 1.4,
+      "matchup_adj": 0.0,
       "skill_era": 3.54,
       "era": 1.23,
       "fip": 3.70037285021248,
@@ -5097,6 +5796,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.28,
+      "luck_base": 1.28,
+      "matchup_adj": 0.0,
       "skill_era": 6.48,
       "era": 4.35,
       "fip": 6.395275583044152,
@@ -5177,6 +5878,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -1.2,
+      "luck_base": -1.2,
+      "matchup_adj": 0.0,
       "skill_era": 3.93,
       "era": 5.81,
       "fip": 3.68559816422001,
@@ -5257,6 +5960,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.13,
+      "luck_base": 1.13,
+      "matchup_adj": 0.0,
       "skill_era": 3.48,
       "era": 2.01,
       "fip": 3.581423591136954,
@@ -5337,6 +6042,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.11,
+      "luck_base": 1.11,
+      "matchup_adj": 0.0,
       "skill_era": 4.26,
       "era": 2.55,
       "fip": 4.088559560347049,
@@ -5417,6 +6124,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -1.06,
+      "luck_base": -1.06,
+      "matchup_adj": 0.0,
       "skill_era": 4.2,
       "era": 5.86,
       "fip": 4.5058963990900205,
@@ -5497,6 +6206,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 1.03,
+      "luck_base": 1.03,
+      "matchup_adj": 0.0,
       "skill_era": 7.46,
       "era": 6.05,
       "fip": 8.380815072804836,
@@ -5577,6 +6288,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -0.98,
+      "luck_base": -0.98,
+      "matchup_adj": 0.0,
       "skill_era": 4.54,
       "era": 6.04,
       "fip": 4.887305944001314,
@@ -5657,6 +6370,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.95,
+      "luck_base": 0.95,
+      "matchup_adj": 0.0,
       "skill_era": 2.8,
       "era": 1.49,
       "fip": 2.36301751905872,
@@ -5737,6 +6452,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.92,
+      "luck_base": 0.92,
+      "matchup_adj": 0.0,
       "skill_era": 3.99,
       "era": 2.6,
       "fip": 3.555596779734381,
@@ -5817,6 +6534,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.92,
+      "luck_base": 0.92,
+      "matchup_adj": 0.0,
       "skill_era": 4.22,
       "era": 2.57,
       "fip": 4.536771184747869,
@@ -5897,6 +6616,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.87,
+      "luck_base": 0.87,
+      "matchup_adj": 0.0,
       "skill_era": 4.9,
       "era": 4.5,
       "fip": 4.681224189103201,
@@ -5972,6 +6693,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -0.85,
+      "luck_base": -0.85,
+      "matchup_adj": 0.0,
       "skill_era": 5.41,
       "era": 6.75,
       "fip": 5.886771185253655,
@@ -6052,6 +6775,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.83,
+      "luck_base": 0.83,
+      "matchup_adj": 0.0,
       "skill_era": 5.49,
       "era": 4.35,
       "fip": 5.84737724535393,
@@ -6132,6 +6857,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.81,
+      "luck_base": 0.81,
+      "matchup_adj": 0.0,
       "skill_era": 3.97,
       "era": 3.0,
       "fip": 3.542453002929688,
@@ -6212,6 +6939,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -0.75,
+      "luck_base": -0.75,
+      "matchup_adj": 0.0,
       "skill_era": 4.64,
       "era": 5.86,
       "fip": 4.468589366566051,
@@ -6292,6 +7021,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.73,
+      "luck_base": 0.73,
+      "matchup_adj": 0.0,
       "skill_era": 3.42,
       "era": 2.39,
       "fip": 3.218877053555389,
@@ -6372,6 +7103,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.73,
+      "luck_base": 0.73,
+      "matchup_adj": 0.0,
       "skill_era": 3.96,
       "era": 3.0,
       "fip": 3.900871370276626,
@@ -6452,6 +7185,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.71,
+      "luck_base": 0.71,
+      "matchup_adj": 0.0,
       "skill_era": 3.74,
       "era": 2.68,
       "fip": 3.7009794930353848,
@@ -6532,6 +7267,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -0.7,
+      "luck_base": -0.7,
+      "matchup_adj": 0.0,
       "skill_era": 4.29,
       "era": 5.35,
       "fip": 4.094800718615482,
@@ -6612,6 +7349,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -0.69,
+      "luck_base": -0.69,
+      "matchup_adj": 0.0,
       "skill_era": 4.21,
       "era": 5.23,
       "fip": 4.246888486726983,
@@ -6692,6 +7431,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.64,
+      "luck_base": 0.64,
+      "matchup_adj": 0.0,
       "skill_era": 5.28,
       "era": 4.2,
       "fip": 5.476210487817637,
@@ -6772,6 +7513,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.62,
+      "luck_base": 0.62,
+      "matchup_adj": 0.0,
       "skill_era": 4.41,
       "era": 3.61,
       "fip": 4.003570514491836,
@@ -6852,6 +7595,8 @@
       "verdict": "PROGRESSION",
       "tone": "back",
       "luck": -0.61,
+      "luck_base": -0.61,
+      "matchup_adj": 0.0,
       "skill_era": 4.28,
       "era": 5.16,
       "fip": 4.259953002871938,
@@ -6932,6 +7677,8 @@
       "verdict": "REGRESSION",
       "tone": "fade",
       "luck": 0.61,
+      "luck_base": 0.61,
+      "matchup_adj": 0.0,
       "skill_era": 3.0,
       "era": 2.27,
       "fip": 2.412645310670409,
@@ -7012,6 +7759,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.52,
+      "luck_base": 0.52,
+      "matchup_adj": 0.0,
       "skill_era": 4.23,
       "era": 3.6,
       "fip": 3.9716196695963535,
@@ -7092,6 +7841,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.51,
+      "luck_base": -0.51,
+      "matchup_adj": 0.0,
       "skill_era": 4.86,
       "era": 5.67,
       "fip": 4.773592056282862,
@@ -7172,6 +7923,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.51,
+      "luck_base": 0.51,
+      "matchup_adj": 0.0,
       "skill_era": 3.09,
       "era": 2.72,
       "fip": 3.256213507118657,
@@ -7252,6 +8005,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.49,
+      "luck_base": 0.49,
+      "matchup_adj": 0.0,
       "skill_era": 4.14,
       "era": 3.47,
       "fip": 3.9119705467893366,
@@ -7332,6 +8087,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.49,
+      "luck_base": -0.49,
+      "matchup_adj": 0.0,
       "skill_era": 5.03,
       "era": 6.1,
       "fip": 5.3881388434356,
@@ -7412,6 +8169,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.48,
+      "luck_base": 0.48,
+      "matchup_adj": 0.0,
       "skill_era": 2.94,
       "era": 2.3,
       "fip": 2.8241019390879494,
@@ -7492,6 +8251,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.46,
+      "luck_base": -0.46,
+      "matchup_adj": 0.0,
       "skill_era": 5.15,
       "era": 5.4,
       "fip": 5.226904221924334,
@@ -7572,6 +8333,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.44,
+      "luck_base": -0.44,
+      "matchup_adj": 0.0,
       "skill_era": 3.83,
       "era": 4.5,
       "fip": 3.104953002929688,
@@ -7652,6 +8415,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.43,
+      "luck_base": -0.43,
+      "matchup_adj": 0.0,
       "skill_era": 4.15,
       "era": 4.8,
       "fip": 4.104953002929688,
@@ -7732,6 +8497,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.42,
+      "luck_base": 0.42,
+      "matchup_adj": 0.0,
       "skill_era": 3.69,
       "era": 3.03,
       "fip": 3.6343647676638806,
@@ -7812,6 +8579,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.41,
+      "luck_base": 0.41,
+      "matchup_adj": 0.0,
       "skill_era": 5.08,
       "era": 4.42,
       "fip": 5.259498457573076,
@@ -7892,6 +8661,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.39,
+      "luck_base": 0.39,
+      "matchup_adj": 0.0,
       "skill_era": 5.36,
       "era": 4.84,
       "fip": 6.189858663598075,
@@ -7972,6 +8743,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.38,
+      "luck_base": 0.38,
+      "matchup_adj": 0.0,
       "skill_era": 5.06,
       "era": 4.4,
       "fip": 5.230581143740021,
@@ -8052,6 +8825,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.38,
+      "luck_base": -0.38,
+      "matchup_adj": 0.0,
       "skill_era": 4.86,
       "era": 5.35,
       "fip": 5.047684280377144,
@@ -8132,6 +8907,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.33,
+      "luck_base": -0.33,
+      "matchup_adj": 0.0,
       "skill_era": 2.67,
       "era": 3.86,
       "fip": 1.8192387153786675,
@@ -8212,6 +8989,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.31,
+      "luck_base": -0.31,
+      "matchup_adj": 0.0,
       "skill_era": 3.6,
       "era": 4.14,
       "fip": 3.461388646511689,
@@ -8292,6 +9071,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.3,
+      "luck_base": -0.3,
+      "matchup_adj": 0.0,
       "skill_era": 5.78,
       "era": 6.22,
       "fip": 6.120104518081202,
@@ -8372,6 +9153,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.29,
+      "luck_base": -0.29,
+      "matchup_adj": 0.0,
       "skill_era": 4.91,
       "era": 5.37,
       "fip": 5.03738543536212,
@@ -8452,6 +9235,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.29,
+      "luck_base": 0.29,
+      "matchup_adj": 0.0,
       "skill_era": 3.24,
       "era": 2.45,
       "fip": 4.468589365326382,
@@ -8532,6 +9317,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.28,
+      "luck_base": 0.28,
+      "matchup_adj": 0.0,
       "skill_era": 5.57,
       "era": 5.19,
       "fip": 6.311849554495851,
@@ -8612,6 +9399,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.28,
+      "luck_base": 0.28,
+      "matchup_adj": 0.0,
       "skill_era": 4.94,
       "era": 4.59,
       "fip": 4.964953002836688,
@@ -8692,6 +9481,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.27,
+      "luck_base": 0.27,
+      "matchup_adj": 0.0,
       "skill_era": 3.41,
       "era": 3.17,
       "fip": 3.5745182203005763,
@@ -8772,6 +9563,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.22,
+      "luck_base": -0.22,
+      "matchup_adj": 0.0,
       "skill_era": 5.16,
       "era": 5.48,
       "fip": 5.555657228454385,
@@ -8852,6 +9645,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.2,
+      "luck_base": -0.2,
+      "matchup_adj": 0.0,
       "skill_era": 3.81,
       "era": 4.27,
       "fip": 3.5415727212395467,
@@ -8932,6 +9727,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.19,
+      "luck_base": -0.19,
+      "matchup_adj": 0.0,
       "skill_era": 3.17,
       "era": 3.46,
       "fip": 2.985483976375729,
@@ -9012,6 +9809,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.17,
+      "luck_base": 0.17,
+      "matchup_adj": 0.0,
       "skill_era": 5.58,
       "era": 5.27,
       "fip": 5.348855441954078,
@@ -9092,6 +9891,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.15,
+      "luck_base": -0.15,
+      "matchup_adj": 0.0,
       "skill_era": 3.5,
       "era": 3.75,
       "fip": 3.215044746043904,
@@ -9172,6 +9973,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.15,
+      "luck_base": -0.15,
+      "matchup_adj": 0.0,
       "skill_era": 4.61,
       "era": 4.71,
       "fip": 4.987028474539024,
@@ -9252,6 +10055,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.14,
+      "luck_base": 0.14,
+      "matchup_adj": 0.0,
       "skill_era": 3.23,
       "era": 3.21,
       "fip": 2.715763813761536,
@@ -9332,6 +10137,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.13,
+      "luck_base": 0.13,
+      "matchup_adj": 0.0,
       "skill_era": 4.11,
       "era": 4.15,
       "fip": 3.9919095247459446,
@@ -9412,6 +10219,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.12,
+      "luck_base": -0.12,
+      "matchup_adj": 0.0,
       "skill_era": 4.97,
       "era": 5.13,
       "fip": 5.459383382676523,
@@ -9492,6 +10301,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.12,
+      "luck_base": 0.12,
+      "matchup_adj": 0.0,
       "skill_era": 3.2,
       "era": 3.11,
       "fip": 2.9321134967568483,
@@ -9572,6 +10383,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.12,
+      "luck_base": 0.12,
+      "matchup_adj": 0.0,
       "skill_era": 4.66,
       "era": 4.38,
       "fip": 4.771619669596355,
@@ -9652,6 +10465,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.1,
+      "luck_base": 0.1,
+      "matchup_adj": 0.0,
       "skill_era": 4.0,
       "era": 3.9,
       "fip": 4.056760231845351,
@@ -9732,6 +10547,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.1,
+      "luck_base": 0.1,
+      "matchup_adj": 0.0,
       "skill_era": 4.24,
       "era": 4.06,
       "fip": 4.019587149271152,
@@ -9812,6 +10629,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.09,
+      "luck_base": -0.09,
+      "matchup_adj": 0.0,
       "skill_era": 2.58,
       "era": 2.81,
       "fip": 2.4382863362630216,
@@ -9892,6 +10711,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.08,
+      "luck_base": -0.08,
+      "matchup_adj": 0.0,
       "skill_era": 4.5,
       "era": 4.57,
       "fip": 4.416428412765753,
@@ -9972,6 +10793,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.07,
+      "luck_base": -0.07,
+      "matchup_adj": 0.0,
       "skill_era": 4.16,
       "era": 4.25,
       "fip": 4.142624235841937,
@@ -10052,6 +10875,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.06,
+      "luck_base": -0.06,
+      "matchup_adj": 0.0,
       "skill_era": 3.15,
       "era": 3.38,
       "fip": 2.4913166392235926,
@@ -10132,6 +10957,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.06,
+      "luck_base": -0.06,
+      "matchup_adj": 0.0,
       "skill_era": 3.9,
       "era": 4.11,
       "fip": 3.720847042705575,
@@ -10212,6 +11039,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.06,
+      "luck_base": 0.06,
+      "matchup_adj": 0.0,
       "skill_era": 4.99,
       "era": 4.7,
       "fip": 5.104953002929688,
@@ -10292,6 +11121,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.05,
+      "luck_base": 0.05,
+      "matchup_adj": 0.0,
       "skill_era": 4.07,
       "era": 4.09,
       "fip": 5.468589366566052,
@@ -10372,6 +11203,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.04,
+      "luck_base": 0.04,
+      "matchup_adj": 0.0,
       "skill_era": 3.16,
       "era": 3.17,
       "fip": 2.898475270127806,
@@ -10452,6 +11285,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.03,
+      "luck_base": 0.03,
+      "matchup_adj": 0.0,
       "skill_era": 4.32,
       "era": 4.16,
       "fip": 4.477293428388606,
@@ -10532,6 +11367,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.03,
+      "luck_base": 0.03,
+      "matchup_adj": 0.0,
       "skill_era": 3.19,
       "era": 3.23,
       "fip": 2.776828002929688,
@@ -10612,6 +11449,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.03,
+      "luck_base": 0.03,
+      "matchup_adj": 0.0,
       "skill_era": 4.12,
       "era": 4.14,
       "fip": 4.207278584273766,
@@ -10692,6 +11531,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.02,
+      "luck_base": -0.02,
+      "matchup_adj": 0.0,
       "skill_era": 4.15,
       "era": 4.23,
       "fip": 4.662204911386072,
@@ -10772,6 +11613,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.02,
+      "luck_base": 0.02,
+      "matchup_adj": 0.0,
       "skill_era": 3.34,
       "era": 3.41,
       "fip": 3.2084012787917566,
@@ -10852,6 +11695,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": -0.02,
+      "luck_base": -0.02,
+      "matchup_adj": 0.0,
       "skill_era": 3.88,
       "era": 3.86,
       "fip": 3.5713395575711324,
@@ -10932,6 +11777,8 @@
       "verdict": "STABLE",
       "tone": "neutral",
       "luck": 0.01,
+      "luck_base": 0.01,
+      "matchup_adj": 0.0,
       "skill_era": 3.15,
       "era": 3.21,
       "fip": 2.8335244315011163,
@@ -11011,7 +11858,7 @@
       "time": "6:40 PM ET",
       "away_sp": "Tyler Phillips",
       "home_sp": "Jes\u00fas Luzardo",
-      "away_skill": 3.92,
+      "away_skill": 3.38,
       "home_skill": null,
       "away_verdict": "REGRESSION",
       "home_verdict": null,
@@ -11029,17 +11876,17 @@
       "time": "6:45 PM ET",
       "away_sp": "Michael Wacha",
       "home_sp": "Foster Griffin",
-      "away_skill": 4.15,
-      "home_skill": 4.33,
-      "away_verdict": "STABLE",
-      "home_verdict": "REGRESSION",
+      "away_skill": 4.05,
+      "home_skill": 4.71,
+      "away_verdict": "REGRESSION",
+      "home_verdict": "STABLE",
       "away_bp": 0.01,
       "home_bp": 0.01,
       "ml_lean": "\u2014",
-      "total_lean": "\u2014",
-      "f5_lean": "\u2014",
+      "total_lean": "OVER",
+      "f5_lean": "OVER",
       "drivers": [
-        "WSN SP regression risk"
+        "KCR SP regression risk"
       ]
     },
     {
@@ -11049,7 +11896,7 @@
       "time": "6:45 PM ET",
       "away_sp": "Dylan Cease",
       "home_sp": "Payton Tolle",
-      "away_skill": 2.38,
+      "away_skill": 2.34,
       "home_skill": null,
       "away_verdict": "STABLE",
       "home_verdict": null,
@@ -11067,9 +11914,9 @@
       "time": "7:05 PM ET",
       "away_sp": "Davis Martin",
       "home_sp": "Gerrit Cole",
-      "away_skill": 2.73,
-      "home_skill": 4.36,
-      "away_verdict": "STABLE",
+      "away_skill": 2.43,
+      "home_skill": 4.11,
+      "away_verdict": "REGRESSION",
       "home_verdict": "REGRESSION",
       "away_bp": -0.88,
       "home_bp": -1.11,
@@ -11077,6 +11924,7 @@
       "total_lean": "OVER",
       "f5_lean": "\u2014",
       "drivers": [
+        "CHW SP regression risk",
         "NYY SP regression risk"
       ]
     },
@@ -11105,8 +11953,8 @@
       "time": "7:15 PM ET",
       "away_sp": "Adrian Houser",
       "home_sp": "Grant Holmes",
-      "away_skill": 5.02,
-      "home_skill": 4.9,
+      "away_skill": 5.37,
+      "home_skill": 5.26,
       "away_verdict": "STABLE",
       "home_verdict": "REGRESSION",
       "away_bp": -0.29,
@@ -11143,9 +11991,9 @@
       "time": "7:45 PM ET",
       "away_sp": "Michael King",
       "home_sp": "Andre Pallante",
-      "away_skill": 4.27,
+      "away_skill": 4.31,
       "home_skill": null,
-      "away_verdict": "STABLE",
+      "away_verdict": "REGRESSION",
       "home_verdict": null,
       "away_bp": -0.89,
       "home_bp": 0.77,
@@ -11161,15 +12009,15 @@
       "time": "8:05 PM ET",
       "away_sp": "Ryan Feltner",
       "home_sp": "Edward Cabrera",
-      "away_skill": 4.8,
-      "home_skill": 4.55,
+      "away_skill": 5.09,
+      "home_skill": 5.09,
       "away_verdict": "STABLE",
       "home_verdict": "STABLE",
       "away_bp": 0.51,
       "home_bp": -0.8,
       "ml_lean": "CHC",
       "total_lean": "\u2014",
-      "f5_lean": "\u2014",
+      "f5_lean": "OVER",
       "drivers": []
     },
     {
@@ -11197,7 +12045,7 @@
       "time": "8:10 PM ET",
       "away_sp": "Framber Valdez",
       "home_sp": "Hunter Brown",
-      "away_skill": 4.45,
+      "away_skill": 4.75,
       "home_skill": null,
       "away_verdict": "STABLE",
       "home_verdict": null,
@@ -11216,13 +12064,13 @@
       "away_sp": "Brandon Young",
       "home_sp": "Logan Gilbert",
       "away_skill": null,
-      "home_skill": 3.88,
+      "home_skill": 4.12,
       "away_verdict": null,
-      "home_verdict": "STABLE",
+      "home_verdict": "REGRESSION",
       "away_bp": -0.17,
       "home_bp": -0.74,
       "ml_lean": "\u2014",
-      "total_lean": "\u2014",
+      "total_lean": "OVER",
       "f5_lean": "\u2014",
       "drivers": []
     },
@@ -11234,14 +12082,14 @@
       "away_sp": "Reid Detmers",
       "home_sp": "Merrill Kelly",
       "away_skill": null,
-      "home_skill": 5.66,
+      "home_skill": 5.07,
       "away_verdict": null,
       "home_verdict": "STABLE",
       "away_bp": -0.18,
       "home_bp": -1.52,
       "ml_lean": "\u2014",
       "total_lean": "\u2014",
-      "f5_lean": "OVER",
+      "f5_lean": "\u2014",
       "drivers": []
     },
     {
@@ -11251,7 +12099,7 @@
       "time": "9:40 PM ET",
       "away_sp": "Mitch Keller",
       "home_sp": "Jack Perkins",
-      "away_skill": 4.13,
+      "away_skill": 3.86,
       "home_skill": null,
       "away_verdict": "STABLE",
       "home_verdict": null,
