@@ -94,6 +94,10 @@
   .factor{background:var(--card-2);border:1px solid var(--border-2);border-radius:10px;padding:8px 12px;font-size:12.5px;min-width:150px}
   .factor .fl{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
   .factor .fv{font-weight:800;font-size:14px;font-family:var(--display);margin-top:1px} .factor .fn{color:var(--ink2);font-size:11.5px}
+  .chip{display:inline-block;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
+  td .chip, .factor .chip{font-family:var(--display);font-size:inherit}
+  .chip.c-elite{color:#4ADE80}.chip.c-good{color:#7BDC5A}.chip.c-mid{color:#FBBF24}
+  .chip.c-weak{color:#FB923C}.chip.c-poor{color:#F87171}.chip.c-na{color:var(--muted)}
 
   .pill{display:inline-block;padding:3px 11px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.03em}
   .pill.reg{background:var(--redbg);color:var(--red-l)}.pill.prog{background:var(--greenbg);color:var(--green-l)}.pill.stab{background:rgba(255,255,255,.07);color:var(--ink2)}
@@ -192,6 +196,42 @@ const esc=s=>String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','
 const verdPill=v=>`<span class="pill ${v==='REGRESSION'?'reg':v==='PROGRESSION'?'prog':'stab'}">${v==='REGRESSION'?'REGRESS':v==='PROGRESSION'?'PROGRESS':'STABLE'}</span>`;
 const leanCls=l=>l==='over'?'over':l==='under'?'under':'n';
 
+/* ---- MLBMA metric grading (matches Chase Analytics valChip / metricColor) ---- */
+const METRIC_CTX={
+  era:{mean:4.10,std:0.85,hi:false},fip:{mean:4.10,std:0.55,hi:false},xfip:{mean:4.05,std:0.35,hi:false},
+  luck:{mean:0,std:0.65,hi:false},kpct:{mean:22.5,std:4.5,hi:true},bbpct:{mean:8.0,std:1.8,hi:false},
+  kstart:{mean:5.0,std:1.4,hi:true},bbstart:{mean:2.0,std:0.9,hi:false},outs:{mean:16.0,std:3.2,hi:true},
+  erstart:{mean:2.5,std:1.1,hi:false},oor:{mean:50,std:12,hi:true},babip:{mean:0.295,std:0.028,hi:false},
+  lob:{mean:0.72,std:0.08,hi:true},luck_delta:{mean:0,std:1.0,hi:false},trend:{mean:0,std:2.5,hi:true},
+  pitches:{mean:92,std:14,hi:false},default:{mean:50,std:12,hi:true}
+};
+const CHIP_CLASS={elite:'c-elite',strong:'c-good',aboveAvg:'c-good',average:'c-mid',belowAvg:'c-mid',weak:'c-weak',veryWeak:'c-poor'};
+function zScore(v,ctx){const c=METRIC_CTX[ctx]||METRIC_CTX.default;const z=(+v-c.mean)/(c.std||1);return c.sens?z*c.sens:z;}
+function gradeKey(v,ctx,invert){const c=METRIC_CTX[ctx]||METRIC_CTX.default;let inv=invert!=null?!!invert:!c.hi;let z=zScore(v,ctx);if(inv)z=-z;
+  if(z<=-1.5)return 'veryWeak';if(z<=-0.85)return 'weak';if(z<=-0.30)return 'belowAvg';if(z<=0.30)return 'average';
+  if(z<=0.85)return 'aboveAvg';if(z<=1.5)return 'strong';return 'elite';}
+function metricChip(v,ctx,invert,dec){if(v==null||isNaN(+v))return `<span class="chip c-na">—</span>`;
+  const d=dec==null?1:dec;const cls=CHIP_CLASS[gradeKey(+v,ctx,invert)]||'c-mid';
+  return `<span class="chip ${cls}">${(+v).toFixed(d)}</span>`;}
+function metricChipSigned(v,ctx,invert,dec){if(v==null||isNaN(+v))return `<span class="chip c-na">—</span>`;
+  const d=dec==null?1:dec;const cls=CHIP_CLASS[gradeKey(+v,ctx,invert)]||'c-mid';
+  const txt=(+v>=0?'+':'')+(+v).toFixed(d);return `<span class="chip ${cls}">${txt}</span>`;}
+function propCtx(pn){return ({K:'kstart',BB:'bbstart',Outs:'outs',ER:'erstart'}[pn]||'default');}
+function factorChip(label,raw){
+  const l=String(label||'').toLowerCase();let v=parseFloat(String(raw).replace(/[^0-9.-]/g,''));
+  const disp=esc(String(raw==null?'—':raw));
+  if(isNaN(v))return `<span class="chip c-na">${disp}</span>`;
+  if(l.includes('era vs')||l.includes('hr suppression'))return metricChipSigned(v,'luck_delta',true,2);
+  if(l.includes('babip'))return metricChip(v,'babip',true,3);
+  if(l.includes('lob'))return metricChip(v,'lob',true,3);
+  if(l.includes('oor')||l.includes('schedule'))return metricChip(v,'oor',false,1);
+  if(l.includes('k% trend'))return metricChipSigned(v,'trend',false,1);
+  if(l.includes('bb% trend'))return metricChipSigned(v,'trend',true,1);
+  if(l.includes('pitch count'))return metricChip(v,'pitches',false,0);
+  return metricChip(v,'default',false,2);
+}
+function skillChip(v){return metricChip(v,'era',null,2);}
+
 /* ---- Pitchers ---- */
 function pitcherRows(){
   let rows=(D.data.pitchers||[]).slice();
@@ -217,12 +257,12 @@ function renderPitchers(){
       <td>${r.today?'<span class="today-dot"></span>':''}${esc(r.name)} <span style="color:var(--muted);font-weight:500">${esc(r.team)}</span></td>
       <td class="num">${esc(r.opp||'—')}</td>
       <td>${verdPill(r.verdict)}</td>
-      <td class="num ${r.luck>=0?'neg':'pos'}">${sp(r.luck)}</td>
-      <td class="num">${f1(r.skill_era,2)}</td>
-      <td class="num">${f1(pr.proj,1)}</td>
+      <td class="num">${metricChipSigned(r.luck,'luck',null,2)}</td>
+      <td class="num">${skillChip(r.skill_era)}</td>
+      <td class="num">${metricChip(pr.proj,propCtx(pn),null,1)}</td>
       <td><span class="lean ${leanCls(pr.lean)}">${pr.lean&&pr.lean!=='—'?pr.lean.toUpperCase():'—'}</span></td></tr>`;
     h+=`<tr class="detail" id="det-${idx}" style="display:none"><td colspan="7"><div class="factors">`
-      + (r.factors||[]).map(ff=>`<div class="factor"><div class="fl">${esc(ff[0])}</div><div class="fv num">${esc(ff[1])}</div>${ff[2]?`<div class="fn">${esc(ff[2])}</div>`:''}</div>`).join('')
+      + (r.factors||[]).map(ff=>`<div class="factor"><div class="fl">${esc(ff[0])}</div><div class="fv num">${factorChip(ff[0],ff[1])}</div>${ff[2]?`<div class="fn">${esc(ff[2])}</div>`:''}</div>`).join('')
       + `</div></td></tr>`;
   });
   h+='</tbody></table></div>';
@@ -244,8 +284,8 @@ function renderMarkets(){
   if(!g.length) h+='<div class="empty">no games match this filter.</div>';
   g.forEach(m=>{
     h+=`<div class="mk"><div class="gm">${esc(m.game)}<span class="t">${esc(m.time||'')}</span></div>
-      <div class="sp">${esc(m.away_sp||'TBD')} <span style="color:var(--muted)">(${m.away_verdict||'—'}, ${f1(m.away_skill,2)})</span><br>
-        ${esc(m.home_sp||'TBD')} <span style="color:var(--muted)">(${m.home_verdict||'—'}, ${f1(m.home_skill,2)})</span></div>
+      <div class="sp">${esc(m.away_sp||'TBD')} <span style="color:var(--muted)">(${m.away_verdict||'—'}, </span>${skillChip(m.away_skill)}<span style="color:var(--muted)">)</span><br>
+        ${esc(m.home_sp||'TBD')} <span style="color:var(--muted)">(${m.home_verdict||'—'}, </span>${skillChip(m.home_skill)}<span style="color:var(--muted)">)</span></div>
       <div class="leans">${lz('Moneyline',m.ml_lean,'side')}${lz('Total',m.total_lean)}${lz('First 5',m.f5_lean)}</div>
       <div class="drv">${(m.drivers||[]).map(x=>`<span>${esc(x)}</span>`).join('')||'<span style="color:var(--muted);background:none;border:none;padding:0">no strong edge</span>'}</div></div>`;
   });
