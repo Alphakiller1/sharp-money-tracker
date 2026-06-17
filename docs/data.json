@@ -122,7 +122,7 @@
       }
     ]
   },
-  "generated_at": "2026-06-16T22:23:15+00:00",
+  "generated_at": "2026-06-17T04:56:49+00:00",
   "counts": {
     "settled_contracts": 647,
     "sharp_observations": 20,
@@ -556,8 +556,8 @@
       "matchup_adj": -0.3,
       "skill_era": 5.44,
       "era": 9.0,
-      "fip": 6.154953002929688,
-      "xfip": 4.89692623578012,
+      "fip": 6.14951229095459,
+      "xfip": 4.896885554865003,
       "factors": [
         [
           "ERA vs FIP",
@@ -571,7 +571,7 @@
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -1.26,
+          -1.25,
           "homer-unlucky"
         ],
         [
@@ -652,10 +652,10 @@
       "starts": 4,
       "verdict": "REGRESSION",
       "tone": "fade",
-      "luck": 1.91,
+      "luck": 1.9,
       "luck_base": 1.36,
-      "matchup_adj": 0.55,
-      "skill_era": 4.11,
+      "matchup_adj": 0.54,
+      "skill_era": 4.1,
       "era": 2.45,
       "fip": 4.1958620938387785,
       "xfip": 4.569368607347662,
@@ -722,7 +722,7 @@
         ],
         [
           "Split FIP vs lineup",
-          4.11,
+          4.1,
           "weighted vs today's 78% LHH mix (\u0394 -0.09 vs season FIP)"
         ],
         [
@@ -773,17 +773,17 @@
       "starts": 10,
       "verdict": "REGRESSION",
       "tone": "fade",
-      "luck": 1.31,
-      "luck_base": 0.8,
+      "luck": 1.3,
+      "luck_base": 0.79,
       "matchup_adj": 0.51,
-      "skill_era": 4.33,
+      "skill_era": 4.32,
       "era": 3.03550296,
-      "fip": 4.063532884643213,
-      "xfip": 4.643388143898858,
+      "fip": 4.058092172668115,
+      "xfip": 4.643272906342201,
       "factors": [
         [
           "ERA vs FIP",
-          1.03,
+          1.02,
           "ERA below FIP = lucky"
         ],
         [
@@ -793,7 +793,7 @@
         ],
         [
           "HR suppression (xFIP-FIP)",
-          0.58,
+          0.59,
           "homer-lucky"
         ],
         [
@@ -823,7 +823,7 @@
         ],
         [
           "Split FIP vs lineup",
-          4.33,
+          4.32,
           "weighted vs today's 78% LHH mix (\u0394 +0.27 vs season FIP)"
         ],
         [
@@ -945,7 +945,7 @@
         [
           "Split FIP vs lineup",
           3.38,
-          "weighted vs today's 67% LHH mix (\u0394 -0.11 vs season FIP)"
+          "weighted vs today's 67% LHH mix (\u0394 -0.12 vs season FIP)"
         ],
         [
           "Ballpark factor",
@@ -1000,8 +1000,8 @@
       "matchup_adj": 0.38,
       "skill_era": 2.64,
       "era": 6.25,
-      "fip": 3.660508558485243,
-      "xfip": 3.978509566974309,
+      "fip": 3.6550678465101454,
+      "xfip": 3.9778466602580416,
       "factors": [
         [
           "ERA vs FIP",
@@ -1099,10 +1099,10 @@
       "luck": 1.08,
       "luck_base": 0.9,
       "matchup_adj": 0.18,
-      "skill_era": 1.76,
+      "skill_era": 1.75,
       "era": 0.84375,
-      "fip": 1.6049530033984376,
-      "xfip": 2.4349418501600795,
+      "fip": 1.59951229142334,
+      "xfip": 2.4317511511259373,
       "factors": [
         [
           "ERA vs FIP",
@@ -1146,7 +1146,7 @@
         ],
         [
           "Split FIP vs lineup",
-          1.76,
+          1.75,
           "weighted vs today's 67% LHH mix (\u0394 +0.15 vs season FIP)"
         ],
         [
@@ -1202,8 +1202,8 @@
       "matchup_adj": 0.78,
       "skill_era": 3.21,
       "era": 2.71232877,
-      "fip": 3.0364598522447563,
-      "xfip": 2.844784227728028,
+      "fip": 3.0310191402696587,
+      "xfip": 2.8426860007317103,
       "factors": [
         [
           "ERA vs FIP",
@@ -1303,17 +1303,17 @@
       "matchup_adj": -0.27,
       "skill_era": 3.21,
       "era": 4.34745763,
-      "fip": 3.333766562242026,
-      "xfip": 3.1746548902782106,
+      "fip": 3.3283258502669284,
+      "xfip": 3.172366738808806,
       "factors": [
         [
           "ERA vs FIP",
-          -1.01,
+          -1.02,
           "ERA above FIP = unlucky"
         ],
         [
           "ERA vs xFIP",
-          -1.17,
+          -1.18,
           ""
         ],
         [
@@ -1525,8 +1525,8 @@
       "matchup_adj": -0.1,
       "skill_era": 3.85,
       "era": 2.94545455,
-      "fip": 3.6776802756829934,
-      "xfip": 4.58589620319238,
+      "fip": 3.672239563707896,
+      "xfip": 4.585800976509224,
       "factors": [
         [
           "ERA vs FIP",
@@ -1624,7 +1624,7 @@
       "luck": 0.69,
       "luck_base": 0.4,
       "matchup_adj": 0.29,
-      "skill_era": 4.05,
+      "skill_era": 4.04,
       "era": 3.58,
       "fip": 4.036771184747869,
       "xfip": 4.286545957337049,
@@ -1691,8 +1691,8 @@
         ],
         [
           "Split FIP vs lineup",
-          4.05,
-          "weighted vs today's 67% LHH mix (\u0394 +0.01 vs season FIP)"
+          4.04,
+          "weighted vs today's 67% LHH mix (\u0394 +0.00 vs season FIP)"
         ],
         [
           "Ballpark factor",
@@ -1745,19 +1745,19 @@
       "luck": 0.68,
       "luck_base": 0.47,
       "matchup_adj": 0.21,
-      "skill_era": 4.14,
+      "skill_era": 4.13,
       "era": 3.56345178,
-      "fip": 4.079572292220316,
-      "xfip": 4.41972096489148,
+      "fip": 4.0741315802452185,
+      "xfip": 4.418422408720783,
       "factors": [
         [
           "ERA vs FIP",
-          0.52,
+          0.51,
           "ERA below FIP = lucky"
         ],
         [
           "ERA vs xFIP",
-          0.86,
+          0.85,
           ""
         ],
         [
@@ -1792,7 +1792,7 @@
         ],
         [
           "Split FIP vs lineup",
-          4.14,
+          4.13,
           "weighted vs today's 67% LHH mix (\u0394 +0.06 vs season FIP)"
         ],
         [
@@ -1846,7 +1846,7 @@
       "luck": 0.66,
       "luck_base": 0.6,
       "matchup_adj": 0.06,
-      "skill_era": 5.26,
+      "skill_era": 5.25,
       "era": 4.05,
       "fip": 5.264953002821688,
       "xfip": 4.456329804665828,
@@ -1913,7 +1913,7 @@
         ],
         [
           "Split FIP vs lineup",
-          5.26,
+          5.25,
           "weighted vs today's 56% LHH mix (\u0394 -0.01 vs season FIP)"
         ],
         [
@@ -1967,7 +1967,7 @@
       "luck": 0.66,
       "luck_base": 0.24,
       "matchup_adj": 0.42,
-      "skill_era": 4.12,
+      "skill_era": 4.11,
       "era": 3.62,
       "fip": 4.033823295777852,
       "xfip": 3.690535804891625,
@@ -2034,8 +2034,8 @@
         ],
         [
           "Split FIP vs lineup",
-          4.12,
-          "weighted vs today's 67% LHH mix (\u0394 +0.09 vs season FIP)"
+          4.11,
+          "weighted vs today's 67% LHH mix (\u0394 +0.08 vs season FIP)"
         ],
         [
           "Ballpark factor",
@@ -2156,7 +2156,7 @@
         [
           "Split FIP vs lineup",
           4.31,
-          "weighted vs today's 56% LHH mix (\u0394 +0.00 vs season FIP)"
+          "weighted vs today's 56% LHH mix (\u0394 -0.00 vs season FIP)"
         ],
         [
           "Ballpark factor",
@@ -2211,12 +2211,12 @@
       "matchup_adj": -0.18,
       "skill_era": 2.88,
       "era": 4.0,
-      "fip": 2.87038510169512,
-      "xfip": 3.477494906183378,
+      "fip": 2.864944389720022,
+      "xfip": 3.4767455792169515,
       "factors": [
         [
           "ERA vs FIP",
-          -1.13,
+          -1.14,
           "ERA above FIP = unlucky"
         ],
         [
@@ -2310,7 +2310,7 @@
       "luck": 0.47,
       "luck_base": 0.6,
       "matchup_adj": -0.13,
-      "skill_era": 4.71,
+      "skill_era": 4.7,
       "era": 3.46,
       "fip": 4.745978643955329,
       "xfip": 3.816099995584824,
@@ -2377,7 +2377,7 @@
         ],
         [
           "Split FIP vs lineup",
-          4.71,
+          4.7,
           "weighted vs today's 33% LHH mix (\u0394 -0.04 vs season FIP)"
         ],
         [
@@ -2428,9 +2428,9 @@
       "starts": 12,
       "verdict": "STABLE",
       "tone": "neutral",
-      "luck": -0.4,
+      "luck": -0.41,
       "luck_base": -0.34,
-      "matchup_adj": -0.06,
+      "matchup_adj": -0.07,
       "skill_era": 2.34,
       "era": 2.91,
       "fip": 2.354953002929688,
@@ -2499,7 +2499,7 @@
         [
           "Split FIP vs lineup",
           2.34,
-          "weighted vs today's 56% LHH mix (\u0394 -0.01 vs season FIP)"
+          "weighted vs today's 56% LHH mix (\u0394 -0.02 vs season FIP)"
         ],
         [
           "Ballpark factor",
@@ -2552,7 +2552,7 @@
       "luck": -0.31,
       "luck_base": -0.26,
       "matchup_adj": -0.05,
-      "skill_era": 5.09,
+      "skill_era": 5.08,
       "era": 4.86,
       "fip": 5.089079987056672,
       "xfip": 3.8820760325543455,
@@ -2619,8 +2619,8 @@
         ],
         [
           "Split FIP vs lineup",
-          5.09,
-          "weighted vs today's 56% LHH mix (\u0394 -0.00 vs season FIP)"
+          5.08,
+          "weighted vs today's 56% LHH mix (\u0394 -0.01 vs season FIP)"
         ],
         [
           "Ballpark factor",
@@ -2794,7 +2794,7 @@
       "luck": -0.29,
       "luck_base": 0.03,
       "matchup_adj": -0.32,
-      "skill_era": 4.75,
+      "skill_era": 4.74,
       "era": 4.4,
       "fip": 4.469759869823902,
       "xfip": 4.426192286892851,
@@ -2861,8 +2861,8 @@
         ],
         [
           "Split FIP vs lineup",
-          4.75,
-          "weighted vs today's 11% LHH mix (\u0394 +0.28 vs season FIP)"
+          4.74,
+          "weighted vs today's 11% LHH mix (\u0394 +0.27 vs season FIP)"
         ],
         [
           "Ballpark factor",
@@ -2898,7 +2898,7 @@
           "lean": "\u2014"
         },
         "ER": {
-          "proj": 2.9,
+          "proj": 2.8,
           "lean": "\u2014"
         }
       }
@@ -2915,7 +2915,7 @@
       "luck": -0.2,
       "luck_base": 0.15,
       "matchup_adj": -0.35,
-      "skill_era": 5.07,
+      "skill_era": 5.06,
       "era": 5.46,
       "fip": 5.9028804642145545,
       "xfip": 5.36309421420834,
@@ -2982,8 +2982,8 @@
         ],
         [
           "Split FIP vs lineup",
-          5.07,
-          "weighted vs today's 33% LHH mix (\u0394 -0.83 vs season FIP)"
+          5.06,
+          "weighted vs today's 33% LHH mix (\u0394 -0.84 vs season FIP)"
         ],
         [
           "Ballpark factor",
@@ -3036,10 +3036,10 @@
       "luck": -0.19,
       "luck_base": -0.14,
       "matchup_adj": -0.05,
-      "skill_era": 5.36,
+      "skill_era": 5.35,
       "era": 5.20183486,
-      "fip": 5.224219058169988,
-      "xfip": 4.473609641347251,
+      "fip": 5.21877834619489,
+      "xfip": 4.473893732942892,
       "factors": [
         [
           "ERA vs FIP",
@@ -3053,7 +3053,7 @@
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -0.75,
+          -0.74,
           "homer-unlucky"
         ],
         [
@@ -3083,7 +3083,7 @@
         ],
         [
           "Split FIP vs lineup",
-          5.36,
+          5.35,
           "weighted vs today's 44% LHH mix (\u0394 +0.13 vs season FIP)"
         ],
         [
@@ -3139,8 +3139,8 @@
       "matchup_adj": -0.19,
       "skill_era": 4.42,
       "era": 3.87559809,
-      "fip": 4.468589366500805,
-      "xfip": 4.271759236786994,
+      "fip": 4.463148654525708,
+      "xfip": 4.270337686685161,
       "factors": [
         [
           "ERA vs FIP",
@@ -3149,12 +3149,12 @@
         ],
         [
           "ERA vs xFIP",
-          0.4,
+          0.39,
           ""
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -0.2,
+          -0.19,
           "homer-unlucky"
         ],
         [
@@ -3238,14 +3238,14 @@
       "luck": 0.1,
       "luck_base": 0.01,
       "matchup_adj": 0.09,
-      "skill_era": 7.55,
+      "skill_era": 7.54,
       "era": 6.38181818,
-      "fip": 7.250407549137952,
-      "xfip": 5.490858870772112,
+      "fip": 7.244966837162854,
+      "xfip": 5.49218183406529,
       "factors": [
         [
           "ERA vs FIP",
-          0.87,
+          0.86,
           "ERA below FIP = lucky"
         ],
         [
@@ -3255,7 +3255,7 @@
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -1.76,
+          -1.75,
           "homer-unlucky"
         ],
         [
@@ -3285,7 +3285,7 @@
         ],
         [
           "Split FIP vs lineup",
-          7.55,
+          7.54,
           "weighted vs today's 44% LHH mix (\u0394 +0.30 vs season FIP)"
         ],
         [
@@ -3339,7 +3339,7 @@
       "luck": 0.07,
       "luck_base": -0.21,
       "matchup_adj": 0.28,
-      "skill_era": 5.09,
+      "skill_era": 5.08,
       "era": 5.2,
       "fip": 4.976512636128914,
       "xfip": 4.575999873861152,
@@ -3406,7 +3406,7 @@
         ],
         [
           "Split FIP vs lineup",
-          5.09,
+          5.08,
           "weighted vs today's 44% LHH mix (\u0394 +0.11 vs season FIP)"
         ],
         [
@@ -3462,12 +3462,12 @@
       "matchup_adj": 0.44,
       "skill_era": 4.17,
       "era": 4.83027523,
-      "fip": 4.288439241407509,
-      "xfip": 4.164502494152598,
+      "fip": 4.282998529432412,
+      "xfip": 4.163575569607654,
       "factors": [
         [
           "ERA vs FIP",
-          -0.54,
+          -0.55,
           "ERA above FIP = unlucky"
         ],
         [
@@ -3561,10 +3561,10 @@
       "luck": 0.02,
       "luck_base": -0.14,
       "matchup_adj": 0.16,
-      "skill_era": 6.31,
+      "skill_era": 6.3,
       "era": 5.60655738,
-      "fip": 6.318067757028048,
-      "xfip": 4.630245761011468,
+      "fip": 6.312627045052951,
+      "xfip": 4.630050980849345,
       "factors": [
         [
           "ERA vs FIP",
@@ -3578,7 +3578,7 @@
         ],
         [
           "HR suppression (xFIP-FIP)",
-          -1.69,
+          -1.68,
           "homer-unlucky"
         ],
         [
@@ -3608,7 +3608,7 @@
         ],
         [
           "Split FIP vs lineup",
-          6.31,
+          6.3,
           "weighted vs today's 67% LHH mix (\u0394 -0.01 vs season FIP)"
         ],
         [
@@ -3783,10 +3783,10 @@
       "luck": -0.01,
       "luck_base": 0.39,
       "matchup_adj": -0.4,
-      "skill_era": 2.42,
+      "skill_era": 2.41,
       "era": 2.7,
-      "fip": 2.7112030029050778,
-      "xfip": 3.8889273511270166,
+      "fip": 2.705762290929981,
+      "xfip": 3.888661668918057,
       "factors": [
         [
           "ERA vs FIP",
@@ -3830,7 +3830,7 @@
         ],
         [
           "Split FIP vs lineup",
-          2.42,
+          2.41,
           "weighted vs today's 11% LHH mix (\u0394 -0.29 vs season FIP)"
         ],
         [
@@ -13393,8 +13393,8 @@
       "time": "6:45 PM ET",
       "away_sp": "Michael Wacha",
       "home_sp": "Foster Griffin",
-      "away_skill": 4.05,
-      "home_skill": 4.71,
+      "away_skill": 4.04,
+      "home_skill": 4.7,
       "away_verdict": "REGRESSION",
       "home_verdict": "STABLE",
       "away_bp": 0.01,
@@ -13414,7 +13414,7 @@
       "away_sp": "Dylan Cease",
       "home_sp": "Payton Tolle",
       "away_skill": 2.34,
-      "home_skill": 2.42,
+      "home_skill": 2.41,
       "away_verdict": "STABLE",
       "home_verdict": "STABLE",
       "away_bp": -1.33,
@@ -13432,7 +13432,7 @@
       "away_sp": "Davis Martin",
       "home_sp": "Gerrit Cole",
       "away_skill": 2.43,
-      "home_skill": 4.11,
+      "home_skill": 4.1,
       "away_verdict": "REGRESSION",
       "home_verdict": "REGRESSION",
       "away_bp": -0.88,
@@ -13453,7 +13453,7 @@
       "away_sp": "Kodai Senga",
       "home_sp": "Brady Singer",
       "away_skill": 5.44,
-      "home_skill": 6.31,
+      "home_skill": 6.3,
       "away_verdict": "PROGRESSION",
       "home_verdict": "STABLE",
       "away_bp": -0.8,
@@ -13471,7 +13471,7 @@
       "away_sp": "Adrian Houser",
       "home_sp": "Grant Holmes",
       "away_skill": 5.37,
-      "home_skill": 5.26,
+      "home_skill": 5.25,
       "away_verdict": "STABLE",
       "home_verdict": "REGRESSION",
       "away_bp": -0.29,
@@ -13491,7 +13491,7 @@
       "away_sp": "Slade Cecconi",
       "home_sp": "Robert Gasser",
       "away_skill": 4.17,
-      "home_skill": 7.55,
+      "home_skill": 7.54,
       "away_verdict": "STABLE",
       "home_verdict": "STABLE",
       "away_bp": -1.18,
@@ -13528,8 +13528,8 @@
       "time": "8:05 PM ET",
       "away_sp": "Ryan Feltner",
       "home_sp": "Edward Cabrera",
-      "away_skill": 5.09,
-      "home_skill": 5.09,
+      "away_skill": 5.08,
+      "home_skill": 5.08,
       "away_verdict": "STABLE",
       "home_verdict": "STABLE",
       "away_bp": 0.51,
@@ -13546,8 +13546,8 @@
       "time": "8:05 PM ET",
       "away_sp": "Zebby Matthews",
       "home_sp": "Kumar Rocker",
-      "away_skill": 5.36,
-      "home_skill": 4.14,
+      "away_skill": 5.35,
+      "home_skill": 4.13,
       "away_verdict": "STABLE",
       "home_verdict": "REGRESSION",
       "away_bp": 0.38,
@@ -13566,8 +13566,8 @@
       "time": "8:10 PM ET",
       "away_sp": "Framber Valdez",
       "home_sp": "Hunter Brown",
-      "away_skill": 4.75,
-      "home_skill": 1.76,
+      "away_skill": 4.74,
+      "home_skill": 1.75,
       "away_verdict": "STABLE",
       "home_verdict": "REGRESSION",
       "away_bp": -0.24,
@@ -13586,8 +13586,8 @@
       "time": "9:40 PM ET",
       "away_sp": "Brandon Young",
       "home_sp": "Logan Gilbert",
-      "away_skill": 4.33,
-      "home_skill": 4.12,
+      "away_skill": 4.32,
+      "home_skill": 4.11,
       "away_verdict": "REGRESSION",
       "home_verdict": "REGRESSION",
       "away_bp": -0.17,
@@ -13608,7 +13608,7 @@
       "away_sp": "Reid Detmers",
       "home_sp": "Merrill Kelly",
       "away_skill": 2.88,
-      "home_skill": 5.07,
+      "home_skill": 5.06,
       "away_verdict": "PROGRESSION",
       "home_verdict": "STABLE",
       "away_bp": -0.18,
