@@ -12,9 +12,10 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Roboto+Condensed:wght@400;500;600;700;800&display=swap"></noscript>
 <style>
   :root{
+    color-scheme:dark;
     --bg:#08090F;--bg-2:#0E1018;--card:#12141D;--card-2:#181B26;--raised:#20232F;
     --border:#262A38;--border-2:#363B4D;--border-violet:rgba(124,77,255,.32);
-    --ink:#F5F6FA;--ink2:#A4A8B6;--muted:#6E7383;--muted-2:#4C5161;
+    --ink:#F8F9FC;--ink2:#BCC0CC;--muted:#9196A6;--muted-2:#707687;
     --v-light:#C4B0FF;--accent:#9A6BFF;--v-mid:#7C4DFF;--v-deep:#5B2BE0;
     --v-grad:linear-gradient(135deg,#9A6BFF 0%,#5B2BE0 100%);
     --green:#3CCB7F;--green-l:#7BDC5A;--red:#F2545B;--red-l:#FCA5A5;
@@ -24,12 +25,13 @@
     --sans:"DM Sans",-apple-system,system-ui,sans-serif;
   }
   *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   body{margin:0;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;
     background:
       radial-gradient(ellipse 90% 60% at 78% -8%, rgba(124,77,255,.14), transparent 58%),
       radial-gradient(ellipse 70% 50% at 6% 102%, rgba(91,43,224,.08), transparent 60%),
       var(--bg);
-    background-attachment:fixed;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    background-attachment:fixed;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
   .wrap{max-width:1180px;margin:0 auto;padding:30px 22px 80px}
   .num{font-variant-numeric:tabular-nums}
   .pos{color:var(--green)}.neg{color:var(--red)}.warnc{color:var(--gold)}
@@ -55,10 +57,11 @@
 
   /* ── Tabs ──────────────────────────────────────────────────── */
   .tabs{display:flex;gap:4px;margin:26px 0 10px;border-bottom:1px solid var(--border);flex-wrap:wrap}
-  .tab{background:none;border:none;color:var(--muted);font-size:14.5px;font-weight:700;font-family:var(--sans);
+  .tab{background:none;border:none;color:var(--muted);font-size:15px;font-weight:700;font-family:var(--sans);
     padding:12px 18px;cursor:pointer;border-bottom:2.5px solid transparent;margin-bottom:-1px;transition:color .15s}
   .tab:hover{color:var(--ink2)}
   .tab.active{color:var(--ink);border-bottom-color:var(--accent)}
+  button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--v-light);outline-offset:3px}
   .view{display:none} .view.active{display:block}
 
   /* ── Controls ──────────────────────────────────────────────── */
@@ -76,7 +79,7 @@
 
   /* ── Table card (premium, violet top-edge glint) ───────────── */
   .tblwrap{border:1px solid var(--border-2);border-radius:16px;overflow-x:auto;overflow-y:hidden;background:var(--card);
-    position:relative;box-shadow:0 24px 70px -24px rgba(0,0,0,.7)}
+    position:relative;box-shadow:0 28px 74px -28px rgba(0,0,0,.82),0 1px 0 rgba(255,255,255,.04) inset}
   .tblwrap::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;
     background:linear-gradient(90deg,#9A6BFF,#5B2BE0);z-index:3}
   table{width:100%;border-collapse:collapse}
@@ -85,10 +88,10 @@
   th:first-child{text-align:left} th.sorted{color:var(--ink)}
   th.sortable::after{content:" ⇅";color:var(--muted-2);font-size:11px}
   th.sorted.asc::after{content:" ↑";color:var(--accent)} th.sorted.desc::after{content:" ↓";color:var(--accent)}
-  td{padding:12px 14px;text-align:right;border-bottom:1px solid rgba(255,255,255,.045);font-size:14.5px;font-variant-numeric:tabular-nums}
+  td{padding:13px 14px;text-align:right;border-bottom:1px solid rgba(255,255,255,.065);font-size:14.5px;font-variant-numeric:tabular-nums}
   td:first-child{text-align:left;font-weight:600;color:var(--ink)}
   tbody tr:last-child td{border-bottom:none}
-  tbody tr.r:hover td{background:rgba(124,77,255,.07);cursor:pointer}
+  tbody tr.r:hover td{background:rgba(124,77,255,.105);cursor:pointer}
   tbody tr.detail td{background:#0C0E16;padding:0}
   .factors{display:flex;flex-wrap:wrap;gap:9px;padding:15px 16px}
   .factor{background:var(--card-2);border:1px solid var(--border-2);border-radius:10px;padding:8px 12px;font-size:12.5px;min-width:150px}
@@ -102,18 +105,19 @@
   .c-weak{color:#FB923C}.c-poor{color:#F87171}.c-na{color:var(--muted)}
   .mk .mval{font-variant-numeric:tabular-nums;font-weight:700}
 
-  .pill{display:inline-block;padding:3px 11px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.03em}
+  .pill{display:inline-block;padding:4px 11px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.045em;border:1px solid transparent}
+  .pill.reg{border-color:rgba(242,84,91,.22)}.pill.prog{border-color:rgba(60,203,127,.22)}.pill.stab{border-color:rgba(255,255,255,.08)}
   .pill.reg{background:var(--redbg);color:var(--red-l)}.pill.prog{background:var(--greenbg);color:var(--green-l)}.pill.stab{background:rgba(255,255,255,.07);color:var(--ink2)}
   .lean.over{color:var(--green);font-weight:800}.lean.under{color:var(--red);font-weight:800}.lean.n{color:var(--muted)}
   .prop-cell{line-height:1.2;vertical-align:middle}
   .prop-cell .lean{display:block;font-size:10px;margin-top:4px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
   .today-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block;margin-right:8px;vertical-align:middle;box-shadow:0 0 8px rgba(154,107,255,.7)}
   .pitcher-cell{display:flex;align-items:center;gap:10px;min-width:190px}
-  .pitcher-avatar{width:42px;height:42px;flex:0 0 42px;border-radius:50%;object-fit:cover;object-position:center top;
-    background:var(--raised);border:1px solid var(--border-2);box-shadow:0 5px 14px rgba(0,0,0,.32)}
+  .pitcher-avatar{width:44px;height:44px;flex:0 0 44px;border-radius:50%;object-fit:cover;object-position:center top;
+    image-rendering:auto;background:var(--raised);border:2px solid #454B61;box-shadow:0 6px 16px rgba(0,0,0,.42),0 0 0 2px rgba(154,107,255,.10)}
   .pitcher-copy{min-width:0;line-height:1.25}.pitcher-name{display:block;white-space:nowrap}
   .pitcher-team{display:flex;align-items:center;gap:5px;color:var(--muted);font-size:12px;font-weight:600;margin-top:3px}
-  .team-logo{width:24px;height:24px;object-fit:contain;vertical-align:middle;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+  .team-logo{width:24px;height:24px;object-fit:contain;vertical-align:middle;image-rendering:auto;filter:drop-shadow(0 3px 4px rgba(0,0,0,.48))}
   .team-logo.sm{width:18px;height:18px}.team-logo.lg{width:34px;height:34px}
   .team-logo-fallback{align-items:center;justify-content:center;border-radius:50%;background:var(--raised);color:var(--ink2);
     font:800 9px/1 var(--display);border:1px solid var(--border-2);vertical-align:middle}
@@ -121,21 +125,23 @@
   .empty{color:var(--muted);font-size:14px;padding:18px;background:var(--card);border:1px dashed var(--border-2);border-radius:14px}
 
   /* ── Market cards ──────────────────────────────────────────── */
-  .mkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(335px,1fr));gap:15px}
-  .mk{background:linear-gradient(168deg,var(--card-2),var(--card));border:1px solid var(--border-2);border-radius:16px;
-    padding:16px 17px;position:relative;overflow:hidden}
+  .mkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(335px,1fr));gap:18px}
+  .mk{background:linear-gradient(155deg,rgba(31,34,47,.98),rgba(16,18,27,.99));border:1px solid #3A3F52;border-radius:18px;
+    padding:18px 19px;position:relative;overflow:hidden;box-shadow:0 18px 45px -26px rgba(0,0,0,.9),0 1px 0 rgba(255,255,255,.04) inset;
+    transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+  .mk:hover{transform:translateY(-2px);border-color:rgba(154,107,255,.56);box-shadow:0 24px 54px -28px rgba(0,0,0,.95),0 0 0 1px rgba(154,107,255,.08)}
   .mk::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--v-grad);opacity:.7}
-  .mk .gm{font-family:var(--display);font-weight:800;font-size:17px;display:flex;justify-content:space-between;align-items:center;letter-spacing:.01em}
+  .mk .gm{font-family:var(--display);font-weight:800;font-size:18px;display:flex;justify-content:space-between;align-items:center;letter-spacing:.01em}
   .mk .gm .t{color:var(--muted);font-size:12px;font-weight:500;font-family:var(--sans)}
   .matchup-brand{display:flex;align-items:center;gap:8px}.matchup-brand .at{color:var(--muted);font-size:12px}
   .matchup-team{display:inline-flex;align-items:center;gap:5px}
-  .mk .sp{color:var(--ink2);font-size:13px;margin:9px 0 13px;line-height:1.55}
-  .starter-line{display:flex;align-items:center;gap:9px;margin:7px 0}.starter-line .pitcher-avatar{width:34px;height:34px;flex-basis:34px}
-  .starter-meta{line-height:1.35}.starter-label{color:var(--muted);font-size:11px;margin-left:4px}
+  .mk .sp{color:var(--ink2);font-size:13.5px;margin:13px 0 15px;line-height:1.55;border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:7px 0}
+  .starter-line{display:flex;align-items:center;gap:10px;margin:8px 0}.starter-line .pitcher-avatar{width:38px;height:38px;flex-basis:38px}
+  .starter-meta{line-height:1.4;color:var(--ink);font-weight:650}.starter-label{color:var(--muted);font-size:11px;margin-left:4px;font-weight:600}
   .mk .leans{display:flex;gap:9px;margin-bottom:11px}
-  .lz{flex:1;text-align:center;background:var(--bg-2);border:1px solid var(--border);border-radius:11px;padding:9px 4px}
-  .lz .lk{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
-  .lz .lv{font-weight:800;font-size:16px;font-family:var(--display);margin-top:3px}
+  .lz{flex:1;text-align:center;background:rgba(8,9,15,.72);border:1px solid #303547;border-radius:12px;padding:10px 5px}
+  .lz .lk{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;font-weight:800}
+  .lz .lv{font-weight:800;font-size:17px;font-family:var(--display);margin-top:3px}
   .lv.side{color:var(--v-light)}.lv.over{color:var(--green)}.lv.under{color:var(--red)}.lv.none{color:var(--muted-2)}
   .drv{font-size:12px;color:var(--ink2)} .drv span{display:inline-block;background:var(--card-2);border:1px solid var(--border);border-radius:7px;padding:3px 9px;margin:4px 4px 0 0}
   .secnote{color:var(--ink2);font-size:13.5px;margin:0 0 16px;line-height:1.6;max-width:760px}
@@ -147,6 +153,17 @@
   details.meth summary::-webkit-details-marker{display:none}
   details.meth summary::before{content:"▸ ";color:var(--accent)} details.meth[open] summary::before{content:"▾ "}
   .meth p{color:var(--muted);font-size:13.5px;line-height:1.75} .meth b{color:var(--ink2)}
+
+  @media (max-width:720px){
+    .wrap{padding:22px 14px 60px}.ca-page-header{align-items:flex-start}.ca-page-title{font-size:38px}
+    .tag{font-size:14.5px}.chips{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}
+    .chip{padding:8px 7px}.tabs{overflow-x:auto;flex-wrap:nowrap}.tab{white-space:nowrap;padding:12px 14px}
+    .controls{align-items:stretch}.seg{flex:1}.seg button{flex:1}.search{width:100%}.hint{margin-left:0;line-height:1.45}
+    .mkgrid{grid-template-columns:1fr;gap:14px}.mk{padding:16px}.mk:hover{transform:none}
+    .mk .gm{align-items:flex-start;gap:8px}.matchup-brand{gap:5px}.team-logo.lg{width:30px;height:30px}
+    .mk .leans{gap:6px}.lz{padding:9px 3px}.lz .lv{font-size:15px}
+  }
+  @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.mk{transition:none}}
 </style>
 </head>
 <body>
@@ -222,14 +239,14 @@ const leanCls=l=>l==='over'?'over':l==='under'?'under':'n';
 const ESPN_TEAM={ARI:'ari',ATL:'atl',BAL:'bal',BOS:'bos',CHC:'chc',CHW:'chw',CWS:'chw',CIN:'cin',CLE:'cle',COL:'col',DET:'det',HOU:'hou',KCR:'kc',KC:'kc',LAA:'laa',LAD:'lad',MIA:'mia',MIL:'mil',MIN:'min',NYM:'nym',NYY:'nyy',ATH:'oak',OAK:'oak',PHI:'phi',PIT:'pit',SDP:'sd',SD:'sd',SFG:'sf',SF:'sf',SEA:'sea',STL:'stl',TBR:'tb',TB:'tb',TEX:'tex',TOR:'tor',WSN:'wsh',WSH:'wsh'};
 function teamLogo(team,cls=''){
   const ab=String(team||'').toUpperCase(),slug=ESPN_TEAM[ab]||ab.toLowerCase(),initials=esc(ab.slice(0,2));
-  const src=`https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/${slug}.png&w=96&h=96`;
   const px=cls==='lg'?34:cls==='sm'?18:24;
-  return `<img class="team-logo ${cls}" src="${src}" alt="${esc(ab)} logo" loading="lazy" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="team-logo-fallback" style="display:none;width:${px}px;height:${px}px">${initials}</span>`;
+  const src=(w)=>`https://a.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/${slug}.png&w=${w}&h=${w}`;
+  return `<img class="team-logo ${cls}" src="${src(96)}" srcset="${src(96)} 1x, ${src(192)} 2x" width="${px}" height="${px}" alt="${esc(ab)} logo" loading="lazy" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='inline-flex'"><span class="team-logo-fallback" style="display:none;width:${px}px;height:${px}px">${initials}</span>`;
 }
 function pitcherPhoto(id,name){
   const pid=Number(id)||0,safe=esc(name||'Pitcher');
-  const src=`https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/c_fill,g_auto:face,w_320,h_320,q_auto:best/v1/people/${pid}/headshot/67/current`;
-  return `<img class="pitcher-avatar" src="${src}" alt="${safe}" loading="lazy" decoding="async">`;
+  const src=(w)=>`https://img.mlbstatic.com/mlb-photos/image/upload/d_people:generic:headshot:67:current.png/c_fill,g_auto:face,w_${w},h_${w},q_auto:best/v1/people/${pid}/headshot/67/current`;
+  return `<img class="pitcher-avatar" src="${src(320)}" srcset="${src(320)} 1x, ${src(640)} 2x" width="44" height="44" alt="${safe}" loading="lazy" decoding="async">`;
 }
 function teamMark(team,cls=''){return `<span class="matchup-team">${teamLogo(team,cls)}<span>${esc(team)}</span></span>`;}
 
