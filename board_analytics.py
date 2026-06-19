@@ -106,6 +106,28 @@ def _build_pitcher_index(profiles: pd.DataFrame | None, standard: pd.DataFrame |
             df = df[df["Season"] == df["Season"].max()]
         for _, r in df.iterrows():
             put(_standard_to_profile(r), 1)
+
+    # FanGraphs' playerId is not an MLB Stats API ID, so resolve fallback
+    # profiles through MLBMA's registry before exporting CDN headshot URLs.
+    registry = load("player_registry.csv")
+    registry_ids: dict[str, list[tuple[str, int]]] = {}
+    if registry is not None and not registry.empty:
+        for _, r in registry.iterrows():
+            player_id = _num(r.get("player_id"))
+            if player_id is None:
+                continue
+            registry_ids.setdefault(_norm_name(r.get("full_name")), []).append(
+                (str(r.get("team_abbr", "")).upper(), int(player_id))
+            )
+    for nk, entries in index.items():
+        matches = registry_ids.get(nk, [])
+        for _, profile in entries:
+            if _num(profile.get("pitcher_id")) is not None or not matches:
+                continue
+            team = str(profile.get("pitcher_team", "")).upper()
+            team_match = next((pid for tm, pid in matches if tm == team), None)
+            if team_match is not None or len(matches) == 1:
+                profile["pitcher_id"] = team_match if team_match is not None else matches[0][1]
     for nk in index:
         index[nk].sort(key=lambda x: x[0])
     return index
@@ -211,7 +233,9 @@ def _pitcher_row(
         )
         reg = apply_matchup_to_regression(reg, ctx)
     props = prop_projections(profile, reg, ctx)
+    player_id = _num(profile.get("pitcher_id") or profile.get("playerId") or profile.get("player_id"))
     return {
+        "player_id": int(player_id) if player_id is not None else None,
         "name": display_name,
         "team": team,
         "opp": opp if is_today else "",
@@ -697,6 +721,8 @@ def market_board() -> list[dict]:
                 season_fip=_num(p.get("FIP")),
             )
             reg = apply_matchup_to_regression(reg, ctx)
+        player_id = _num(p.get("pitcher_id") or p.get("playerId") or p.get("player_id"))
+        reg["player_id"] = int(player_id) if player_id is not None else None
         return reg
 
     def bp_fatigue(team):
@@ -766,6 +792,8 @@ def market_board() -> list[dict]:
         rows.append({
             "game": f"{a}@{h}", "away": a, "home": h, "time": str(g.get("Time", "")),
             "away_sp": str(g.get("Away_SP", "")), "home_sp": str(g.get("Home_SP", "")),
+            "away_sp_id": a_reg.get("player_id") if a_reg else None,
+            "home_sp_id": h_reg.get("player_id") if h_reg else None,
             "away_skill": a_reg["skill_era"] if a_reg else None, "home_skill": h_reg["skill_era"] if h_reg else None,
             "away_verdict": a_reg["verdict"] if a_reg else None, "home_verdict": h_reg["verdict"] if h_reg else None,
             "away_bp": a_bp["score"] if a_bp else None, "home_bp": h_bp["score"] if h_bp else None,

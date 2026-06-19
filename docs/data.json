@@ -122,7 +122,7 @@
       }
     ]
   },
-  "generated_at": "2026-06-19T07:44:04+00:00",
+  "generated_at": "2026-06-19T08:08:53+00:00",
   "counts": {
     "settled_contracts": 647,
     "sharp_observations": 20,
@@ -543,6 +543,7 @@
   "sharp_performance": [],
   "pitchers": [
     {
+      "player_id": 669199,
       "name": "Lake Bachar",
       "team": "MIA",
       "opp": "SFG",
@@ -664,6 +665,7 @@
       }
     },
     {
+      "player_id": 607536,
       "name": "Kyle Freeland",
       "team": "COL",
       "opp": "PIT",
@@ -785,6 +787,7 @@
       }
     },
     {
+      "player_id": 682243,
       "name": "Bryce Miller",
       "team": "SEA",
       "opp": "BOS",
@@ -906,6 +909,7 @@
       }
     },
     {
+      "player_id": 643377,
       "name": "Griffin Jax",
       "team": "TBR",
       "opp": "WSN",
@@ -1027,6 +1031,7 @@
       }
     },
     {
+      "player_id": 667755,
       "name": "Jos\u00e9 Soriano",
       "team": "LAA",
       "opp": "ATH",
@@ -1128,6 +1133,7 @@
       }
     },
     {
+      "player_id": 687570,
       "name": "Connor Prielipp",
       "team": "MIN",
       "opp": "ARI",
@@ -1249,6 +1255,7 @@
       }
     },
     {
+      "player_id": 694819,
       "name": "Jacob Misiorowski",
       "team": "MIL",
       "opp": "ATL",
@@ -1370,6 +1377,7 @@
       }
     },
     {
+      "player_id": 527048,
       "name": "Mart\u00edn P\u00e9rez",
       "team": "ATL",
       "opp": "MIL",
@@ -1471,6 +1479,7 @@
       }
     },
     {
+      "player_id": 607200,
       "name": "Erick Fedde",
       "team": "CHW",
       "opp": "DET",
@@ -1592,6 +1601,7 @@
       }
     },
     {
+      "player_id": 700241,
       "name": "Michael McGreevy",
       "team": "STL",
       "opp": "KCR",
@@ -1713,6 +1723,7 @@
       }
     },
     {
+      "player_id": 695076,
       "name": "Rhett Lowder",
       "team": "CIN",
       "opp": "NYY",
@@ -1834,6 +1845,7 @@
       }
     },
     {
+      "player_id": 676962,
       "name": "Ben Brown",
       "team": "CHC",
       "opp": "TOR",
@@ -1955,6 +1967,7 @@
       }
     },
     {
+      "player_id": 681190,
       "name": "Randy V\u00e1squez",
       "team": "SDP",
       "opp": "TEX",
@@ -2056,6 +2069,7 @@
       }
     },
     {
+      "player_id": 693645,
       "name": "Cam Schlittler",
       "team": "NYY",
       "opp": "CIN",
@@ -2177,6 +2191,7 @@
       }
     },
     {
+      "player_id": 694738,
       "name": "Landen Roupp",
       "team": "SFG",
       "opp": "MIA",
@@ -2298,6 +2313,7 @@
       }
     },
     {
+      "player_id": 647336,
       "name": "Michael Soroka",
       "team": "ARI",
       "opp": "MIN",
@@ -2419,6 +2435,7 @@
       }
     },
     {
+      "player_id": 694346,
       "name": "Trey Gibson",
       "team": "BAL",
       "opp": "LAD",
@@ -2540,6 +2557,7 @@
       }
     },
     {
+      "player_id": 837227,
       "name": "Tatsuya Imai",
       "team": "HOU",
       "opp": "CLE",
@@ -2661,6 +2679,7 @@
       }
     },
     {
+      "player_id": 669373,
       "name": "Tarik Skubal",
       "team": "DET",
       "opp": "CHW",
@@ -2782,6 +2801,7 @@
       }
     },
     {
+      "player_id": 594798,
       "name": "Jacob deGrom",
       "team": "TEX",
       "opp": "SDP",
@@ -2903,6 +2923,7 @@
       }
     },
     {
+      "player_id": 624133,
       "name": "Ranger Suarez",
       "team": "BOS",
       "opp": "SEA",
@@ -3024,6 +3045,7 @@
       }
     },
     {
+      "player_id": 676440,
       "name": "Tanner Bibee",
       "team": "CLE",
       "opp": "HOU",
@@ -3145,6 +3167,7 @@
       }
     },
     {
+      "player_id": 808963,
       "name": "Roki Sasaki",
       "team": "LAD",
       "opp": "BAL",
@@ -3266,6 +3289,7 @@
       }
     },
     {
+      "player_id": 605488,
       "name": "Jeffrey Springs",
       "team": "ATH",
       "opp": "LAA",
@@ -3387,6 +3411,7 @@
       }
     },
     {
+      "player_id": 592332,
       "name": "Kevin Gausman",
       "team": "TOR",
       "opp": "CHC",
@@ -3508,6 +3533,7 @@
       }
     },
     {
+      "player_id": 607625,
       "name": "Seth Lugo",
       "team": "KCR",
       "opp": "STL",
@@ -3629,6 +3655,7 @@
       }
     },
     {
+      "player_id": 696149,
       "name": "Bubba Chandler",
       "team": "PIT",
       "opp": "COL",
@@ -3750,6 +3777,7 @@
       }
     },
     {
+      "player_id": 676917,
       "name": "Cade Cavalli",
       "team": "WSN",
       "opp": "TBR",
@@ -3871,6 +3899,7 @@
       }
     },
     {
+      "player_id": 572143,
       "name": "Burch Smith",
       "team": "DET",
       "opp": "",
@@ -3953,6 +3982,7 @@
       }
     },
     {
+      "player_id": 701719,
       "name": "Tyler Samaniego",
       "team": "BOS",
       "opp": "",
@@ -4035,6 +4065,7 @@
       }
     },
     {
+      "player_id": 675848,
       "name": "Juan Mejia",
       "team": "COL",
       "opp": "",
@@ -4117,6 +4148,7 @@
       }
     },
     {
+      "player_id": 664126,
       "name": "Pete Fairbanks",
       "team": "MIA",
       "opp": "",
@@ -4199,6 +4231,7 @@
       }
     },
     {
+      "player_id": 680689,
       "name": "Lyon Richardson",
       "team": "CIN",
       "opp": "",
@@ -4281,6 +4314,7 @@
       }
     },
     {
+      "player_id": 671111,
       "name": "Sammy Peralta",
       "team": "COL",
       "opp": "",
@@ -4363,6 +4397,7 @@
       }
     },
     {
+      "player_id": 657514,
       "name": "Brennan Bernardino",
       "team": "COL",
       "opp": "",
@@ -4445,6 +4480,7 @@
       }
     },
     {
+      "player_id": 695034,
       "name": "Kade Morris",
       "team": "ATH",
       "opp": "",
@@ -4527,6 +4563,7 @@
       }
     },
     {
+      "player_id": 696136,
       "name": "Jordan Wicks",
       "team": "CHC",
       "opp": "",
@@ -4609,6 +4646,7 @@
       }
     },
     {
+      "player_id": 663559,
       "name": "Bailey Falter",
       "team": "KCR",
       "opp": "",
@@ -4691,6 +4729,7 @@
       }
     },
     {
+      "player_id": 605483,
       "name": "Blake Snell",
       "team": "LAD",
       "opp": "",
@@ -4773,6 +4812,7 @@
       }
     },
     {
+      "player_id": 668964,
       "name": "Tobias Myers",
       "team": "NYM",
       "opp": "",
@@ -4855,6 +4895,7 @@
       }
     },
     {
+      "player_id": 595345,
       "name": "Steven Okert",
       "team": "HOU",
       "opp": "",
@@ -4937,6 +4978,7 @@
       }
     },
     {
+      "player_id": 800311,
       "name": "Didier Fuentes",
       "team": "ATL",
       "opp": "",
@@ -5019,6 +5061,7 @@
       }
     },
     {
+      "player_id": 687765,
       "name": "Mitch Spence",
       "team": "KCR",
       "opp": "",
@@ -5101,6 +5144,7 @@
       }
     },
     {
+      "player_id": 666129,
       "name": "Braxton Garrett",
       "team": "MIA",
       "opp": "",
@@ -5183,6 +5227,7 @@
       }
     },
     {
+      "player_id": 667463,
       "name": "John King",
       "team": "MIA",
       "opp": "",
@@ -5265,6 +5310,7 @@
       }
     },
     {
+      "player_id": 673929,
       "name": "Jordan Leasure",
       "team": "CHW",
       "opp": "",
@@ -5347,6 +5393,7 @@
       }
     },
     {
+      "player_id": 679775,
       "name": "Kyle Backhus",
       "team": "PHI",
       "opp": "",
@@ -5429,6 +5476,7 @@
       }
     },
     {
+      "player_id": 807743,
       "name": "Sean Sullivan",
       "team": "COL",
       "opp": "",
@@ -5511,6 +5559,7 @@
       }
     },
     {
+      "player_id": 621383,
       "name": "Tanner Banks",
       "team": "PHI",
       "opp": "",
@@ -5593,6 +5642,7 @@
       }
     },
     {
+      "player_id": 676879,
       "name": "Aaron Ashby",
       "team": "MIL",
       "opp": "",
@@ -5675,6 +5725,7 @@
       }
     },
     {
+      "player_id": 678394,
       "name": "Brayan Bello",
       "team": "BOS",
       "opp": "",
@@ -5757,6 +5808,7 @@
       }
     },
     {
+      "player_id": 693686,
       "name": "Spencer Miles",
       "team": "TOR",
       "opp": "",
@@ -5839,6 +5891,7 @@
       }
     },
     {
+      "player_id": 681343,
       "name": "Shane Smith",
       "team": "CHW",
       "opp": "",
@@ -5921,6 +5974,7 @@
       }
     },
     {
+      "player_id": 669084,
       "name": "DL Hall",
       "team": "MIL",
       "opp": "",
@@ -6003,6 +6057,7 @@
       }
     },
     {
+      "player_id": 593974,
       "name": "Wandy Peralta",
       "team": "SDP",
       "opp": "",
@@ -6080,6 +6135,7 @@
       }
     },
     {
+      "player_id": 656457,
       "name": "Tyler Gilbert",
       "team": "CHW",
       "opp": "",
@@ -6162,6 +6218,7 @@
       }
     },
     {
+      "player_id": 621112,
       "name": "Paul Blackburn",
       "team": "NYY",
       "opp": "",
@@ -6244,6 +6301,7 @@
       }
     },
     {
+      "player_id": 663362,
       "name": "Matt Waldron",
       "team": "SDP",
       "opp": "",
@@ -6326,6 +6384,7 @@
       }
     },
     {
+      "player_id": 434378,
       "name": "Justin Verlander",
       "team": "DET",
       "opp": "",
@@ -6408,6 +6467,7 @@
       }
     },
     {
+      "player_id": 687606,
       "name": "Paxton Schultz",
       "team": "WSN",
       "opp": "",
@@ -6490,6 +6550,7 @@
       }
     },
     {
+      "player_id": 681810,
       "name": "Austin Warren",
       "team": "NYM",
       "opp": "",
@@ -6572,6 +6633,7 @@
       }
     },
     {
+      "player_id": 641302,
       "name": "Tyler Alexander",
       "team": "TEX",
       "opp": "",
@@ -6649,6 +6711,7 @@
       }
     },
     {
+      "player_id": 696070,
       "name": "Kendry Rojas",
       "team": "MIN",
       "opp": "",
@@ -6731,6 +6794,7 @@
       }
     },
     {
+      "player_id": 669020,
       "name": "Ryan Rolison",
       "team": "CHC",
       "opp": "",
@@ -6808,6 +6872,7 @@
       }
     },
     {
+      "player_id": 688642,
       "name": "Zach Agnos",
       "team": "COL",
       "opp": "",
@@ -6890,6 +6955,7 @@
       }
     },
     {
+      "player_id": 664299,
       "name": "Cristian Javier",
       "team": "HOU",
       "opp": "",
@@ -6972,6 +7038,7 @@
       }
     },
     {
+      "player_id": 656641,
       "name": "Jacob Latz",
       "team": "TEX",
       "opp": "",
@@ -7054,6 +7121,7 @@
       }
     },
     {
+      "player_id": 696270,
       "name": "Ryan Johnson",
       "team": "LAA",
       "opp": "",
@@ -7136,6 +7204,7 @@
       }
     },
     {
+      "player_id": 680755,
       "name": "Braydon Fisher",
       "team": "TOR",
       "opp": "",
@@ -7218,6 +7287,7 @@
       }
     },
     {
+      "player_id": 642121,
       "name": "Cole Sulser",
       "team": "TBR",
       "opp": "",
@@ -7300,6 +7370,7 @@
       }
     },
     {
+      "player_id": 656849,
       "name": "David Peterson",
       "team": "NYM",
       "opp": "",
@@ -7382,6 +7453,7 @@
       }
     },
     {
+      "player_id": 699134,
       "name": "Bradgley Rodriguez",
       "team": "SDP",
       "opp": "",
@@ -7464,6 +7536,7 @@
       }
     },
     {
+      "player_id": 702303,
       "name": "Riley Martin",
       "team": "CHC",
       "opp": "",
@@ -7541,6 +7614,7 @@
       }
     },
     {
+      "player_id": 683155,
       "name": "Joey Estes",
       "team": "ATH",
       "opp": "",
@@ -7623,6 +7697,7 @@
       }
     },
     {
+      "player_id": 678022,
       "name": "Jack Perkins",
       "team": "ATH",
       "opp": "",
@@ -7705,6 +7780,7 @@
       }
     },
     {
+      "player_id": 571510,
       "name": "Matthew Boyd",
       "team": "CHC",
       "opp": "",
@@ -7787,6 +7863,7 @@
       }
     },
     {
+      "player_id": 608718,
       "name": "Brent Suter",
       "team": "LAA",
       "opp": "",
@@ -7869,6 +7946,7 @@
       }
     },
     {
+      "player_id": 694361,
       "name": "Will Klein",
       "team": "LAD",
       "opp": "",
@@ -7951,6 +8029,7 @@
       }
     },
     {
+      "player_id": 571945,
       "name": "Miles Mikolas",
       "team": "WSN",
       "opp": "",
@@ -8033,6 +8112,7 @@
       }
     },
     {
+      "player_id": 693855,
       "name": "Ian Seymour",
       "team": "TBR",
       "opp": "",
@@ -8115,6 +8195,7 @@
       }
     },
     {
+      "player_id": 665622,
       "name": "Luis Medina",
       "team": "ATH",
       "opp": "",
@@ -8197,6 +8278,7 @@
       }
     },
     {
+      "player_id": 669438,
       "name": "Mason Englert",
       "team": "TBR",
       "opp": "",
@@ -8279,6 +8361,7 @@
       }
     },
     {
+      "player_id": 676571,
       "name": "PJ Poulin",
       "team": "WSN",
       "opp": "",
@@ -8361,6 +8444,7 @@
       }
     },
     {
+      "player_id": 680570,
       "name": "Grayson Rodriguez",
       "team": "LAA",
       "opp": "",
@@ -8443,6 +8527,7 @@
       }
     },
     {
+      "player_id": 641835,
       "name": "Tim Mayza",
       "team": "PHI",
       "opp": "",
@@ -8525,6 +8610,7 @@
       }
     },
     {
+      "player_id": 673540,
       "name": "Kodai Senga",
       "team": "NYM",
       "opp": "",
@@ -8607,6 +8693,7 @@
       }
     },
     {
+      "player_id": 682254,
       "name": "Mason Montgomery",
       "team": "PIT",
       "opp": "",
@@ -8689,6 +8776,7 @@
       }
     },
     {
+      "player_id": 676467,
       "name": "Colton Gordon",
       "team": "HOU",
       "opp": "",
@@ -8771,6 +8859,7 @@
       }
     },
     {
+      "player_id": 663542,
       "name": "Bryan Hudson",
       "team": "CHW",
       "opp": "",
@@ -8853,6 +8942,7 @@
       }
     },
     {
+      "player_id": 691946,
       "name": "George Klassen",
       "team": "LAA",
       "opp": "",
@@ -8935,6 +9025,7 @@
       }
     },
     {
+      "player_id": 691799,
       "name": "Grant Taylor",
       "team": "CHW",
       "opp": "",
@@ -9017,6 +9108,7 @@
       }
     },
     {
+      "player_id": 702193,
       "name": "Andrew Morris",
       "team": "MIN",
       "opp": "",
@@ -9099,6 +9191,7 @@
       }
     },
     {
+      "player_id": 663947,
       "name": "Tyler Holton",
       "team": "DET",
       "opp": "",
@@ -9181,6 +9274,7 @@
       }
     },
     {
+      "player_id": 547179,
       "name": "Michael Lorenzen",
       "team": "COL",
       "opp": "",
@@ -9263,6 +9357,7 @@
       }
     },
     {
+      "player_id": 689818,
       "name": "David Sandlin",
       "team": "CHW",
       "opp": "",
@@ -9345,6 +9440,7 @@
       }
     },
     {
+      "player_id": 592836,
       "name": "Taijuan Walker",
       "team": "PHI",
       "opp": "",
@@ -9427,6 +9523,7 @@
       }
     },
     {
+      "player_id": 453286,
       "name": "Max Scherzer",
       "team": "TOR",
       "opp": "",
@@ -9509,6 +9606,7 @@
       }
     },
     {
+      "player_id": 804267,
       "name": "Zach Thornton",
       "team": "NYM",
       "opp": "",
@@ -9591,6 +9689,7 @@
       }
     },
     {
+      "player_id": 671936,
       "name": "Adam Macko",
       "team": "TOR",
       "opp": "",
@@ -9673,6 +9772,7 @@
       }
     },
     {
+      "player_id": 675512,
       "name": "Troy Melton",
       "team": "DET",
       "opp": "",
@@ -9755,6 +9855,7 @@
       }
     },
     {
+      "player_id": 691725,
       "name": "Andrew Painter",
       "team": "PHI",
       "opp": "",
@@ -9837,6 +9938,7 @@
       }
     },
     {
+      "player_id": 676979,
       "name": "Garrett Crochet",
       "team": "BOS",
       "opp": "",
@@ -9919,6 +10021,7 @@
       }
     },
     {
+      "player_id": 621121,
       "name": "Lance McCullers Jr.",
       "team": "HOU",
       "opp": "",
@@ -10001,6 +10104,7 @@
       }
     },
     {
+      "player_id": 679883,
       "name": "Luinder Avila",
       "team": "KCR",
       "opp": "",
@@ -10083,6 +10187,7 @@
       }
     },
     {
+      "player_id": 656288,
       "name": "Griffin Canning",
       "team": "SDP",
       "opp": "",
@@ -10165,6 +10270,7 @@
       }
     },
     {
+      "player_id": 601713,
       "name": "Nick Pivetta",
       "team": "SDP",
       "opp": "",
@@ -10247,6 +10353,7 @@
       }
     },
     {
+      "player_id": 690928,
       "name": "Hunter Dobbins",
       "team": "STL",
       "opp": "",
@@ -10329,6 +10436,7 @@
       }
     },
     {
+      "player_id": 623454,
       "name": "Drew Anderson",
       "team": "DET",
       "opp": "",
@@ -10411,6 +10519,7 @@
       }
     },
     {
+      "player_id": 690990,
       "name": "Cade Horton",
       "team": "CHC",
       "opp": "",
@@ -10493,6 +10602,7 @@
       }
     },
     {
+      "player_id": 543037,
       "name": "Gerrit Cole",
       "team": "NYY",
       "opp": "",
@@ -10575,6 +10685,7 @@
       }
     },
     {
+      "player_id": 579328,
       "name": "Yusei Kikuchi",
       "team": "LAA",
       "opp": "",
@@ -10657,6 +10768,7 @@
       }
     },
     {
+      "player_id": 702474,
       "name": "Mike Paredes",
       "team": "MIN",
       "opp": "",
@@ -10739,6 +10851,7 @@
       }
     },
     {
+      "player_id": 593958,
       "name": "Eduardo Rodriguez",
       "team": "ARI",
       "opp": "",
@@ -10821,6 +10934,7 @@
       }
     },
     {
+      "player_id": 687473,
       "name": "Ryan Gusto",
       "team": "MIA",
       "opp": "",
@@ -10903,6 +11017,7 @@
       }
     },
     {
+      "player_id": 683003,
       "name": "Jared Jones",
       "team": "PIT",
       "opp": "",
@@ -10985,6 +11100,7 @@
       }
     },
     {
+      "player_id": 691951,
       "name": "Sam Aldegheri",
       "team": "LAA",
       "opp": "",
@@ -11067,6 +11183,7 @@
       }
     },
     {
+      "player_id": 806960,
       "name": "Luis Morales",
       "team": "ATH",
       "opp": "",
@@ -11149,6 +11266,7 @@
       }
     },
     {
+      "player_id": 660271,
       "name": "Shohei Ohtani",
       "team": "LAD",
       "opp": "",
@@ -11231,6 +11349,7 @@
       }
     },
     {
+      "player_id": 681293,
       "name": "Spencer Arrighetti",
       "team": "HOU",
       "opp": "",
@@ -11313,6 +11432,7 @@
       }
     },
     {
+      "player_id": 608337,
       "name": "Lucas Giolito",
       "team": "SDP",
       "opp": "",
@@ -11395,6 +11515,7 @@
       }
     },
     {
+      "player_id": 685299,
       "name": "Tanner Gordon",
       "team": "COL",
       "opp": "",
@@ -11477,6 +11598,7 @@
       }
     },
     {
+      "player_id": 675660,
       "name": "Shane Drohan",
       "team": "MIL",
       "opp": "",
@@ -11559,6 +11681,7 @@
       }
     },
     {
+      "player_id": 680744,
       "name": "Ty Madden",
       "team": "DET",
       "opp": "",
@@ -11641,6 +11764,7 @@
       }
     },
     {
+      "player_id": 554430,
       "name": "Zack Wheeler",
       "team": "PHI",
       "opp": "",
@@ -11723,6 +11847,7 @@
       }
     },
     {
+      "player_id": 661563,
       "name": "Luis Gil",
       "team": "NYY",
       "opp": "",
@@ -11805,6 +11930,7 @@
       }
     },
     {
+      "player_id": 671212,
       "name": "Joe Boyle",
       "team": "TBR",
       "opp": "",
@@ -11887,6 +12013,7 @@
       }
     },
     {
+      "player_id": 680736,
       "name": "Justin Wrobleski",
       "team": "LAD",
       "opp": "",
@@ -11969,6 +12096,7 @@
       }
     },
     {
+      "player_id": 641816,
       "name": "Tyler Mahle",
       "team": "SFG",
       "opp": "",
@@ -12051,6 +12179,7 @@
       }
     },
     {
+      "player_id": 605400,
       "name": "Aaron Nola",
       "team": "PHI",
       "opp": "",
@@ -12133,6 +12262,7 @@
       }
     },
     {
+      "player_id": 669372,
       "name": "J.T. Ginn",
       "team": "ATH",
       "opp": "",
@@ -12215,6 +12345,7 @@
       }
     },
     {
+      "player_id": 669211,
       "name": "Keegan Akin",
       "team": "BAL",
       "opp": "",
@@ -12292,6 +12423,7 @@
       }
     },
     {
+      "player_id": 695505,
       "name": "Chase Burns",
       "team": "CIN",
       "opp": "",
@@ -12374,6 +12506,7 @@
       }
     },
     {
+      "player_id": 690953,
       "name": "Mick Abel",
       "team": "MIN",
       "opp": "",
@@ -12456,6 +12589,7 @@
       }
     },
     {
+      "player_id": 607259,
       "name": "Nick Martinez",
       "team": "TBR",
       "opp": "",
@@ -12538,6 +12672,7 @@
       }
     },
     {
+      "player_id": 686613,
       "name": "Hunter Brown",
       "team": "HOU",
       "opp": "",
@@ -12620,6 +12755,7 @@
       }
     },
     {
+      "player_id": 678906,
       "name": "Kai-Wei Teng",
       "team": "HOU",
       "opp": "",
@@ -12702,6 +12838,7 @@
       }
     },
     {
+      "player_id": 694477,
       "name": "Chad Patrick",
       "team": "MIL",
       "opp": "",
@@ -12784,6 +12921,7 @@
       }
     },
     {
+      "player_id": 669920,
       "name": "Jason Alexander",
       "team": "HOU",
       "opp": "",
@@ -12866,6 +13004,7 @@
       }
     },
     {
+      "player_id": 623474,
       "name": "Jimmy Herget",
       "team": "COL",
       "opp": "",
@@ -12948,6 +13087,7 @@
       }
     },
     {
+      "player_id": 686799,
       "name": "Jack Kochanowicz",
       "team": "LAA",
       "opp": "",
@@ -13030,6 +13170,7 @@
       }
     },
     {
+      "player_id": 687064,
       "name": "Brandon Young",
       "team": "BAL",
       "opp": "",
@@ -13112,6 +13253,7 @@
       }
     },
     {
+      "player_id": 669432,
       "name": "Trevor Rogers",
       "team": "BAL",
       "opp": "",
@@ -13194,6 +13336,7 @@
       }
     },
     {
+      "player_id": 702281,
       "name": "Robby Snelling",
       "team": "MIA",
       "opp": "",
@@ -13276,6 +13419,7 @@
       }
     },
     {
+      "player_id": 605280,
       "name": "Clay Holmes",
       "team": "NYM",
       "opp": "",
@@ -13358,6 +13502,7 @@
       }
     },
     {
+      "player_id": 663568,
       "name": "Stephen Kolek",
       "team": "KCR",
       "opp": "",
@@ -13440,6 +13585,7 @@
       }
     },
     {
+      "player_id": 656427,
       "name": "Jack Flaherty",
       "team": "DET",
       "opp": "",
@@ -13522,6 +13668,7 @@
       }
     },
     {
+      "player_id": 663623,
       "name": "Jake Irvin",
       "team": "WSN",
       "opp": "",
@@ -13604,6 +13751,7 @@
       }
     },
     {
+      "player_id": 663567,
       "name": "Peter Lambert",
       "team": "HOU",
       "opp": "",
@@ -13686,6 +13834,7 @@
       }
     },
     {
+      "player_id": 695611,
       "name": "Gage Jump",
       "team": "ATH",
       "opp": "",
@@ -13768,6 +13917,7 @@
       }
     },
     {
+      "player_id": 656605,
       "name": "Mitch Keller",
       "team": "PIT",
       "opp": "",
@@ -13850,6 +14000,7 @@
       }
     },
     {
+      "player_id": 685126,
       "name": "Brandon Eisert",
       "team": "CHW",
       "opp": "",
@@ -13932,6 +14083,7 @@
       }
     },
     {
+      "player_id": 808967,
       "name": "Yoshinobu Yamamoto",
       "team": "LAD",
       "opp": "",
@@ -14014,6 +14166,7 @@
       }
     },
     {
+      "player_id": 656492,
       "name": "Foster Griffin",
       "team": "WSN",
       "opp": "",
@@ -14096,6 +14249,7 @@
       }
     },
     {
+      "player_id": 686790,
       "name": "Trevor McDonald",
       "team": "SFG",
       "opp": "",
@@ -14178,6 +14332,7 @@
       }
     },
     {
+      "player_id": 622491,
       "name": "Luis Castillo",
       "team": "SEA",
       "opp": "",
@@ -14260,6 +14415,7 @@
       }
     },
     {
+      "player_id": 671096,
       "name": "Andrew Abbott",
       "team": "CIN",
       "opp": "",
@@ -14342,6 +14498,7 @@
       }
     },
     {
+      "player_id": 663969,
       "name": "Tyler Phillips",
       "team": "MIA",
       "opp": "",
@@ -14424,6 +14581,7 @@
       }
     },
     {
+      "player_id": 682052,
       "name": "Jacob Lopez",
       "team": "ATH",
       "opp": "",
@@ -14506,6 +14664,7 @@
       }
     },
     {
+      "player_id": 672456,
       "name": "Keider Montero",
       "team": "DET",
       "opp": "",
@@ -14588,6 +14747,7 @@
       }
     },
     {
+      "player_id": 681035,
       "name": "Christian Scott",
       "team": "NYM",
       "opp": "",
@@ -14670,6 +14830,7 @@
       }
     },
     {
+      "player_id": 689441,
       "name": "Coleman Crow",
       "team": "MIL",
       "opp": "",
@@ -14752,6 +14913,7 @@
       }
     },
     {
+      "player_id": 813349,
       "name": "Connelly Early",
       "team": "BOS",
       "opp": "",
@@ -14834,6 +14996,7 @@
       }
     },
     {
+      "player_id": 680802,
       "name": "Ryan Weiss",
       "team": "HOU",
       "opp": "",
@@ -14916,6 +15079,7 @@
       }
     },
     {
+      "player_id": 683004,
       "name": "Jack Leiter",
       "team": "TEX",
       "opp": "",
@@ -14998,6 +15162,7 @@
       }
     },
     {
+      "player_id": 694297,
       "name": "Brandon Pfaadt",
       "team": "ARI",
       "opp": "",
@@ -15080,6 +15245,7 @@
       }
     },
     {
+      "player_id": 676974,
       "name": "Max Meyer",
       "team": "MIA",
       "opp": "",
@@ -15162,6 +15328,7 @@
       }
     },
     {
+      "player_id": 650633,
       "name": "Michael King",
       "team": "SDP",
       "opp": "",
@@ -15244,6 +15411,7 @@
       }
     },
     {
+      "player_id": 801403,
       "name": "Chase Dollander",
       "team": "COL",
       "opp": "",
@@ -15326,6 +15494,7 @@
       }
     },
     {
+      "player_id": 605540,
       "name": "Brandon Woodruff",
       "team": "MIL",
       "opp": "",
@@ -15408,6 +15577,7 @@
       }
     },
     {
+      "player_id": 693821,
       "name": "Bryce Elder",
       "team": "ATL",
       "opp": "",
@@ -15490,6 +15660,7 @@
       }
     },
     {
+      "player_id": 605135,
       "name": "Chris Bassitt",
       "team": "BAL",
       "opp": "",
@@ -15572,6 +15743,7 @@
       }
     },
     {
+      "player_id": 607192,
       "name": "Tyler Glasnow",
       "team": "LAD",
       "opp": "",
@@ -15654,6 +15826,7 @@
       }
     },
     {
+      "player_id": 687075,
       "name": "Brandon Sproat",
       "team": "MIL",
       "opp": "",
@@ -15736,6 +15909,7 @@
       }
     },
     {
+      "player_id": 688107,
       "name": "Robert Gasser",
       "team": "MIL",
       "opp": "",
@@ -15818,6 +15992,7 @@
       }
     },
     {
+      "player_id": 669461,
       "name": "Matthew Liberatore",
       "team": "STL",
       "opp": "",
@@ -15900,6 +16075,7 @@
       }
     },
     {
+      "player_id": 669947,
       "name": "Jesse Scholtens",
       "team": "TBR",
       "opp": "",
@@ -15982,6 +16158,7 @@
       }
     },
     {
+      "player_id": 800048,
       "name": "Parker Messick",
       "team": "CLE",
       "opp": "",
@@ -16064,6 +16241,7 @@
       }
     },
     {
+      "player_id": 519242,
       "name": "Chris Sale",
       "team": "ATL",
       "opp": "",
@@ -16146,6 +16324,7 @@
       }
     },
     {
+      "player_id": 669724,
       "name": "Brenan Hanifee",
       "team": "DET",
       "opp": "",
@@ -16228,6 +16407,7 @@
       }
     },
     {
+      "player_id": 605288,
       "name": "Adrian Houser",
       "team": "SFG",
       "opp": "",
@@ -16310,6 +16490,7 @@
       }
     },
     {
+      "player_id": 681347,
       "name": "Mike Burrows",
       "team": "HOU",
       "opp": "",
@@ -16392,6 +16573,7 @@
       }
     },
     {
+      "player_id": 690986,
       "name": "Kyle Harrison",
       "team": "MIL",
       "opp": "",
@@ -16474,6 +16656,7 @@
       }
     },
     {
+      "player_id": 647315,
       "name": "Zach Pop",
       "team": "PHI",
       "opp": "",
@@ -16556,6 +16739,7 @@
       }
     },
     {
+      "player_id": 656550,
       "name": "Grant Holmes",
       "team": "ATL",
       "opp": "",
@@ -16638,6 +16822,7 @@
       }
     },
     {
+      "player_id": 686218,
       "name": "Emmet Sheehan",
       "team": "LAD",
       "opp": "",
@@ -16720,6 +16905,7 @@
       }
     },
     {
+      "player_id": 669923,
       "name": "George Kirby",
       "team": "SEA",
       "opp": "",
@@ -16802,6 +16988,7 @@
       }
     },
     {
+      "player_id": 676083,
       "name": "Janson Junk",
       "team": "MIA",
       "opp": "",
@@ -16884,6 +17071,7 @@
       }
     },
     {
+      "player_id": 608372,
       "name": "Tomoyuki Sugano",
       "team": "COL",
       "opp": "",
@@ -16966,6 +17154,7 @@
       }
     },
     {
+      "player_id": 663554,
       "name": "Casey Mize",
       "team": "DET",
       "opp": "",
@@ -17048,6 +17237,7 @@
       }
     },
     {
+      "player_id": 665795,
       "name": "Edward Cabrera",
       "team": "CHC",
       "opp": "",
@@ -17130,6 +17320,7 @@
       }
     },
     {
+      "player_id": 592662,
       "name": "Robbie Ray",
       "team": "SFG",
       "opp": "",
@@ -17212,6 +17403,7 @@
       }
     },
     {
+      "player_id": 680732,
       "name": "Sean Burke",
       "team": "CHW",
       "opp": "",
@@ -17294,6 +17486,7 @@
       }
     },
     {
+      "player_id": 543243,
       "name": "Sonny Gray",
       "team": "BOS",
       "opp": "",
@@ -17376,6 +17569,7 @@
       }
     },
     {
+      "player_id": 640455,
       "name": "Sean Manaea",
       "team": "NYM",
       "opp": "",
@@ -17458,6 +17652,7 @@
       }
     },
     {
+      "player_id": 687562,
       "name": "Jake Bennett",
       "team": "BOS",
       "opp": "",
@@ -17540,6 +17735,7 @@
       }
     },
     {
+      "player_id": 702070,
       "name": "Noah Cameron",
       "team": "KCR",
       "opp": "",
@@ -17622,6 +17818,7 @@
       }
     },
     {
+      "player_id": 702273,
       "name": "Noah Schultz",
       "team": "CHW",
       "opp": "",
@@ -17704,6 +17901,7 @@
       }
     },
     {
+      "player_id": 666142,
       "name": "Cole Ragans",
       "team": "KCR",
       "opp": "",
@@ -17786,6 +17984,7 @@
       }
     },
     {
+      "player_id": 668678,
       "name": "Zac Gallen",
       "team": "ARI",
       "opp": "",
@@ -17868,6 +18067,7 @@
       }
     },
     {
+      "player_id": 801139,
       "name": "Payton Tolle",
       "team": "BOS",
       "opp": "",
@@ -17950,6 +18150,7 @@
       }
     },
     {
+      "player_id": 666157,
       "name": "Nick Lodolo",
       "team": "CIN",
       "opp": "",
@@ -18032,6 +18233,7 @@
       }
     },
     {
+      "player_id": 676106,
       "name": "Emerson Hancock",
       "team": "SEA",
       "opp": "",
@@ -18114,6 +18316,7 @@
       }
     },
     {
+      "player_id": 689254,
       "name": "Mason Fluharty",
       "team": "TOR",
       "opp": "",
@@ -18196,6 +18399,7 @@
       }
     },
     {
+      "player_id": 608379,
       "name": "Michael Wacha",
       "team": "KCR",
       "opp": "",
@@ -18278,6 +18482,7 @@
       }
     },
     {
+      "player_id": 664074,
       "name": "Cody Ponce",
       "team": "TOR",
       "opp": "",
@@ -18360,6 +18565,7 @@
       }
     },
     {
+      "player_id": 665871,
       "name": "Javier Assad",
       "team": "CHC",
       "opp": "",
@@ -18442,6 +18648,7 @@
       }
     },
     {
+      "player_id": 656876,
       "name": "Drew Rasmussen",
       "team": "TBR",
       "opp": "",
@@ -18524,6 +18731,7 @@
       }
     },
     {
+      "player_id": 702056,
       "name": "Trey Yesavage",
       "team": "TOR",
       "opp": "",
@@ -18606,6 +18814,7 @@
       }
     },
     {
+      "player_id": 621111,
       "name": "Walker Buehler",
       "team": "SDP",
       "opp": "",
@@ -18688,6 +18897,7 @@
       }
     },
     {
+      "player_id": 607067,
       "name": "Colin Rea",
       "team": "CHC",
       "opp": "",
@@ -18770,6 +18980,7 @@
       }
     },
     {
+      "player_id": 621107,
       "name": "Zach Eflin",
       "team": "BAL",
       "opp": "",
@@ -18852,6 +19063,7 @@
       }
     },
     {
+      "player_id": 641793,
       "name": "Zack Littell",
       "team": "WSN",
       "opp": "",
@@ -18934,6 +19146,7 @@
       }
     },
     {
+      "player_id": 592791,
       "name": "Jameson Taillon",
       "team": "CHC",
       "opp": "",
@@ -19016,6 +19229,7 @@
       }
     },
     {
+      "player_id": 669302,
       "name": "Logan Gilbert",
       "team": "SEA",
       "opp": "",
@@ -19098,6 +19312,7 @@
       }
     },
     {
+      "player_id": 669387,
       "name": "Carmen Mlodzinski",
       "team": "PIT",
       "opp": "",
@@ -19180,6 +19395,7 @@
       }
     },
     {
+      "player_id": 669467,
       "name": "Andre Pallante",
       "team": "STL",
       "opp": "",
@@ -19262,6 +19478,7 @@
       }
     },
     {
+      "player_id": 641927,
       "name": "Bailey Ober",
       "team": "MIN",
       "opp": "",
@@ -19344,6 +19561,7 @@
       }
     },
     {
+      "player_id": 677944,
       "name": "Slade Cecconi",
       "team": "CLE",
       "opp": "",
@@ -19426,6 +19644,7 @@
       }
     },
     {
+      "player_id": 700249,
       "name": "Cade Povich",
       "team": "BAL",
       "opp": "",
@@ -19508,6 +19727,7 @@
       }
     },
     {
+      "player_id": 669160,
       "name": "Dustin May",
       "team": "STL",
       "opp": "",
@@ -19590,6 +19810,7 @@
       }
     },
     {
+      "player_id": 672282,
       "name": "Reid Detmers",
       "team": "LAA",
       "opp": "",
@@ -19672,6 +19893,7 @@
       }
     },
     {
+      "player_id": 693433,
       "name": "Bryan Woo",
       "team": "SEA",
       "opp": "",
@@ -19754,6 +19976,7 @@
       }
     },
     {
+      "player_id": 641743,
       "name": "Anthony Kay",
       "team": "CHW",
       "opp": "",
@@ -19836,6 +20059,7 @@
       }
     },
     {
+      "player_id": 675911,
       "name": "Spencer Strider",
       "team": "ATL",
       "opp": "",
@@ -19918,6 +20142,7 @@
       }
     },
     {
+      "player_id": 657277,
       "name": "Logan Webb",
       "team": "SFG",
       "opp": "",
@@ -20000,6 +20225,7 @@
       }
     },
     {
+      "player_id": 669022,
       "name": "MacKenzie Gore",
       "team": "TEX",
       "opp": "",
@@ -20082,6 +20308,7 @@
       }
     },
     {
+      "player_id": 663372,
       "name": "Ryan Feltner",
       "team": "COL",
       "opp": "",
@@ -20164,6 +20391,7 @@
       }
     },
     {
+      "player_id": 571927,
       "name": "Steven Matz",
       "team": "TBR",
       "opp": "",
@@ -20246,6 +20474,7 @@
       }
     },
     {
+      "player_id": 656302,
       "name": "Dylan Cease",
       "team": "TOR",
       "opp": "",
@@ -20328,6 +20557,7 @@
       }
     },
     {
+      "player_id": 680694,
       "name": "Kyle Bradish",
       "team": "BAL",
       "opp": "",
@@ -20410,6 +20640,7 @@
       }
     },
     {
+      "player_id": 500779,
       "name": "Jose Quintana",
       "team": "COL",
       "opp": "",
@@ -20492,6 +20723,7 @@
       }
     },
     {
+      "player_id": 677958,
       "name": "Kumar Rocker",
       "team": "TEX",
       "opp": "",
@@ -20574,6 +20806,7 @@
       }
     },
     {
+      "player_id": 650644,
       "name": "Aaron Civale",
       "team": "ATH",
       "opp": "",
@@ -20656,6 +20889,7 @@
       }
     },
     {
+      "player_id": 657746,
       "name": "Joe Ryan",
       "team": "MIN",
       "opp": "",
@@ -20738,6 +20972,7 @@
       }
     },
     {
+      "player_id": 664285,
       "name": "Framber Valdez",
       "team": "DET",
       "opp": "",
@@ -20820,6 +21055,7 @@
       }
     },
     {
+      "player_id": 668909,
       "name": "Gavin Williams",
       "team": "CLE",
       "opp": "",
@@ -20902,6 +21138,7 @@
       }
     },
     {
+      "player_id": 681517,
       "name": "Kyle Leahy",
       "team": "STL",
       "opp": "",
@@ -20984,6 +21221,7 @@
       }
     },
     {
+      "player_id": 682227,
       "name": "Brandon Williamson",
       "team": "CIN",
       "opp": "",
@@ -21066,6 +21304,7 @@
       }
     },
     {
+      "player_id": 608331,
       "name": "Max Fried",
       "team": "NYY",
       "opp": "",
@@ -21148,6 +21387,7 @@
       }
     },
     {
+      "player_id": 805673,
       "name": "Zebby Matthews",
       "team": "MIN",
       "opp": "",
@@ -21230,6 +21470,7 @@
       }
     },
     {
+      "player_id": 663436,
       "name": "Davis Martin",
       "team": "CHW",
       "opp": "",
@@ -21312,6 +21553,7 @@
       }
     },
     {
+      "player_id": 669194,
       "name": "Ryne Nelson",
       "team": "ARI",
       "opp": "",
@@ -21394,6 +21636,7 @@
       }
     },
     {
+      "player_id": 676282,
       "name": "Joey Cantillo",
       "team": "CLE",
       "opp": "",
@@ -21476,6 +21719,7 @@
       }
     },
     {
+      "player_id": 695534,
       "name": "Chase Petty",
       "team": "CIN",
       "opp": "",
@@ -21558,6 +21802,7 @@
       }
     },
     {
+      "player_id": 642547,
       "name": "Freddy Peralta",
       "team": "NYM",
       "opp": "",
@@ -21640,6 +21885,7 @@
       }
     },
     {
+      "player_id": 669358,
       "name": "Shane Baz",
       "team": "BAL",
       "opp": "",
@@ -21722,6 +21968,7 @@
       }
     },
     {
+      "player_id": 684007,
       "name": "Shota Imanaga",
       "team": "CHC",
       "opp": "",
@@ -21804,6 +22051,7 @@
       }
     },
     {
+      "player_id": 674841,
       "name": "Andrew Alvarez",
       "team": "WSN",
       "opp": "",
@@ -21886,6 +22134,7 @@
       }
     },
     {
+      "player_id": 571578,
       "name": "Patrick Corbin",
       "team": "TOR",
       "opp": "",
@@ -21968,6 +22217,7 @@
       }
     },
     {
+      "player_id": 518876,
       "name": "Merrill Kelly",
       "team": "ARI",
       "opp": "",
@@ -22050,6 +22300,7 @@
       }
     },
     {
+      "player_id": 702275,
       "name": "JR Ritchie",
       "team": "ATL",
       "opp": "",
@@ -22132,6 +22383,7 @@
       }
     },
     {
+      "player_id": 596001,
       "name": "Jakob Junis",
       "team": "TEX",
       "opp": "",
@@ -22214,6 +22466,7 @@
       }
     },
     {
+      "player_id": 663460,
       "name": "Kris Bubic",
       "team": "KCR",
       "opp": "",
@@ -22296,6 +22549,7 @@
       }
     },
     {
+      "player_id": 665152,
       "name": "Dean Kremer",
       "team": "BAL",
       "opp": "",
@@ -22378,6 +22632,7 @@
       }
     },
     {
+      "player_id": 675989,
       "name": "Cody Bolton",
       "team": "HOU",
       "opp": "",
@@ -22460,6 +22715,7 @@
       }
     },
     {
+      "player_id": 645261,
       "name": "Sandy Alcantara",
       "team": "MIA",
       "opp": "",
@@ -22542,6 +22798,7 @@
       }
     },
     {
+      "player_id": 677960,
       "name": "Ryan Weathers",
       "team": "NYY",
       "opp": "",
@@ -22624,6 +22881,7 @@
       }
     },
     {
+      "player_id": 701656,
       "name": "Logan Henderson",
       "team": "MIL",
       "opp": "",
@@ -22706,6 +22964,7 @@
       }
     },
     {
+      "player_id": 622663,
       "name": "Luis Severino",
       "team": "ATH",
       "opp": "",
@@ -22788,6 +23047,7 @@
       }
     },
     {
+      "player_id": 663556,
       "name": "Shane McClanahan",
       "team": "TBR",
       "opp": "",
@@ -22870,6 +23130,7 @@
       }
     },
     {
+      "player_id": 543135,
       "name": "Nathan Eovaldi",
       "team": "TEX",
       "opp": "",
@@ -22952,6 +23213,7 @@
       }
     },
     {
+      "player_id": 671737,
       "name": "Taj Bradley",
       "team": "MIN",
       "opp": "",
@@ -23034,6 +23296,7 @@
       }
     },
     {
+      "player_id": 694973,
       "name": "Paul Skenes",
       "team": "PIT",
       "opp": "",
@@ -23116,6 +23379,7 @@
       }
     },
     {
+      "player_id": 663903,
       "name": "Brady Singer",
       "team": "CIN",
       "opp": "",
@@ -23198,6 +23462,7 @@
       }
     },
     {
+      "player_id": 677952,
       "name": "Braxton Ashcraft",
       "team": "PIT",
       "opp": "",
@@ -23280,6 +23545,7 @@
       }
     },
     {
+      "player_id": 690997,
       "name": "Nolan McLean",
       "team": "NYM",
       "opp": "",
@@ -23362,6 +23628,7 @@
       }
     },
     {
+      "player_id": 701542,
       "name": "Will Warren",
       "team": "NYY",
       "opp": "",
@@ -23452,6 +23719,8 @@
       "time": "2:20 PM ET",
       "away_sp": "Kevin Gausman",
       "home_sp": "Ben Brown",
+      "away_sp_id": 592332,
+      "home_sp_id": 676962,
       "away_skill": 3.27,
       "home_skill": 2.36,
       "away_verdict": "STABLE",
@@ -23472,6 +23741,8 @@
       "time": "6:40 PM ET",
       "away_sp": "Erick Fedde",
       "home_sp": "Tarik Skubal",
+      "away_sp_id": 607200,
+      "home_sp_id": 669373,
       "away_skill": 5.35,
       "home_skill": 3.24,
       "away_verdict": "REGRESSION",
@@ -23492,6 +23763,8 @@
       "time": "7:05 PM ET",
       "away_sp": "Rhett Lowder",
       "home_sp": "Cam Schlittler",
+      "away_sp_id": 695076,
+      "home_sp_id": 693645,
       "away_skill": 4.78,
       "home_skill": 2.56,
       "away_verdict": "REGRESSION",
@@ -23513,6 +23786,8 @@
       "time": "7:10 PM ET",
       "away_sp": "Landen Roupp",
       "home_sp": "Lake Bachar",
+      "away_sp_id": 694738,
+      "home_sp_id": 669199,
       "away_skill": 3.03,
       "home_skill": 3.69,
       "away_verdict": "STABLE",
@@ -23533,6 +23808,8 @@
       "time": "7:10 PM ET",
       "away_sp": "Cade Cavalli",
       "home_sp": "Griffin Jax",
+      "away_sp_id": 676917,
+      "home_sp_id": 643377,
       "away_skill": 3.51,
       "home_skill": 4.57,
       "away_verdict": "STABLE",
@@ -23553,6 +23830,8 @@
       "time": "7:15 PM ET",
       "away_sp": "Jacob Misiorowski",
       "home_sp": "Mart\u00edn P\u00e9rez",
+      "away_sp_id": 694819,
+      "home_sp_id": 527048,
       "away_skill": 1.54,
       "home_skill": 3.83,
       "away_verdict": "REGRESSION",
@@ -23574,6 +23853,8 @@
       "time": "8:05 PM ET",
       "away_sp": "Randy V\u00e1squez",
       "home_sp": "Jacob deGrom",
+      "away_sp_id": 681190,
+      "home_sp_id": 594798,
       "away_skill": 4.65,
       "home_skill": 3.2,
       "away_verdict": "REGRESSION",
@@ -23594,6 +23875,8 @@
       "time": "8:10 PM ET",
       "away_sp": "Tanner Bibee",
       "home_sp": "Tatsuya Imai",
+      "away_sp_id": 676440,
+      "home_sp_id": 837227,
       "away_skill": 4.5,
       "home_skill": 6.08,
       "away_verdict": "STABLE",
@@ -23612,6 +23895,8 @@
       "time": "8:15 PM ET",
       "away_sp": "Michael McGreevy",
       "home_sp": "Seth Lugo",
+      "away_sp_id": 700241,
+      "home_sp_id": 607625,
       "away_skill": 4.29,
       "home_skill": 3.67,
       "away_verdict": "REGRESSION",
@@ -23632,6 +23917,8 @@
       "time": "8:40 PM ET",
       "away_sp": "Bubba Chandler",
       "home_sp": "Kyle Freeland",
+      "away_sp_id": 696149,
+      "home_sp_id": 607536,
       "away_skill": 4.64,
       "home_skill": 4.97,
       "away_verdict": "STABLE",
@@ -23650,6 +23937,8 @@
       "time": "9:40 PM ET",
       "away_sp": "Jos\u00e9 Soriano",
       "home_sp": "Jeffrey Springs",
+      "away_sp_id": 667755,
+      "home_sp_id": 605488,
       "away_skill": 3.95,
       "home_skill": 5.64,
       "away_verdict": "REGRESSION",
@@ -23670,6 +23959,8 @@
       "time": "9:45 PM ET",
       "away_sp": "Connor Prielipp",
       "home_sp": "Michael Soroka",
+      "away_sp_id": 687570,
+      "home_sp_id": 647336,
       "away_skill": 3.57,
       "home_skill": 3.05,
       "away_verdict": "PROGRESSION",
@@ -23688,6 +23979,8 @@
       "time": "10:10 PM ET",
       "away_sp": "Trey Gibson",
       "home_sp": "Roki Sasaki",
+      "away_sp_id": 694346,
+      "home_sp_id": 808963,
       "away_skill": 6.32,
       "home_skill": 4.72,
       "away_verdict": "STABLE",
@@ -23706,6 +23999,8 @@
       "time": "10:10 PM ET",
       "away_sp": "Ranger Suarez",
       "home_sp": "Bryce Miller",
+      "away_sp_id": 624133,
+      "home_sp_id": 682243,
       "away_skill": 2.76,
       "home_skill": 2.94,
       "away_verdict": "STABLE",
