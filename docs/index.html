@@ -92,11 +92,28 @@
   td:first-child{text-align:left;font-weight:600;color:var(--ink)}
   tbody tr:last-child td{border-bottom:none}
   tbody tr.r:hover td{background:rgba(124,77,255,.105);cursor:pointer}
-  tbody tr.detail td{background:#0C0E16;padding:0}
-  .factors{display:flex;flex-wrap:wrap;gap:9px;padding:15px 16px}
-  .factor{background:var(--card-2);border:1px solid var(--border-2);border-radius:10px;padding:8px 12px;font-size:12.5px;min-width:150px}
-  .factor .fl{color:var(--muted);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
-  .factor .fv{font-weight:800;font-size:14px;font-family:var(--display);margin-top:1px} .factor .fn{color:var(--ink2);font-size:11.5px}
+  tbody tr.detail td{background:#0C0E16;padding:0;text-align:left}
+  .factors{padding:18px 16px 20px}
+  .factor-overview{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 15px;margin-bottom:13px;
+    background:linear-gradient(105deg,rgba(124,77,255,.14),rgba(24,27,38,.84));border:1px solid var(--border-violet);border-radius:12px}
+  .factor-overview-copy{min-width:0}.factor-overview .fl{color:var(--v-light);font:800 11px/1.2 var(--display);text-transform:uppercase;letter-spacing:.1em}
+  .factor-overview .fn{color:var(--ink2);font-size:12px;margin-top:4px}.factor-equation{display:flex;align-items:center;gap:8px;white-space:nowrap}
+  .factor-equation-label{color:var(--muted);font:700 10px/1 var(--display);text-transform:uppercase;letter-spacing:.06em;margin-right:2px}
+  .factor-equation-op{color:var(--muted);font-weight:800}
+  .factor-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+  .factor-group{background:rgba(18,20,29,.72);border:1px solid var(--border);border-radius:12px;padding:12px}
+  .factor-group--season,.factor-group--matchup{grid-column:span 2}
+  .factor-group-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:0 2px 10px;border-bottom:1px solid rgba(255,255,255,.07)}
+  .factor-group-title{display:flex;align-items:center;gap:7px;color:var(--ink);font:800 13px/1.2 var(--display);letter-spacing:.02em}
+  .factor-group-title::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px rgba(154,107,255,.5)}
+  .factor-group--form .factor-group-title::before{background:var(--teal);box-shadow:0 0 8px rgba(45,212,191,.38)}
+  .factor-group--matchup .factor-group-title::before{background:var(--gold);box-shadow:0 0 8px rgba(232,194,74,.38)}
+  .factor-group--environment .factor-group-title::before{background:var(--green);box-shadow:0 0 8px rgba(60,203,127,.38)}
+  .factor-group-sub{color:var(--muted);font-size:10.5px;margin-top:3px;line-height:1.3}.factor-group-count{color:var(--muted-2);font:700 10px/1 var(--display);padding-top:2px}
+  .factor-list{display:grid;grid-template-columns:1fr;gap:7px;padding-top:9px}.factor-group--season .factor-list,.factor-group--matchup .factor-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .factor{background:var(--card-2);border:1px solid rgba(54,59,77,.78);border-radius:9px;padding:9px 10px;min-width:0}
+  .factor-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.factor .fl{color:var(--ink2);font-size:10.5px;letter-spacing:.02em;font-weight:700;line-height:1.25}
+  .factor .fv{flex:0 0 auto;font-weight:800;font-size:13px;font-family:var(--display)} .factor .fn{color:var(--muted);font-size:10.5px;line-height:1.35;margin-top:5px}
   .chip{display:inline-block;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.2}
   td .chip, .factor .chip{font-family:var(--display);font-size:inherit}
   .chip.c-elite{color:#4ADE80}.chip.c-good{color:#7BDC5A}.chip.c-mid{color:#FBBF24}
@@ -162,6 +179,9 @@
     .mkgrid{grid-template-columns:1fr;gap:14px}.mk{padding:16px}.mk:hover{transform:none}
     .mk .gm{align-items:flex-start;gap:8px}.matchup-brand{gap:5px}.team-logo.lg{width:30px;height:30px}
     .mk .leans{gap:6px}.lz{padding:9px 3px}.lz .lv{font-size:15px}
+    .factors{width:calc(100vw - 28px);position:sticky;left:0;padding:13px 10px 16px}.factor-overview{align-items:flex-start;flex-direction:column;gap:10px}
+    .factor-equation{width:100%;justify-content:flex-start;flex-wrap:wrap}.factor-groups{grid-template-columns:1fr}
+    .factor-group--season,.factor-group--matchup{grid-column:auto}.factor-group--season .factor-list,.factor-group--matchup .factor-list{grid-template-columns:1fr}
   }
   @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.mk{transition:none}}
 </style>
@@ -289,6 +309,33 @@ function factorChip(label,raw){
   if(l.includes('split fip'))return metricChip(v,'era',null,2);
   return metricChip(v,'default',false,2);
 }
+const FACTOR_GROUPS={
+  season:{title:'Season luck',sub:'Results vs underlying indicators'},
+  form:{title:'Recent form',sub:'Movement over the last 3 starts'},
+  matchup:{title:"Today's matchup",sub:'Opponent quality and lineup fit'},
+  environment:{title:'Environment',sub:'Park and weather context'}
+};
+function factorGroupKey(label){
+  const l=String(label||'').toLowerCase();
+  if(l.includes('weather')||l.includes('ballpark'))return 'environment';
+  if(l.includes('trend')||l.includes('pitch count'))return 'form';
+  if(l.includes('schedule')||l.includes('lineup')||l.includes('wrc'))return 'matchup';
+  return 'season';
+}
+function factorItemHtml(ff){
+  return `<div class="factor"><div class="factor-top"><div class="fl">${esc(ff[0])}</div><div class="fv num">${factorChip(ff[0],ff[1])}</div></div>${ff[2]?`<div class="fn">${esc(ff[2])}</div>`:''}</div>`;
+}
+function factorBreakdownHtml(r){
+  const grouped={season:[],form:[],matchup:[],environment:[]};
+  (r.factors||[]).forEach(ff=>grouped[factorGroupKey(ff[0])].push(ff));
+  const hasOverview=r.luck_base!=null&&r.matchup_adj!=null;
+  const overview=hasOverview?`<div class="factor-overview"><div class="factor-overview-copy"><div class="fl">Luck stack</div><div class="fn">Season baseline adjusted for today's slate</div></div><div class="factor-equation num"><span class="factor-equation-label">Base</span><span class="chip c-mid">${sp(r.luck_base,2)}</span><span class="factor-equation-op">+</span><span class="factor-equation-label">Matchup</span><span class="chip ${r.matchup_adj>=0?'c-poor':'c-good'}">${sp(r.matchup_adj,2)}</span></div></div>`:'';
+  const groups=Object.keys(FACTOR_GROUPS).filter(k=>grouped[k].length).map(k=>{
+    const meta=FACTOR_GROUPS[k],items=grouped[k];
+    return `<section class="factor-group factor-group--${k}"><div class="factor-group-head"><div><div class="factor-group-title">${meta.title}</div><div class="factor-group-sub">${meta.sub}</div></div><span class="factor-group-count">${items.length}</span></div><div class="factor-list">${items.map(factorItemHtml).join('')}</div></section>`;
+  }).join('');
+  return overview+`<div class="factor-groups">${groups}</div>`;
+}
 function skillChip(v){return metricChip(v,'era',null,2);}
 function metricText(v,ctx,invert,dec){
   if(v==null||isNaN(+v))return `<span class="c-na">—</span>`;
@@ -335,10 +382,7 @@ function renderPitchers(){
       <td class="num" title="${esc(luckTitle)}">${metricChipSigned(r.luck,'luck',null,2)}</td>
       <td class="num">${skillChip(r.skill_era)}</td>
       ${PROP_STATS.map(s=>propCell(r,s)).join('')}</tr>`;
-    h+=`<tr class="detail" id="det-${idx}" style="display:none"><td colspan="9"><div class="factors">`
-      + (r.luck_base!=null&&r.matchup_adj?`<div class="factor"><div class="fl">Luck stack</div><div class="fv num"><span class="chip c-mid">Base ${sp(r.luck_base,2)}</span> <span style="color:var(--muted)">+</span> <span class="chip ${r.matchup_adj>=0?'c-poor':'c-good'}">Matchup ${sp(r.matchup_adj,2)}</span></div><div class="fn">Today's slate overlay on season luck</div></div>`:'')
-      + (r.factors||[]).map(ff=>`<div class="factor"><div class="fl">${esc(ff[0])}</div><div class="fv num">${factorChip(ff[0],ff[1])}</div>${ff[2]?`<div class="fn">${esc(ff[2])}</div>`:''}</div>`).join('')
-      + `</div></td></tr>`;
+    h+=`<tr class="detail" id="det-${idx}" style="display:none"><td colspan="9"><div class="factors">${factorBreakdownHtml(r)}</div></td></tr>`;
   });
   h+='</tbody></table></div>';
   document.getElementById('ptable').innerHTML=h;
