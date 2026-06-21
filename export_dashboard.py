@@ -13,11 +13,14 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
+import pandas as pd
+
 import db
 import market_edge
 import cross_venue
 
 DOCS = Path(__file__).resolve().parent / "docs"
+SHARP_CSV = Path(__file__).resolve().parent / "data" / "sharp_signals.csv"
 
 
 def _safe(view: str, params: str = "") -> list[dict]:
@@ -25,6 +28,41 @@ def _safe(view: str, params: str = "") -> list[dict]:
         return db.select(view, params)
     except SystemExit:
         return []
+
+
+def _today_sharp_signals() -> list[dict]:
+    """Return the current slate's signals, including locally queued rows.
+
+    The tracker always writes its CSV before attempting Supabase.  Reading both
+    sources keeps the live dashboard current if a warehouse FK/schema problem
+    temporarily prevents the insert.
+    """
+    from _compat import TODAY
+
+    fields = {
+        "market_type", "selection", "divergence", "sharp_novig_prob",
+        "soft_novig_prob", "steam_flag", "snapshot_time",
+    }
+    remote = _safe(
+        "sharp_signals",
+        "?select=market_type,selection,divergence,sharp_novig_prob,soft_novig_prob,"
+        "steam_flag,snapshot_time&order=snapshot_time.desc&limit=100",
+    )
+    local: list[dict] = []
+    if SHARP_CSV.exists():
+        frame = pd.read_csv(SHARP_CSV)
+        if "snapshot_time" in frame.columns:
+            frame = frame[frame["snapshot_time"].astype(str).str.startswith(TODAY)]
+            local = frame.to_dict(orient="records")
+
+    rows = remote + local
+    rows = [r for r in rows if str(r.get("snapshot_time", "")).startswith(TODAY)]
+    unique: dict[tuple, dict] = {}
+    for row in rows:
+        clean = {k: v for k, v in row.items() if k in fields}
+        key = (clean.get("snapshot_time"), clean.get("market_type"), clean.get("selection"))
+        unique[key] = clean
+    return sorted(unique.values(), key=lambda r: str(r.get("snapshot_time", "")), reverse=True)[:20]
 
 
 def build() -> dict:
@@ -43,13 +81,15 @@ def build() -> dict:
         "thin": [{"sel": s, "div": d, "vol": vol}
                  for (g, s, d, vol) in sorted(thins, key=lambda x: abs(x[2]), reverse=True)][:10],
     }
+    sharp_today = _today_sharp_signals()
     return {
         "cross_venue": cv,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "counts": {
             "settled_contracts": db.count("prediction_market_snapshots"),
             "sharp_observations": db.count("sharp_observations"),
-            "sharp_signals": db.count("sharp_signals"),
+            "sharp_signals": len(sharp_today),
+            "sharp_signals_total": db.count("sharp_signals"),
             "games": db.count("games"),
         },
         "market_edge": [
@@ -65,10 +105,7 @@ def build() -> dict:
         "open_vs_close": _safe("v_open_vs_close_brier"),
         "liquidity": _safe("v_liquidity_calibration", "?order=liq_q.asc"),
         "pm_calibration": _safe("v_pm_calibration", "?order=price_bucket.asc"),
-        "sharp_signals_recent": _safe(
-            "sharp_signals",
-            "?select=market_type,selection,divergence,sharp_novig_prob,soft_novig_prob,steam_flag"
-            "&order=snapshot_time.desc&limit=20"),
+        "sharp_signals_recent": sharp_today,
         "sharp_performance": _safe("v_sharp_book_performance", "?order=win_rate.desc"),
     }
 
