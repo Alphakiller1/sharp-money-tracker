@@ -37,6 +37,21 @@ def load(filename: str) -> pd.DataFrame | None:
     return pd.read_csv(path)
 
 
+def load_pitch_mix(kind: str) -> pd.DataFrame | None:
+    """Load pitch-mix CSV from MLBMA_DATA_DIR; prefer L14 window, fall back to season."""
+    base = f"pitch_mix_{kind}"
+    for suffix in ("_l14", ""):
+        path = os.path.join(config.PIPELINE_DATA_DIR, f"{base}{suffix}.csv")
+        if os.path.exists(path):
+            df = pd.read_csv(path)
+            if df is not None and not df.empty:
+                return df
+    season_path = os.path.join(config.PIPELINE_DATA_DIR, f"{base}.csv")
+    if not os.path.exists(season_path):
+        print(f"  WARNING: {base}.csv not found in {config.PIPELINE_DATA_DIR}")
+    return None
+
+
 def american_to_implied(odds: int) -> float:
     return 100.0 / (odds + 100.0) if odds > 0 else (-odds) / (-odds + 100.0)
 

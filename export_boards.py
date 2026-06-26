@@ -37,6 +37,12 @@ def run():
     today = [p for p in pitchers if p["today"]]
     print(f"  wrote {len(pitchers)} pitchers ({len(today)} starting today) + {len(markets)} games -> {DATA}")
 
+    try:
+        from push_projections import run as push_proj
+        push_proj(from_file=True)
+    except Exception as exc:
+        print(f"  (projection push skipped: {exc})")
+
 
 if __name__ == "__main__":
     run()

@@ -58,3 +58,7 @@ signals/observations/findings to a shared **Supabase** warehouse. Part of the Ch
 Analytics ecosystem (pipeline → evaluator → **sharp tracker** → warehouse → dashboard).
 
 *Educational analysis only — not betting advice.*
+
+## Projection tracking
+
+Pitcher prop snapshots → Supabase for MAE / lean-hit reporting. See [`docs/PROJECTION_TRACKING.md`](docs/PROJECTION_TRACKING.md).

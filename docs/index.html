@@ -239,11 +239,17 @@
       <p><b>Today's matchup overlay</b> (starters only) adjusts that luck score using the actual slate context from the MLBMA pipeline:
       projected lineup platoon mix from <b>Today_Lineups</b> (how many LHH/RHH the SP faces, switch hitters bat opposite),
       split-adjusted opponent <b>OSI</b> and team <b>wRC+ vs hand</b>, the pitcher's <b>vs-LHH / vs-RHH FIP</b> weighted to that mix,
+      <b>Statcast pitch-mix overlap</b> (arsenal usage × whiff/CSW/xwOBA vs opponent team batting),
       <b>ballpark factor</b> at the home stadium, and <b>weather</b> (wind, temperature, dome). Positive matchup adjustment
       pushes a lucky arm toward regression faster; a cold lineup or pitcher-friendly park can dampen it.</p>
-      <p><b>Prop leans</b> follow the matchup-adjusted verdict: a regressing arm in a platoon-stress spot projects fewer Ks/outs
-      and more earned runs. <b>Market leans</b> combine both starters' reg/prog with bullpen fatigue/quality, opponent OSI, and splits.
-      <b>Sharp signals</b> de-vig each book and surface only FDR-surviving, profit-positive, CLV-validated segments as tradeable.</p></div>
+      <p><b>Prop leans</b> use channel-separated layers (anti double-count): <b>K/BB</b> from L14 rate blend,
+      gamelog K%/BB% trends, Statcast pitch-mix (season or L14), lineup batter pitch-mix, Savant team discipline,
+      and signals conviction (K% vs OBR / BB% vs ABQ). <b>ER/F5</b> from lineup-weighted projOSI, OSI-tier split FIP,
+      PitchScore anchors, rolling opponent OSI, L10 vs SP-hand cross-check, park/weather, and bullpen quick-hook on outs.
+      Platoon and split FIP adjust the luck stack only — not re-applied on K%/BB% props.</p>
+      <p><b>Market leans</b> combine both starters' reg/prog with bullpen fatigue/quality and split context.
+      <b>Supabase projection tracking</b> snapshots every slate for MAE / lean-hit-rate reporting after reconcile.
+      <b>Sharp signals</b> de-vig each book and surface only FDR-surviving segments as tradeable.</p></div>
   </details>
 </div>
 
@@ -291,8 +297,9 @@ function metricChipSigned(v,ctx,invert,dec){if(v==null||isNaN(+v))return `<span 
   const d=dec==null?1:dec;const cls=CHIP_CLASS[gradeKey(+v,ctx,invert)]||'c-mid';
   const txt=(+v>=0?'+':'')+(+v).toFixed(d);return `<span class="chip ${cls}">${txt}</span>`;}
 function propCtx(pn){return ({K:'kstart',BB:'bbstart',Outs:'outs',ER:'erstart'}[pn]||'default');}
-function factorChip(label,raw){
-  const l=String(label||'').toLowerCase();let v=parseFloat(String(raw).replace(/[^0-9.-]/g,''));
+function factorChip(label,raw,key){
+  const l=String(label||'').toLowerCase();const k=String(key||'').toLowerCase();
+  let v=parseFloat(String(raw).replace(/[^0-9.-]/g,''));
   const disp=esc(String(raw==null?'—':raw));
   if(isNaN(v))return `<span class="chip c-na">${disp}</span>`;
   if(l.includes('era vs')||l.includes('hr suppression'))return metricChipSigned(v,'luck_delta',true,2);
@@ -307,7 +314,12 @@ function factorChip(label,raw){
   if(l.includes('ballpark'))return metricChip(v,'default',null,2);
   if(l.includes('weather'))return metricChipSigned(v,'luck_delta',true,2);
   if(l.includes('split fip'))return metricChip(v,'era',null,2);
+  if(l.includes('pitch mix')||k==='pitch_mix')return metricChipSigned(v,'trend',false,3);
   return metricChip(v,'default',false,2);
+}
+function factorMeta(ff){
+  if(ff&&typeof ff==='object'&&!Array.isArray(ff)) return {key:ff.key||'',label:ff.label||'',value:ff.value,note:ff.note||''};
+  return {key:'',label:String(ff[0]||''),value:ff[1],note:ff[2]||''};
 }
 const FACTOR_GROUPS={
   season:{title:'Season luck',sub:'Results vs underlying indicators'},
@@ -315,19 +327,23 @@ const FACTOR_GROUPS={
   matchup:{title:"Today's matchup",sub:'Opponent quality and lineup fit'},
   environment:{title:'Environment',sub:'Park and weather context'}
 };
-function factorGroupKey(label){
-  const l=String(label||'').toLowerCase();
-  if(l.includes('weather')||l.includes('ballpark'))return 'environment';
-  if(l.includes('trend')||l.includes('pitch count'))return 'form';
-  if(l.includes('schedule')||l.includes('lineup')||l.includes('wrc'))return 'matchup';
+function factorGroupKey(ff){
+  const m=factorMeta(ff), k=m.key, l=m.label.toLowerCase();
+  if(k==='weather'||k==='park'||l.includes('weather')||l.includes('ballpark'))return 'environment';
+  if(k==='k_trend'||k==='bb_trend'||k==='pitch_count'||k==='l14_blend'||k==='staleness'||k==='rest_workload'
+     ||l.includes('trend')||l.includes('pitch count')||l.includes('l14')||l.includes('rest'))return 'form';
+  if(k==='pitch_mix'||k==='platoon'||k==='opp_osi'||k==='wrc_hand'||k==='split_fip'
+     ||k==='lineup_proj_osi'||k==='lineup_pitch_mix'||k==='osi_tier_fip'||k==='offense_er'
+     ||l.includes('lineup')||l.includes('wrc')||l.includes('pitch mix')||l.includes('split fip')||l.includes('osi'))return 'matchup';
   return 'season';
 }
 function factorItemHtml(ff){
-  return `<div class="factor"><div class="factor-top"><div class="fl">${esc(ff[0])}</div><div class="fv num">${factorChip(ff[0],ff[1])}</div></div>${ff[2]?`<div class="fn">${esc(ff[2])}</div>`:''}</div>`;
+  const m=factorMeta(ff);
+  return `<div class="factor"><div class="factor-top"><div class="fl">${esc(m.label)}</div><div class="fv num">${factorChip(m.label,m.value,m.key)}</div></div>${m.note?`<div class="fn">${esc(m.note)}</div>`:''}</div>`;
 }
 function factorBreakdownHtml(r){
   const grouped={season:[],form:[],matchup:[],environment:[]};
-  (r.factors||[]).forEach(ff=>grouped[factorGroupKey(ff[0])].push(ff));
+  (r.factors||[]).forEach(ff=>grouped[factorGroupKey(ff)].push(ff));
   const hasOverview=r.luck_base!=null&&r.matchup_adj!=null;
   const overview=hasOverview?`<div class="factor-overview"><div class="factor-overview-copy"><div class="fl">Luck stack</div><div class="fn">Season baseline adjusted for today's slate</div></div><div class="factor-equation num"><span class="factor-equation-label">Base</span><span class="chip c-mid">${sp(r.luck_base,2)}</span><span class="factor-equation-op">+</span><span class="factor-equation-label">Matchup</span><span class="chip ${r.matchup_adj>=0?'c-poor':'c-good'}">${sp(r.matchup_adj,2)}</span></div></div>`:'';
   const groups=Object.keys(FACTOR_GROUPS).filter(k=>grouped[k].length).map(k=>{
