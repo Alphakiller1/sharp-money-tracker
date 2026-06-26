@@ -68,7 +68,11 @@ def upsert_rows(rows: list[dict]) -> None:
     if not rows:
         return
     body = json.dumps(rows, default=str).encode("utf-8")
-    url = f"{config.SUPABASE_URL.rstrip('/')}/rest/v1/{TABLE}"
+    conflict = "slate_date,pitcher_name,team,model_version"
+    url = (
+        f"{config.SUPABASE_URL.rstrip('/')}/rest/v1/{TABLE}"
+        f"?on_conflict={conflict}"
+    )
     req = urllib.request.Request(url, data=body, method="POST", headers=_headers())
     with urllib.request.urlopen(req, timeout=60) as resp:
         if resp.status not in (200, 201, 204):

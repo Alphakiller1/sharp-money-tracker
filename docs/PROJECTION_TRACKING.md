@@ -29,6 +29,32 @@ Views: `v_projection_accuracy_summary`, `v_projection_factor_layers`.
 
 ## Workflow
 
+### Fast daily (reuse fresh MLBMA `data/` CSVs)
+
+```bash
+# mlbma-pipeline — compute-only / targeted scrapes (skip what's fresh today)
+cd C:/Users/user/Documents/mlbma-pipeline
+crawl_env/Scripts/python.exe -m scripts.sync_from_cache
+
+# sharp-money — slate refresh only if stale, then export + Supabase push
+crawl_env/Scripts/python.exe -m scripts.refresh_sharp_money
+# or skip MLBMA scrapes entirely when slate is current:
+crawl_env/Scripts/python.exe -m scripts.refresh_sharp_money --export-only
+```
+
+`refresh_sharp_money` never runs pitch_mix, sp_gamelog, batter_splits, or FanGraphs.
+Those are MLBMA pipeline jobs (`sync_from_cache` / `finish_pipeline_smart`).
+
+### Full pipeline (cold start or stale season files)
+
+```bash
+cd C:/Users/user/Documents/mlbma-pipeline
+crawl_env/Scripts/python.exe -m scripts.finish_pipeline_smart
+# or: crawl_env/Scripts/python.exe -m pipeline.main
+```
+
+### Boards + projection tracking
+
 ```bash
 # Refresh boards + push snapshots (skip push if no key)
 python export_boards.py

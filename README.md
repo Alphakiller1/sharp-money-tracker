@@ -62,3 +62,5 @@ Analytics ecosystem (pipeline → evaluator → **sharp tracker** → warehouse 
 ## Projection tracking
 
 Pitcher prop snapshots → Supabase for MAE / lean-hit reporting. See [`docs/PROJECTION_TRACKING.md`](docs/PROJECTION_TRACKING.md).
+
+**Fast daily** (from `mlbma-pipeline`): `python -m scripts.refresh_sharp_money` — reuses fresh CSVs, exports boards only when slate is current.
