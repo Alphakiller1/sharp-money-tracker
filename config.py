@@ -31,7 +31,7 @@ _load_dotenv()
 # Read-only MLB data source (mlbma_pipeline output). Override with env var if the
 # pipeline moves.
 PIPELINE_DATA_DIR = Path(
-    os.getenv("MLBMA_DATA_DIR", r"C:\Users\chase\mlbma_pipeline\data")
+    os.getenv("MLBMA_DATA_DIR", r"C:\Users\user\Documents\mlbma-pipeline\data")
 )
 
 # Vault the evaluator writes analyses into.
