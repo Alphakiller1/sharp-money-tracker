@@ -122,7 +122,7 @@
       }
     ]
   },
-  "generated_at": "2026-06-26T13:15:50+00:00",
+  "generated_at": "2026-06-28T18:59:10+00:00",
   "counts": {
     "settled_contracts": 647,
     "sharp_observations": 20,
@@ -788,8 +788,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 11,
-          "note": "11d rest \u00b7 last start 63 pitches"
+          "value": 13,
+          "note": "13d rest \u00b7 last start 63 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -956,13 +956,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 45.4,
+          "value": 48.1,
           "note": "6 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 45.4,
+          "value": 48.1,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -992,7 +992,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.113,
+          "value": -0.061,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -1010,8 +1010,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 37,
-          "note": "37d rest \u00b7 last start 80 pitches"
+          "value": 39,
+          "note": "39d rest \u00b7 last start 80 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -1033,7 +1033,7 @@
         }
       ],
       "opp_osi": 36.4,
-      "lineup_proj_osi": 45.43333333333334,
+      "lineup_proj_osi": 48.07272727272727,
       "lineup_platoon": {
         "lhh": 4,
         "rhh": 5,
@@ -1042,7 +1042,7 @@
         "rhh_pct": 0.556
       },
       "park_factor": 1.0,
-      "er_offense_push": -0.11343328044004314,
+      "er_offense_push": -0.06117328044004326,
       "props": {
         "K": {
           "proj": 2.3,
@@ -1151,13 +1151,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 51.3,
+          "value": 55.7,
           "note": "2 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 51.3,
+          "value": 55.7,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -1193,7 +1193,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.007,
+          "value": 0.093,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -1211,8 +1211,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 25,
-          "note": "25d rest \u00b7 last start 80 pitches"
+          "value": 27,
+          "note": "27d rest \u00b7 last start 80 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -1234,7 +1234,7 @@
         }
       ],
       "opp_osi": 57.9,
-      "lineup_proj_osi": 51.29999999999999,
+      "lineup_proj_osi": 55.65454545454545,
       "lineup_platoon": {
         "lhh": 5,
         "rhh": 4,
@@ -1243,7 +1243,7 @@
         "rhh_pct": 0.444
       },
       "park_factor": 0.91,
-      "er_offense_push": 0.006528406410523605,
+      "er_offense_push": 0.0927484064105237,
       "props": {
         "K": {
           "proj": 3.5,
@@ -1352,13 +1352,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 53.2,
+          "value": 55.7,
           "note": "7 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 53.2,
+          "value": 55.7,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -1400,7 +1400,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.001,
+          "value": 0.05,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -1424,8 +1424,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 104 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 104 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -1447,7 +1447,7 @@
         }
       ],
       "opp_osi": 43.8,
-      "lineup_proj_osi": 53.25,
+      "lineup_proj_osi": 55.7275,
       "lineup_platoon": {
         "lhh": 7,
         "rhh": 2,
@@ -1456,7 +1456,7 @@
         "rhh_pct": 0.222
       },
       "park_factor": 1.0,
-      "er_offense_push": 0.0012544433769049873,
+      "er_offense_push": 0.050308943376904974,
       "props": {
         "K": {
           "proj": 6.5,
@@ -1469,11 +1469,11 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.3,
+          "proj": 17.8,
           "lean": "under"
         },
         "ER": {
-          "proj": 2.2,
+          "proj": 2.3,
           "lean": "over"
         },
         "F5": {
@@ -1593,13 +1593,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 63.5,
+          "value": 61.8,
           "note": "6 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 63.5,
+          "value": 61.8,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -1641,7 +1641,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.293,
+          "value": 0.258,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -1671,8 +1671,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 90 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -1694,7 +1694,7 @@
         }
       ],
       "opp_osi": 54.4,
-      "lineup_proj_osi": 63.52121212121212,
+      "lineup_proj_osi": 61.77272727272727,
       "lineup_platoon": {
         "lhh": 5,
         "rhh": 4,
@@ -1703,7 +1703,7 @@
         "rhh_pct": 0.444
       },
       "park_factor": 0.93,
-      "er_offense_push": 0.2926374857997176,
+      "er_offense_push": 0.25801748579971756,
       "props": {
         "K": {
           "proj": 4.3,
@@ -1720,7 +1720,7 @@
           "lean": "under"
         },
         "ER": {
-          "proj": 2.1,
+          "proj": 2.0,
           "lean": "over"
         },
         "F5": {
@@ -1840,13 +1840,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 49.9,
+          "value": 54.8,
           "note": "5 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 49.9,
+          "value": 54.8,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -1888,7 +1888,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.018,
+          "value": 0.078,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -1918,8 +1918,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 7,
-          "note": "7d rest \u00b7 last start 95 pitches"
+          "value": 9,
+          "note": "9d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -1941,7 +1941,7 @@
         }
       ],
       "opp_osi": 34.2,
-      "lineup_proj_osi": 49.89285714285714,
+      "lineup_proj_osi": 54.760714285714286,
       "lineup_platoon": {
         "lhh": 6,
         "rhh": 3,
@@ -1950,7 +1950,7 @@
         "rhh_pct": 0.333
       },
       "park_factor": 1.0,
-      "er_offense_push": -0.018021855324797286,
+      "er_offense_push": 0.07836171610377424,
       "props": {
         "K": {
           "proj": 2.3,
@@ -2087,13 +2087,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 55.4,
+          "value": 50.2,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 55.4,
+          "value": 50.2,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -2135,7 +2135,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.018,
+          "value": -0.084,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -2159,8 +2159,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 88 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 88 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -2182,7 +2182,7 @@
         }
       ],
       "opp_osi": 31.7,
-      "lineup_proj_osi": 55.42499999999999,
+      "lineup_proj_osi": 50.2375,
       "lineup_platoon": {
         "lhh": 5,
         "rhh": 4,
@@ -2191,7 +2191,7 @@
         "rhh_pct": 0.444
       },
       "park_factor": 0.94,
-      "er_offense_push": 0.018463759321967116,
+      "er_offense_push": -0.08424874067803274,
       "props": {
         "K": {
           "proj": 3.3,
@@ -2204,11 +2204,11 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.8,
+          "proj": 18.3,
           "lean": "under"
         },
         "ER": {
-          "proj": 2.3,
+          "proj": 2.2,
           "lean": "over"
         },
         "F5": {
@@ -2328,13 +2328,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 57.5,
+          "value": 58.7,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 57.5,
+          "value": 58.7,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -2376,7 +2376,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.217,
+          "value": 0.24,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -2400,8 +2400,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 79 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 79 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -2423,7 +2423,7 @@
         }
       ],
       "opp_osi": 67.0,
-      "lineup_proj_osi": 57.53333333333333,
+      "lineup_proj_osi": 58.66666666666667,
       "lineup_platoon": {
         "lhh": 5,
         "rhh": 4,
@@ -2432,7 +2432,7 @@
         "rhh_pct": 0.444
       },
       "park_factor": 1.12,
-      "er_offense_push": 0.21731907892445584,
+      "er_offense_push": 0.23975907892445597,
       "props": {
         "K": {
           "proj": 4.0,
@@ -2445,7 +2445,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.5,
+          "proj": 18.1,
           "lean": "under"
         },
         "ER": {
@@ -2569,13 +2569,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 49.3,
+          "value": 50.6,
           "note": "5 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 49.3,
+          "value": 50.6,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -2617,7 +2617,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.014,
+          "value": 0.04,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -2641,8 +2641,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 66,
-          "note": "66d rest \u00b7 last start 58 pitches"
+          "value": 68,
+          "note": "68d rest \u00b7 last start 58 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -2664,7 +2664,7 @@
         }
       ],
       "opp_osi": 43.7,
-      "lineup_proj_osi": 49.30357142857142,
+      "lineup_proj_osi": 50.607142857142854,
       "lineup_platoon": {
         "lhh": 4,
         "rhh": 5,
@@ -2673,7 +2673,7 @@
         "rhh_pct": 0.556
       },
       "park_factor": 0.97,
-      "er_offense_push": 0.014042783138042308,
+      "er_offense_push": 0.039853497423756636,
       "props": {
         "K": {
           "proj": 3.7,
@@ -2810,13 +2810,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 49.5,
+          "value": 53.2,
           "note": "5 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 49.5,
+          "value": 53.2,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -2858,7 +2858,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.014,
+          "value": 0.06,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -2888,8 +2888,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 98 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -2911,7 +2911,7 @@
         }
       ],
       "opp_osi": 33.0,
-      "lineup_proj_osi": 49.510714285714286,
+      "lineup_proj_osi": 53.232142857142854,
       "lineup_platoon": {
         "lhh": 4,
         "rhh": 5,
@@ -2920,7 +2920,7 @@
         "rhh_pct": 0.556
       },
       "park_factor": 0.93,
-      "er_offense_push": -0.013845738899717852,
+      "er_offense_push": 0.059838546814567795,
       "props": {
         "K": {
           "proj": 3.7,
@@ -2937,7 +2937,7 @@
           "lean": "under"
         },
         "ER": {
-          "proj": 2.2,
+          "proj": 2.3,
           "lean": "over"
         },
         "F5": {
@@ -3057,13 +3057,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 52.0,
+          "value": 50.1,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 52.0,
+          "value": 50.1,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -3105,7 +3105,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.078,
+          "value": 0.041,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -3129,8 +3129,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 98 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -3152,7 +3152,7 @@
         }
       ],
       "opp_osi": 56.1,
-      "lineup_proj_osi": 52.017647058823535,
+      "lineup_proj_osi": 50.13529411764706,
       "lineup_platoon": {
         "lhh": 5,
         "rhh": 4,
@@ -3161,7 +3161,7 @@
         "rhh_pct": 0.444
       },
       "park_factor": 1.0,
-      "er_offense_push": 0.07804632587284382,
+      "er_offense_push": 0.04077573763754956,
       "props": {
         "K": {
           "proj": 5.8,
@@ -3298,13 +3298,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 50.7,
+          "value": 54.8,
           "note": "5 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 50.7,
+          "value": 54.8,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -3346,7 +3346,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.063,
+          "value": 0.143,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -3370,8 +3370,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 85 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 85 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -3393,7 +3393,7 @@
         }
       ],
       "opp_osi": 52.4,
-      "lineup_proj_osi": 50.72758620689656,
+      "lineup_proj_osi": 54.77241379310345,
       "lineup_platoon": {
         "lhh": 5,
         "rhh": 4,
@@ -3402,7 +3402,7 @@
         "rhh_pct": 0.444
       },
       "park_factor": 0.99,
-      "er_offense_push": 0.06322471165212053,
+      "er_offense_push": 0.143312297859017,
       "props": {
         "K": {
           "proj": 2.1,
@@ -3539,13 +3539,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 57.6,
+          "value": 56.6,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 57.6,
+          "value": 56.6,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -3587,7 +3587,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.208,
+          "value": 0.188,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -3611,8 +3611,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 81 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 81 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -3634,7 +3634,7 @@
         }
       ],
       "opp_osi": 47.4,
-      "lineup_proj_osi": 57.61176470588235,
+      "lineup_proj_osi": 56.60588235294117,
       "lineup_platoon": {
         "lhh": 6,
         "rhh": 3,
@@ -3643,7 +3643,7 @@
         "rhh_pct": 0.333
       },
       "park_factor": 0.94,
-      "er_offense_push": 0.20769302454425081,
+      "er_offense_push": 0.1877765539560155,
       "props": {
         "K": {
           "proj": 2.3,
@@ -3660,7 +3660,7 @@
           "lean": "over"
         },
         "ER": {
-          "proj": 3.2,
+          "proj": 3.1,
           "lean": "under"
         },
         "F5": {
@@ -3780,13 +3780,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 59.0,
+          "value": 57.2,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 59.0,
+          "value": 57.2,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -3828,7 +3828,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.262,
+          "value": 0.225,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -3852,8 +3852,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 97 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 97 pitches"
         },
         {
           "key": "signal_k",
@@ -3881,7 +3881,7 @@
         }
       ],
       "opp_osi": 64.2,
-      "lineup_proj_osi": 59.0375,
+      "lineup_proj_osi": 57.17499999999999,
       "lineup_platoon": {
         "lhh": 4,
         "rhh": 5,
@@ -3890,7 +3890,7 @@
         "rhh_pct": 0.556
       },
       "park_factor": 0.95,
-      "er_offense_push": 0.26188003941036697,
+      "er_offense_push": 0.22500253941036674,
       "props": {
         "K": {
           "proj": 3.6,
@@ -4027,13 +4027,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 57.9,
+          "value": 54.9,
           "note": "8 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 57.9,
+          "value": 54.9,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -4075,7 +4075,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.158,
+          "value": 0.098,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -4099,8 +4099,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 96 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 96 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -4122,7 +4122,7 @@
         }
       ],
       "opp_osi": 57.8,
-      "lineup_proj_osi": 57.911111111111104,
+      "lineup_proj_osi": 54.86222222222222,
       "lineup_platoon": {
         "lhh": 5,
         "rhh": 4,
@@ -4131,7 +4131,7 @@
         "rhh_pct": 0.444
       },
       "park_factor": 0.98,
-      "er_offense_push": 0.15816255252767286,
+      "er_offense_push": 0.09779455252767298,
       "props": {
         "K": {
           "proj": 3.3,
@@ -4268,13 +4268,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 48.2,
+          "value": 48.0,
           "note": "5 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 48.2,
+          "value": 48.0,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -4316,7 +4316,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.022,
+          "value": -0.025,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -4340,8 +4340,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 76 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 76 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -4363,7 +4363,7 @@
         }
       ],
       "opp_osi": 42.4,
-      "lineup_proj_osi": 48.151851851851845,
+      "lineup_proj_osi": 47.99999999999999,
       "lineup_platoon": {
         "lhh": 2,
         "rhh": 7,
@@ -4372,7 +4372,7 @@
         "rhh_pct": 0.778
       },
       "park_factor": 0.99,
-      "er_offense_push": -0.02170153983484121,
+      "er_offense_push": -0.02470820650150788,
       "props": {
         "K": {
           "proj": 2.5,
@@ -4385,7 +4385,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.0,
+          "proj": 17.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -4509,13 +4509,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 66.0,
+          "value": 60.7,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 66.0,
+          "value": 60.7,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -4557,7 +4557,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.245,
+          "value": 0.14,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -4581,8 +4581,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 7,
-          "note": "7d rest \u00b7 last start 90 pitches"
+          "value": 9,
+          "note": "9d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -4604,7 +4604,7 @@
         }
       ],
       "opp_osi": 42.2,
-      "lineup_proj_osi": 66.03333333333333,
+      "lineup_proj_osi": 60.733333333333334,
       "lineup_platoon": {
         "lhh": 3,
         "rhh": 6,
@@ -4613,7 +4613,7 @@
         "rhh_pct": 0.667
       },
       "park_factor": 0.92,
-      "er_offense_push": 0.24482103917150266,
+      "er_offense_push": 0.13988103917150274,
       "props": {
         "K": {
           "proj": 4.9,
@@ -4630,7 +4630,7 @@
           "lean": "\u2014"
         },
         "ER": {
-          "proj": 2.9,
+          "proj": 2.8,
           "lean": "\u2014"
         },
         "F5": {
@@ -4750,13 +4750,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 52.3,
+          "value": 53.3,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 52.3,
+          "value": 53.3,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -4792,7 +4792,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.092,
+          "value": 0.111,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -4822,8 +4822,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 68 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 68 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -4845,7 +4845,7 @@
         }
       ],
       "opp_osi": 60.8,
-      "lineup_proj_osi": 52.3,
+      "lineup_proj_osi": 53.3,
       "lineup_platoon": {
         "lhh": 2,
         "rhh": 7,
@@ -4854,7 +4854,7 @@
         "rhh_pct": 0.778
       },
       "park_factor": 0.98,
-      "er_offense_push": 0.09165718042951233,
+      "er_offense_push": 0.11145718042951233,
       "props": {
         "K": {
           "proj": 4.2,
@@ -4867,7 +4867,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 11.7,
+          "proj": 12.0,
           "lean": "\u2014"
         },
         "ER": {
@@ -4991,13 +4991,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 48.7,
+          "value": 49.8,
           "note": "4 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 48.7,
+          "value": 49.8,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -5039,7 +5039,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.016,
+          "value": 0.005,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -5063,8 +5063,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 101 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 101 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -5086,7 +5086,7 @@
         }
       ],
       "opp_osi": 41.0,
-      "lineup_proj_osi": 48.71304347826087,
+      "lineup_proj_osi": 49.76521739130435,
       "lineup_platoon": {
         "lhh": 2,
         "rhh": 7,
@@ -5095,7 +5095,7 @@
         "rhh_pct": 0.778
       },
       "park_factor": 0.98,
-      "er_offense_push": -0.016153120143746046,
+      "er_offense_push": 0.0046799233345147665,
       "props": {
         "K": {
           "proj": 2.7,
@@ -5232,13 +5232,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 39.2,
+          "value": 44.1,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 39.2,
+          "value": 44.1,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -5280,7 +5280,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.31,
+          "value": -0.213,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -5304,8 +5304,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 90 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -5327,7 +5327,7 @@
         }
       ],
       "opp_osi": 23.3,
-      "lineup_proj_osi": 39.2,
+      "lineup_proj_osi": 44.06666666666667,
       "lineup_platoon": {
         "lhh": 6,
         "rhh": 3,
@@ -5336,7 +5336,7 @@
         "rhh_pct": 0.333
       },
       "park_factor": 1.12,
-      "er_offense_push": -0.3095137870371633,
+      "er_offense_push": -0.21315378703716328,
       "props": {
         "K": {
           "proj": 4.3,
@@ -5473,13 +5473,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 52.6,
+          "value": 54.1,
           "note": "4 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 52.6,
+          "value": 54.1,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -5521,7 +5521,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.111,
+          "value": 0.14,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -5545,8 +5545,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 98 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -5568,7 +5568,7 @@
         }
       ],
       "opp_osi": 50.1,
-      "lineup_proj_osi": 52.6090909090909,
+      "lineup_proj_osi": 54.07727272727272,
       "lineup_platoon": {
         "lhh": 5,
         "rhh": 4,
@@ -5577,7 +5577,7 @@
         "rhh_pct": 0.444
       },
       "park_factor": 0.96,
-      "er_offense_push": 0.11087273674982605,
+      "er_offense_push": 0.13994273674982605,
       "props": {
         "K": {
           "proj": 4.5,
@@ -5660,13 +5660,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 46.4,
+          "value": 45.7,
           "note": "4 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 46.4,
+          "value": 45.7,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -5690,7 +5690,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.092,
+          "value": -0.104,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -5719,7 +5719,7 @@
         }
       ],
       "opp_osi": 40.7,
-      "lineup_proj_osi": 46.38636363636363,
+      "lineup_proj_osi": 45.73181818181818,
       "lineup_platoon": {
         "lhh": 6,
         "rhh": 3,
@@ -5728,7 +5728,7 @@
         "rhh_pct": 0.333
       },
       "park_factor": 0.99,
-      "er_offense_push": -0.09153166236004637,
+      "er_offense_push": -0.10449166236004638,
       "props": {
         "K": {
           "proj": 3.9,
@@ -5837,13 +5837,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 51.8,
+          "value": 54.3,
           "note": "1 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 51.8,
+          "value": 54.3,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -5885,7 +5885,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.041,
+          "value": 0.09,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -5909,8 +5909,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 94 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 94 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -5932,7 +5932,7 @@
         }
       ],
       "opp_osi": 35.5,
-      "lineup_proj_osi": 51.8,
+      "lineup_proj_osi": 54.3,
       "lineup_platoon": {
         "lhh": 4,
         "rhh": 5,
@@ -5941,7 +5941,7 @@
         "rhh_pct": 0.556
       },
       "park_factor": 0.98,
-      "er_offense_push": 0.04090815665064188,
+      "er_offense_push": 0.09040815665064188,
       "props": {
         "K": {
           "proj": 5.7,
@@ -5954,7 +5954,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 18.7,
+          "proj": 19.2,
           "lean": "\u2014"
         },
         "ER": {
@@ -6078,13 +6078,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 58.5,
+          "value": 61.6,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 58.5,
+          "value": 61.6,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -6126,7 +6126,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.228,
+          "value": 0.291,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -6150,8 +6150,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 78 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 78 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -6173,7 +6173,7 @@
         }
       ],
       "opp_osi": 60.3,
-      "lineup_proj_osi": 58.464705882352945,
+      "lineup_proj_osi": 61.64705882352941,
       "lineup_platoon": {
         "lhh": 6,
         "rhh": 3,
@@ -6182,7 +6182,7 @@
         "rhh_pct": 0.333
       },
       "park_factor": 1.04,
-      "er_offense_push": 0.22794305687934283,
+      "er_offense_push": 0.2909536451146369,
       "props": {
         "K": {
           "proj": 2.6,
@@ -6319,13 +6319,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 45.5,
+          "value": 51.0,
           "note": "4 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 45.5,
+          "value": 51.0,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -6367,7 +6367,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.11,
+          "value": -0.003,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -6391,8 +6391,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 91 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 91 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -6414,7 +6414,7 @@
         }
       ],
       "opp_osi": 28.2,
-      "lineup_proj_osi": 45.54545454545454,
+      "lineup_proj_osi": 50.959090909090904,
       "lineup_platoon": {
         "lhh": 4,
         "rhh": 5,
@@ -6423,7 +6423,7 @@
         "rhh_pct": 0.556
       },
       "park_factor": 0.99,
-      "er_offense_push": -0.10989162047715108,
+      "er_offense_push": -0.0027016204771510705,
       "props": {
         "K": {
           "proj": 4.6,
@@ -6440,7 +6440,7 @@
           "lean": "\u2014"
         },
         "ER": {
-          "proj": 2.6,
+          "proj": 2.7,
           "lean": "\u2014"
         },
         "F5": {
@@ -6506,13 +6506,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 49.9,
+          "value": 50.3,
           "note": "6 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 49.9,
+          "value": 50.3,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -6536,7 +6536,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.04,
+          "value": 0.048,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -6565,7 +6565,7 @@
         }
       ],
       "opp_osi": 67.8,
-      "lineup_proj_osi": 49.88857142857143,
+      "lineup_proj_osi": 50.28285714285715,
       "lineup_platoon": {
         "lhh": 3,
         "rhh": 6,
@@ -6574,7 +6574,7 @@
         "rhh_pct": 0.667
       },
       "park_factor": 1.04,
-      "er_offense_push": 0.03980840991758308,
+      "er_offense_push": 0.04761526706044024,
       "props": {
         "K": {
           "proj": 4.0,
@@ -6683,13 +6683,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 54.2,
+          "value": 57.2,
           "note": "5 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 54.2,
+          "value": 57.2,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -6731,7 +6731,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.228,
+          "value": 0.287,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -6755,8 +6755,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 87 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 87 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -6778,7 +6778,7 @@
         }
       ],
       "opp_osi": 83.9,
-      "lineup_proj_osi": 54.235714285714295,
+      "lineup_proj_osi": 57.17857142857143,
       "lineup_platoon": {
         "lhh": 7,
         "rhh": 2,
@@ -6787,7 +6787,7 @@
         "rhh_pct": 0.222
       },
       "park_factor": 0.92,
-      "er_offense_push": 0.22835492999904156,
+      "er_offense_push": 0.28662350142761284,
       "props": {
         "K": {
           "proj": 4.1,
@@ -6924,13 +6924,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 51.7,
+          "value": 52.8,
           "note": "4 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 51.7,
+          "value": 52.8,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -6972,7 +6972,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.048,
+          "value": -0.025,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -6996,8 +6996,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 104 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 104 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -7019,7 +7019,7 @@
         }
       ],
       "opp_osi": 48.3,
-      "lineup_proj_osi": 51.65909090909091,
+      "lineup_proj_osi": 52.79545454545455,
       "lineup_platoon": {
         "lhh": 3,
         "rhh": 6,
@@ -7028,7 +7028,7 @@
         "rhh_pct": 0.667
       },
       "park_factor": 0.95,
-      "er_offense_push": -0.047879749341247835,
+      "er_offense_push": -0.02537974934124776,
       "props": {
         "K": {
           "proj": 6.8,
@@ -7165,13 +7165,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 50.6,
+          "value": 51.0,
           "note": "4 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 50.6,
+          "value": 51.0,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -7213,7 +7213,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": 0.029,
+          "value": 0.036,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -7237,8 +7237,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 69 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 69 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -7260,7 +7260,7 @@
         }
       ],
       "opp_osi": 47.8,
-      "lineup_proj_osi": 50.595652173913045,
+      "lineup_proj_osi": 50.982608695652175,
       "lineup_platoon": {
         "lhh": 6,
         "rhh": 3,
@@ -7269,7 +7269,7 @@
         "rhh_pct": 0.333
       },
       "park_factor": 0.97,
-      "er_offense_push": 0.028670081349201394,
+      "er_offense_push": 0.036331820479636165,
       "props": {
         "K": {
           "proj": 3.2,
@@ -7406,13 +7406,13 @@
         {
           "key": "lineup_proj_osi",
           "label": "Lineup-weighted projOSI",
-          "value": 48.5,
+          "value": 47.7,
           "note": "3 batters \u00b7 vs_RHP splits"
         },
         {
           "key": "opp_osi",
           "label": "Opponent lineup OSI",
-          "value": 48.5,
+          "value": 47.7,
           "note": "lineup-weighted projOSI"
         },
         {
@@ -7454,7 +7454,7 @@
         {
           "key": "offense_er",
           "label": "Offense ER pressure",
-          "value": -0.066,
+          "value": -0.082,
           "note": "lineup projOSI + residual team wRC (ER channel only)"
         },
         {
@@ -7478,8 +7478,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 13,
-          "note": "13d rest \u00b7 last start 84 pitches"
+          "value": 15,
+          "note": "15d rest \u00b7 last start 84 pitches"
         },
         {
           "key": "rolling_opp_osi",
@@ -7501,7 +7501,7 @@
         }
       ],
       "opp_osi": 36.2,
-      "lineup_proj_osi": 48.49411764705882,
+      "lineup_proj_osi": 47.682352941176475,
       "lineup_platoon": {
         "lhh": 8,
         "rhh": 1,
@@ -7510,7 +7510,7 @@
         "rhh_pct": 0.111
       },
       "park_factor": 0.96,
-      "er_offense_push": -0.06582483242317137,
+      "er_offense_push": -0.08189777359964183,
       "props": {
         "K": {
           "proj": 4.0,
@@ -7647,8 +7647,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 48,
-          "note": "48d rest \u00b7 last start 11 pitches"
+          "value": 50,
+          "note": "50d rest \u00b7 last start 11 pitches"
         },
         {
           "key": "f5_era",
@@ -7765,8 +7765,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 28,
-          "note": "28d rest \u00b7 last start 22 pitches"
+          "value": 30,
+          "note": "30d rest \u00b7 last start 22 pitches"
         },
         {
           "key": "f5_era",
@@ -7883,8 +7883,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 71,
-          "note": "71d rest \u00b7 last start 30 pitches"
+          "value": 73,
+          "note": "73d rest \u00b7 last start 30 pitches"
         },
         {
           "key": "f5_era",
@@ -8001,8 +8001,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 82,
-          "note": "82d rest \u00b7 last start 27 pitches"
+          "value": 84,
+          "note": "84d rest \u00b7 last start 27 pitches"
         },
         {
           "key": "f5_era",
@@ -8119,8 +8119,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 25,
-          "note": "25d rest \u00b7 last start 30 pitches"
+          "value": 27,
+          "note": "27d rest \u00b7 last start 30 pitches"
         },
         {
           "key": "f5_era",
@@ -8237,8 +8237,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 38,
-          "note": "38d rest \u00b7 last start 23 pitches"
+          "value": 40,
+          "note": "40d rest \u00b7 last start 23 pitches"
         },
         {
           "key": "f5_era",
@@ -8355,8 +8355,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 55,
-          "note": "55d rest \u00b7 last start 23 pitches"
+          "value": 57,
+          "note": "57d rest \u00b7 last start 23 pitches"
         },
         {
           "key": "f5_era",
@@ -8479,8 +8479,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 20,
-          "note": "20d rest \u00b7 last start 90 pitches"
+          "value": 22,
+          "note": "22d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -8597,8 +8597,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 26,
-          "note": "26d rest \u00b7 last start 49 pitches"
+          "value": 28,
+          "note": "28d rest \u00b7 last start 49 pitches"
         },
         {
           "key": "f5_era",
@@ -8715,8 +8715,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 31,
-          "note": "31d rest \u00b7 last start 45 pitches"
+          "value": 33,
+          "note": "33d rest \u00b7 last start 45 pitches"
         },
         {
           "key": "f5_era",
@@ -8833,8 +8833,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 34,
-          "note": "34d rest \u00b7 last start 15 pitches"
+          "value": 36,
+          "note": "36d rest \u00b7 last start 15 pitches"
         },
         {
           "key": "f5_era",
@@ -8951,8 +8951,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 53,
-          "note": "53d rest \u00b7 last start 20 pitches"
+          "value": 55,
+          "note": "55d rest \u00b7 last start 20 pitches"
         },
         {
           "key": "f5_era",
@@ -9069,8 +9069,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 48,
-          "note": "48d rest \u00b7 last start 77 pitches"
+          "value": 50,
+          "note": "50d rest \u00b7 last start 77 pitches"
         },
         {
           "key": "f5_era",
@@ -9187,8 +9187,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 11,
-          "note": "11d rest \u00b7 last start 43 pitches"
+          "value": 13,
+          "note": "13d rest \u00b7 last start 43 pitches"
         },
         {
           "key": "f5_era",
@@ -9305,8 +9305,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 65,
-          "note": "65d rest \u00b7 last start 74 pitches"
+          "value": 67,
+          "note": "67d rest \u00b7 last start 74 pitches"
         },
         {
           "key": "f5_era",
@@ -9423,8 +9423,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 38,
-          "note": "38d rest \u00b7 last start 65 pitches"
+          "value": 40,
+          "note": "40d rest \u00b7 last start 65 pitches"
         },
         {
           "key": "f5_era",
@@ -9541,8 +9541,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 26,
-          "note": "26d rest \u00b7 last start 30 pitches"
+          "value": 28,
+          "note": "28d rest \u00b7 last start 30 pitches"
         },
         {
           "key": "f5_era",
@@ -9659,8 +9659,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 71,
-          "note": "71d rest \u00b7 last start 21 pitches"
+          "value": 73,
+          "note": "73d rest \u00b7 last start 21 pitches"
         },
         {
           "key": "f5_era",
@@ -9777,8 +9777,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 65,
-          "note": "65d rest \u00b7 last start 15 pitches"
+          "value": 67,
+          "note": "67d rest \u00b7 last start 15 pitches"
         },
         {
           "key": "f5_era",
@@ -9895,8 +9895,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 77,
-          "note": "77d rest \u00b7 last start 44 pitches"
+          "value": 79,
+          "note": "79d rest \u00b7 last start 44 pitches"
         },
         {
           "key": "f5_era",
@@ -10013,8 +10013,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 22,
-          "note": "22d rest \u00b7 last start 108 pitches"
+          "value": 24,
+          "note": "24d rest \u00b7 last start 108 pitches"
         },
         {
           "key": "f5_era",
@@ -10131,8 +10131,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 26,
-          "note": "26d rest \u00b7 last start 70 pitches"
+          "value": 28,
+          "note": "28d rest \u00b7 last start 70 pitches"
         },
         {
           "key": "f5_era",
@@ -10249,8 +10249,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 14,
-          "note": "14d rest \u00b7 last start 28 pitches"
+          "value": 16,
+          "note": "16d rest \u00b7 last start 28 pitches"
         },
         {
           "key": "f5_era",
@@ -10367,8 +10367,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 80,
-          "note": "80d rest \u00b7 last start 99 pitches"
+          "value": 82,
+          "note": "82d rest \u00b7 last start 99 pitches"
         },
         {
           "key": "f5_era",
@@ -10485,8 +10485,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 65,
-          "note": "65d rest \u00b7 last start 32 pitches"
+          "value": 67,
+          "note": "67d rest \u00b7 last start 32 pitches"
         },
         {
           "key": "f5_era",
@@ -10603,8 +10603,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 19,
-          "note": "19d rest \u00b7 last start 17 pitches"
+          "value": 21,
+          "note": "21d rest \u00b7 last start 17 pitches"
         },
         {
           "key": "f5_era",
@@ -10715,8 +10715,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 23 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 23 pitches"
         },
         {
           "key": "f5_era",
@@ -10737,7 +10737,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 3.8,
+          "proj": 4.0,
           "lean": "under"
         },
         "ER": {
@@ -10833,8 +10833,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 58,
-          "note": "58d rest \u00b7 last start 83 pitches"
+          "value": 60,
+          "note": "60d rest \u00b7 last start 83 pitches"
         },
         {
           "key": "f5_era",
@@ -10951,8 +10951,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 50,
-          "note": "50d rest \u00b7 last start 24 pitches"
+          "value": 52,
+          "note": "52d rest \u00b7 last start 24 pitches"
         },
         {
           "key": "f5_era",
@@ -11069,8 +11069,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 13 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 13 pitches"
         },
         {
           "key": "f5_era",
@@ -11081,7 +11081,7 @@
       ],
       "props": {
         "K": {
-          "proj": 1.2,
+          "proj": 1.3,
           "lean": "under",
           "conviction": 0.0
         },
@@ -11091,7 +11091,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 2.9,
+          "proj": 3.0,
           "lean": "under"
         },
         "ER": {
@@ -11187,8 +11187,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 88,
-          "note": "88d rest \u00b7 last start 80 pitches"
+          "value": 90,
+          "note": "90d rest \u00b7 last start 80 pitches"
         },
         {
           "key": "f5_era",
@@ -11311,8 +11311,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 28,
-          "note": "28d rest \u00b7 last start 26 pitches"
+          "value": 30,
+          "note": "30d rest \u00b7 last start 26 pitches"
         },
         {
           "key": "f5_era",
@@ -11429,8 +11429,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 16,
-          "note": "16d rest \u00b7 last start 33 pitches"
+          "value": 18,
+          "note": "18d rest \u00b7 last start 33 pitches"
         },
         {
           "key": "f5_era",
@@ -11541,8 +11541,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 15 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 15 pitches"
         },
         {
           "key": "f5_era",
@@ -11563,7 +11563,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 3.0,
+          "proj": 3.1,
           "lean": "under"
         },
         "ER": {
@@ -11653,8 +11653,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 12,
-          "note": "12d rest \u00b7 last start 11 pitches"
+          "value": 14,
+          "note": "14d rest \u00b7 last start 11 pitches"
         },
         {
           "key": "f5_era",
@@ -11771,8 +11771,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 9,
-          "note": "9d rest \u00b7 last start 21 pitches"
+          "value": 11,
+          "note": "11d rest \u00b7 last start 21 pitches"
         },
         {
           "key": "f5_era",
@@ -11889,8 +11889,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 79,
-          "note": "79d rest \u00b7 last start 20 pitches"
+          "value": 81,
+          "note": "81d rest \u00b7 last start 20 pitches"
         },
         {
           "key": "f5_era",
@@ -12007,8 +12007,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 90,
-          "note": "90d rest \u00b7 last start 68 pitches"
+          "value": 92,
+          "note": "92d rest \u00b7 last start 68 pitches"
         },
         {
           "key": "f5_era",
@@ -12125,8 +12125,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 79 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 79 pitches"
         },
         {
           "key": "f5_era",
@@ -12147,7 +12147,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.0,
+          "proj": 14.4,
           "lean": "over"
         },
         "ER": {
@@ -12243,8 +12243,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 20,
-          "note": "20d rest \u00b7 last start 57 pitches"
+          "value": 22,
+          "note": "22d rest \u00b7 last start 57 pitches"
         },
         {
           "key": "f5_era",
@@ -12361,8 +12361,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 62 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 62 pitches"
         },
         {
           "key": "f5_era",
@@ -12383,7 +12383,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.0,
+          "proj": 15.5,
           "lean": "under"
         },
         "ER": {
@@ -12479,8 +12479,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 9,
-          "note": "9d rest \u00b7 last start 17 pitches"
+          "value": 11,
+          "note": "11d rest \u00b7 last start 17 pitches"
         },
         {
           "key": "f5_era",
@@ -12591,8 +12591,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 73,
-          "note": "73d rest \u00b7 last start 6 pitches"
+          "value": 75,
+          "note": "75d rest \u00b7 last start 6 pitches"
         },
         {
           "key": "f5_era",
@@ -12715,8 +12715,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 13,
-          "note": "13d rest \u00b7 last start 71 pitches"
+          "value": 15,
+          "note": "15d rest \u00b7 last start 71 pitches"
         },
         {
           "key": "f5_era",
@@ -12827,8 +12827,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 42 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 42 pitches"
         },
         {
           "key": "f5_era",
@@ -12945,8 +12945,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 98 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "f5_era",
@@ -12957,7 +12957,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.0,
+          "proj": 4.1,
           "lean": "over",
           "conviction": 0.0
         },
@@ -12967,7 +12967,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 11.4,
+          "proj": 11.9,
           "lean": "over"
         },
         "ER": {
@@ -13063,8 +13063,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 7,
-          "note": "7d rest \u00b7 last start 32 pitches"
+          "value": 9,
+          "note": "9d rest \u00b7 last start 32 pitches"
         },
         {
           "key": "f5_era",
@@ -13187,8 +13187,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 46,
-          "note": "46d rest \u00b7 last start 37 pitches"
+          "value": 48,
+          "note": "48d rest \u00b7 last start 37 pitches"
         },
         {
           "key": "f5_era",
@@ -13311,8 +13311,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 78 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 78 pitches"
         },
         {
           "key": "f5_era",
@@ -13333,7 +13333,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.3,
+          "proj": 13.7,
           "lean": "over"
         },
         "ER": {
@@ -13435,8 +13435,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 8 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 8 pitches"
         },
         {
           "key": "f5_era",
@@ -13457,7 +13457,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 3.6,
+          "proj": 3.7,
           "lean": "under"
         },
         "ER": {
@@ -13559,8 +13559,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 45,
-          "note": "45d rest \u00b7 last start 71 pitches"
+          "value": 47,
+          "note": "47d rest \u00b7 last start 71 pitches"
         },
         {
           "key": "f5_era",
@@ -13677,8 +13677,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 72,
-          "note": "72d rest \u00b7 last start 36 pitches"
+          "value": 74,
+          "note": "74d rest \u00b7 last start 36 pitches"
         },
         {
           "key": "f5_era",
@@ -13795,8 +13795,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 80,
-          "note": "80d rest \u00b7 last start 65 pitches"
+          "value": 82,
+          "note": "82d rest \u00b7 last start 65 pitches"
         },
         {
           "key": "f5_era",
@@ -13913,8 +13913,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 75,
-          "note": "75d rest \u00b7 last start 27 pitches"
+          "value": 77,
+          "note": "77d rest \u00b7 last start 27 pitches"
         },
         {
           "key": "f5_era",
@@ -14037,8 +14037,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 33,
-          "note": "33d rest \u00b7 last start 18 pitches"
+          "value": 35,
+          "note": "35d rest \u00b7 last start 18 pitches"
         },
         {
           "key": "f5_era",
@@ -14161,8 +14161,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 12,
-          "note": "12d rest \u00b7 last start 47 pitches"
+          "value": 14,
+          "note": "14d rest \u00b7 last start 47 pitches"
         },
         {
           "key": "f5_era",
@@ -14279,8 +14279,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 73,
-          "note": "73d rest \u00b7 last start 68 pitches"
+          "value": 75,
+          "note": "75d rest \u00b7 last start 68 pitches"
         },
         {
           "key": "f5_era",
@@ -14403,8 +14403,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 76,
-          "note": "76d rest \u00b7 last start 72 pitches"
+          "value": 78,
+          "note": "78d rest \u00b7 last start 72 pitches"
         },
         {
           "key": "f5_era",
@@ -14521,8 +14521,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 88 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 88 pitches"
         },
         {
           "key": "f5_era",
@@ -14639,8 +14639,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 8,
-          "note": "8d rest \u00b7 last start 27 pitches"
+          "value": 10,
+          "note": "10d rest \u00b7 last start 27 pitches"
         },
         {
           "key": "f5_era",
@@ -14757,8 +14757,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 90 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -14779,7 +14779,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.0,
+          "proj": 14.5,
           "lean": "over"
         },
         "ER": {
@@ -14875,8 +14875,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 53,
-          "note": "53d rest \u00b7 last start 22 pitches"
+          "value": 55,
+          "note": "55d rest \u00b7 last start 22 pitches"
         },
         {
           "key": "f5_era",
@@ -14993,8 +14993,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 22,
-          "note": "22d rest \u00b7 last start 48 pitches"
+          "value": 24,
+          "note": "24d rest \u00b7 last start 48 pitches"
         },
         {
           "key": "f5_era",
@@ -15111,8 +15111,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 19,
-          "note": "19d rest \u00b7 last start 25 pitches"
+          "value": 21,
+          "note": "21d rest \u00b7 last start 25 pitches"
         },
         {
           "key": "f5_era",
@@ -15229,8 +15229,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 81 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 81 pitches"
         },
         {
           "key": "f5_era",
@@ -15241,7 +15241,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.9,
+          "proj": 4.1,
           "lean": "over",
           "conviction": 0.0
         },
@@ -15251,7 +15251,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.8,
+          "proj": 15.4,
           "lean": "over"
         },
         "ER": {
@@ -15347,8 +15347,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 50 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 50 pitches"
         },
         {
           "key": "f5_era",
@@ -15359,7 +15359,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.5,
+          "proj": 3.6,
           "lean": "under",
           "conviction": 0.0
         },
@@ -15369,7 +15369,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 8.6,
+          "proj": 9.0,
           "lean": "under"
         },
         "ER": {
@@ -15465,8 +15465,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 70,
-          "note": "70d rest \u00b7 last start 89 pitches"
+          "value": 72,
+          "note": "72d rest \u00b7 last start 89 pitches"
         },
         {
           "key": "f5_era",
@@ -15583,8 +15583,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 16,
-          "note": "16d rest \u00b7 last start 82 pitches"
+          "value": 18,
+          "note": "18d rest \u00b7 last start 82 pitches"
         },
         {
           "key": "f5_era",
@@ -15701,8 +15701,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 28,
-          "note": "28d rest \u00b7 last start 30 pitches"
+          "value": 30,
+          "note": "30d rest \u00b7 last start 30 pitches"
         },
         {
           "key": "f5_era",
@@ -15819,8 +15819,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 62,
-          "note": "62d rest \u00b7 last start 90 pitches"
+          "value": 64,
+          "note": "64d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -15937,8 +15937,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 44,
-          "note": "44d rest \u00b7 last start 90 pitches"
+          "value": 46,
+          "note": "46d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -16055,8 +16055,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 75,
-          "note": "75d rest \u00b7 last start 46 pitches"
+          "value": 77,
+          "note": "77d rest \u00b7 last start 46 pitches"
         },
         {
           "key": "f5_era",
@@ -16173,8 +16173,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 11,
-          "note": "11d rest \u00b7 last start 59 pitches"
+          "value": 13,
+          "note": "13d rest \u00b7 last start 59 pitches"
         },
         {
           "key": "f5_era",
@@ -16291,8 +16291,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 14,
-          "note": "14d rest \u00b7 last start 93 pitches"
+          "value": 16,
+          "note": "16d rest \u00b7 last start 93 pitches"
         },
         {
           "key": "f5_era",
@@ -16409,8 +16409,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 9,
-          "note": "9d rest \u00b7 last start 56 pitches"
+          "value": 11,
+          "note": "11d rest \u00b7 last start 56 pitches"
         },
         {
           "key": "f5_era",
@@ -16527,8 +16527,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 76 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 76 pitches"
         },
         {
           "key": "f5_era",
@@ -16651,8 +16651,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 15,
-          "note": "15d rest \u00b7 last start 88 pitches"
+          "value": 17,
+          "note": "17d rest \u00b7 last start 88 pitches"
         },
         {
           "key": "f5_era",
@@ -16769,8 +16769,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 84,
-          "note": "84d rest \u00b7 last start 17 pitches"
+          "value": 86,
+          "note": "86d rest \u00b7 last start 17 pitches"
         },
         {
           "key": "f5_era",
@@ -16887,8 +16887,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 95 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "f5_era",
@@ -16899,7 +16899,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.5,
+          "proj": 4.7,
           "lean": "under",
           "conviction": 0.0
         },
@@ -16909,7 +16909,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.1,
+          "proj": 17.8,
           "lean": "under"
         },
         "ER": {
@@ -17005,8 +17005,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 7,
-          "note": "7d rest \u00b7 last start 37 pitches"
+          "value": 9,
+          "note": "9d rest \u00b7 last start 37 pitches"
         },
         {
           "key": "f5_era",
@@ -17129,8 +17129,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 58,
-          "note": "58d rest \u00b7 last start 35 pitches"
+          "value": 60,
+          "note": "60d rest \u00b7 last start 35 pitches"
         },
         {
           "key": "f5_era",
@@ -17247,8 +17247,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 17,
-          "note": "17d rest \u00b7 last start 85 pitches"
+          "value": 19,
+          "note": "19d rest \u00b7 last start 85 pitches"
         },
         {
           "key": "f5_era",
@@ -17365,8 +17365,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 85 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 85 pitches"
         },
         {
           "key": "f5_era",
@@ -17387,7 +17387,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.5,
+          "proj": 14.9,
           "lean": "under"
         },
         "ER": {
@@ -17489,8 +17489,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 83,
-          "note": "83d rest \u00b7 last start 77 pitches"
+          "value": 85,
+          "note": "85d rest \u00b7 last start 77 pitches"
         },
         {
           "key": "f5_era",
@@ -17607,8 +17607,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 81 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 81 pitches"
         },
         {
           "key": "f5_era",
@@ -17619,7 +17619,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.6,
+          "proj": 4.8,
           "lean": "under",
           "conviction": 0.0
         },
@@ -17629,7 +17629,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.3,
+          "proj": 17.0,
           "lean": "under"
         },
         "ER": {
@@ -17725,8 +17725,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 26,
-          "note": "26d rest \u00b7 last start 75 pitches"
+          "value": 28,
+          "note": "28d rest \u00b7 last start 75 pitches"
         },
         {
           "key": "f5_era",
@@ -17849,8 +17849,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 91 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 91 pitches"
         },
         {
           "key": "f5_era",
@@ -17871,7 +17871,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 12.3,
+          "proj": 12.7,
           "lean": "over"
         },
         "ER": {
@@ -17967,8 +17967,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 92 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 92 pitches"
         },
         {
           "key": "f5_era",
@@ -17979,7 +17979,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.8,
+          "proj": 4.1,
           "lean": "under",
           "conviction": 0.0
         },
@@ -17989,7 +17989,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 18.2,
+          "proj": 19.0,
           "lean": "under"
         },
         "ER": {
@@ -18085,8 +18085,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 25,
-          "note": "25d rest \u00b7 last start 48 pitches"
+          "value": 27,
+          "note": "27d rest \u00b7 last start 48 pitches"
         },
         {
           "key": "f5_era",
@@ -18203,8 +18203,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 75 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 75 pitches"
         },
         {
           "key": "f5_era",
@@ -18225,7 +18225,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 12.7,
+          "proj": 13.0,
           "lean": "under"
         },
         "ER": {
@@ -18321,8 +18321,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 79,
-          "note": "79d rest \u00b7 last start 84 pitches"
+          "value": 81,
+          "note": "81d rest \u00b7 last start 84 pitches"
         },
         {
           "key": "f5_era",
@@ -18439,8 +18439,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 61,
-          "note": "61d rest \u00b7 last start 83 pitches"
+          "value": 63,
+          "note": "63d rest \u00b7 last start 83 pitches"
         },
         {
           "key": "f5_era",
@@ -18557,8 +18557,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 89 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 89 pitches"
         },
         {
           "key": "f5_era",
@@ -18569,7 +18569,7 @@
       ],
       "props": {
         "K": {
-          "proj": 6.6,
+          "proj": 6.8,
           "lean": "under",
           "conviction": 0.0
         },
@@ -18579,7 +18579,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.7,
+          "proj": 18.4,
           "lean": "under"
         },
         "ER": {
@@ -18675,8 +18675,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 90 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -18793,8 +18793,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 88 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 88 pitches"
         },
         {
           "key": "f5_era",
@@ -18805,7 +18805,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.2,
+          "proj": 4.3,
           "lean": "under",
           "conviction": 0.0
         },
@@ -18815,7 +18815,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 11.8,
+          "proj": 12.3,
           "lean": "under"
         },
         "ER": {
@@ -18911,8 +18911,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 96 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 96 pitches"
         },
         {
           "key": "f5_era",
@@ -18933,7 +18933,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.1,
+          "proj": 17.6,
           "lean": "under"
         },
         "ER": {
@@ -19029,8 +19029,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 7,
-          "note": "7d rest \u00b7 last start 72 pitches"
+          "value": 9,
+          "note": "9d rest \u00b7 last start 72 pitches"
         },
         {
           "key": "f5_era",
@@ -19147,8 +19147,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 87 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 87 pitches"
         },
         {
           "key": "f5_era",
@@ -19159,7 +19159,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.5,
+          "proj": 3.6,
           "lean": "over",
           "conviction": 0.0
         },
@@ -19169,7 +19169,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 11.6,
+          "proj": 12.1,
           "lean": "over"
         },
         "ER": {
@@ -19265,8 +19265,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 73,
-          "note": "73d rest \u00b7 last start 90 pitches"
+          "value": 75,
+          "note": "75d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -19377,8 +19377,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 35,
-          "note": "35d rest \u00b7 last start 18 pitches"
+          "value": 37,
+          "note": "37d rest \u00b7 last start 18 pitches"
         },
         {
           "key": "f5_era",
@@ -19495,8 +19495,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 45 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 45 pitches"
         },
         {
           "key": "f5_era",
@@ -19517,7 +19517,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 12.2,
+          "proj": 12.6,
           "lean": "over"
         },
         "ER": {
@@ -19613,8 +19613,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 31,
-          "note": "31d rest \u00b7 last start 100 pitches"
+          "value": 33,
+          "note": "33d rest \u00b7 last start 100 pitches"
         },
         {
           "key": "f5_era",
@@ -19731,8 +19731,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 104 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 104 pitches"
         },
         {
           "key": "f5_era",
@@ -19743,7 +19743,7 @@
       ],
       "props": {
         "K": {
-          "proj": 7.5,
+          "proj": 7.7,
           "lean": "over",
           "conviction": 0.0
         },
@@ -19753,7 +19753,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.4,
+          "proj": 16.1,
           "lean": "over"
         },
         "ER": {
@@ -19849,8 +19849,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 90 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -19967,8 +19967,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 96 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 96 pitches"
         },
         {
           "key": "f5_era",
@@ -20091,8 +20091,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 90 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -20103,7 +20103,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.6,
+          "proj": 3.8,
           "lean": "over",
           "conviction": 0.0
         },
@@ -20113,7 +20113,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.6,
+          "proj": 14.1,
           "lean": "over"
         },
         "ER": {
@@ -20209,8 +20209,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 34 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 34 pitches"
         },
         {
           "key": "f5_era",
@@ -20231,7 +20231,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 5.8,
+          "proj": 6.0,
           "lean": "under"
         },
         "ER": {
@@ -20327,8 +20327,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 30,
-          "note": "30d rest \u00b7 last start 61 pitches"
+          "value": 32,
+          "note": "32d rest \u00b7 last start 61 pitches"
         },
         {
           "key": "f5_era",
@@ -20445,8 +20445,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 95 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "f5_era",
@@ -20467,7 +20467,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.7,
+          "proj": 17.2,
           "lean": "under"
         },
         "ER": {
@@ -20569,8 +20569,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 20,
-          "note": "20d rest \u00b7 last start 38 pitches"
+          "value": 22,
+          "note": "22d rest \u00b7 last start 38 pitches"
         },
         {
           "key": "f5_era",
@@ -20687,8 +20687,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 49,
-          "note": "49d rest \u00b7 last start 86 pitches"
+          "value": 51,
+          "note": "51d rest \u00b7 last start 86 pitches"
         },
         {
           "key": "f5_era",
@@ -20805,8 +20805,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 86 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 86 pitches"
         },
         {
           "key": "f5_era",
@@ -20817,7 +20817,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.6,
+          "proj": 4.8,
           "lean": "over",
           "conviction": 0.0
         },
@@ -20827,7 +20827,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.5,
+          "proj": 15.1,
           "lean": "over"
         },
         "ER": {
@@ -20923,8 +20923,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 42,
-          "note": "42d rest \u00b7 last start 95 pitches"
+          "value": 44,
+          "note": "44d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "f5_era",
@@ -21041,8 +21041,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 23,
-          "note": "23d rest \u00b7 last start 61 pitches"
+          "value": 25,
+          "note": "25d rest \u00b7 last start 61 pitches"
         },
         {
           "key": "f5_era",
@@ -21159,8 +21159,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 68 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 68 pitches"
         },
         {
           "key": "f5_era",
@@ -21181,7 +21181,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 11.2,
+          "proj": 11.6,
           "lean": "over"
         },
         "ER": {
@@ -21277,8 +21277,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 7,
-          "note": "7d rest \u00b7 last start 97 pitches"
+          "value": 9,
+          "note": "9d rest \u00b7 last start 97 pitches"
         },
         {
           "key": "f5_era",
@@ -21395,8 +21395,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 70 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 70 pitches"
         },
         {
           "key": "f5_era",
@@ -21407,7 +21407,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.7,
+          "proj": 4.9,
           "lean": "over",
           "conviction": 0.0
         },
@@ -21417,7 +21417,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.9,
+          "proj": 15.6,
           "lean": "over"
         },
         "ER": {
@@ -21513,8 +21513,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 14,
-          "note": "14d rest \u00b7 last start 63 pitches"
+          "value": 16,
+          "note": "16d rest \u00b7 last start 63 pitches"
         },
         {
           "key": "f5_era",
@@ -21637,8 +21637,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 34,
-          "note": "34d rest \u00b7 last start 80 pitches"
+          "value": 36,
+          "note": "36d rest \u00b7 last start 80 pitches"
         },
         {
           "key": "f5_era",
@@ -21755,8 +21755,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 92 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 92 pitches"
         },
         {
           "key": "f5_era",
@@ -21767,7 +21767,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.4,
+          "proj": 5.6,
           "lean": "under",
           "conviction": 0.0
         },
@@ -21777,7 +21777,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.5,
+          "proj": 17.2,
           "lean": "under"
         },
         "ER": {
@@ -21879,8 +21879,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 105 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 105 pitches"
         },
         {
           "key": "f5_era",
@@ -21901,7 +21901,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.7,
+          "proj": 15.2,
           "lean": "under"
         },
         "ER": {
@@ -21997,8 +21997,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 82 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 82 pitches"
         },
         {
           "key": "f5_era",
@@ -22019,7 +22019,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.5,
+          "proj": 14.9,
           "lean": "over"
         },
         "ER": {
@@ -22115,8 +22115,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 92 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 92 pitches"
         },
         {
           "key": "f5_era",
@@ -22239,8 +22239,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 97 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 97 pitches"
         },
         {
           "key": "f5_era",
@@ -22251,7 +22251,7 @@
       ],
       "props": {
         "K": {
-          "proj": 7.0,
+          "proj": 7.2,
           "lean": "under",
           "conviction": 0.0
         },
@@ -22261,7 +22261,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.7,
+          "proj": 17.4,
           "lean": "under"
         },
         "ER": {
@@ -22357,8 +22357,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 93 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 93 pitches"
         },
         {
           "key": "f5_era",
@@ -22379,7 +22379,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.2,
+          "proj": 17.8,
           "lean": "under"
         },
         "ER": {
@@ -22475,8 +22475,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 108 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 108 pitches"
         },
         {
           "key": "f5_era",
@@ -22593,8 +22593,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 91 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 91 pitches"
         },
         {
           "key": "f5_era",
@@ -22615,7 +22615,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.7,
+          "proj": 15.1,
           "lean": "under"
         },
         "ER": {
@@ -22711,8 +22711,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 98 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "f5_era",
@@ -22829,8 +22829,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 19,
-          "note": "19d rest \u00b7 last start 21 pitches"
+          "value": 21,
+          "note": "21d rest \u00b7 last start 21 pitches"
         },
         {
           "key": "f5_era",
@@ -22953,8 +22953,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 26,
-          "note": "26d rest \u00b7 last start 56 pitches"
+          "value": 28,
+          "note": "28d rest \u00b7 last start 56 pitches"
         },
         {
           "key": "f5_era",
@@ -23071,8 +23071,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 22,
-          "note": "22d rest \u00b7 last start 70 pitches"
+          "value": 24,
+          "note": "24d rest \u00b7 last start 70 pitches"
         },
         {
           "key": "f5_era",
@@ -23189,8 +23189,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 94 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 94 pitches"
         },
         {
           "key": "f5_era",
@@ -23201,7 +23201,7 @@
       ],
       "props": {
         "K": {
-          "proj": 1.9,
+          "proj": 2.0,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -23211,7 +23211,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 11.5,
+          "proj": 12.0,
           "lean": "\u2014"
         },
         "ER": {
@@ -23307,8 +23307,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 82 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 82 pitches"
         },
         {
           "key": "f5_era",
@@ -23319,7 +23319,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.2,
+          "proj": 4.4,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -23329,7 +23329,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.0,
+          "proj": 15.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -23425,8 +23425,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 66,
-          "note": "66d rest \u00b7 last start 86 pitches"
+          "value": 68,
+          "note": "68d rest \u00b7 last start 86 pitches"
         },
         {
           "key": "f5_era",
@@ -23543,8 +23543,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 15,
-          "note": "15d rest \u00b7 last start 88 pitches"
+          "value": 17,
+          "note": "17d rest \u00b7 last start 88 pitches"
         },
         {
           "key": "f5_era",
@@ -23661,8 +23661,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 22,
-          "note": "22d rest \u00b7 last start 25 pitches"
+          "value": 24,
+          "note": "24d rest \u00b7 last start 25 pitches"
         },
         {
           "key": "f5_era",
@@ -23779,8 +23779,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 32 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 32 pitches"
         },
         {
           "key": "f5_era",
@@ -23801,7 +23801,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 4.5,
+          "proj": 4.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -23903,8 +23903,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 98 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "f5_era",
@@ -23915,7 +23915,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.7,
+          "proj": 3.8,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -23925,7 +23925,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.7,
+          "proj": 14.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -24021,8 +24021,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 89 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 89 pitches"
         },
         {
           "key": "f5_era",
@@ -24043,7 +24043,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.2,
+          "proj": 16.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -24139,8 +24139,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 93 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 93 pitches"
         },
         {
           "key": "f5_era",
@@ -24151,7 +24151,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.2,
+          "proj": 5.4,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -24161,7 +24161,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.7,
+          "proj": 16.4,
           "lean": "\u2014"
         },
         "ER": {
@@ -24257,8 +24257,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 9,
-          "note": "9d rest \u00b7 last start 85 pitches"
+          "value": 11,
+          "note": "11d rest \u00b7 last start 85 pitches"
         },
         {
           "key": "f5_era",
@@ -24375,8 +24375,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 76,
-          "note": "76d rest \u00b7 last start 101 pitches"
+          "value": 78,
+          "note": "78d rest \u00b7 last start 101 pitches"
         },
         {
           "key": "f5_era",
@@ -24493,8 +24493,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 108 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 108 pitches"
         },
         {
           "key": "f5_era",
@@ -24505,7 +24505,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.2,
+          "proj": 4.4,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -24515,7 +24515,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.6,
+          "proj": 14.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -24611,8 +24611,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 79 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 79 pitches"
         },
         {
           "key": "f5_era",
@@ -24633,7 +24633,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.4,
+          "proj": 15.9,
           "lean": "\u2014"
         },
         "ER": {
@@ -24729,8 +24729,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 105 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 105 pitches"
         },
         {
           "key": "f5_era",
@@ -24741,7 +24741,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.8,
+          "proj": 5.0,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -24751,7 +24751,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.6,
+          "proj": 15.2,
           "lean": "\u2014"
         },
         "ER": {
@@ -24847,8 +24847,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 102 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 102 pitches"
         },
         {
           "key": "f5_era",
@@ -24965,8 +24965,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 102 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 102 pitches"
         },
         {
           "key": "f5_era",
@@ -24977,7 +24977,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.4,
+          "proj": 4.5,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -24987,7 +24987,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.7,
+          "proj": 15.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -25083,8 +25083,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 86 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 86 pitches"
         },
         {
           "key": "f5_era",
@@ -25095,7 +25095,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.6,
+          "proj": 4.8,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -25105,7 +25105,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.8,
+          "proj": 14.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -25201,8 +25201,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 83 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 83 pitches"
         },
         {
           "key": "f5_era",
@@ -25223,7 +25223,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.4,
+          "proj": 13.8,
           "lean": "\u2014"
         },
         "ER": {
@@ -25319,8 +25319,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 43,
-          "note": "43d rest \u00b7 last start 28 pitches"
+          "value": 45,
+          "note": "45d rest \u00b7 last start 28 pitches"
         },
         {
           "key": "f5_era",
@@ -25437,8 +25437,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 101 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 101 pitches"
         },
         {
           "key": "f5_era",
@@ -25555,8 +25555,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 23,
-          "note": "23d rest \u00b7 last start 56 pitches"
+          "value": 25,
+          "note": "25d rest \u00b7 last start 56 pitches"
         },
         {
           "key": "f5_era",
@@ -25673,8 +25673,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 51,
-          "note": "51d rest \u00b7 last start 19 pitches"
+          "value": 53,
+          "note": "53d rest \u00b7 last start 19 pitches"
         },
         {
           "key": "f5_era",
@@ -25791,8 +25791,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 86 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 86 pitches"
         },
         {
           "key": "f5_era",
@@ -25803,7 +25803,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.9,
+          "proj": 6.1,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -25813,7 +25813,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.7,
+          "proj": 17.4,
           "lean": "\u2014"
         },
         "ER": {
@@ -25909,8 +25909,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 80 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 80 pitches"
         },
         {
           "key": "f5_era",
@@ -25931,7 +25931,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 12.8,
+          "proj": 13.1,
           "lean": "\u2014"
         },
         "ER": {
@@ -26027,8 +26027,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 8,
-          "note": "8d rest \u00b7 last start 76 pitches"
+          "value": 10,
+          "note": "10d rest \u00b7 last start 76 pitches"
         },
         {
           "key": "f5_era",
@@ -26151,8 +26151,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 44 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 44 pitches"
         },
         {
           "key": "f5_era",
@@ -26173,7 +26173,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.4,
+          "proj": 16.9,
           "lean": "\u2014"
         },
         "ER": {
@@ -26269,8 +26269,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 49,
-          "note": "49d rest \u00b7 last start 91 pitches"
+          "value": 51,
+          "note": "51d rest \u00b7 last start 91 pitches"
         },
         {
           "key": "f5_era",
@@ -26387,8 +26387,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 66,
-          "note": "66d rest \u00b7 last start 14 pitches"
+          "value": 68,
+          "note": "68d rest \u00b7 last start 14 pitches"
         },
         {
           "key": "f5_era",
@@ -26505,8 +26505,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 42,
-          "note": "42d rest \u00b7 last start 14 pitches"
+          "value": 44,
+          "note": "44d rest \u00b7 last start 14 pitches"
         },
         {
           "key": "f5_era",
@@ -26623,8 +26623,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 83 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 83 pitches"
         },
         {
           "key": "f5_era",
@@ -26635,7 +26635,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.5,
+          "proj": 3.7,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -26645,7 +26645,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.5,
+          "proj": 16.2,
           "lean": "\u2014"
         },
         "ER": {
@@ -26741,8 +26741,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 10,
-          "note": "10d rest \u00b7 last start 29 pitches"
+          "value": 12,
+          "note": "12d rest \u00b7 last start 29 pitches"
         },
         {
           "key": "f5_era",
@@ -26859,8 +26859,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 75,
-          "note": "75d rest \u00b7 last start 37 pitches"
+          "value": 77,
+          "note": "77d rest \u00b7 last start 37 pitches"
         },
         {
           "key": "f5_era",
@@ -26977,8 +26977,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 75 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 75 pitches"
         },
         {
           "key": "f5_era",
@@ -26989,7 +26989,7 @@
       ],
       "props": {
         "K": {
-          "proj": 1.5,
+          "proj": 1.6,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -26999,7 +26999,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 10.6,
+          "proj": 11.0,
           "lean": "\u2014"
         },
         "ER": {
@@ -27095,8 +27095,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 7,
-          "note": "7d rest \u00b7 last start 91 pitches"
+          "value": 9,
+          "note": "9d rest \u00b7 last start 91 pitches"
         },
         {
           "key": "f5_era",
@@ -27213,8 +27213,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 98 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "f5_era",
@@ -27225,7 +27225,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.2,
+          "proj": 4.3,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -27235,7 +27235,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.1,
+          "proj": 13.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -27331,8 +27331,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 89 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 89 pitches"
         },
         {
           "key": "f5_era",
@@ -27343,7 +27343,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.3,
+          "proj": 5.5,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -27353,7 +27353,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.2,
+          "proj": 16.8,
           "lean": "\u2014"
         },
         "ER": {
@@ -27449,8 +27449,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 85 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 85 pitches"
         },
         {
           "key": "f5_era",
@@ -27567,8 +27567,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 32,
-          "note": "32d rest \u00b7 last start 93 pitches"
+          "value": 34,
+          "note": "34d rest \u00b7 last start 93 pitches"
         },
         {
           "key": "f5_era",
@@ -27685,8 +27685,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 54 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 54 pitches"
         },
         {
           "key": "f5_era",
@@ -27697,7 +27697,7 @@
       ],
       "props": {
         "K": {
-          "proj": 2.8,
+          "proj": 2.9,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -27707,7 +27707,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 8.6,
+          "proj": 9.0,
           "lean": "\u2014"
         },
         "ER": {
@@ -27803,8 +27803,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 95 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "f5_era",
@@ -27815,7 +27815,7 @@
       ],
       "props": {
         "K": {
-          "proj": 6.9,
+          "proj": 7.1,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -27825,7 +27825,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.0,
+          "proj": 17.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -27921,8 +27921,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 51,
-          "note": "51d rest \u00b7 last start 58 pitches"
+          "value": 53,
+          "note": "53d rest \u00b7 last start 58 pitches"
         },
         {
           "key": "f5_era",
@@ -28039,8 +28039,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 101 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 101 pitches"
         },
         {
           "key": "f5_era",
@@ -28061,7 +28061,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.1,
+          "proj": 14.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -28157,8 +28157,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 33,
-          "note": "33d rest \u00b7 last start 70 pitches"
+          "value": 35,
+          "note": "35d rest \u00b7 last start 70 pitches"
         },
         {
           "key": "f5_era",
@@ -28275,8 +28275,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 99 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 99 pitches"
         },
         {
           "key": "f5_era",
@@ -28297,7 +28297,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 18.8,
+          "proj": 19.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -28399,8 +28399,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 69 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 69 pitches"
         },
         {
           "key": "f5_era",
@@ -28411,7 +28411,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.8,
+          "proj": 6.0,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -28421,7 +28421,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.9,
+          "proj": 16.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -28517,8 +28517,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 80 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 80 pitches"
         },
         {
           "key": "f5_era",
@@ -28529,7 +28529,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.6,
+          "proj": 5.8,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -28539,7 +28539,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.8,
+          "proj": 14.4,
           "lean": "\u2014"
         },
         "ER": {
@@ -28635,8 +28635,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 72 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 72 pitches"
         },
         {
           "key": "f5_era",
@@ -28657,7 +28657,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.0,
+          "proj": 16.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -28753,8 +28753,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 81 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 81 pitches"
         },
         {
           "key": "f5_era",
@@ -28871,8 +28871,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 92 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 92 pitches"
         },
         {
           "key": "f5_era",
@@ -28883,7 +28883,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.1,
+          "proj": 4.3,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -28893,7 +28893,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.9,
+          "proj": 16.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -28989,8 +28989,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 99 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 99 pitches"
         },
         {
           "key": "f5_era",
@@ -29107,8 +29107,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 94 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 94 pitches"
         },
         {
           "key": "f5_era",
@@ -29129,7 +29129,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.4,
+          "proj": 18.0,
           "lean": "\u2014"
         },
         "ER": {
@@ -29231,8 +29231,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 90 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -29253,7 +29253,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.4,
+          "proj": 17.9,
           "lean": "\u2014"
         },
         "ER": {
@@ -29355,8 +29355,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 58 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 58 pitches"
         },
         {
           "key": "f5_era",
@@ -29367,7 +29367,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.4,
+          "proj": 3.5,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -29377,7 +29377,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 9.0,
+          "proj": 9.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -29473,8 +29473,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 66 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 66 pitches"
         },
         {
           "key": "f5_era",
@@ -29485,7 +29485,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.3,
+          "proj": 4.4,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -29495,7 +29495,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.5,
+          "proj": 14.1,
           "lean": "\u2014"
         },
         "ER": {
@@ -29597,8 +29597,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 85 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 85 pitches"
         },
         {
           "key": "f5_era",
@@ -29619,7 +29619,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.2,
+          "proj": 16.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -29715,8 +29715,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 91 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 91 pitches"
         },
         {
           "key": "f5_era",
@@ -29727,7 +29727,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.3,
+          "proj": 5.5,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -29737,7 +29737,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.3,
+          "proj": 18.0,
           "lean": "\u2014"
         },
         "ER": {
@@ -29833,8 +29833,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 10,
-          "note": "10d rest \u00b7 last start 70 pitches"
+          "value": 12,
+          "note": "12d rest \u00b7 last start 70 pitches"
         },
         {
           "key": "f5_era",
@@ -29951,8 +29951,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 88,
-          "note": "88d rest \u00b7 last start 47 pitches"
+          "value": 90,
+          "note": "90d rest \u00b7 last start 47 pitches"
         },
         {
           "key": "f5_era",
@@ -30069,8 +30069,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 99 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 99 pitches"
         },
         {
           "key": "f5_era",
@@ -30081,7 +30081,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.3,
+          "proj": 4.5,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -30091,7 +30091,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.9,
+          "proj": 15.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -30187,8 +30187,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 75 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 75 pitches"
         },
         {
           "key": "f5_era",
@@ -30199,7 +30199,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.9,
+          "proj": 4.1,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -30209,7 +30209,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.9,
+          "proj": 15.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -30305,8 +30305,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 32,
-          "note": "32d rest \u00b7 last start 86 pitches"
+          "value": 34,
+          "note": "34d rest \u00b7 last start 86 pitches"
         },
         {
           "key": "f5_era",
@@ -30423,8 +30423,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 90 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -30445,7 +30445,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.2,
+          "proj": 17.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -30541,8 +30541,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 7,
-          "note": "7d rest \u00b7 last start 72 pitches"
+          "value": 9,
+          "note": "9d rest \u00b7 last start 72 pitches"
         },
         {
           "key": "f5_era",
@@ -30659,8 +30659,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 24,
-          "note": "24d rest \u00b7 last start 53 pitches"
+          "value": 26,
+          "note": "26d rest \u00b7 last start 53 pitches"
         },
         {
           "key": "f5_era",
@@ -30777,8 +30777,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 19,
-          "note": "19d rest \u00b7 last start 35 pitches"
+          "value": 21,
+          "note": "21d rest \u00b7 last start 35 pitches"
         },
         {
           "key": "f5_era",
@@ -30895,8 +30895,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 87,
-          "note": "87d rest \u00b7 last start 74 pitches"
+          "value": 89,
+          "note": "89d rest \u00b7 last start 74 pitches"
         },
         {
           "key": "f5_era",
@@ -31013,8 +31013,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 27,
-          "note": "27d rest \u00b7 last start 97 pitches"
+          "value": 29,
+          "note": "29d rest \u00b7 last start 97 pitches"
         },
         {
           "key": "f5_era",
@@ -31131,8 +31131,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 97 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 97 pitches"
         },
         {
           "key": "f5_era",
@@ -31153,7 +31153,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.0,
+          "proj": 15.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -31249,8 +31249,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 98 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "f5_era",
@@ -31367,8 +31367,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 97 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 97 pitches"
         },
         {
           "key": "f5_era",
@@ -31379,7 +31379,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.4,
+          "proj": 5.6,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -31389,7 +31389,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.2,
+          "proj": 15.8,
           "lean": "\u2014"
         },
         "ER": {
@@ -31491,8 +31491,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 87 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 87 pitches"
         },
         {
           "key": "f5_era",
@@ -31615,8 +31615,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 97 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 97 pitches"
         },
         {
           "key": "f5_era",
@@ -31733,8 +31733,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 93 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 93 pitches"
         },
         {
           "key": "f5_era",
@@ -31745,7 +31745,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.9,
+          "proj": 4.1,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -31755,7 +31755,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.2,
+          "proj": 16.9,
           "lean": "\u2014"
         },
         "ER": {
@@ -31851,8 +31851,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 75 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 75 pitches"
         },
         {
           "key": "f5_era",
@@ -31969,8 +31969,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 56,
-          "note": "56d rest \u00b7 last start 95 pitches"
+          "value": 58,
+          "note": "58d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "f5_era",
@@ -32087,8 +32087,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 104 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 104 pitches"
         },
         {
           "key": "f5_era",
@@ -32099,7 +32099,7 @@
       ],
       "props": {
         "K": {
-          "proj": 6.9,
+          "proj": 7.1,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -32109,7 +32109,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.9,
+          "proj": 15.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -32205,8 +32205,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 34,
-          "note": "34d rest \u00b7 last start 62 pitches"
+          "value": 36,
+          "note": "36d rest \u00b7 last start 62 pitches"
         },
         {
           "key": "f5_era",
@@ -32323,8 +32323,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 50,
-          "note": "50d rest \u00b7 last start 43 pitches"
+          "value": 52,
+          "note": "52d rest \u00b7 last start 43 pitches"
         },
         {
           "key": "f5_era",
@@ -32441,8 +32441,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 85 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 85 pitches"
         },
         {
           "key": "f5_era",
@@ -32453,7 +32453,7 @@
       ],
       "props": {
         "K": {
-          "proj": 7.2,
+          "proj": 7.4,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -32463,7 +32463,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.2,
+          "proj": 17.9,
           "lean": "\u2014"
         },
         "ER": {
@@ -32559,8 +32559,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 90 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -32571,7 +32571,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.1,
+          "proj": 5.2,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -32581,7 +32581,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.9,
+          "proj": 15.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -32683,8 +32683,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 9,
-          "note": "9d rest \u00b7 last start 99 pitches"
+          "value": 11,
+          "note": "11d rest \u00b7 last start 99 pitches"
         },
         {
           "key": "f5_era",
@@ -32801,8 +32801,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 75 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 75 pitches"
         },
         {
           "key": "f5_era",
@@ -32813,7 +32813,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.6,
+          "proj": 4.7,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -32823,7 +32823,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.1,
+          "proj": 14.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -32919,8 +32919,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 14,
-          "note": "14d rest \u00b7 last start 68 pitches"
+          "value": 16,
+          "note": "16d rest \u00b7 last start 68 pitches"
         },
         {
           "key": "f5_era",
@@ -33037,8 +33037,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 102 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 102 pitches"
         },
         {
           "key": "f5_era",
@@ -33049,7 +33049,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.9,
+          "proj": 6.1,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -33059,7 +33059,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.9,
+          "proj": 15.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -33155,8 +33155,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 106 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 106 pitches"
         },
         {
           "key": "f5_era",
@@ -33177,7 +33177,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.3,
+          "proj": 13.8,
           "lean": "\u2014"
         },
         "ER": {
@@ -33273,8 +33273,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 33,
-          "note": "33d rest \u00b7 last start 33 pitches"
+          "value": 35,
+          "note": "35d rest \u00b7 last start 33 pitches"
         },
         {
           "key": "f5_era",
@@ -33391,8 +33391,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 92 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 92 pitches"
         },
         {
           "key": "f5_era",
@@ -33509,8 +33509,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 6,
-          "note": "6d rest \u00b7 last start 76 pitches"
+          "value": 8,
+          "note": "8d rest \u00b7 last start 76 pitches"
         },
         {
           "key": "f5_era",
@@ -33633,8 +33633,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 84 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 84 pitches"
         },
         {
           "key": "f5_era",
@@ -33645,7 +33645,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.1,
+          "proj": 3.2,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -33655,7 +33655,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.7,
+          "proj": 14.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -33751,8 +33751,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 110 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 110 pitches"
         },
         {
           "key": "f5_era",
@@ -33773,7 +33773,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.2,
+          "proj": 15.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -33869,8 +33869,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 94 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 94 pitches"
         },
         {
           "key": "f5_era",
@@ -33891,7 +33891,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.8,
+          "proj": 17.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -33987,8 +33987,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 7,
-          "note": "7d rest \u00b7 last start 9 pitches"
+          "value": 9,
+          "note": "9d rest \u00b7 last start 9 pitches"
         },
         {
           "key": "f5_era",
@@ -34105,8 +34105,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 89 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 89 pitches"
         },
         {
           "key": "f5_era",
@@ -34127,7 +34127,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.2,
+          "proj": 14.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -34223,8 +34223,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 98 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "f5_era",
@@ -34341,8 +34341,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 98 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "f5_era",
@@ -34353,7 +34353,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.3,
+          "proj": 4.5,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -34363,7 +34363,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.7,
+          "proj": 15.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -34459,8 +34459,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 24 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 24 pitches"
         },
         {
           "key": "f5_era",
@@ -34481,7 +34481,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 4.5,
+          "proj": 4.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -34577,8 +34577,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 95 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "f5_era",
@@ -34599,7 +34599,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 18.1,
+          "proj": 18.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -34695,8 +34695,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 91 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 91 pitches"
         },
         {
           "key": "f5_era",
@@ -34707,7 +34707,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.8,
+          "proj": 5.0,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -34717,7 +34717,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.8,
+          "proj": 17.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -34813,8 +34813,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 58,
-          "note": "58d rest \u00b7 last start 58 pitches"
+          "value": 60,
+          "note": "60d rest \u00b7 last start 58 pitches"
         },
         {
           "key": "f5_era",
@@ -34931,8 +34931,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 69 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 69 pitches"
         },
         {
           "key": "f5_era",
@@ -34943,7 +34943,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.5,
+          "proj": 5.7,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -34953,7 +34953,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.6,
+          "proj": 17.2,
           "lean": "\u2014"
         },
         "ER": {
@@ -35049,8 +35049,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 95 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "f5_era",
@@ -35071,7 +35071,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.8,
+          "proj": 18.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -35167,8 +35167,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 44,
-          "note": "44d rest \u00b7 last start 61 pitches"
+          "value": 46,
+          "note": "46d rest \u00b7 last start 61 pitches"
         },
         {
           "key": "f5_era",
@@ -35285,8 +35285,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 11,
-          "note": "11d rest \u00b7 last start 95 pitches"
+          "value": 13,
+          "note": "13d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "f5_era",
@@ -35403,8 +35403,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 101 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 101 pitches"
         },
         {
           "key": "f5_era",
@@ -35425,7 +35425,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.8,
+          "proj": 16.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -35521,8 +35521,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 108 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 108 pitches"
         },
         {
           "key": "f5_era",
@@ -35543,7 +35543,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.7,
+          "proj": 17.2,
           "lean": "\u2014"
         },
         "ER": {
@@ -35639,8 +35639,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 79 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 79 pitches"
         },
         {
           "key": "f5_era",
@@ -35661,7 +35661,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.8,
+          "proj": 16.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -35757,8 +35757,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 68 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 68 pitches"
         },
         {
           "key": "f5_era",
@@ -35769,7 +35769,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.9,
+          "proj": 6.0,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -35779,7 +35779,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.9,
+          "proj": 15.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -35875,8 +35875,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 49 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 49 pitches"
         },
         {
           "key": "f5_era",
@@ -35897,7 +35897,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.2,
+          "proj": 17.7,
           "lean": "\u2014"
         },
         "ER": {
@@ -35993,8 +35993,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 46,
-          "note": "46d rest \u00b7 last start 31 pitches"
+          "value": 48,
+          "note": "48d rest \u00b7 last start 31 pitches"
         },
         {
           "key": "f5_era",
@@ -36111,8 +36111,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 87 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 87 pitches"
         },
         {
           "key": "f5_era",
@@ -36123,7 +36123,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.7,
+          "proj": 5.9,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -36133,7 +36133,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.9,
+          "proj": 15.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -36229,8 +36229,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 69,
-          "note": "69d rest \u00b7 last start 95 pitches"
+          "value": 71,
+          "note": "71d rest \u00b7 last start 95 pitches"
         },
         {
           "key": "f5_era",
@@ -36347,8 +36347,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 54,
-          "note": "54d rest \u00b7 last start 61 pitches"
+          "value": 56,
+          "note": "56d rest \u00b7 last start 61 pitches"
         },
         {
           "key": "f5_era",
@@ -36465,8 +36465,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 96 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 96 pitches"
         },
         {
           "key": "f5_era",
@@ -36487,7 +36487,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.5,
+          "proj": 18.0,
           "lean": "\u2014"
         },
         "ER": {
@@ -36583,8 +36583,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 43,
-          "note": "43d rest \u00b7 last start 84 pitches"
+          "value": 45,
+          "note": "45d rest \u00b7 last start 84 pitches"
         },
         {
           "key": "f5_era",
@@ -36701,8 +36701,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 86 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 86 pitches"
         },
         {
           "key": "f5_era",
@@ -36713,7 +36713,7 @@
       ],
       "props": {
         "K": {
-          "proj": 7.0,
+          "proj": 7.3,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -36723,7 +36723,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.4,
+          "proj": 18.1,
           "lean": "\u2014"
         },
         "ER": {
@@ -36825,8 +36825,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 28,
-          "note": "28d rest \u00b7 last start 23 pitches"
+          "value": 30,
+          "note": "30d rest \u00b7 last start 23 pitches"
         },
         {
           "key": "f5_era",
@@ -36943,8 +36943,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 103 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 103 pitches"
         },
         {
           "key": "f5_era",
@@ -36965,7 +36965,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 18.0,
+          "proj": 18.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -37061,8 +37061,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 98 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 98 pitches"
         },
         {
           "key": "f5_era",
@@ -37073,7 +37073,7 @@
       ],
       "props": {
         "K": {
-          "proj": 6.9,
+          "proj": 7.1,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -37083,7 +37083,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 15.8,
+          "proj": 16.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -37179,8 +37179,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 35,
-          "note": "35d rest \u00b7 last start 85 pitches"
+          "value": 37,
+          "note": "37d rest \u00b7 last start 85 pitches"
         },
         {
           "key": "f5_era",
@@ -37297,8 +37297,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 97 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 97 pitches"
         },
         {
           "key": "f5_era",
@@ -37309,7 +37309,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.7,
+          "proj": 5.9,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -37319,7 +37319,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.6,
+          "proj": 17.3,
           "lean": "\u2014"
         },
         "ER": {
@@ -37421,8 +37421,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 85 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 85 pitches"
         },
         {
           "key": "f5_era",
@@ -37433,7 +37433,7 @@
       ],
       "props": {
         "K": {
-          "proj": 4.0,
+          "proj": 4.2,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -37443,7 +37443,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.4,
+          "proj": 15.0,
           "lean": "\u2014"
         },
         "ER": {
@@ -37539,8 +37539,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 1,
-          "note": "1d rest \u00b7 last start 90 pitches"
+          "value": 3,
+          "note": "3d rest \u00b7 last start 90 pitches"
         },
         {
           "key": "f5_era",
@@ -37657,8 +37657,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 91 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 91 pitches"
         },
         {
           "key": "f5_era",
@@ -37669,7 +37669,7 @@
       ],
       "props": {
         "K": {
-          "proj": 6.9,
+          "proj": 7.1,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -37679,7 +37679,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.0,
+          "proj": 16.6,
           "lean": "\u2014"
         },
         "ER": {
@@ -37775,8 +37775,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 3,
-          "note": "3d rest \u00b7 last start 109 pitches"
+          "value": 5,
+          "note": "5d rest \u00b7 last start 109 pitches"
         },
         {
           "key": "f5_era",
@@ -37787,7 +37787,7 @@
       ],
       "props": {
         "K": {
-          "proj": 5.2,
+          "proj": 5.4,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -37797,7 +37797,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 16.7,
+          "proj": 17.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -37893,8 +37893,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 4,
-          "note": "4d rest \u00b7 last start 93 pitches"
+          "value": 6,
+          "note": "6d rest \u00b7 last start 93 pitches"
         },
         {
           "key": "f5_era",
@@ -37915,7 +37915,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 14.1,
+          "proj": 14.5,
           "lean": "\u2014"
         },
         "ER": {
@@ -38011,8 +38011,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 5,
-          "note": "5d rest \u00b7 last start 77 pitches"
+          "value": 7,
+          "note": "7d rest \u00b7 last start 77 pitches"
         },
         {
           "key": "f5_era",
@@ -38033,7 +38033,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 17.5,
+          "proj": 18.0,
           "lean": "\u2014"
         },
         "ER": {
@@ -38129,8 +38129,8 @@
         {
           "key": "rest_workload",
           "label": "Rest / workload",
-          "value": 2,
-          "note": "2d rest \u00b7 last start 100 pitches"
+          "value": 4,
+          "note": "4d rest \u00b7 last start 100 pitches"
         },
         {
           "key": "f5_era",
@@ -38141,7 +38141,7 @@
       ],
       "props": {
         "K": {
-          "proj": 3.9,
+          "proj": 4.0,
           "lean": "\u2014",
           "conviction": 0.0
         },
@@ -38151,7 +38151,7 @@
           "conviction": 0.0
         },
         "Outs": {
-          "proj": 13.3,
+          "proj": 13.9,
           "lean": "\u2014"
         },
         "ER": {
